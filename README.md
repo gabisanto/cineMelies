@@ -33,7 +33,7 @@ Proyecto integrador Digital House
 
 ## Wireframes importantes
 
-
+Wireframes en formato pdf [aquí](https://github.com/gabisanto/grupo_3_cineMelies/tree/main/assets/wireframes)
 
 ## Bocetos
 
