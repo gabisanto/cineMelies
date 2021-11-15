@@ -34,32 +34,30 @@ Proyecto integrador Digital House
 ## Wireframes importantes
 
 
+
 ## Bocetos
 
 - Homepage
 
-<img src="https://i.imgur.com/KmnZViH.jpg" alt="Home" width="300"/>   <img src="https://i.imgur.com/pP2yWha.jpg" alt="Al pasar el cursor sobre un poster" width="300"/>
+<img src="https://i.imgur.com/KmnZViH.jpg" alt="Home" width="300" title="Home" />   <img src="https://i.imgur.com/pP2yWha.jpg" alt="Al pasar el cursor sobre un poster" width="300" title="Home" />
 
 - Detalle de película
 
-<img src="https://i.imgur.com/4KOaPhU.jpg" alt="Detalle de película" width="300"/>
+<img src="https://i.imgur.com/4KOaPhU.jpg" alt="Detalle de película" width="300" title="Detalle de película" />
 
 - Proceso de compra
 
-<img src="https://i.imgur.com/38td0wN.jpg" alt="Proceso de compra paso 1" width="300"/> <img src="https://i.imgur.com/UkRRtqV.jpg" alt="Proceso de compra paso 2" width="300"/> <img src="https://i.imgur.com/3q8HczQ.jpg" alt="Proceso de compra paso 3" width="300"/> <img src="https://i.imgur.com/mQR92Ar.jpg" alt="Proceso de compra paso 4" width="300"/> <img src="https://i.imgur.com/JAD2CTo.jpeg" alt="Proceso de compra paso 5" width="300"/>
+<img src="https://i.imgur.com/38td0wN.jpg" alt="Proceso de compra paso 1" width="300" title="Proceso de compra 1"/> <img src="https://i.imgur.com/UkRRtqV.jpg" alt="Proceso de compra paso 2" width="300" title="Proceso de compra 2"/> <img src="https://i.imgur.com/3q8HczQ.jpg" alt="Proceso de compra paso 3" width="300" title="Proceso de compra 3"/> <img src="https://i.imgur.com/mQR92Ar.jpg" alt="Proceso de compra paso 4" width="300" title="Proceso de compra 4"/> <img src="https://i.imgur.com/JAD2CTo.jpeg" alt="Proceso de compra paso 5" width="300" title="Proceso de compra 5"/>
 
 - Agenda, precios, promociones, nosotros
 
-<img src="https://i.imgur.com/SF9xsyB.jpg" alt="Agenda" width="300"/> <img src="https://i.imgur.com/vz3ELsq.jpg" alt="Precios" width="300"/>
+<img src="https://i.imgur.com/SF9xsyB.jpg" alt="Agenda" width="300" title="Agenda"/> <img src="https://i.imgur.com/vz3ELsq.jpg" alt="Precios" width="300" title="Precios"/>
 <br>
-<img src="https://i.imgur.com/qdzH4Ky.jpg" alt="Promociones" width="300"/> <img src="https://i.imgur.com/5udXwDB.jpg" alt="Nosotros" width="300"/>
+<img src="https://i.imgur.com/qdzH4Ky.jpg" alt="Promociones" width="300" title="Promociones"/> <img src="https://i.imgur.com/5udXwDB.jpg" alt="Nosotros" width="300" title="Nosotros"/>
 
 - Log in y Sign up
 
-<img src="https://i.imgur.com/46T8kSd.jpg" alt="Log In" width="300"/> <img src="https://i.imgur.com/yWz6BQS.jpg" alt="Sign up" width="300"/>
-
-
-
+<img src="https://i.imgur.com/46T8kSd.jpg" alt="Log In" width="300" title="Log In"/> <img src="https://i.imgur.com/yWz6BQS.jpg" alt="Sign up" width="300" title="Sign up"/>
 
 ## Tipografías y gama de colores
 
@@ -81,4 +79,4 @@ Escogimos una estética de tipografías sans serif
 
 Inspirados en "Le Voyage dans la Lune" de George Melies, creamos un imagotipo sencillo.
 
-<img src="https://i.imgur.com/ljfkk9N.jpg" alt="Logo Cine Melies Blanco y Negro" width="300"/>   <img src="https://i.imgur.com/1QPNWHu.jpg" alt="Logo Cine Melies Colores" width="300"/>
+<img src="https://i.imgur.com/ljfkk9N.jpg" alt="Logo Cine Melies Blanco y Negro" width="300" title="Logotipo Blanco y negro"/>   <img src="https://i.imgur.com/1QPNWHu.jpg" alt="Logo Cine Melies Colores" width="300" "Logotipo colores"/>
