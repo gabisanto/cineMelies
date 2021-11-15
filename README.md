@@ -79,4 +79,4 @@ Escogimos una estética de tipografías sans serif
 
 Inspirados en "Le Voyage dans la Lune" de George Melies, creamos un imagotipo sencillo.
 
-<img src="https://i.imgur.com/ljfkk9N.jpg" alt="Logo Cine Melies Blanco y Negro" width="300" title="Logotipo Blanco y negro"/>   <img src="https://i.imgur.com/1QPNWHu.jpg" alt="Logo Cine Melies Colores" width="300" "Logotipo colores"/>
+<img src="https://i.imgur.com/ljfkk9N.jpg" alt="Logo Cine Melies Blanco y Negro" width="300" title="Logotipo Blanco y negro"/>   <img src="https://i.imgur.com/1QPNWHu.jpg" alt="Logo Cine Melies Colores" width="300" title="Logotipo colores"/>
