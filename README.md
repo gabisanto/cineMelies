@@ -13,7 +13,7 @@ Proyecto integrador Digital House
 👓 En nuestro cine, el usuario podrá encontrar una variada oferta de películas tanto modernas con los últimos estrenos de cartelera, como una selección de películas clásicas y/o cine arte planificadas de forma anual según colecciones mensuales.
 
 ## Público dirigido
-👥 Cualquier mayor de 18 años con amor por el cine.
+👥 Cualquier mayor de 18 años con amor por el cine.( y con dinero)
 
 ## Integrantes
 
