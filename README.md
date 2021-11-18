@@ -59,7 +59,7 @@ Wireframes en formato pdf [aquí](https://github.com/gabisanto/grupo_3_cineMelie
 
 <img src="https://i.imgur.com/46T8kSd.jpg" alt="Log In" width="300" title="Log In"/> <img src="https://i.imgur.com/yWz6BQS.jpg" alt="Sign up" width="300" title="Sign up"/>
 
-## Boceto Movile
+## Boceto Mobile
 https://github.com/FlorCar/Bocetos-mobile/blob/02e47d25dbd277e196a2b875e03f232c4aca047a/README.md
 
 ## Tipografías y gama de colores
