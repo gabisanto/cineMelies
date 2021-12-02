@@ -71,13 +71,8 @@ Wireframes en formato pdf [aquí](https://github.com/gabisanto/grupo_3_cineMelie
 Escogimos una estética de tipografías sans serif
 
 - [FiraSans](https://fonts.google.com/specimen/Fira+Sans?category=Sans+Serif,Display,Handwriting,Monospace): Textos cortos
-- [Hind Siliguri](https://fonts.google.com/specimen/Hind+Siliguri?category=Sans+Serif,Display,Handwriting,Monospace): Textos cortos
 - [Alegreya Sans SC](https://fonts.google.com/specimen/Alegreya+Sans+SC?category=Sans+Serif&thickness=7&width=7): Títulos y botones, barra navegador
-- [PT Sans Narrow](https://fonts.google.com/specimen/PT+Sans+Narrow?category=Sans+Serif&query=pt+sans+narrow): Párrafos
-
 
 ## Logotipo
 
-Inspirados en "Le Voyage dans la Lune" de George Melies, creamos un imagotipo sencillo.
-
-<img src="https://i.imgur.com/ljfkk9N.jpg" alt="Logo Cine Melies Blanco y Negro" width="300" title="Logotipo Blanco y negro"/>   <img src="https://i.imgur.com/1QPNWHu.jpg" alt="Logo Cine Melies Colores" width="300" title="Logotipo colores"/>
+<img src="https://i.imgur.com/AFK78b3.png" alt="Logo Cine Melies" width="300" title="Logotipo Cine Melies"/>
