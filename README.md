@@ -39,32 +39,32 @@ Wireframes en formato pdf [aquí](https://github.com/gabisanto/grupo_3_cineMelie
 
 - Homepage
 
-<img src="https://i.imgur.com/KmnZViH.jpg" alt="Home" width="300" title="Home" />   <img src="https://i.imgur.com/pP2yWha.jpg" alt="Al pasar el cursor sobre un poster" width="300" title="Home" />
+<img src="https://i.imgur.com/WtoyAbj.jpg" alt="Home" width="300" title="Home" />
 
 - Detalle de película
 
-<img src="https://i.imgur.com/4KOaPhU.jpg" alt="Detalle de película" width="300" title="Detalle de película" />
+<img src="https://i.imgur.com/gjG75d4.jpg" alt="Detalle de película" width="300" title="Detalle de película" />
 
 - Proceso de compra
 
-<img src="https://i.imgur.com/38td0wN.jpg" alt="Proceso de compra paso 1" width="300" title="Proceso de compra 1"/> <img src="https://i.imgur.com/UkRRtqV.jpg" alt="Proceso de compra paso 2" width="300" title="Proceso de compra 2"/> <img src="https://i.imgur.com/3q8HczQ.jpg" alt="Proceso de compra paso 3" width="300" title="Proceso de compra 3"/> <img src="https://i.imgur.com/mQR92Ar.jpg" alt="Proceso de compra paso 4" width="300" title="Proceso de compra 4"/> <img src="https://i.imgur.com/JAD2CTo.jpeg" alt="Proceso de compra paso 5" width="300" title="Proceso de compra 5"/>
+<img src="https://i.imgur.com/OH7fsJp.jpg" alt="Proceso de compra paso 1" width="300" title="Proceso de compra 1"/> <img src="https://i.imgur.com/WvfSTiJ.jpg" alt="Proceso de compra paso 2" width="300" title="Proceso de compra 2"/> <img src="https://i.imgur.com/EfA8dUN.jpg" alt="Proceso de compra paso 3" width="300" title="Proceso de compra 3"/> <img src="https://i.imgur.com/4duB0l6.jpg" alt="Proceso de compra paso 4" width="300" title="Proceso de compra 4"/> <img src="https://i.imgur.com/nGyueSM.jpg" alt="Proceso de compra paso 5" width="300" title="Proceso de compra 5"/>
 
 - Agenda, precios, promociones, nosotros
 
-<img src="https://i.imgur.com/SF9xsyB.jpg" alt="Agenda" width="300" title="Agenda"/> <img src="https://i.imgur.com/vz3ELsq.jpg" alt="Precios" width="300" title="Precios"/>
+<img src="https://i.imgur.com/tsBSmUg.jpg" alt="Agenda" width="300" title="Agenda"/> <img src="https://i.imgur.com/4oCblA5.jpg" alt="Precios" width="300" title="Precios"/>
 <br>
-<img src="https://i.imgur.com/qdzH4Ky.jpg" alt="Promociones" width="300" title="Promociones"/> <img src="https://i.imgur.com/5udXwDB.jpg" alt="Nosotros" width="300" title="Nosotros"/>
+<img src="https://i.imgur.com/XSFfpo9.jpg" alt="Promociones" width="300" title="Promociones"/> <img src="https://i.imgur.com/juWnfh2.jpg" alt="Nosotros" width="300" title="Nosotros"/>
 
 - Log in y Sign up
 
-<img src="https://i.imgur.com/46T8kSd.jpg" alt="Log In" width="300" title="Log In"/> <img src="https://i.imgur.com/yWz6BQS.jpg" alt="Sign up" width="300" title="Sign up"/>
+<img src="https://i.imgur.com/LiO8a04.jpg" alt="Log In" width="300" title="Log In"/> <img src="https://i.imgur.com/qxp4wcJ.jpg" alt="Sign up" width="300" title="Sign up"/>
 
 
 ## Tipografías y gama de colores
 
 ### Colores
 
-![gama de colores de la página con códigos](https://i.imgur.com/SERJwA8.jpg "Colores de Cine Melies")
+![gama de colores de la página con códigos](https://i.imgur.com/IRhMNJJ.jpg "Colores de Cine Melies")
 
 ### Tipografías
 
