@@ -22,6 +22,10 @@ Proyecto integrador Digital House
 - Curró, Luciano
 - Santoriello, Gabriela
 
+## Tablero de trabajo
+
+[Trello](https://trello.com/cinemelies)
+
 ## Referencias del mercado
 
 - https://filmhallen.nl/?faf=today página holandesa, tiene una estética muy moderna que nos pareció interesante y nos dio ideas respecto a lo visual.
