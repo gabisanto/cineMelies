@@ -74,9 +74,11 @@ Wireframes en formato pdf [aquí](https://github.com/gabisanto/grupo_3_cineMelie
 
 Escogimos una estética de tipografías sans serif
 
-- [FiraSans](https://fonts.google.com/specimen/Fira+Sans?category=Sans+Serif,Display,Handwriting,Monospace): Textos cortos
-- [Alegreya Sans SC](https://fonts.google.com/specimen/Alegreya+Sans+SC?category=Sans+Serif&thickness=7&width=7): Títulos y botones, barra navegador
+- [FiraSans](https://fonts.google.com/specimen/Fira+Sans?category=Sans+Serif,Display,Handwriting,Monospace): Títulos y botones, barra navegador
+- [Alegreya Sans SC](https://fonts.google.com/specimen/Alegreya+Sans+SC?category=Sans+Serif&thickness=7&width=7): Textos cortos
 
 ## Logotipo
 
-<img src="https://i.imgur.com/AFK78b3.png" alt="Logo Cine Melies" width="300" title="Logotipo Cine Melies"/>
+<img src="https://i.imgur.com/0hYQhxq.jpg" alt="Logo Cine Melies" width="300" title="Logotipo Cine Melies"/>
+
+<img src="https://i.imgur.com/jt05oxA.jpg" alt="Logo Cine Melies" width="300" title="Logotipo Cine Melies"/>
