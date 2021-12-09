@@ -21,6 +21,7 @@
 
     <!--CSS-->
     <link rel="stylesheet" href="/css/home.css" />
+    <link rel="stylesheet" href="/css/header.css">
 
     <!--Librerías-->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
@@ -32,16 +33,17 @@
 
 <body>
 
-<header>
-    <nav>
+<header class = "header_superior">
+    <nav class ="main_nav">
         <picture>
-            <a href="http://localhost:3001"><img src="/img/logo v2.jpeg" alt="Logo Cine Melies" id="logo"></a>
+            <a href="http://localhost:3001"><img src="/img/LOGOVFINAL2.png" alt="Logo Cine Melies" id="logo"></a>
         </picture>
+
         <dl class="nav01">
-            <dt class="item"><a href="#">Agenda</a></dt>
-            <dt class="item"><a href="#">Precios</a></dt>
-            <dt class="item"><a href="#">Combos</a></dt>
-            <dt class="item"><a href="#">Nosotros</a></dt>
+            <dt class="item"><a class="option" href="#">Agenda</a></dt>
+            <dt class="item"><a class="option" href="#">Precios</a></dt>
+            <dt class="item"><a class="option" href="#">Combos</a></dt>
+            <dt class="item"><a class="option" href="#">Nosotros</a></dt>
         </dl>
         <form class="search" action="/" method="get">
             <fieldset>
@@ -51,18 +53,38 @@
                 </button>
             </fieldset>
         </form>
-        <section id="nav02">
-            <i class="fas fa-user iconNav"></i>
-            <i class="fas fa-shopping-cart iconNav"></i>
-            <a href="#"><i class="fas fa-bars"></i></a>
+        <section >
+            <i id="nav02"class="fas fa-user iconNav"></i>
+            <i id="nav02"class="fas fa-shopping-cart iconNav"></i>
+            <a href="#"><i id="nav02" class="fas fa-bars"></i></a>
         </section>
     </nav>
 
-    <section id="carrousel">
-
-    </section>
+    
     
 </header>
+
+<div id="slider_container">
+    <ul class="slider">
+        <li id="slide1"><img src="/img/1.png" alt=""></li>
+    
+        <li id="slide2"> <img src="/img/2.png" alt="">    </li>
+
+        <li id="slide3"> <img src="/img/3.png" alt="">    </li>
+        <li id="slide4"> <img src="/img/4.png" alt="">    </li>
+        <li id="slide5"> <img src="/img/7.png" alt="">    </li>
+
+    </ul>
+
+    <ul class="menu">
+        <li><a href="#slide1"></a></li>
+        <li><a href="#slide2"></a></li>
+        <li><a href="#slide3"></a></li>
+        <li><a href="#slide4"></a></li>
+        <li><a href="#slide5"></a></li>
+    </ul>
+
+</div>
 
 <main>
     
