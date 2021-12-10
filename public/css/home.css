@@ -14,10 +14,50 @@ font-family: 'Fira Sans', sans-serif; ----> botones, menú etc
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    
   }
 
 dl {
     list-style-type: none;
 }
 
-/* css del main de la pagina*/
+main{
+  background-color: rgb(242, 158, 56);
+  text-align: center;
+}
+
+/* css del main */
+
+#main-posters{
+  border: dashed 1px blue;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 2em;
+  background-color: #EDEEF2 ;
+  margin: 2em; 
+}
+
+.images img{
+ max-width: 50%;
+ padding-bottom: 2em;
+}
+
+.titulos{
+  font-family: 'Alegreya Sans', sans-serif; 
+}
+
+#info-dune{
+  font-family: 'Alegreya Sans', sans-serif; 
+  background-color:#EDEEF2;
+  opacity: 50%;
+  width: 50%;
+  position: relative;
+  left: 18em;
+  top: 11em;
+  display: none;
+}
+
+#detalle-dune{
+  display: none;
+}
