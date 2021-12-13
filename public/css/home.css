@@ -36,6 +36,7 @@ main{
 display: flex;
 flex-direction: column;
 margin: 10px;
+padding-bottom: 2em;
 }
 
 .images img{
@@ -66,8 +67,6 @@ margin: 10px;
 section:hover #info-dune {
   display: block;
 }
-
-
 
 
 
