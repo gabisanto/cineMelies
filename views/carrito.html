@@ -581,25 +581,33 @@
 
                     <h2 id="titulos">Proceso de compra | PASO 3</h2>
                     <form action="/" id="formPasoTres" method="post">
-                        <fieldset class="fieldDatos">
-                            <label for="nombreApellido"></label>
-                            <input type="text" name="nombreApellido" class="caja" placeholder="Nombre y apellido" required  >
+                        <fieldset class="fieldNuevo">
+                            <label for="nombreApellido"><input type="text" name="nombreApellido" class="cajaNuevo" placeholder="Nombre y apellido" required  >
+                            <span>Nombre y apellido</span>
+                            </label>
+                            
                         </fieldset>
 
-                        <fieldset class="fieldDatos">
-                            <label for="dni"></label>
-                            <input type="text" name="dni" class="caja" placeholder="DNI" required  >
-                        </fieldset>
+                        <fieldset class="fieldNuevo">
+                          <label for="dni"><input type="text" name="dni" class="cajaNuevo" placeholder="DNI" required  >
+                          <span>DNI</span>
+                          </label>
+                          
+                      </fieldset>
 
-                        <fieldset class="fieldDatos">
-                            <label for="telefono"></label>
-                            <input type="text" name="telefono" class="caja" placeholder="Teléfono" required  >
-                        </fieldset>
+                      <fieldset class="fieldNuevo">
+                        <label for="telefono"><input type="text" name="telefono" class="cajaNuevo" placeholder="Teléfono" required  >
+                        <span>Teléfono</span>
+                        </label>
+                        
+                    </fieldset>
 
-                        <fieldset class="fieldDatos">
-                            <label for="email"></label>
-                            <input type="text" name="email" class="caja" placeholder="E-mail" required  >
-                        </fieldset>
+                    <fieldset class="fieldNuevo">
+                      <label for="email"><input type="text" name="email" class="cajaNuevo" placeholder="E-mail" required  >
+                      <span>E-mail</span>
+                      </label>
+                      
+                  </fieldset>
 
                         <fieldset class="botones">
                             <button type="button" class="reset">Paso anterior</button> 
@@ -615,35 +623,47 @@
 
                     <h2 id="titulos">Proceso de compra | Pagar</h2>
                     <form action="/" id="formPasoCinco" method="post">
-                        <fieldset class="fieldDatos">
-                            <label for="numeroTarjeta"></label>
-                            <input type="text" name="numeroTarjeta" class="caja" placeholder="Número de la tarjeta" required  >
-                        </fieldset>
+                      <fieldset class="fieldNuevo">
+                        <label for="tarjeta"><input type="text" name="tarjeta" class="cajaNuevo" placeholder="Número de tarjeta" required  >
+                        <span>Número de tarjeta</span>
+                        </label>
+                        
+                    </fieldset>
 
-                        <fieldset class="fieldDatos">
-                            <label for="titular"></label>
-                            <input type="text" name="titular" class="caja" placeholder="Titular" required  >
-                        </fieldset>
+                    <fieldset class="fieldNuevo">
+                      <label for="titularTarjeta"><input type="text" name="titularTarjeta" class="cajaNuevo" placeholder="Titular de la tarjeta" required  >
+                      <span>Titular de la tarjeta</span>
+                      </label>
+                      
+                  </fieldset>
 
-                        <fieldset class="fieldDatos">
-                            <label for="dniTarjeta"></label>
-                            <input type="text" name="dniTarjeta" class="caja" placeholder="DNI del titular" required  >
-                        </fieldset>
+                  <fieldset class="fieldNuevo">
+                    <label for="dniTarjeta"><input type="text" name="dniTarjeta" class="cajaNuevo" placeholder="DNI del titular" required  >
+                    <span>DNI del titular</span>
+                    </label>
+                    
+                </fieldset>
 
-                        <fieldset class="fieldDatos">
-                            <label for="banco"></label>
-                            <input type="text" name="banco" class="caja" placeholder="Banco" required  >
-                        </fieldset>
+                <fieldset class="fieldNuevo">
+                  <label for="banco"><input type="text" name="banco" class="cajaNuevo" placeholder="Banco" required  >
+                  <span>Banco</span>
+                  </label>
+                  
+              </fieldset>
 
-                        <fieldset class="fieldDatos">
-                            <label for="fechaVencimiento"></label>
-                            <input type="date" name="fechaVencimiento" class="caja" placeholder="Fecha de vencimiento" required  >
-                        </fieldset>
+              <fieldset class="fieldNuevo">
+                <label for="fechaVto"><input type="date" name="fechaVto" class="cajaNuevo" placeholder="Fecha de Vencimiento" required  >
+                <span>Fecha de vencimiento</span>
+                </label>
+                
+            </fieldset>
 
-                        <fieldset class="fieldDatos">
-                            <label for="codigoSeguridad"></label>
-                            <input type="number" name="codigoSeguridad" class="caja" placeholder="Código de seguridad" required  >
-                        </fieldset>
+            <fieldset class="fieldNuevo">
+              <label for="numeroSeguridad"><input type="text" name="numeroSeguridad" class="cajaNuevo" placeholder="Número de seguridad" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" required  >
+              <span>Número de seguridad</span>
+              </label>
+              
+          </fieldset>
                         
                         <fieldset class="botones">
                             <button type="button" class="reset">Paso anterior</button> 
@@ -657,7 +677,7 @@
                 
 
 
-            </form>
+            <!-- </form> -->
         </section>
     </main>
 
