@@ -14,4 +14,6 @@ app.get('/register',(req,res) => res.sendFile(path.resolve(__dirname,'./views/re
 
 app.get('/login',(req,res) => res.sendFile(path.resolve(__dirname,'./views/login.html')))
 
+app.get('/carrito',(req,res) => res.sendFile(path.resolve(__dirname,'./views/carrito.html')))
+
 app.use(express.static(path.resolve(__dirname,'./public')))
