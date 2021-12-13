@@ -434,7 +434,7 @@ body {
 
 /*Estilos paso 3*/
 
-.caja{
+/* .caja{
     order:none;
     background-color: white;
     font-family: 'Fira Sans', sans-serif;
@@ -452,7 +452,88 @@ body {
 
 .caja:active {
     transform: translateY(2px);
+} */
+
+/*ESTILOS DE INPUTS*/
+
+.fieldNuevo{
+  border:none;
+  display:block;
+ 
+  width:100%;
+  position:relative;
+  margin-bottom:0.5em;
 }
+
+.cajaNuevo{
+  border-radius:5px;
+  width:100%;
+  height:45px;
+  padding:1em;
+  display:block;
+  /* margin: 0 auto; */
+  border:none;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+  background-color: white;
+  /* font-weight: bold; */
+  color: #747373;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2), inset 0 -3px 0 rgba(0,0,0,0.22);
+}
+
+.fieldNuevo label input::-moz-placeholder {
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  color: #444444;
+  /* font-weight: bold; */
+}
+.fieldNuevo label input:-ms-input-placeholder {
+  -ms-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  color: #444444;
+  /* font-weight: bold; */
+}
+.fieldNuevo label input::placeholder {
+  transition: all 0.2s ease-in-out;
+  color: #444444;
+  /* font-weight: bold; */
+}
+
+.fieldNuevo label input:focus, .fieldNuevo label input.populated {
+  padding-top: 28px;
+  padding-bottom: 12px;
+}
+.fieldNuevo label input:focus::-moz-placeholder, .fieldNuevo label input.populated::-moz-placeholder {
+      color: transparent;
+  }
+.fieldNuevo label input:focus:-ms-input-placeholder, .fieldNuevo label input.populated:-ms-input-placeholder {
+      color: transparent;
+  }
+.fieldNuevo label input:focus::placeholder, .fieldNuevo label input.populated::placeholder {
+      color: transparent;
+  }
+.fieldNuevo label input:focus + span, .fieldNuevo label input.populated + span {
+     opacity: 1;
+      top: 2px;
+  }
+
+.fieldNuevo label span {
+font-size: .8rem;
+color: #A9A9A9;
+position: absolute;
+top: 0px;
+/* left: 20px; */
+opacity: 0;
+padding-left:1em;
+transition: all 0.2s ease-in-out;
+font-family: 'Fira Sans', sans-serif;
+}
+
+.cajaNuevo:active {
+  transform: translateY(2px);
+}
+
+/*FIN ESTILOS INPUT*/
 
 /*Estilos paso 4*/
 
@@ -466,39 +547,46 @@ body {
 
 @media(min-width:769px){
 
-    .botones{
-        justify-content: right;
-    }
+  .botones{
+      justify-content: right;
+  }
 
 /*Paso 1*/
 
-    #titulos{
-        font-size: 24px;
-    }
+  #titulos{
+      font-size: 24px;
+  }
 
-    #selectPelicula,.selectEntradas,.selectFecha{
-        margin-left:3em;
-    }
+  #selectPelicula,.selectEntradas,.selectFecha{
+      margin-left:3em;
+  }
 
-    #formPasoUno,#formPasoTres, #formPasoCinco fieldset{
-        margin-left:25%;
-    }
+  /* #formPasoUno,#formPasoTres, #formPasoCinco fieldset{
+      margin: 0 auto;
+  } */
 
-    
+  #formPasoUno{
+    align-self:center;
+    width:400px;
+  }
+
+  
+
 /*Paso 2*/
 
 .butacasCine {
-    
-    margin-left:25%;
-    
-  }
+  
+  margin-left:25%;
+  
+}
 
 
 /*paso 3*/
 
-  .caja{
-      width:70%;
-  }
+#formPasoTres,#formPasoCinco{
+align-self:center;
+width:500px
+}
 
 }
 
