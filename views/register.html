@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Register</title>
+    <link href="/css/register.css" rel="stylesheet">
+</head>
+<body>
+    
+<!-- Sección Main -->
+<main>
+    <article> <h3> Registrarte </h3> </article>
+    <figure>
+        <img src="cinefilo.png" alt="">
+    </figure>
+<section>
+    <section  class="main-form" >
+    <form action="/" method="post" >
+    <fieldset>
+    <legend class="dn">Nombre y Apellido </legend>
+    <label class="dn" for="nombreCompleto">Nombre y Apellido </label>
+    <input type="text" name="nombreCompleto" id="nombreCompleto" placeholder="Nombre y Apellido" required >
+    </fieldset>
+
+    <fieldset>
+    <legend class="dn" > DNI </legend>
+    <label class="dn"  for="Documento"> DNI </label>
+    <input type="number" name="Documento" id="Documento" placeholder="Documento"  required >
+    </fieldset>
+
+    <fieldset >
+    <legend  > Fecha de Nacimiento </legend>
+    <label for="fecha" class="dn"> Fecha de Nacimiento </label>
+    <input type="date" class="t-input" name="fecha" id="fecha" placeholder="fecha"  required >
+    </fieldset>
+
+    <fieldset>
+    <legend class="dn" > Email </legend>
+    <label  class="dn" for="email"> Email</label>
+    <input type="email" name="email" id="email" placeholder="Email"  required >
+    </fieldset>
+
+    <fieldset>
+    <legend class="dn" > Contraseña </legend>
+    <span><label for="clave"> Contraseña  </label></span>
+    <input type="password" class="t-input" name="confirm" id="confirm" required >
+    </fieldset>
+
+    <fieldset>
+    <legend class="dn" > Confirmar Contraseña </legend>
+    <span><label for="confirm"> Confirmar Contraseña </label></span>
+    <input type="password" name="confirm" id="confirm" class="clave" required >
+    </fieldset>
+
+    <fieldset class="botones">
+    <legend class="dn"> Botones del Formulario </legend>
+    <button type="submit" class="btn"> Ingresar </button>
+    </fieldset>
+    </form>
+    </section>
+</section>
+</main>
+</body>
+
+</html>

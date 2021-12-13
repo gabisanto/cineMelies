@@ -1,0 +1,62 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    
+  }
+
+  /*seccion main*/
+
+main{
+    background-color: rgb(242, 158, 56);
+    text-align: center;
+  }
+  
+
+.dn{
+  display: none;
+}
+
+.main-form{
+  background-color: #ebebeb;
+  padding: 2em;
+  margin:.25rem;
+  display: flex;  
+}
+
+.fr{
+  width: 95vw;
+ 
+}
+
+form fieldset{
+  display: flex;
+  flex-wrap: wrap;
+  border: none;
+  margin-bottom: 2em  ;
+  align-items: center;
+  justify-content: center;
+}
+
+form fieldset input{
+  flex: 1 0 auto;
+  border: none;
+  outline: none;
+  padding: 1em;
+  border-radius: 5px;
+  font-size: 12px;
+}
+
+form fieldset button {
+  flex: 1 0 auto;
+  border: none;
+  outline: none;
+  padding: 1em;
+  border-radius: 5px;
+  background-color: #F29E38;
+  color: white;
+  font-size: 12px;
+
+}
+
+
