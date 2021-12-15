@@ -20,4 +20,6 @@ app.get('/precios',(req,res) => res.sendFile(path.resolve(__dirname,'./views/pre
 
 app.get('/combos',(req,res) => res.sendFile(path.resolve(__dirname,'./views/combos.html')))
 
+app.get('/agenda',(req,res) => res.sendFile(path.resolve(__dirname,'./views/agenda.html')))
+
 app.use(express.static(path.resolve(__dirname,'./public')))
