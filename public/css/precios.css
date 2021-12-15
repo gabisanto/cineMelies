@@ -22,37 +22,68 @@
 ._2d{
     display:flex;
     flex-direction: row; 
+    border-radius: 5%;
     justify-content:space-around;
     align-items: center;
     background-color:#ebebeb;
-    margin-bottom: 3%;
+    margin: 2em;
+    transition:all 200ms;
+    
 }
 ._3d{
     display:flex;
     flex-direction: row;
-    
+    border-radius: 5%;
     justify-content:space-around;
     align-items: center;
     background-color:#ebebeb;
-    margin-bottom: 3%;
+    margin: 2em;
 
 }
 
+._2d:hover{
+    box-shadow: -2px 2px 18px 4px rgba(0,0,0,0.75);
+   
+}
+._3d:hover{
+    box-shadow: -2px 2px 18px 4px rgba(0,0,0,0.75);
+}
 
- #img_2d, #img_3d{
+
+ #img_2d{
     width:400px;
+    height: 300px;
+    max-height: 65vh;
+    border-radius: 10%;
     max-width: 65vw;
+    padding:3px;
+    margin: 10% 5px;
     object-fit: cover;
 }
 
+#img_3d{
+    width:400px;
+    max-width: 65vw;
+    height: 300px;
+    max-height: 65vh;
+    object-fit: cover;
+    padding:3px;
+    margin: 10% 5px;
+}
 .tarifas_title{
     font-size: 1.17em;
     text-align: center;
     font-family: 'Alegreya Sans', sans-serif;
+    margin-top: 15px;
 }
 .salas_title{
     font-size: 36px;
-    text-align: center;
+    text-align: left;
+}
+.la_linea{
+  height: 10px;
+  width: 100%;
+  background-color: #262626;
 }
 
 .precios {
@@ -61,11 +92,13 @@
 }
 div ul {
     padding-top:20px;
+    
 }
 div ul li {
     margin: 5px;
     font-size: 24px;
     font-family: 'Alegreya Sans', sans-serif;
+   
 }
 
 .terminos h3 {
