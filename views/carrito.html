@@ -70,8 +70,7 @@
 
         <h2 id="titulos">Proceso de compra | PASO 1</h2>
         <form action="/" id="formPasoUno" method="post">
-                        <fieldset>
-                            <label for="pelicula">Película </label>
+                        <fieldset class="fieldNuevo">
                                 <select name="Pelicula" id="selectPelicula">
                                     <option selected value="0"> Elija una película </option>
                                         <optgroup label="Clásica"> 
@@ -89,7 +88,7 @@
                                 </select>
                         </fieldset>
                         
-                        <fieldset>
+                        <fieldset class="filedNuevo">
                             <label for="cantEntradas" >Cantidad de entradas </label>
                             <input type="number" class="selectEntradas" id="cantEntradas" name="cantEntradas" min="1" max="10">
                         </fieldset>
@@ -109,7 +108,7 @@
                                 <label class="button-label" for="funcionTres">8PM</label> 
                         </fieldset>
 
-                        <fieldset class="botones">
+                        <fieldset class="botonNuevo">
                             <button type="submit" class="enviar">Paso siguiente</button>
                             <button type="reset" class="reset">Cancelar</button> 
                         </fieldset>
@@ -117,7 +116,7 @@
                     </form>
 
                 <h2 id="titulos">Proceso de compra | PASO 2</h2>
-                <form action="/" method="post">
+                <form action="/" id="formPasoDos" method="post">
                     
                     
                     
@@ -571,7 +570,7 @@
                           </li>
                         </ol>
                         
-                        <fieldset class="botones">
+                        <fieldset class="botonNuevo">
                             <button type="button" class="reset">Paso anterior</button> 
                             <button type="submit" class="enviar">Paso siguiente</button> 
                         </fieldset>
@@ -609,7 +608,7 @@
                       
                   </fieldset>
 
-                        <fieldset class="botones">
+                        <fieldset class="botonNuevo">
                             <button type="button" class="reset">Paso anterior</button> 
                             <button type="submit" class="enviar">Paso siguiente</button> 
                         </fieldset>
@@ -665,7 +664,7 @@
               
           </fieldset>
                         
-                        <fieldset class="botones">
+                        <fieldset class="botonNuevo">
                             <button type="button" class="reset">Paso anterior</button> 
                             <button type="submit" class="enviar">Pagar</button> 
                         </fieldset>
