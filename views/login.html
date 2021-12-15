@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+
     <!--Librerías-->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -43,7 +44,7 @@
 </header>
 
 <main>
-    <article>  <h3> Iniciar Sesión  </h3>  </article>
+    <article>  <h3> INGRESÁ TU CUENTA  </h3>  </article>
 <section class="main-form"> 
     <figure>
         <img src="/img/cinefilo.png" alt="">
@@ -58,7 +59,9 @@
     <fieldset>
         <legend > Contraseña </legend>
         <label for="clave" class="dn"> Contraseña  </label>
-        <input type="password" name="confirm" id="confirm"placeholder="Escribí tu contraseña"required >
+        <input type="password" name="confirm" id="confirm" placeholder="Escribí tu contraseña" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+        title="Debe contener 8 o más caracteres de al menos un número y una letra mayúscula y minúscula" required >
+    </fieldset>
     </fieldset>
 
     <fieldset class="botones">
@@ -67,7 +70,7 @@
     </fieldset>
     </form>
 </section>
-<article> <h3> ¿ No ténes Usuario ? <a href="/register"> ¡Registrate! </h3> </a> </article>
+<article id="txt-register"> <h3> ¿ No ténes Usuario ? <a href="/register" id="register"> ¡Registrate! Acá </h3> </a> </article>
 
 </main>
 

@@ -45,7 +45,8 @@
     
 <!-- Sección Main -->
 <main>
-    <article> <h3> Nuevo Cinéfilo </h3> </article>
+<section> 
+    <article> <h3> NUEVO CINÉFILO </h3> </article>
     <section  class="main-form" >
         <figure>
             <img src="/img/cinefilo.png">
@@ -78,21 +79,23 @@
     <fieldset>
     <legend class="dn" > Contraseña </legend>
     <span> <label for="clave"  > Contraseña  </label> </span>
-    <input type="password" class="t-input" name="confirm" id="confirm" required >
+    <input type="password" class="t-input" name="confirm" id="confirm" placeholder="Escribí tu contraseña" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+    title="Debe contener 8 o más caracteres de al menos un número y una letra mayúscula y minúscula" required >
     </fieldset>
 
     <fieldset>
     <legend class="dn" > Confirmar Contraseña </legend>
-    <span><label for="confirm"   > Confirmar Contraseña </label></span>
+    <span id="confirmar"><label for="confirm"> Confirmar Contraseña </label> </span>
     <input type="password" name="confirm" id="confirm" class="clave" required >
     </fieldset>
 
     <fieldset class="botones">
     <legend class="dn"> Botones del Formulario </legend>
-    <button type="submit" class="btn"> Ingresar </button>
+    <button type="submit" class="btn"> Registrarse </button>
     </fieldset>
     </form>
     </section>
+</section>
 </main>
 
 <footer id="footer">

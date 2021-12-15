@@ -108,78 +108,84 @@ img{
 }
 
 
+ /*seccion main*/
 
-
-/*seccion main*/
-
-main{
-    background-color: rgb(242, 158, 56);
-    text-align: center;
-    font-family: 'Alegreya Sans', sans-serif; 
-  }
-  
-h3{
-    padding: .50em;
+ main{
+  background-color: rgb(242, 158, 56);
+  text-align: center;
+  font-family: 'Alegreya Sans', sans-serif; 
+  text-align: center;
 }
 
-
-.dn {
-    display: none;
+img{
+width: 40%;
+padding-top: .50em;
 }
 
-label{
-margin-bottom: 1em;
-}
-
-legend{
-    margin-bottom: 1em;
-    font-weight: bold;
+.dn{
+display: none;
 }
 
 .main-form{
-    background-color: #ebebeb;
-    padding: 2em;
-    margin: 1em;
-    border-radius: 2px;
-    display: flex;  
-}
- 
-
-span label{
-    font-weight: bold;
+background-color: #ebebeb;
+margin: 1rem 4rem ;
+display: flex;  
+border-radius: 3px;
+flex-direction: column;
+align-items: center;
 }
 
-.fr {
-    width: 65vw;
-   
+
+.fr{
+padding: 1em;
+
 }
 
 .fr fieldset{
-    display: flex;
-    flex-wrap: wrap;
-    border: none;
-    margin-bottom: 2em  ;
-    align-items: center;
-    justify-content: space-between;
-
-}
-
-.p-usuario{
 display: flex;
-justify-content: space-around
+border: none;
+margin-bottom: 2em;
+flex-direction: column;
 }
 
+.fr fieldset legend{
+text-align: left;
+padding-bottom: .25em ;
+}
 
 .fr fieldset input{
-    flex: 1 0 auto;
-    border: none;
-    outline: none;
-    padding: 1em;
-    border-radius: 5px;
-    font-size: 12px;
+flex: 1 0 auto;
+border: none;
+outline: none;
+padding: 1em;
+border-radius: 5px;
+font-size: 12px;
+border-radius: 0.25em;
+box-shadow: 0 3px 10px rgb(0 0 0 / 20%), inset 0 -3px 0 rgb(0 0 0 / 22%);
+}
+
+.fr fieldset button {
+flex: 1 0 auto;
+border: none;
+padding: 1em;
+border-radius: 5px;
+background-color: #F29E38;
+color: white;
+font-size: 12px;
 
 }
 
+.botones{
+border-radius: 0.25em;
+box-shadow: 0 3px 10px rgb(0 0 0 / 20%), inset 0 -3px 0 rgb(0 0 0 / 22%);
+}
+
+
+h3{
+font-size: 24px;
+padding-top: 1em;
+text-align: center;
+}
 
 .t-input{
   padding-right: 2em;
@@ -187,23 +193,13 @@ justify-content: space-around
   margin-top: 1em;
 }
 
-.botones{
-    width: 50%; 
+span{
+  text-align: left;
 }
 
-.fr fieldset button {
-    flex: 1 0 auto;
-    border: none;
-    outline: none;
-    padding: 1em;
-    border-radius: 5px;
-    background-color: #F29E38;
-    color: white;
-    font-size: 12px;
-  
-  }
-  
-
+#confirmar{
+  padding-bottom: .75em;
+}
   /*footer*/
 
 
