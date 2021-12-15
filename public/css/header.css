@@ -15,7 +15,7 @@ dl {
     background-color: #262626;
     font-family: 'Fira Sans', sans-serif;
     padding: 5px 20px;
-    height: 5vh;
+    height: 7vh;
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-evenly;
@@ -54,13 +54,17 @@ dl {
     color:#F29E38;
 }
 
-.search {
+form .search {
     display: flex;
-    
+    max-width: 65vw;
     /*margin-right:2em;*/
     flex-basis: auto;
     border:none;
     outline: none;
+    
+    
+    
+    
 
 }
 
@@ -69,7 +73,10 @@ dl {
     flex-grow: 1;
     justify-content:space-around;
     border: none;
-    width:100%;
+   
+    
+    
+    
     
 }
 
@@ -80,7 +87,7 @@ dl {
     display:flex;
     flex-grow: 1;
     background-color: white;
-    height: 30px;
+    height: 5vh;
     width:100%
 }
 
@@ -187,6 +194,7 @@ dl {
 /*media queries*/
 
 @media(min-width: 769px){
+    
     .nav01{
         display: flex;
         
