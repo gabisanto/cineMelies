@@ -16,4 +16,8 @@ app.get('/login',(req,res) => res.sendFile(path.resolve(__dirname,'./views/login
 
 app.get('/carrito',(req,res) => res.sendFile(path.resolve(__dirname,'./views/carrito.html')))
 
+app.get('/precios',(req,res) => res.sendFile(path.resolve(__dirname,'./views/precios.html')))
+
+app.get('/combos',(req,res) => res.sendFile(path.resolve(__dirname,'./views/combos.html')))
+
 app.use(express.static(path.resolve(__dirname,'./public')))
