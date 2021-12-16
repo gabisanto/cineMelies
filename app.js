@@ -22,4 +22,6 @@ app.get('/combos',(req,res) => res.sendFile(path.resolve(__dirname,'./views/comb
 
 app.get('/agenda',(req,res) => res.sendFile(path.resolve(__dirname,'./views/agenda.html')))
 
+app.get('/nosotros',(req,res) => res.sendFile(path.resolve(__dirname,'./views/nosotros.html')))
+
 app.use(express.static(path.resolve(__dirname,'./public')))

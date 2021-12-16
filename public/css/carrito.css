@@ -439,6 +439,37 @@ font-family: 'Fira Sans', sans-serif;
 
 /*Estilos paso 4*/
 
+#resumenCompra{
+  display:flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+#resumenCompra picture {
+  width:50%;
+  margin-bottom:-2%;
+  z-index: 1;
+}
+
+#resumenCompra picture img{
+  width:100%;
+  box-shadow:0 3px 10px rgba(0,0,0,0.2), inset 0 -3px 0 rgba(0,0,0,0.22);
+  
+}
+
+#detalleCompra{
+  background-color: white;
+  width:70%;
+  height:fit-content;
+  padding:2em 2em;
+  border-radius: 5px;
+  box-shadow:0 3px 10px rgba(0,0,0,0.2), inset 0 -3px 0 rgba(0,0,0,0.22);
+  font-weight: bold;
+  font-size:14px;
+  text-align:center
+}
+
 
 
 /*Estilos paso 5*/
@@ -489,9 +520,43 @@ font-family: 'Fira Sans', sans-serif;
 
 /*paso 3*/
 
-#formPasoTres,#formPasoCinco{
+#formPasoTres,#formPasoCuatro,#formPasoCinco{
 align-self:center;
 width:500px
+}
+
+/* PASO 4 */
+
+#resumenCompra{
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#resumenCompra picture {
+  width:30%;
+  margin-right:-5%;
+  z-index:1;
+  margin-bottom:0
+}
+
+#resumenCompra picture img{
+  width:100%;
+  box-shadow:0 3px 10px rgba(0,0,0,0.2), inset 0 -3px 0 rgba(0,0,0,0.22);
+  
+}
+
+#detalleCompra{
+  background-color: white;
+  width:70%;
+  height:fit-content;
+  padding:2em 4em;
+  border-radius: 5px;
+  box-shadow:0 3px 10px rgba(0,0,0,0.2), inset 0 -3px 0 rgba(0,0,0,0.22);
+  font-weight: bold;
+  
+  font-size:18px
 }
 
 }
