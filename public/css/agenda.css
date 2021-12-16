@@ -1,0 +1,148 @@
+/*Código Colores
+#0D1026 negro azulado
+#F2B035 naranja claro
+#F29E38 naranja oscuro
+#EDEEF2 gris
+#262626 casi negro
+
+font-family: 'Alegreya Sans', sans-serif; ----> textos
+font-family: 'Fira Sans', sans-serif; ----> botones, menú etc
+*/
+
+
+* {
+    box-sizing: border-box;
+    /* padding: 0;
+    margin: 0; */
+    
+  }
+
+  main,html{
+    background-color: rgb(242, 158, 56);
+    
+}
+
+html, body {
+    height: 100%;
+  }
+
+#agendaMain{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: justify;
+    padding: 1.5em;
+    background-color: #EDEEF2 ;
+    margin: 2em; 
+    font-family: 'Alegreya Sans', sans-serif; 
+}
+
+#selectMesAgenda{
+    border:none;
+    background-color: white;
+    font-family: 'Fira Sans', sans-serif;
+    padding: 1em;
+    /* margin-left: 15px; */
+    border-radius: 0.25em;
+    width: 100%;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2), inset 0 -3px 0 rgba(0,0,0,0.22);
+    transition: 0.3s;
+}
+
+.titulos{
+    font-family: 'Alegreya Sans', sans-serif; 
+    outline:none;
+    border:none;
+    margin-bottom: 2em;
+    font-weight: bold;
+    font-size:18px;
+}
+
+.tituloCiclo{
+    padding-bottom:1em;
+}
+
+#cicloDeCineEnero,#cicloDeCineFebrero,#cicloDeCineMarzo,#cicloDeCineAbril,#cicloDeCineMayo,#cicloDeCineJunio,#cicloDeCineJulio,#cicloDeCineAgosto,#cicloDeCineSeptiembre,#cicloDeCineOctubre,#cicloDeCineNoviembre,#cicloDeCineDiciembre {
+    padding-top:3em;
+}
+
+.descripcionCiclo{
+    display: flex;
+    flex-direction: column;
+    padding-bottom:2em;
+    justify-items: center;
+}
+
+.textoCiclo{
+    margin-top:5px;
+    text-align: justify;
+    font-family:'Alegreya Sans', sans-serif;
+}
+
+.textoCiclo i{
+    color: #F2B035;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.descripcionCiclo picture{
+    width:100%;
+    
+}
+
+.descripcionCiclo picture img{
+    width:80%;
+    display:block;
+    margin: 0 auto;
+}
+
+.postersPeliculas{
+    display: flex;
+    flex-direction: column;
+    flex-wrap:nowrap;
+    
+    
+}
+
+.postersPeliculas picture img {
+    width:100%;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2), inset 0 -3px 0 rgba(0,0,0,0.22);
+    padding-bottom: 5px;
+    margin-top: 20px;
+    
+}
+
+@media(min-width:769px){
+
+
+    .titulos{
+        font-size: 24px;
+    }
+
+    .descripcionCiclo{
+        flex-direction: row;
+    }
+
+    .postersPeliculas picture img {
+        width:20vw;
+        margin-right:5px;
+    }
+
+    .postersPeliculas{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .descripcionCiclo picture{
+        width:100%;
+        padding-right:2em;
+        
+    }
+    
+    .descripcionCiclo picture img{
+        width:100%;
+        
+    }
+
+}
