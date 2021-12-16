@@ -22,7 +22,7 @@
 ._2d{
     display:flex;
     flex-direction: row; 
-    border-radius: 5%;
+    
     justify-content:space-around;
     align-items: center;
     background-color:#ebebeb;
@@ -33,7 +33,7 @@
 ._3d{
     display:flex;
     flex-direction: row;
-    border-radius: 5%;
+    
     justify-content:space-around;
     align-items: center;
     background-color:#ebebeb;
@@ -41,13 +41,7 @@
 
 }
 
-._2d:hover{
-    box-shadow: -2px 2px 18px 4px rgba(0,0,0,0.75);
-   
-}
-._3d:hover{
-    box-shadow: -2px 2px 18px 4px rgba(0,0,0,0.75);
-}
+
 
 
  #img_2d{
