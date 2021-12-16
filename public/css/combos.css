@@ -68,6 +68,7 @@
   justify-content:justify;
   align-items: flex-start;
   font-family: 'Alegreya Sans', sans-serif;
+  margin-left: 3%;
 }
 
 .descripcion_title{
@@ -80,7 +81,7 @@
 }
   
 .img_compra_online{
-  max-width: 100%;
+  width: 100%;
 }
  
 /* totalizador */ 
@@ -275,4 +276,21 @@ font-family: 'Alegreya Sans', sans-serif;
 
 .botonNuevo button:active {
   transform: translateY(var(--border-size));
+}
+
+@media (max-width:681px){
+
+  .main_box{
+    display:flex;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+  }
+.column_box {
+  width:90%;
+  margin-bottom: 5%;
+}
+.main_candy{
+  width:90%;
+}
+
 }
