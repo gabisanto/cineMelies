@@ -24,4 +24,6 @@ app.get('/agenda',(req,res) => res.sendFile(path.resolve(__dirname,'./views/agen
 
 app.get('/nosotros',(req,res) => res.sendFile(path.resolve(__dirname,'./views/nosotros.html')))
 
+app.get('/productDetail',(req,res) => res.sendFile(path.resolve(__dirname,'./views/productDetail.html')))
+
 app.use(express.static(path.resolve(__dirname,'./public')))

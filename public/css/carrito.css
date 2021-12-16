@@ -35,7 +35,7 @@ font-family: 'Fira Sans', sans-serif; ----> botones, menú etc
         font-family: 'Alegreya Sans', sans-serif; 
 }
 
-#titulos{
+.titulos{
     font-family: 'Alegreya Sans', sans-serif; 
     outline:none;
     border:none;
