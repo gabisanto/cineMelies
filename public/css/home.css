@@ -31,64 +31,99 @@ main{
 
 .titulos{
   font-family: 'Alegreya Sans', sans-serif; 
+  padding-top: 2em;
 }
 
 #container-posters{
-display: flex;
-padding: 2.5em;
-flex-wrap: wrap;
-}
-
-.images img{
- width: 100%;
- border-radius: 3px ;
-
+  background-color: #EDEEF2;
+  border-radius: 5px;
+  margin: 40px;
+  display: flex;
+  flex-direction:column
 }
 
 .images{
-  background-color: #EDEEF2;
-  padding: 45px;
+  padding: 3em 3em 1em 3em;
  
 }
 
-.container-poster-dune{
-  display: flex;
-  position: absolute;
+.images img{
+    width: 100%;
+    border-radius: 3px ;
+    box-shadow: 0px 0 0px 1px rgb(242, 158, 56);
+    padding: 15px;
+    
+   
+   }
+
+
+
+#container-moderna{
+display: flex;
+flex-direction: column;
+
 }
 
-#info-dune{
-  width: 100%;
-  backdrop-filter: blur(2px);
-  position: relative;
-  left: -10px;
-  top: -194px;
-  display: none;
-}
-
-/*section:hover #info-dune {
-  display: block;
-}*/
 
 .estrenos{
+  background-color: #262626 ;
+  padding-bottom: 10px;
+}
+
+.estrenos article .images{
+
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
-  
+
 }
 
+.estrenos article .images img{
+  box-shadow: 0px 0 0px 1px #e6e6e6;
+  padding: 15px;
+
+}
+
+.container-estreno{
+  flex-direction: column;
+  margin-bottom: 1em;
+ 
+}
+
+
+.descripciones{
+  font-family: 'Alegreya Sans', sans-serif; 
+  text-align: center;
+  font-size: 12px;
+  
+}
 
 
 @media (min-width:769px){
   
-  #container-posters{
-   display: flex;
-   flex-wrap: nowrap;
 
-  }
-
-  .estrenos{
+  #container-moderna{
     display: flex;
     flex-direction: row;
+    
+    }
+    
+    #container-clasica{
+      display: flex;
+      flex-direction: row;
+      }
+
+    .images {
+        padding: 1.25em;
+    }
+ 
+  .estrenos{
+  
+    flex-direction: row;
   }
+
+  .estrenos article .images {
+    padding: 1em;
+}
 
 }

@@ -3,45 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Login</title>
 
-    <!--Librerías-->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
+   <!--Librerías-->
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
+
+      <!--CSS-->
+      <link rel="stylesheet" href="/css/home.css">
+      <link rel="stylesheet" href="/css/header.css">
+      <link rel="stylesheet" href="/css/footer.css">
 
     <link href="/css/login.css" rel="stylesheet">
 </head>
+
 <body>
-<header class = "header_superior">
-    <nav class ="main_nav">
-    <picture>
-    <a href="http://localhost:3001"><img src="/img/LOGOVFINAL2.png" alt="Logo Cine Melies" id="logo"></a>
-    </picture>
+
+    <header class = "header_superior">
+        <nav class ="main_nav">
+            <picture>
+                <a href="http://localhost:3001"><img src="/img/LOGOVFINAL2.png" alt="Logo Cine Melies" id="logo"></a>
+            </picture>
     
-    <dl class="nav01">
-    <dt class="item"><a class="option" href="/agenda">Agenda</a></dt>
-    <dt class="item"><a class="option" href="/precios">Precios</a></dt>
-    <dt class="item"><a class="option" href="/combos">Combos</a></dt>
-    <dt class="item"><a class="option" href="/nosotros">Nosotros</a></dt>
-    </dl>
-    <form class="search" action="/" method="get">
-    <fieldset>
-    <input type="search" placeholder="Buscar" name="search" />
-    <button>
-    <i class="fas fa-search"></i>
-    </button>
-    </fieldset>
-    </form>
-    <section id="nav02">
-    <a href="/login"><i class="fas fa-user iconNav"></i></a>
-    <a href="/carrito"><i class="fas fa-shopping-cart iconNav"></i></a>
-    <a href="/menu"><i class="fas fa-bars"></i></a>
-    </section>
-    </nav>           
-</header>
+            <dl class="nav01">
+                <dt class="item"><a class="option" href="/agenda">Agenda</a></dt>
+                <dt class="item"><a class="option" href="/precios">Precios</a></dt>
+                <dt class="item"><a class="option" href="/combos">Combos</a></dt>
+                <dt class="item"><a class="option" href="/nosotros">Nosotros</a></dt>
+            </dl>
+            <form class="search" action="/" method="get">
+                <fieldset>
+                    <input type="search" placeholder="Buscar" name="search" />
+                    <button  .class="buscador">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </fieldset>
+            </form>
+            <section id="nav02">
+                <a href="/login"><i class="fas fa-user iconNav"></i></a>
+                <a href="/carrito"><i class="fas fa-shopping-cart iconNav"></i></a>
+                <a href="/menu"><i class="fas fa-bars"></i></a>
+            </section>
+        </nav>
+    
+        
+        
+    </header>
+
+<div id="slider_container">
+    <ul class="slider">
+        <li id="slide1"><img src="/img/aquaman.jpg" alt=""></li>
+    
+        <li id="slide2"> <img src="/img/xman.jpg" alt="">    </li>
+
+        <li id="slide3"> <img src="/img/hobbit.jpg" alt="">    </li>
+        <li id="slide4"> <img src="/img/avenger.jpg" alt="">    </li>
+        <li id="slide5"> <img src="/img/batman.jpg" alt="">    </li>
+
+    </ul>
+
+    <ul class="menu">
+        <li><a href="#slide1"></a></li>
+        <li><a href="#slide2"></a></li>
+        <li><a href="#slide3"></a></li>
+        <li><a href="#slide4"></a></li>
+        <li><a href="#slide5"></a></li>
+    </ul>
+
+</div>
+
+   
 
 <main>
     <article>  <h3> INGRESÁ TU CUENTA  </h3>  </article>
@@ -108,6 +142,7 @@
     </section>
 
 </footer>
+
 
 </body>
 </html>

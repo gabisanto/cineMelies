@@ -4,98 +4,189 @@
   margin: 0;
 }
 
-
-/* css del HEADER de la pagina*/
-
-  dl {
-    list-style-type: none;
+dl {
+  list-style-type: none;
 }
 
 .main_nav{
-    background-color: #262626;
-    font-family: 'Fira Sans', sans-serif;
-    padding: 5px 20px;
-    height: 5vh;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-evenly;
-    align-items: center;
+  background-color: #262626;
+  font-family: 'Fira Sans', sans-serif;
+  padding: 5px 20px;
+  height: 7vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 #nav02 i, a {
-    text-decoration: none;
-    color:#F29E38;
+  text-decoration: none;
+  color:#F29E38;
 }
 
 .nav01 .item a {
-    color: #EDEEF2;;
-    text-decoration: none;
+  color: #EDEEF2;;
+  text-decoration: none;
 }
 
 .nav01 {
-    
-    display: none;
-  }
+  
+  display: none;
+}
 
 .item{
-    color:#F29E38
+  color:#F29E38
 }
 
 #logo{
-    height:3vh;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top:-20%;
+  height:3vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top:-20%;
 }
 
 #nav02 i, a {
-    text-decoration: none;
-    color:#F29E38;
+  text-decoration: none;
+  color:#F29E38;
 }
 
-.search {
-    display: flex;
-    
-    /*margin-right:2em;*/
-    flex-basis: auto;
-    border:none;
-    outline: none;
+form .search {
+  display: flex;
+  max-width: 65vw;
+  /*margin-right:2em;*/
+  flex-basis: auto;
+  border:none;
+  outline: none;
+  
+  
+  
+  
 
 }
 
 .search fieldset{
-    display: flex;
-    flex-grow: 1;
-    justify-content:space-around;
-    border: none;
-    width:100%;
-    
+  display: flex;
+  flex-grow: 1;
+  justify-content:space-around;
+  border: none;
+ 
+  
+  
+  
+  
 }
 
 .search fieldset input {
-    border: none;
-    border-radius: 5px;
-    outline: none;
-    display:flex;
-    flex-grow: 1;
-    background-color: white;
-    height: 30px;
-    width:100%
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  display:flex;
+  flex-grow: 1;
+  background-color: white;
+  height: 5vh;
+  width:100%
 }
 
 .search fieldset button {
-    border:none;
-    background-color: white;
-    margin-left: -10px;
-    border-radius: 5px;
+  border:none;
+  background-color: white;
+  margin-left: -10px;
+  border-radius: 5px;
 }
 
 .header_superior{
   position: -webkit-sticky;
-	position: sticky;
-	top: 0;
+position: sticky;
+top: 0;
   z-index: 1;
+}
+
+
+/* styles for slider */
+
+#slider_container{
+  
+  margin: 0;
+  background-color:white ;
+  width: 100%;
+  padding: 0;
+  padding-bottom: 1.5%;
+
+}
+
+
+
+#slider_container > ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+#slider_container > ul.slider{
+  position: relative;
+  width:100%;
+  
+  height: 37vh;
+}
+#slider_container > ul.slider li {
+  position: absolute;
+  left: 0px;
+  top: 0px ;
+  opacity: 0;
+  width: inherit;
+  height: inherit;
+  background-color: #fff;
+  transition: all .5s;
+
+}
+
+
+#slider_container > ul.slider li img {
+  width: 100%;
+  height: 50vh;
+  object-fit: cover;
+}
+
+#slider_container > ul.slider li:first-child{
+  opacity: 1;
+}
+
+#slider_container > ul.slider li:target{
+  opacity: 1;
+
+}
+
+/* styls for buttoms*/
+
+#slider_container > .menu{
+  text-align: center;
+  margin:20px;
+  position: relative;
+  bottom: 2vh;
+}
+
+#slider_container >.menu li {
+  display: inline-block;
+  text-align: center;
+}
+
+#slider_container >.menu li a {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  background-color: grey;
+  padding: 10px;
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+  border-radius: 100%;
+  transition:all 300ms;
+}
+#slider_container >.menu li a:hover {
+  background-color:black;
 }
 
 
@@ -103,13 +194,12 @@
 
 main{
     background-color: rgb(242, 158, 56);
-    text-align: center;
     font-family: 'Alegreya Sans', sans-serif; 
-    text-align: center;
+  
   }
 
 img{
-  width: 40%;
+  width: 30%;
   padding-top: .50em;
 }
 
@@ -118,17 +208,21 @@ img{
 }
 
 .main-form{
-  background-color: #ebebeb;
-  margin: 1rem 4rem ;
-  display: flex;  
-  border-radius: 3px;
-  flex-direction: column;
-  align-items: center;
+
+    background-color: rgba(235, 235, 235, 100%);
+    box-shadow: 0 0.0625rem 0.125rem 0 rgb(0 0 0 / 15%);
+    margin: 1.125rem ;
+    padding: 2rem 4rem;
+    display: flex;  
+    flex-direction: column;
+    align-items: center;
+    border-radius: 3px;
 }
 
 
 .fr{
   padding: 1em;
+  width: 100%;
 
 }
 
@@ -136,6 +230,7 @@ img{
   display: flex;
   border: none;
   margin-bottom: 2em  ;
+
 }
 
 .fr fieldset legend{
@@ -152,7 +247,14 @@ img{
   font-size: 12px;
   border-radius: 0.25em;
   box-shadow: 0 3px 10px rgb(0 0 0 / 20%), inset 0 -3px 0 rgb(0 0 0 / 22%);
-  transition: 0.3s;
+  border-radius: 5px;
+  
+}
+
+
+.fr fieldset input:focus {
+  box-shadow: 0px 0px 0px rgb(0 0 0 / 20%), inset 0 0px 0 1px rgba(242, 158, 56 );
+
 }
 
 .fr fieldset button {
@@ -166,16 +268,22 @@ img{
 
 }
 
+.fr fieldset button:hover{
+  background-color: #262626 ;
+
+}
+
 .botones{
   border-radius: 0.25em;
   box-shadow: 0 3px 10px rgb(0 0 0 / 20%), inset 0 -3px 0 rgb(0 0 0 / 22%);
-  transition: 0.3s;
+
 
 }
 
 h3{
   font-size: 24px;
   padding-top: 1em;
+  text-align-last: initial;
 }
 
 #txt-register h3{
@@ -184,12 +292,15 @@ h3{
   font-size: 16px;
 }
 
-#register {
+#register{
+color: black;
+}
+
+#register:hover {
 color: white;
 }
 
 /*footer*/
-
 
 .iconFooter{
   color:#F29E38;
@@ -251,26 +362,36 @@ color: white;
 }
 
 
+
 /*media queries*/
 
 @media(min-width: 769px){
+/*header*/
   .nav01{
-      display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-grow:2;
-  }
-
-  .search {       
-      margin-right:2em;
-  }
-
-  #logo{
-      height:5vh;
-  }
-
+    display: flex;
+    
+flex-wrap: nowrap;
+justify-content: space-evenly;
+align-items: center;
+flex-grow:2;
 }
+
+.search {       
+    margin-right:2em;
+}
+
+#logo{
+    height:5vh;
+}
+
+/*main*/
+
+.main-form{
+  margin: 1rem 9rem ;
+}
+
+
+/*footer*/
 
 #footer{
   width:100%;
@@ -319,4 +440,6 @@ color: white;
 #logoFooter{
   width:20vw;
   margin-top: -40%;
+}
+
 }
