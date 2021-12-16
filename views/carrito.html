@@ -83,7 +83,7 @@
                                         <option value="10">Dune</option> 
                                         <option value="11">Maligno</option> 
                                         <option value="12">Matrix</option> 
-                                        <option value="12">Eternals</option> 
+                                        <option value="13">Eternals</option> 
                                     </optgroup> 
                                 </select>
                         </fieldset>
@@ -107,6 +107,31 @@
                                 <input class="hidden radio-label" id="funcionTres" type="radio" name="funcionesDisponibles">
                                 <label class="button-label" for="funcionTres">8PM</label> 
                         </fieldset>
+
+                        <fieldset class="fieldNuevo">
+                          <select name="combos" id="selectCombo">
+                              <option selected value="0"> Elija un combo </option>
+                              <option value="13">Ninguno</option>
+                                  <optgroup label="Completo"> 
+                                  <option value="1">Combo Peluche</option> 
+                                  <option value="2">Combo Familia</option> 
+                                  <option value="3">Combo Película</option> 
+                                  <option value="4">Combo Individual</option> 
+                              </optgroup> 
+                              <optgroup label="Bebidas"> 
+                                  <option value="10">Bebida grande</option> 
+                                  <option value="11">Agua saborizada</option> 
+                                  <option value="12">Agua sin gas</option> 
+                              </optgroup> 
+                          </select>
+                  </fieldset>
+
+                  <fieldset class="fieldNuevo">
+                    <label for="cantCombo" >Cantidad</label>
+                    <input type="number" class="selectCombo" id="cantCombo" name="cantCombo" min="1" max="5"> <a href=""><i class="fas fa-plus" title="Agregar otro"></i></a>
+                    
+                </fieldset>
+                
 
                         <fieldset class="botonNuevo">
                             <button type="submit" class="enviar">Paso siguiente</button>

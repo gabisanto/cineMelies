@@ -6,6 +6,11 @@
     padding: 0;
     margin: 0;
   }
+  .header_superior{
+      display:flex;
+      flex-direction:column;
+      width:100%;
+  }
 
 dl {
     list-style-type: none;

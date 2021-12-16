@@ -84,7 +84,7 @@ body {
   width:30%;
 } */
 
-#selectPelicula{
+#selectPelicula,#selectCombo{
     border:none;
     background-color: white;
     font-family: 'Fira Sans', sans-serif;
@@ -97,7 +97,7 @@ body {
 
 }
 
-.selectEntradas{
+.selectEntradas,.selectCombo{
     border:none;
     background-color: white;
     font-family: 'Fira Sans', sans-serif;
@@ -192,7 +192,12 @@ body {
 }
   
 
-/*radio/
+/*radio*/
+
+.fa-plus{
+    color: #F2B035;
+    margin-left:10px;
+}
 
 /*Estilos paso 2*/
 
@@ -490,7 +495,7 @@ font-family: 'Fira Sans', sans-serif;
       font-size: 24px;
   }
 
-  .selectEntradas,.selectFecha{
+  .selectEntradas,.selectFecha, .selectCombo{
       margin-left:3em;
   }
 
