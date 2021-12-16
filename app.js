@@ -2,7 +2,7 @@ const path = require ("path")
 const express = require ("express")
 const app = express ()
 
-app.set ("port", 3001)
+app.set ("port", process.env.PORT || 3001)
 
 app.listen (app.get("port"), () => {
     console.log ("Servidor OK");
