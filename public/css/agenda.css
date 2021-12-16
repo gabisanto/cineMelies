@@ -26,6 +26,11 @@ html, body {
     height: 100%;
   }
 
+#selectorAgenda{
+    margin:0 auto;
+    width:80%;
+}
+
 #agendaMain{
     display: flex;
     flex-direction: column;
@@ -60,6 +65,7 @@ html, body {
 
 .tituloCiclo{
     padding-bottom:1em;
+    text-align: center;
 }
 
 #cicloDeCineEnero,#cicloDeCineFebrero,#cicloDeCineMarzo,#cicloDeCineAbril,#cicloDeCineMayo,#cicloDeCineJunio,#cicloDeCineJulio,#cicloDeCineAgosto,#cicloDeCineSeptiembre,#cicloDeCineOctubre,#cicloDeCineNoviembre,#cicloDeCineDiciembre {
@@ -94,12 +100,15 @@ html, body {
     width:80%;
     display:block;
     margin: 0 auto;
+    border-radius: 5px;
 }
 
 .postersPeliculas{
     display: flex;
     flex-direction: column;
     flex-wrap:nowrap;
+    width:80%;
+    margin:0 auto;
     
     
 }
@@ -109,6 +118,7 @@ html, body {
     box-shadow: 0 3px 10px rgba(0,0,0,0.2), inset 0 -3px 0 rgba(0,0,0,0.22);
     padding-bottom: 5px;
     margin-top: 20px;
+    border-radius: 5px;
     
 }
 
@@ -119,19 +129,36 @@ html, body {
         font-size: 24px;
     }
 
+    .textoCiclo{
+        width:80%;
+        font-size: 18px;
+    }
+
     .descripcionCiclo{
         flex-direction: row;
+        width:70%;
+        align-items: center;
+        margin: 0 auto;
+        padding-bottom:1em;
     }
 
     .postersPeliculas picture img {
-        width:20vw;
+        width:100%;
         margin-right:5px;
     }
+
+    .postersPeliculas picture {
+        width:25%;
+        margin-right:5px;
+    }
+
 
     .postersPeliculas{
         display: flex;
         flex-direction: row;
         justify-content: center;
+        width:70%;
+        margin: 0 auto
     }
 
     .descripcionCiclo picture{
@@ -143,6 +170,13 @@ html, body {
     .descripcionCiclo picture img{
         width:100%;
         
+    }
+
+   
+
+    #selectorAgenda{
+        margin:0 auto;
+        width:70%;
     }
 
 }

@@ -1,0 +1,94 @@
+/*Código Colores
+#0D1026 negro azulado
+#F2B035 naranja claro
+#F29E38 naranja oscuro
+#EDEEF2 gris
+#262626 casi negro
+
+font-family: 'Alegreya Sans', sans-serif; ----> textos
+font-family: 'Fira Sans', sans-serif; ----> botones, menú etc
+*/
+
+
+* {
+    box-sizing: border-box;
+    /* padding: 0;
+    margin: 0; */
+    
+  }
+
+  main,html{
+    background-color: rgb(242, 158, 56);
+    
+}
+
+html, body {
+    height: 100%;
+  }
+
+#mainAbout{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: justify;
+    padding: 1.5em;
+    background-color: #EDEEF2 ;
+    margin: 2em; 
+    font-family: 'Alegreya Sans', sans-serif; 
+}
+
+.titulos{
+    font-family: 'Alegreya Sans', sans-serif; 
+    outline:none;
+    border:none;
+    margin-bottom: 2em;
+    font-weight: bold;
+    font-size:18px;
+}
+
+#descripcionAbout{
+    width: 100%;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    margin: 0 auto;
+    position:relative;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2), inset 0 -3px 0 rgba(0,0,0,0.22);
+}
+
+#descripcionAbout picture,article{
+    width: 100%;
+}
+
+#descripcionAbout article {
+  position: absolute;
+  bottom: 5px;
+  right: 0px;
+  background-color: rgba(79, 78, 78,0.6);
+  font-family: 'Alegreya Sans', sans-serif;
+  text-align: justify;
+  font-size:12px;
+  color: white;
+  padding:2%
+}
+
+#descripcionAbout picture img{
+    width: 100%;
+}
+
+@media(min-width:769px){
+
+
+    .titulos{
+        font-size: 24px;
+    }
+
+    #descripcionAbout {
+        width:85%;
+    }
+
+    #descripcionAbout article {
+        font-size: 16px;
+        padding:5%;
+    }
+}
