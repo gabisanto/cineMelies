@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Cine Melies</title> 
+    <title> Detalle Pelicula </title> 
     
     <!--prueba
     
@@ -20,10 +20,9 @@
     -->
 
     <!--CSS-->
-    <link rel="stylesheet" href="/css/home.css">
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/footer.css">
-    
+    <link rel="stylesheet" href="/css/productDetail.css">
 
     <!--Librerías-->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
@@ -60,175 +59,120 @@
                 <a href="/carrito"><i class="fas fa-shopping-cart iconNav"></i></a>
                 <a href="/menu"><i class="fas fa-bars"></i></a>
             </section>
-        </nav>        
+        </nav>     
     </header>
 
-<div id="slider_container">
-    <ul class="slider">
-        <li id="slide1"><img src="/img/aquaman.jpg" alt=""></li>
-    
-        <li id="slide2"> <img src="/img/xman.jpg" alt="">    </li>
-
-        <li id="slide3"> <img src="/img/hobbit.jpg" alt="">    </li>
-        <li id="slide4"> <img src="/img/avenger.jpg" alt="">    </li>
-        <li id="slide5"> <img src="/img/batman.jpg" alt="">    </li>
-
-    </ul>
-
-    <ul class="menu">
-        <li><a href="#slide1"></a></li>
-        <li><a href="#slide2"></a></li>
-        <li><a href="#slide3"></a></li>
-        <li><a href="#slide4"></a></li>
-        <li><a href="#slide5"></a></li>
-    </ul>
-
-</div>
 <!--Sección MAIN-->
 <main>
-    <!-- Sección titulo -->
-    <article class="titulos">
-        <form class="botones"> 
-            <button type="button"> CLÁSICA </button>
-            <button type="button"> MODERNA </button>
-        </form>
-    </article>
-<!-- contenedor padre de las películas-->
-<section id="container-posters">
-    <section id="container-moderna"> 
+
     <!-- contenedor hijo info Película 1 dune -->
-<article >
-    <figure class="images">
-    <img src="img/dune.jpg">
-    </figure>
-    <section class=" descripciones" >
-        <p class="title-peli"> DUNE </p>
-        <p> (2021) </p>
-        <p>  <i class="fas fa-star"></i> 8.2 <span> / 10 </span> </p>
-        <p> LU y MIER 14HS</p>
-    </section>
-</article> 
-     <!-- contenedor hijo Película 2 -->
-<article>
-    <figure  class="images"> 
-    <img src="img/maligno.jpg">
-    </figure>
-    <section class=" descripciones" >
-        <p class="title-peli"> MALIGNO </p>
-        <p> (2021) </p>
-        <p> <i class="fas fa-star"></i>  6.3 <span> / 10 </span> </p>
-        <p> MAR y JUE 20HS</p>
-        </section>
-</article>
-     <!-- contenedor hijo Película 3 -->
-<article>
-    <figure  class="images">
-    <img src="img/Eternals.jpg">
-    </figure>
-    <section class=" descripciones" >
-        <p class="title-peli"> ETERNALS  </p>
-        <p> (2021) </p>
-        <p> <i class="fas fa-star"></i> 6.8 <span> / 10 </span> </p>
-        <p> SAB 14HS y 20HS </p>
-        </section>
-</article>
-    <!-- contenedor hijo  Película 4 -->
-<article>
-    <figure class="images">
-    <img src="img/matrix.jpg">
-    </figure> 
-    <section class=" descripciones" >
-        <p class="title-peli"> MATRIX RESURRECTIONS  </p>
-        <p> (2021) </p>
-        <p> <i class="fas fa-star"></i> 8.7 <span> / 10 </span> </p>
-        <p> VIER 20HS</p>
-        </section>
-</article>
-</section>
-<section id="container-clasica"> 
-    <!-- contenedor hijo  Película clasica 1 -->
-    <article class="clasicas">
-        <figure  class="images">
-        <img src="img/the-big-heat.jpg"> 
+    <article >
+        <figure class="images">
+        <img src="img/dune.jpg">
         </figure>
         <section class=" descripciones" >
-        <p  class="title-peli"> THE BIG HEAT  </p>
-        <p> (1953) </p>
-        <p> <i class="fas fa-star"></i> 7.9 <span> / 10 </span> </p>
-        <p> MAR y JUE 14HS</p>
+            <p> DUNE </p>
+            <p> (2021) </p>
+            <p> 8.2 <span> /10 </span> </p>
+            <p> Adaptación de la novela de ciencia ficción de Frank Herbert sobre el hijo de una familia noble que trata de vengarse de la muerte de su padre y al mismo tiempo salvar un planeta que se le ha encomendado proteger. </p>
+            <p> HS </p>
         </section>
+    </article> 
+         <!-- contenedor hijo Película 2 -->
+    <article>
+        <figure  class="images"> 
+        <img src="img/maligno.jpg">
+        </figure>
+        <section class=" descripciones" >
+            <p> MALIGNO </p>
+            <p> (2021) </p>
+            <p> 6.3 <span> /10 </span> </p>
+            <p>Madison está paralizada por causa de visiones impactantes de asesinatos espeluznantes. Su tormento empeora cuando descubre que estos sueños de vigilia son, de hecho, realidades aterradoras. </p>
+            <p>  HS </p>
+            </section>
     </article>
-    <!-- contenedor hijo  clasica 2 -->
-<article class="clasicas">
-    <figure  class="images ">
-    <img src="img/phantom-lady.jpg">
-    </figure>
-    <section class=" descripciones" >
-        <p  class="title-peli"> PHANTOM LADY  </p>
-        <p> (1944) </p>
-        <p> <i class="fas fa-star"></i> 7.2 <span> / 10 </span> </p>
-        <p> LU y MIER 20HS</p>
-        </section>
-</article>
-    <!-- contenedor hijo  clasica 3 -->
-<article class="clasicas">
-        <figure  class="images ">
-        <img src="img/the-big-combo.jpg">
+         <!-- contenedor hijo Película 3 -->
+    <article>
+        <figure  class="images">
+        <img src="img/Eternals.jpg">
+        </figure>
+        <section class=" descripciones" >
+            <p> ETERNALS  </p>
+            <p> (2021) </p>
+            <p> 6.8 <span> /10 </span> </p>
+            <p> Hace millones de años, los seres cósmicos conocidos como los Celestiales decidieron experimentar genéticamente con los humanos, y moldearon nuestra historia y civilizaciones.</p>
+            <p> HS </p>
+            </section>
+    </article>
+        <!-- contenedor hijo  Película 4 -->
+    <article>
+        <figure class="images">
+        <img src="img/matrix.jpg">
         </figure> 
         <section class=" descripciones" >
-            <p  class="title-peli"> THE BIG COMBO  </p>
-            <p> (1955) </p>
-            <p> <i class="fas fa-star"></i> 7.4 <span> / 10 </span> </p>
-            <p> LU  y MIER 11HS</p>
+            <p> MATRIX RESURRECTIONS  </p>
+            <p> (2021) </p>
+            <p> 8.7 <span> /10 </span> </p>
+            <p> Cuarta entrega de la franquicia "Matrix" en la que Neo y Trinity se embarcarán en una nueva misión.</p>
+            <p> HS</p>
             </section>
-</article>
-    <!-- contenedor hijo  clasica 4  -->
-<article class="clasicas">
-    <figure  class="images ">
-    <img src="img/double-indemnity.jpg">
-    </figure> 
-    <section class=" descripciones" >
-        <p  class="title-peli"> DOUBLE INDEMNITY  </p>
-        <p> (1944) </p>
-        <p> <i class="fas fa-star"></i> 8.3 <span> / 10 </span> </p>
-        <p> DOMING0 14HS y 20HS</p>
-        </section>
-</article> 
-</section> 
-</section> 
-    <!-- Proximos estrenos -->
-    <section id="container-estrenos"> 
-        <!-- 1 -->
-        <article class="estrenos">
-            <figure  class="images">
-            <img src="img/la-cronica-francesa.jpg"> 
-            </figure>
-            <p> <span> ESTRENO </span> </p>
-        </article>
-        <!--  2 -->
-    <article class="estrenos">
-        <figure  class="images ">
-        <img src="img/ecos-de-un-crimen.jpg">
-        </figure>
-        <p> <span> ESTRENO </span> </p>
     </article>
-        <!--3 -->
-    <article class="estrenos">
+    </section>
+    <section id="container-clasica"> 
+        <!-- contenedor hijo  Película clasica 1 -->
+        <article class="clasicas">
+            <figure  class="images">
+            <img src="img/the-big-heat.jpg"> 
+            </figure>
+            <section class=" descripciones" >
+            <p> THE BIG HEAT  </p>
+            <p> (1953) </p>
+            <p> 7.9 <span> /10 </span> </p>
+            <p> El policía Dave Bannion se enfrenta a una organización criminal con ramificaciones políticas. </p>
+            <p> MAR y JUE 18:30 HS</p>
+            </section>
+        </article>
+        <!-- contenedor hijo  clasica 2 -->
+    <article class="clasicas">
+        <figure  class="images ">
+        <img src="img/phantom-lady.jpg">
+        </figure>
+        <section class=" descripciones" >
+            <p> PHANTOM LADY  </p>
+            <p> (1944) </p>
+            <p> 7.2 <span> /10 </span> </p>
+            <p> Una devota secretaria arriesga su vida intentando encontrar a la elusiva mujer que podría probar que su jefe no mató a su mujer. </p>
+            <p> HS </p>
+            </section>
+    </article>
+        <!-- contenedor hijo  clasica 3 -->
+    <article class="clasicas">
             <figure  class="images ">
-            <img src="img/scream.jpg">
+            <img src="img/the-big-combo.jpg">
             </figure> 
-            <p> <span> ESTRENO </span> </p>
+            <section class=" descripciones" >
+                <p> THE BIG COMBO  </p>
+                <p> (1955) </p>
+                <p> 7.4 <span> /10 </span> </p>
+                <p> A un teniente se le ordena que deje de investigar al jefe del crimen mortal, el Sr. Brown, porque no ha podido obtener ninguna evidencia sólida en su contra. </p>
+                <p> HS </p>
+                </section>
     </article>
         <!-- contenedor hijo  clasica 4  -->
-    <article class="estrenos">
+    <article class="clasicas">
         <figure  class="images ">
-        <img src="img/wos.jpg">
+        <img src="img/double-indemnity.jpg">
         </figure> 
-        <p> <span> ESTRENO </span> </p>
+        <section class=" descripciones" >
+            <p> DOUBLE INDEMNITY  </p>
+            <p> (1944) </p>
+            <p> 8.3 <span> /10 </span> </p>
+            <p> Un vendedor de seguros de Los Ángeles se deja seducir por un ama de casa para participar en un plan de fraude y asesinato que despierta las sospechas de su colega, un investigador. </p>
+            <p> HS</p>
+            </section>
     </article> 
     </section> 
-    </section> 
-
+     
 
 </main>
 

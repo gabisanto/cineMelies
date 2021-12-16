@@ -5,192 +5,6 @@
     
 }
 
-/* css del HEADER de la pagina*/
-
-dl {
-  list-style-type: none;
-}
-
-.main_nav{
-  background-color: #262626;
-  font-family: 'Fira Sans', sans-serif;
-  padding: 5px 20px;
-  height: 7vh;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-#nav02 i, a {
-  text-decoration: none;
-  color:#F29E38;
-}
-
-.nav01 .item a {
-  color: #EDEEF2;;
-  text-decoration: none;
-}
-
-.nav01 {
-  
-  display: none;
-}
-
-.item{
-  color:#F29E38
-}
-
-#logo{
-  height:3vh;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-top:-20%;
-}
-
-#nav02 i, a {
-  text-decoration: none;
-  color:#F29E38;
-}
-
-form .search {
-  display: flex;
-  max-width: 65vw;
-  /*margin-right:2em;*/
-  flex-basis: auto;
-  border:none;
-  outline: none;
-  
-  
-  
-  
-
-}
-
-.search fieldset{
-  display: flex;
-  flex-grow: 1;
-  justify-content:space-around;
-  border: none;
- 
-  
-  
-  
-  
-}
-
-.search fieldset input {
-  border: none;
-  border-radius: 5px;
-  outline: none;
-  display:flex;
-  flex-grow: 1;
-  background-color: white;
-  height: 5vh;
-  width:100%
-}
-
-.search fieldset button {
-  border:none;
-  background-color: white;
-  margin-left: -10px;
-  border-radius: 5px;
-}
-
-.header_superior{
-  position: -webkit-sticky;
-position: sticky;
-top: 0;
-  z-index: 1;
-}
-
-
-/* styles for slider */
-
-#slider_container{
-  
-  margin: 0;
-  background-color:white ;
-  width: 100%;
-  padding: 0;
-  padding-bottom: 1.5%;
-
-}
-
-
-
-#slider_container > ul, li {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  box-sizing: border-box;
-}
-
-#slider_container > ul.slider{
-  position: relative;
-  width:100%;
-  
-  height: 37vh;
-}
-#slider_container > ul.slider li {
-  position: absolute;
-  left: 0px;
-  top: 0px ;
-  opacity: 0;
-  width: inherit;
-  height: inherit;
-  background-color: #fff;
-  transition: all .5s;
-
-}
-
-
-#slider_container > ul.slider li img {
-  width: 100%;
-  height: 50vh;
-  object-fit: cover;
-}
-
-#slider_container > ul.slider li:first-child{
-  opacity: 1;
-}
-
-#slider_container > ul.slider li:target{
-  opacity: 1;
-
-}
-
-/* styls for buttoms*/
-
-#slider_container > .menu{
-  text-align: center;
-  margin:20px;
-  position: relative;
-  bottom: 2vh;
-}
-
-#slider_container >.menu li {
-  display: inline-block;
-  text-align: center;
-}
-
-#slider_container >.menu li a {
-  display: inline-block;
-  color: white;
-  text-decoration: none;
-  background-color: grey;
-  padding: 10px;
-  width: 20px;
-  height: 20px;
-  font-size: 20px;
-  border-radius: 100%;
-  transition:all 300ms;
-}
-#slider_container >.menu li a:hover {
-  background-color:black;
-}
 
  /*seccion main*/
 
@@ -201,7 +15,7 @@ top: 0;
   text-align: center;
 }
 
-img{
+#cine-foto img{
 width: 40%;
 padding-top: .50em;
 }
@@ -304,148 +118,24 @@ span{
 #confirmar{
   padding-bottom: .75em;
 }
-  /*footer*/
 
+/*#login{
+  color: black;
+}*/
 
-.iconFooter{
-    color:#F29E38;
-    margin-right: 1em;
-  }
-  
-  #footer{
-    width:100%;
-    background-color: #262626;
-    font-family: 'Fira Sans', sans-serif;
-    padding-bottom:10%;
-    color: #EDEEF2;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    flex-direction: column;
-  
-  }
-  
-  #logoFooter{
-    width:30%;
-    min-width: 164px;
-    display: block;
-    margin-top: -10%;
-    margin: -10% auto auto auto;
-  }
-  
-  #footer picture{
-    width: fit-content;
-    align-self:center;
-  }
-  
-  #footerDatos, #footerRedes, #footerNews{
-    margin: 1% auto auto auto;
-    display: block;
-    width:fit-content;
-    text-align: center;
-  }
-  
-  #footer section article p{
-    font-size: smaller;
-  
-  }
-  
-  #footer section h3{
-    padding-bottom: 1%;
-    margin-top:3%;
-  }
-  
-  #domicilio{
-    display: flex;
-    flex-wrap: wrap
-  }
-  
-  #telefono{
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 1%;
-  }
-  
-  
-  /*media queries*/
-  
-  @media(min-width: 769px){
-    .nav01{
-      display: flex;
-      
-  flex-wrap: nowrap;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-grow:2;
-  }
+@media(min-width: 769px){
 
-  .search {       
-      margin-right:2em;
-  }
-
-  #logo{
-      height:5vh;
-  }
-
-  
+  /*main*/
 
   .fr{
     padding: 1em;
     width: 100%;
   
   }
-
   .main-form{
+  
     margin: 1rem 9rem ;
   }
   
-
-  #footer{
-    width:100%;
-    background-color: #262626;
-    font-family: 'Fira Sans', sans-serif;
-    padding: 20px 20px;
-    color: #EDEEF2;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    flex-direction: row;
-  }
-  
-  #footerDatos, #footerRedes, #footerNews{
-    margin-top: 3%;
-    width:fit-content;
-    display:block;
-    text-align: justify;
-  }
-  
-  #footer picture {
-    width:fit-content;
-    align-self: auto;
-  }
-  
-  #footer section article p{
-    font-size: smaller;
-  }
-  
-  #footer section h3{
-    padding-bottom: 10%;
-  }
-  
-  #domicilio{
-    display: flex;
-    flex-wrap: wrap
-  }
-  
-  #telefono{
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 5%;
-  }
-  
-  
-  #logoFooter{
-    width:20vw;
-    margin-top: -40%;
-  }
 }
+  
