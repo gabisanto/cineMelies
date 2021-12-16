@@ -10,7 +10,7 @@
 main{
     background-color: rgb(242, 158, 56);
     text-align: center;
-   
+
   }
 
 .images{
@@ -20,20 +20,40 @@ main{
 
 .images img{
     width: 100%;
+    }
+
+form input{
+  border: none;
+  padding: 1em;
+  border-radius: 5px;
+  background-color: #F29E38;
+  color: white;
+  font-size: 12px;
 }
 
 
-#container-detalle-dune{
+.container-detalle{
     padding: 3em 3em 1em 3em;
     background-color: #EDEEF2;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 
+.descripciones p{
+    font-size: 16px;
+    font-family: 'Alegreya Sans', sans-serif; 
+}
+
+
+
 @media(min-width: 769px){
-    #container-detalle-dune{
-        flex-direction: row;
-    }
+
+
+    .images img{
+        width: 50%;
+        }
+   
 }
