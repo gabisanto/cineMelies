@@ -4,3 +4,132 @@
     margin: 0;
     
   }
+
+  .main_box{
+    display:flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    background-color:#F29E38;
+    width:100%;
+    
+    padding:3%;
+
+  }
+
+  .left_candy_container{
+    width:70%;
+    height: 100%;
+    background-color:#d3cccc;
+    display:flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content:center;
+    padding-top: 4% ;
+    padding-bottom: 2%;
+    
+  }
+  
+  .column_box{
+    
+    height:100%;
+    width:30%;
+    border:solid blue
+  }
+
+  .candy_box{
+    display:flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    padding:1%;
+    margin: 10px 10px;
+    width:400px;
+    height:270px;
+    
+    
+  }
+  
+  .candy_box_left{
+    display:flex;
+    flex-direction: column;
+   
+    background-color:white;
+    width:60%;
+    height:90%;
+    border-radius: 8px 0 0 8px;
+    
+  }
+  .candy_box_rigth{
+    display:flex;
+    flex-direction:column;
+    width:40%;
+    height:90%;
+    background-color:#838396;
+    border-radius: 0 8px 8px 0;
+    justify-content: center;
+    align-items: center;
+    transition:all 300ms;
+  }
+  .candy_box_rigth:hover {
+    background-color:grey;
+    
+  }
+  /* titulos de secciones*/
+  .combos{
+    width:100%;
+    text-align: center;
+    padding-bottom: 10px;
+    font-family: 'Alegreya Sans', sans-serif;
+  }
+
+  .pochoclos{
+    width:100%;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+
+  .bebidas{
+    width:100%;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+/* TITULO DE COMBO */
+  .combo_titulo{
+    width:100%;
+    font-family: 'Alegreya Sans', sans-serif;
+    font-size: 1.1em;
+  }
+  
+
+  /* img y descrip de cada articulo */
+  .img_box{
+    text-align: center;
+    padding-top: 3%;
+  }
+  .img_article{
+    max-width:100%;
+    align-items: center;
+  }
+  .img_descripcion{
+    text-align: center;
+    padding-top: 10%;
+    padding-left: 2%;
+    padding-right: 2%;
+    font-family: 'Alegreya Sans', sans-serif;
+  }
+
+  /* precio de los candy */
+
+.precio_antes{
+text-decoration: line-through;
+font-size: 1.1em;
+color:white;
+font-family: 'Alegreya Sans', sans-serif;
+}
+
+.precio_ahora{
+font-size: 2em;
+font-weight: bolder;
+color: white;
+font-family: 'Alegreya Sans', sans-serif;
+}
+
