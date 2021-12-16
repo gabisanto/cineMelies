@@ -8,18 +8,25 @@
   .main_box{
     display:flex;
     flex-direction: row;
-    flex-wrap:wrap;
     background-color:#F29E38;
     width:100%;
-    
     padding:3%;
+    align-items: flex-start;
 
+  }
+  .main_candy{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    width:65%;
+
+    
   }
 
   .left_candy_container{
-    width:70%;
+    width:100%;
     height: 100%;
-    background-color:#d3cccc;
+    background-color:#ebebeb;
     display:flex;
     flex-direction: row;
     flex-wrap:wrap;
@@ -29,20 +36,79 @@
     
   }
   
+  /* PARTE DE LA COLUMNA DERECHA*/
   .column_box{
+    display:flex;
+    flex-direction:column;
+    align-self: flex-start;
+    width:35%;
+    height: 100%;
+    margin-left: 1%;
     
-    height:100%;
-    width:30%;
-    border:solid blue
+    background-color:#ebebeb;
   }
+
+  .box_1_compra{
+    display:flex;
+    flex-direction: row;
+    width:100%;
+    justify-content: space-between;
+
+  }
+  .descripcion_left{
+    width: 50%;
+    margin-top: 4%;
+    margin-left: 2%;
+    
+  }
+.descripcion_rigth{
+  width: 50%;
+  display:flex;
+  flex-direction:column;
+  justify-content:justify;
+  align-items: flex-start;
+  font-family: 'Alegreya Sans', sans-serif;
+}
+
+.descripcion_title{
+  font-family: 'Alegreya Sans', sans-serif;
+  font-size: 30px;
+  font-weight: bolder;
+  margin-bottom: 20%;
+  margin-top: 10%;
+  
+}
+  
+.img_compra_online{
+  max-width: 100%;
+}
+ 
+/* totalizador */ 
+
+.el_totalizador{
+  display:flex;
+  flex-direction: row;
+  justify-content:space-between;
+  margin: 15px 10px;
+  font-family: 'Alegreya Sans', sans-serif;
+  font-size:30px;
+
+}
+.la_linea{
+  
+  margin: 15px 10px;
+  height: 2px;
+  border-color: black;
+}
+
+
 
   .candy_box{
     display:flex;
     flex-direction: row;
     flex-wrap:wrap;
-    padding:1%;
     margin: 10px 10px;
-    width:400px;
+    width:380px;
     height:270px;
     
     
@@ -132,4 +198,81 @@ font-weight: bolder;
 color: white;
 font-family: 'Alegreya Sans', sans-serif;
 }
+.agregar_combo{
+  font-size: 30px;
+  color: black;
+  padding-top: 15px;
+  border-color: #F29E38;
+  transition: all 250ms;
+}
+.agregar_combo:hover{
+  color: #F29E38;
+  font-size: 35px;
+}
 
+/* css para botones */
+
+.botonNuevo {
+  display: flex;
+  width: 100%;
+  box-shadow: var(--shadow) 4px 4px;
+  --border-size: 0.125rem;
+  --duration: 250ms;
+  --ease: cubic-bezier(0.215, 0.61, 0.355, 1);
+  --font-family: 'Fira Sans', sans-serif;
+  --color-primary: #EDEEF2;
+  --color-secondary: #F2B035;
+  /* --color-tertiary: dodgerblue; */
+  --shadow: rgba(0, 0, 0, 0.1);
+  --space: 1rem;
+  margin-top:2em;
+}
+
+.botonNuevo button {
+  flex-grow: 1;
+  cursor: pointer;
+  position: relative;
+  /* padding:
+    calc(var(--space) / 1.125)
+    var(--space)
+    var(--space); */
+  height:45px;
+  border: var(--border-size) solid rgb(135, 134, 134);;
+  color: var(black);
+  background-color: var(--color-primary);
+  font-size: 0.75rem;
+  font-family: var(--font-family);
+  text-transform: lowercase;
+  text-shadow: var(--shadow) 2px 2px;
+  transition: flex-grow var(--duration) var(--ease);
+}
+
+.botonNuevo button + button {
+  border-left: var(--border-size) solid rgb(135, 134, 134);
+  margin-left: calc(var(--border-size) * -1);
+}
+
+.botonNuevo button:hover,
+.botonNuevo button:focus {
+  flex-grow: 2;
+  color: white;
+  outline: none;
+  text-shadow: none;
+  background-color: var(--color-secondary);
+}
+
+.botonNuevo button:focus {
+  outline: var(--border-size) dashed var(--color-primary);
+  outline-offset: calc(var(--border-size) * -3);
+}
+
+.botonNuevo:hover button:focus:not(:hover) {
+  flex-grow: 1;
+  color: var(--color-secondary);
+  background-color: var(--color-primary);
+  outline-color: var(--color-tertiary);
+}
+
+.botonNuevo button:active {
+  transform: translateY(var(--border-size));
+}
