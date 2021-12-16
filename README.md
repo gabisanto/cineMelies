@@ -22,9 +22,10 @@ Proyecto integrador Digital House
 - Curró, Luciano
 - Santoriello, Gabriela
 
-## Tablero de trabajo
+## Links importantes
 
 [Trello](https://trello.com/cinemelies)
+[Heroku](https://cine-melies.herokuapp.com/)
 
 ## Referencias del mercado
 
