@@ -8,21 +8,69 @@
 
 
 main{
+    font-family: 'Alegreya Sans', sans-serif;
     background-color: rgb(242, 158, 56);
     text-align: center;
 
   }
 
-.images{
-    border-radius: 5px;
-    margin: 40px;
-}
+
 
 .images img{
-    width: 100%;
-    }
+    width: 45%;
+    
+}
+ 
+    
+#background-indemnity img{
+width: 100%;
 
-form input{
+}
+
+#background-indemnity {
+    margin: 0%;
+    display: flex;
+    position: absolute;
+}
+
+.container-peli{
+    display: flex;
+    flex-direction: column; 
+    position: relative; 
+    text-align: center; 
+    top: 18px;
+    background: #EDEEF2;
+    
+}
+
+.images{
+    border-radius: 5px;
+    margin: 20px;
+    position: relative;
+    text-align: center;
+    top: -3px;
+    
+}
+
+iframe {
+    width:325px;
+    height:180px;
+    position: relative;
+    top: 12px;
+    left:-1px;
+    
+}
+
+#sinopsis{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 66px;
+    margin-right: 66px;
+}
+
+
+article form input{
   border: none;
   padding: 1em;
   border-radius: 5px;
@@ -31,23 +79,36 @@ form input{
   font-size: 12px;
 }
 
-
-.container-detalle{
-    padding: 3em 3em 1em 3em;
-    background-color: #EDEEF2;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    flex-wrap: wrap;
+.descripciones{
+    position: relative;
+    top: -20px;
 }
-
 
 .descripciones p{
-    font-size: 16px;
+    text-align: start;
     font-family: 'Alegreya Sans', sans-serif; 
+
 }
 
+#movie-view{
+    display: flex;
+}
+#movie-idioma{
+    display: flex;
+}
 
+.select-melies{
+    display: flex;
+    flex-direction: column;
+ 
+}
+.component-button{
+background: #262626;
+}
+
+section button{
+    width: 100%;
+}
 
 @media(min-width: 769px){
 

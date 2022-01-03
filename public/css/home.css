@@ -11,75 +11,73 @@ font-family: 'Fira Sans', sans-serif; ----> botones, menú etc
 
 
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    
-  }
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  
+}
 
 dl {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 main{
-  background-color: rgb(242, 158, 56);
-  text-align: center;
- 
+background-color: rgb(242, 158, 56);
+text-align: center;
+
 }
 
 /* css del main */
 
 .titulos{
-  font-family: 'Alegreya Sans', sans-serif; 
-  padding-top: 2em;
+font-family: 'Alegreya Sans', sans-serif; 
+padding-top: 2em;
 }
 .descripciones p{
-  font-size: 16px;
+font-size: 16px;
 }
 .title-peli{
-  font-weight: bold;
-  font-size: 18px;
+font-weight: bold;
+font-size: 16px;
 }
 
 
 .botones button {
-  padding: .50em;
-  border-radius: 3px;
-  background-color: #212529;
-  border-color: rgb(242, 158, 56);
-  color: white;
-    
-  }
+padding: .50em;
+border-radius: 3px;
+background-color: #212529;
+border-color: rgb(242, 158, 56);
+color: white;
+  
+}
 
-  .descripciones p span{
-    font-size: 12px;
-  }
+.descripciones p span{
+  font-size: 12px;
+}
 
 #container-posters{
-  background-color: #EDEEF2;
-  border-radius: 5px;
-  margin: 40px;
-  display: flex;
-  flex-direction:column
+background-color: #EDEEF2;
+border-radius: 5px;
+margin: 15px;
 }
 
 .images{
-  padding: 3em 3em 1em 3em;
- 
+padding: 3em 3em 1em 3em;
+
 }
 
 .images img{
-    width: 100%;
-    border-radius: 3px ;
-    box-shadow: 0px 0 0px 1px rgb(242, 158, 56);
-    padding: 15px;   
+  width: 100%;
+  border-radius: 3px ;
+  box-shadow: 0px 0 0px 1px rgb(242, 158, 56);
+  padding: 15px;   
+  
 }
 
-
-
-#container-moderna{
+#container-clasica{
 display: flex;
 flex-direction: column;
+
 
 }
 
@@ -89,60 +87,77 @@ font-family: 'Alegreya Sans', sans-serif;
 }
 
 .estrenos p{
-  padding-bottom:1em;
+padding-bottom:1em;
 }
 
 #container-estrenos{
-  display: flex;
-  flex-direction: column;
-  background-color: #262626;
-  border-bottom: 20px solid rgb(242, 158, 56);
+display: flex;
+flex-direction: column;
+background-color: #262626;
+border-bottom: 20px solid rgb(242, 158, 56);
+margin:0;
 }
 
-
-
-.descripciones{
-  font-family: 'Alegreya Sans', sans-serif; 
-  text-align: center;
-  font-size: 12px;
-  padding: 2em;
-  
-}
 
 .fa-star{
-  color:  rgb(242, 158, 56);
-  font-size: 10px;
+color:  rgb(242, 158, 56);
+font-size: 10px;
+
+}
+
+#id-select-movie{
+font-family: 'Alegreya Sans', sans-serif; 
+border: none;
+display: flex;
+justify-content: space-evenly;
+padding: 20px;
+color: white;
+font-size: 16px;
+background-color: #262626;
+}
+
+fieldset label{
+font-family: 'Fira Sans', sans-serif;
+color: #F29E38;
+font-size: 18px;
+
+}
+fieldset select{
+background: #F29E38;
+border-radius: 2px;
+width: 60%;
 
 }
 
 
 @media (min-width:769px){
-  
 
-  #container-moderna{
+
+#container-moderna{
+  display: flex;
+  flex-direction: row;
+  
+  }
+  
+  #container-clasica{
     display: flex;
     flex-direction: row;
-    
-    }
-    
-    #container-clasica{
-      display: flex;
-      flex-direction: row;
-      }
-
-    .images {
-        padding: 1.25em;
-    }
- 
- 
-    #container-estrenos{
-     
-      flex-direction: row;
-     
     }
 
-  .estrenos article .images {
-    padding: 1em;
+  .images {
+      padding: 1.25em;
+  }
+
+
+  #container-estrenos{
+   
+    flex-direction: row;
+   
+  }
+
+.estrenos article .images {
+  padding: 1em;
 }
+
 
 }

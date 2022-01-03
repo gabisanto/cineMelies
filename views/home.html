@@ -74,28 +74,28 @@
               <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
             <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="/img/hobbit (1).jpg" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                  <h5>EL HOBBIT</h5>
-                  <p>Proximamente</p>
+                <div class="carousel-item active">
+                  <img src="/img/metropolis2.jpg" class="d-block w-100" alt="...">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5> METROPOLIS </h5>
+                    <p>Proximamente</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="/img/psycho.jpg" class="d-block w-100" alt="...">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>PSYCHO </h5>
+                    <p></p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="/img/zama.jpg" class="d-block w-100" alt="...">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5> ZAMA </h5>
+                    <p></p>
+                  </div>
                 </div>
               </div>
-              <div class="carousel-item">
-                <img src="/img/starwars.jpg" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                  <h5>StarWars</h5>
-                  <p></p>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <img src="/img/xman.jpg" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                  <h5>X-MAN</h5>
-                  <p></p>
-                </div>
-              </div>
-            </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Previous</span>
@@ -110,117 +110,141 @@
 
 <!--Sección MAIN-->
 <main>
-    <!-- Sección titulo -->
-    <article class="titulos">
-        <form class="botones"> 
-            <button type="button"> CLÁSICA </button>
-            <button type="button"> MODERNA </button>
-        </form>
-    </article>
+      <!-- Sección titulos -->
+      <fieldset id="id-select-movie">
+        <label> Cine Melies </label>
+        <select name="Pelicula" >
+            <option selected value="0"> Selecciona una película </option>
+                <optgroup label="Clásica"> 
+                <option value="1">The Big Combo</option> 
+                <option value="2">Phantom Lady</option> 
+                <option value="3">The Big Heat</option> 
+                <option value="4">Double Indemnity</option> 
+            </optgroup> 
+            <optgroup label="Moderna"> 
+                <option value="10">Dune</option> 
+                <option value="11">Maligno</option> 
+                <option value="12">Matrix</option> 
+                <option value="13">Eternals</option> 
+            </optgroup> 
+            <optgroup label="Estrenos"> 
+                <option value="10">Metropolis</option> 
+                <option value="11">Zama</option> 
+                <option value="12">El hombre que sabía demasiado</option> 
+                <option value="13">El bebé de Rosemary</option> 
+            </optgroup> 
+        </select>
+</fieldset>
 <!-- contenedor padre de las películas-->
 <section id="container-posters">
-    <section id="container-moderna"> 
-    <!-- contenedor hijo info Película 1 dune -->
-<article >
-    <figure class="images">
-   <a href="/productDetail">  <img src="img/dune.jpg"> </a>
-    </figure>
-    <section class=" descripciones" >
-        <p class="title-peli"> DUNE </p>
-        <p> (2021) </p>
-        <p>  <i class="fas fa-star"></i> 8.2 <span> / 10 </span> </p>
-        <p> LU y MIER 14HS</p>
-    </section>
-</article> 
-     <!-- contenedor hijo Película 2 -->
-<article>
-    <figure  class="images"> 
-        <a href="/productDetail"> <img src="img/maligno.jpg"> </a>
-    </figure>
-    </figure>
-    <section class=" descripciones" >
-        <p class="title-peli"> MALIGNO </p>
-        <p> (2021) </p>
-        <p> <i class="fas fa-star"></i>  6.3 <span> / 10 </span> </p>
-        <p> MAR y JUE 20HS</p>
+
+    <section id="container-clasica"> 
+            <!-- contenedor   Película clasica 1 -->
+        <section class="clasicas">
+                <figure  class="images">
+                     <img src="img/the-big-heat.jpg"> 
+                </figure>
+        <article  class=" descripciones-clasicas">
+                    <p  class="title-peli"> THE BIG HEAT  </p>
+                    <p> (1953) </p>
+                    <p> <i class="fas fa-star"></i> 7.9 <span> / 10 </span> </p>
+                    <p> MAR y JUE 14HS</p>
+        </article>
         </section>
-</article>
-     <!-- contenedor hijo Película 3 -->
-<article>
-    <figure  class="images">
-        <a href="/productDetail"> <img src="img/Eternals.jpg"> </a>
-    </figure>
-    <section class=" descripciones" >
-        <p class="title-peli"> ETERNALS  </p>
-        <p> (2021) </p>
-        <p> <i class="fas fa-star"></i> 6.8 <span> / 10 </span> </p>
-        <p> SAB 14HS y 20HS </p>
+        
+            <!-- contenedor  clasica 2 -->
+        <section class="clasicas">
+            <figure  class="images ">
+                 <img src="img/phantom-lady.jpg"> 
+            </figure>
+        <article  class=" descripciones-clasicas">
+                <p  class="title-peli"> PHANTOM L  </p>
+                <p> (1944) </p>
+                <p> <i class="fas fa-star"></i> 7.2 <span> / 10 </span> </p>
+                <p> LU y MIER 20HS</p>
+        </article>
         </section>
-</article>
-    <!-- contenedor hijo  Película 4 -->
-<article>
-    <figure class="images">
-        <a href="/productDetail"> <img src="img/matrix.jpg"> </a>
-    </figure> 
-    <section class=" descripciones" >
-        <p class="title-peli"> MATRIX RESURRECTIONS  </p>
-        <p> (2021) </p>
-        <p> <i class="fas fa-star"></i> 8.7 <span> / 10 </span> </p>
-        <p> VIER 20HS</p>
+            <!-- contenedor  clasica 3 -->
+        <section class="clasicas" >
+                <figure  class="images ">
+                     <img src="img/the-big-combo.jpg"> 
+                </figure> 
+        <article >
+                    <p  class="title-peli"> THE BIG C  </p>
+                    <p> (1955) </p>
+                    <p> <i class="fas fa-star"></i> 7.4 <span> / 10 </span> </p>
+                    <p> LU  y MIER 11HS</p>
+        </article>
         </section>
-</article>
-</section>
-<section id="container-clasica"> 
-    <!-- contenedor hijo  Película clasica 1 -->
-    <article class="clasicas">
-        <figure  class="images">
-            <a href="/productDetail">  <img src="img/the-big-heat.jpg"> </a>
+            <!-- contenedor  clasica 4  -->
+        <section class="clasicas">
+            <figure  class="images ">
+                <a href="/productDetail"> <img src="img/double-indemnity.jpg"> </a>
+            </figure> 
+        <article class=" descripciones-clasicas">
+                <p  class="title-peli">  INDEMNITY  </p>
+                <p> (1944) </p>
+                <p> <i class="fas fa-star"></i> 8.3 <span> / 10 </span> </p>
+                <p> DOM 14 y 20HS</p>
+        </article>
+        </section> 
+    </section> 
+    
+    
+     <!-- contenedor Películas modernas -->
+    
+    <section id="container-moderna "> 
+        <!-- contenedor  Película 1 dune -->
+    <section >
+        <figure class="images">
+       <img src="img/dune.jpg"> 
         </figure>
-        <section class=" descripciones" >
-        <p  class="title-peli"> THE BIG HEAT  </p>
-        <p> (1953) </p>
-        <p> <i class="fas fa-star"></i> 7.9 <span> / 10 </span> </p>
-        <p> MAR y JUE 14HS</p>
-        </section>
+    <article >
+            <p class="title-peli"> DUNE </p>
+            <p> (2021) </p>
+            <p>  <i class="fas fa-star"></i> 8.2 <span> / 10 </span> </p>
+            <p> LU y MIER 14HS</p>
     </article>
-    <!-- contenedor hijo  clasica 2 -->
-<article class="clasicas">
-    <figure  class="images ">
-        <a href="/productDetail">  <img src="img/phantom-lady.jpg"> </a>
-    </figure>
-    <section class=" descripciones" >
-        <p  class="title-peli"> PHANTOM LADY  </p>
-        <p> (1944) </p>
-        <p> <i class="fas fa-star"></i> 7.2 <span> / 10 </span> </p>
-        <p> LU y MIER 20HS</p>
-        </section>
-</article>
-    <!-- contenedor hijo  clasica 3 -->
-<article class="clasicas">
-        <figure  class="images ">
-            <a href="/productDetail">  <img src="img/the-big-combo.jpg"> </a>
+    </section> 
+         <!-- contenedor  Película 2 -->
+    <section>
+        <figure  class="images"> 
+            <img src="img/maligno.jpg"> 
+        </figure>
+    <article >
+            <p class="title-peli"> MALIGNO </p>
+            <p> (2021) </p>
+            <p> <i class="fas fa-star"></i>  6.3 <span> / 10 </span> </p>
+            <p> MAR y JUE 20HS</p>
+    </article>
+    </section>
+         <!-- contenedor  Película 3 -->
+    <section>
+        <figure  class="images">
+             <img src="img/Eternals.jpg">
+        </figure>
+    <article  >
+            <p class="title-peli"> ETERNALS  </p>
+            <p> (2021) </p>
+            <p> <i class="fas fa-star"></i> 6.8 <span> / 10 </span> </p>
+            <p> SAB 14HS y 20HS </p>
+    </article>
+    </section>
+        <!-- contenedor  Película 4 -->
+    <section>
+        <figure class="images">
+           <img src="img/matrix.jpg"> 
         </figure> 
-        <section class=" descripciones" >
-            <p  class="title-peli"> THE BIG COMBO  </p>
-            <p> (1955) </p>
-            <p> <i class="fas fa-star"></i> 7.4 <span> / 10 </span> </p>
-            <p> LU  y MIER 11HS</p>
-            </section>
-</article>
-    <!-- contenedor hijo  clasica 4  -->
-<article class="clasicas">
-    <figure  class="images ">
-        <a href="/productDetail"> <img src="img/double-indemnity.jpg"> </a>
-    </figure> 
-    <section class=" descripciones" >
-        <p  class="title-peli"> DOUBLE INDEMNITY  </p>
-        <p> (1944) </p>
-        <p> <i class="fas fa-star"></i> 8.3 <span> / 10 </span> </p>
-        <p> DOMING0 14HS y 20HS</p>
-        </section>
-</article> 
+    <article  >
+            <p class="title-peli"> MATRIX  </p>
+            <p> (2021) </p>
+            <p> <i class="fas fa-star"></i> 8.7 <span> / 10 </span> </p>
+            <p> VIE 20HS</p>
+    </article>
+    </section>  
+    </section>
 </section> 
-</section> 
+    
     <!-- Proximos estrenos -->
     <section id="container-estrenos"> 
         <!-- 1 -->
@@ -252,9 +276,6 @@
         <p> <span> ESTRENO </span> </p>
     </article> 
     </section> 
-    </section> 
-
-
 </main>
 
 
