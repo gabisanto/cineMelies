@@ -103,24 +103,66 @@ html, body {
     border-radius: 5px;
 }
 
-.postersPeliculas{
-    display: flex;
-    flex-direction: column;
-    flex-wrap:nowrap;
-    width:80%;
-    margin:0 auto;
-    
-    
-}
+/*ESTILOS CARRUSEL*/
 
-.postersPeliculas picture img {
-    width:100%;
+/* .postersCont {
+    width: 100vw;
+    height: 200px;
+  } */
+  
+  @keyframes display {
+    0% {
+      transform: translateX(70px);
+      opacity: 0;
+    }
+    10% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    20% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    30% {
+      transform: translateX(-30px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(-30px);
+      opacity: 0;
+    }
+  }
+  
+  .postersCont {
+    position: relative;
+    width: 70%;
+    height: 200px;
+    margin-top: 3px;
+    margin:0 auto;
+  }
+  
+  .postersCont > img {
+    position: absolute;
+    top: 0;
+    left: calc(50% - 100px);
+    opacity: 0;
     box-shadow: 0 3px 10px rgba(0,0,0,0.2), inset 0 -3px 0 rgba(0,0,0,0.22);
-    padding-bottom: 5px;
-    margin-top: 20px;
     border-radius: 5px;
-    
-}
+    height:100%;
+    animation: display 16s infinite;
+  }
+  
+  img:nth-child(2) {
+    animation-delay: 4s;
+  }
+  img:nth-child(3) {
+    animation-delay: 8s;
+  }
+  img:nth-child(4) {
+    animation-delay: 12s;
+  }
+  
+
 
 @media(min-width:769px){
 
@@ -142,25 +184,6 @@ html, body {
         padding-bottom:1em;
     }
 
-    .postersPeliculas picture img {
-        width:100%;
-        margin-right:5px;
-    }
-
-    .postersPeliculas picture {
-        width:25%;
-        margin-right:5px;
-    }
-
-
-    .postersPeliculas{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        width:70%;
-        margin: 0 auto
-    }
-
     .descripcionCiclo picture{
         width:100%;
         padding-right:2em;
@@ -178,5 +201,32 @@ html, body {
         margin:0 auto;
         width:70%;
     }
+
+    .postersCont {
+        height:400px;
+    }
+
+    @keyframes display {
+        0% {
+          transform: translateX(200px);
+          opacity: 0;
+        }
+        10% {
+          transform: translateX(0);
+          opacity: 1;
+        }
+        20% {
+          transform: translateX(0);
+          opacity: 1;
+        }
+        30% {
+          transform: translateX(-200px);
+          opacity: 0;
+        }
+        100% {
+          transform: translateX(-200px);
+          opacity: 0;
+        }
+      }
 
 }

@@ -61,9 +61,11 @@ font-family: 'Fira Sans', sans-serif; ----> botones, menú etc
 
 }
 
-#footer section h3{
-    padding-bottom: 1%;
+.titulosFootie{
+    padding-bottom: 4%;
     margin-top:3%;
+    font-weight:bolder;
+    font-size: 18px;
 }
 
 #domicilio{
@@ -86,6 +88,7 @@ font-family: 'Fira Sans', sans-serif; ----> botones, menú etc
     margin:0;
     padding:0;
     display:flex;
+    justify-content: space-between;
   }
   .cajaIconos {
     list-style:none;
@@ -102,6 +105,10 @@ font-family: 'Fira Sans', sans-serif; ----> botones, menú etc
     color:#EDEEF2;
     margin-right:15px;
     transition:.5s;
+  }
+
+  .instagram {
+    margin-right:0 !important;
   }
   ul li a span {
     position:absolute;
@@ -303,8 +310,9 @@ font-family: 'Fira Sans', sans-serif; ----> botones, menú etc
     font-size: smaller;
 }
 
-#footer section h3{
+.titulosFootie{
     padding-bottom: 10%;
+    font-size:20px;
 }
 
 #domicilio{

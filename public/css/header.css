@@ -75,23 +75,17 @@ form .search {
     flex-basis: auto;
     border:none;
     outline: none;
-    
-    
-    
-    
-
 }
 
 .search fieldset{
     display: flex;
     flex-grow: 1;
     justify-content:space-around;
-    border: none;
-   
-    
-    
-    
-    
+    border: none;  
+}
+
+.search fieldset input {
+    padding-left: 3%;
 }
 
 .search fieldset input {
@@ -134,6 +128,10 @@ form .search {
 
     #logo{
         height:5vh;
+    }
+
+    .fa-bars{
+        display:none !important;
     }
 
 }
