@@ -27,6 +27,11 @@ text-align: center;
 
 }
 
+
+#banner img{
+  width: 100%;
+}
+
 /* css del main */
 
 .titulos{
@@ -58,7 +63,9 @@ color: white;
 #container-posters{
 background-color: #EDEEF2;
 border-radius: 5px;
-margin: 15px;
+margin-left: 10px;
+margin-bottom:10px ;
+margin-right: 10px;
 }
 
 .images{
@@ -116,13 +123,13 @@ font-size: 16px;
 background-color: #262626;
 }
 
-fieldset label{
-font-family: 'Fira Sans', sans-serif;
+ section font-family: 'Fira Sans', sans-serif;
 color: #F29E38;
 font-size: 18px;
 
 }
-fieldset select{
+
+section select{
 background: #F29E38;
 border-radius: 2px;
 width: 60%;

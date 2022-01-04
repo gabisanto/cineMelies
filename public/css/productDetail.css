@@ -158,16 +158,17 @@ article form input{
 @media(min-width: 769px){
 
     h2 {
-        top: -276px; 
+        top: -238px; 
         font-size: 40px;
     }
 
     #stars {
-        top: -273px;
+        top:  -238px;
  
     }
     .container-peli {
-        top: 432px;
+        top: 272px;
+        ;
     }
   
     #footer{
