@@ -129,6 +129,11 @@ width: 60%;
 
 }
 
+#container-moderna{
+display: flex;
+flex-direction: column;
+}
+
 
 @media (min-width:769px){
 

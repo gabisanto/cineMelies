@@ -38,25 +38,47 @@ width: 100%;
     flex-direction: column; 
     position: relative; 
     text-align: center; 
-    top: 18px;
+    top: 174px;
     background: #EDEEF2;
     
 }
 
-.images{
-    border-radius: 5px;
-    margin: 20px;
+ h2{
+    font-family:  'Alegreya Sans', sans-serif; 
+    font-size: 24px;
+    color: #F29E38;
+    font-weight: 900;
+    text-shadow: 3px 3px 3px black;
+    top: -130px;
     position: relative;
-    text-align: center;
-    top: -3px;
-    
+
+}
+
+#stars{
+    position: relative;
+    top: -132px;
+    color: #F29E38;
+    text-shadow: 1px 1px 1px black;
+    font-size: 12px;
+}
+.star-color{
+    color: #f29e3805;
+}
+
+.images{
+
+        border-radius: 5px;
+        margin: 20px;
+        position: relative;
+        text-align: center;
+        top: -3px;
 }
 
 iframe {
     width:325px;
     height:180px;
     position: relative;
-    top: 12px;
+    top: -34px;
     left:-1px;
     
 }
@@ -65,10 +87,9 @@ iframe {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-left: 66px;
-    margin-right: 66px;
+    margin: 10px;
+    padding: 10px;    
 }
-
 
 article form input{
   border: none;
@@ -81,40 +102,79 @@ article form input{
 
 .descripciones{
     position: relative;
-    top: -20px;
+    top: -42px;
+}
+
+#comment-movie{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+    font-family:  'Alegreya Sans', sans-serif; 
+    font-size: 18px;
+    background:#262626;
+    padding: 50px;    
+    color: #F29E38;
+    position: relative;
+    top: -39px;
 }
 
 .descripciones p{
     text-align: start;
     font-family: 'Alegreya Sans', sans-serif; 
+    font-size: 18px;
 
 }
-
-#movie-view{
-    display: flex;
-}
-#movie-idioma{
-    display: flex;
-}
-
-.select-melies{
-    display: flex;
-    flex-direction: column;
- 
-}
-.component-button{
-background: #262626;
+.movie-info{
+    border: none;
+    border-radius: 2px;
+    margin: 1px 10px ;
+    padding: 4px;
+    background-color: #F29E38;
+    
 }
 
-section button{
-    width: 100%;
+.movie-button button{
+    padding: 5px;
+    font-family: 'Fira Sans', sans-serif; 
+}
+
+#button-compra {
+    margin: 10px;
+}
+
+#button-compra input{
+    border: none;
+    padding: 5px;
+    font-family: 'Fira Sans', sans-serif; 
+}
+
+#footer{
+    position: relative;
+    top: 176px;
+    
 }
 
 @media(min-width: 769px){
 
+    h2 {
+        top: -276px; 
+        font-size: 40px;
+    }
 
-    .images img{
-        width: 50%;
-        }
-   
+    #stars {
+        top: -273px;
+ 
+    }
+    .container-peli {
+        top: 432px;
+    }
+  
+    #footer{
+       
+        top: 434px;
+        
+    }
+
 }
+

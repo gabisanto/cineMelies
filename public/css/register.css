@@ -61,7 +61,7 @@ padding-bottom: .25em ;
 }
 
 .fr fieldset input{
-flex: 1 0 auto;
+flex: 1 ;
 border: none;
 outline: none;
 padding: 1em;

@@ -44,8 +44,10 @@ main{
   display: flex;
   border: none;
   margin-bottom: 2em  ;
-
+  align-items: center;
 }
+
+
 
 .fr fieldset legend{
   text-align: left;
@@ -70,10 +72,15 @@ main{
 
 }
 
+.usuario{
+  align-items: flex-end;
+  
+}
+
  form .usuario input{
    box-shadow: none;
    border-radius: none;
-  margin-right: -225px;
+  margin-right: -246px;
  }
 
  .fr .usuario input:focus {
@@ -123,8 +130,7 @@ h3{
 
 .txt-register h3{
 
-  padding-bottom: 1rem;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 #register{
