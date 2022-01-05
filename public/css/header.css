@@ -20,6 +20,10 @@ body{
     padding-top: 7vh;
 }
 
+#banner img{
+    width: 100%;
+  }
+
 .main_nav{
     background-color: #262626;
     font-family: 'Fira Sans', sans-serif;

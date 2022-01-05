@@ -1,71 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Cine Melies</title> 
-    
-    <!--prueba
-    
-    <script>
-        var message = "Hey, volvé!";
-        var original = "Mercado Liebre";
-        
-        window.onblur = function () { document.title = message; }
-        window.onfocus = function () { document.title = original; }
-    </script>
-    
-    <link rel="icon" type="image/png" href="\images\mercado-libre.png">
-    -->
-
-    <!--CSS-->
-    <link rel="stylesheet" href="/css/home.css">
-    <link rel="stylesheet" href="/css/header.css">
-    <link rel="stylesheet" href="/css/footer.css">
-    
-
-    <!--Librerías-->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
-
-</head>
+<%- include ('../modules/head') %> 
 
 <body>
 
-    <header class = "header_superior">
-        <nav class ="main_nav">
-            <picture>
-                <a href="/"><img src="/img/LOGOVFINAL2.png" alt="Logo Cine Melies" id="logo"></a>
-            </picture>
-    
-            <dl class="nav01">
-                <dt class="item"><a class="option" href="/agenda">Agenda</a></dt>
-                <dt class="item"><a class="option" href="/precios">Precios</a></dt>
-                <dt class="item"><a class="option" href="/combos">Combos</a></dt>
-                <dt class="item"><a class="option" href="/nosotros">Nosotros</a></dt>
-            </dl>
-            <form class="search" action="/" method="get">
-                <fieldset>
-                    <input type="search" placeholder="Buscar" name="search" />
-                    <button  .class="buscador">
-                        <i class="fas fa-search"></i>
-                    </button>
-                </fieldset>
-            </form>
-            <section id="nav02">
-                <a href="/login"><i class="fas fa-user iconNav"></i></a>
-                <a href="/carrito"><i class="fas fa-shopping-cart iconNav"></i></a>
-                <a href="/menu"><i class="fas fa-bars"></i></a>
-            </section>
-        </nav> 
-        <article id="banner">
-            <img src="/img/metropolis2.jpg">
-        </article>  
-    </header>
-
+<%- include ('../modules/header') %> 
 
 <!--Sección MAIN-->
 <main>
