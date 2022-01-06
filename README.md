@@ -19,7 +19,6 @@ Proyecto integrador Digital House
 
 - Antonietti, Gabriel
 - Carabajal, Florencia
-- Curró, Luciano
 - Santoriello, Gabriela
 
 ## Links importantes
