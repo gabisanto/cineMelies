@@ -214,6 +214,46 @@
     cursor:pointer;
 }
 
+/* CHECKBOX fieldCheckbox */
+
+.fieldCheckbox label {
+  display: block;
+  
+}
+.fieldCheckbox label input[type=checkbox] {
+  position: relative;
+  appearance: none;
+  font-size: inherit;
+  width: 1em;
+  margin: 0;
+  color: inherit;
+  outline: none;
+  font-family: 'Font Awesome 5 Free';
+  transition: 300ms ease-out;
+}
+.fieldCheckbox label input[type=checkbox]::after {
+  font-family: 'Font Awesome 5 Free';
+  content: '\f111';
+  display: inline-block;
+  text-align: center;
+  width: 1em;
+}
+.fieldCheckbox label input[type=checkbox]:checked::after {
+  font-weight: 900;
+}
+.fieldCheckbox label input[type=checkbox]:active {
+  transform: scale(0.6);
+}
+.fieldCheckbox label input[type=checkbox] + span {
+  margin-left: 0.35em;
+}
+
+.fieldCheckbox label input[type=checkbox]:checked::after {
+  font-family: 'Font Awesome 5 Free';
+  content: '\f058';
+  color:#F2B035;
+}
+
 
 
 
