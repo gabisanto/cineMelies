@@ -18,6 +18,8 @@ app.use(require('./routes/routeProducts'))
 
 app.use(require('./routes/routeUsers'))
 
+app.use(require('./routes/routeAdmin'))
+
 // app.get('/register',(req,res) => res.sendFile(path.resolve(__dirname,'./views/users/register.html')))
 
 // app.get('/login',(req,res) => res.sendFile(path.resolve(__dirname,'./views/users/login.html')))
