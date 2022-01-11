@@ -11,6 +11,7 @@ main{
     font-family: 'Alegreya Sans', sans-serif;
     background-color: rgb(242, 158, 56);
     text-align: center;
+    
 
   }
 
@@ -38,9 +39,9 @@ width: 100%;
     flex-direction: column; 
     position: relative; 
     text-align: center; 
-    top: 174px;
+    top: 126px;
     background: #EDEEF2;
-    
+    border: #F29E38 4px dashed;
 }
 
  h2{
@@ -49,7 +50,7 @@ width: 100%;
     color: #F29E38;
     font-weight: 900;
     text-shadow: 3px 3px 3px black;
-    top: -130px;
+    top: -87px;
     position: relative;
 
 }
@@ -78,7 +79,7 @@ iframe {
     width:325px;
     height:180px;
     position: relative;
-    top: -34px;
+    top: -7px;
     left:-1px;
     
 }
@@ -103,6 +104,22 @@ article form input{
 .descripciones{
     position: relative;
     top: -42px;
+}
+
+.descripciones-images {
+    color: white;
+    font-size: 24px;
+    width: 68%;
+    height: 78%;
+    font-size: bold;
+    font-family: 'Alegreya Sans', sans-serif;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    text-shadow: 1px 1px 1px black;
+    visibility: hidden;
 }
 
 #comment-movie{
@@ -130,13 +147,24 @@ article form input{
     border-radius: 2px;
     margin: 1px 10px ;
     padding: 4px;
-    background-color: #F29E38;
     
 }
 
 .movie-button button{
     padding: 5px;
     font-family: 'Fira Sans', sans-serif; 
+}
+
+#button-compra input{
+    border: none;
+    padding: 5px;
+    font-family: 'Fira Sans', sans-serif; 
+}
+
+#form-movie{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #button-compra {
@@ -151,7 +179,7 @@ article form input{
 
 #footer{
     position: relative;
-    top: 176px;
+    top: 125px;
     
 }
 
@@ -168,12 +196,24 @@ article form input{
     }
     .container-peli {
         top: 272px;
-        ;
+        
+    }
+
+    iframe {
+        width: 605px;
+        height: 357px;
+    }
+
+    .descripciones-images {
+       
+        top: 55%;
+        left: 50%;
+       
     }
   
     #footer{
        
-        top: 434px;
+        top: 269px;
         
     }
 
