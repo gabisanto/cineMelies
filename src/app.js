@@ -1,7 +1,7 @@
 const path = require ("path");
 const express = require ("express");
 const { urlencoded } = require("express");
-//const method = require ('method-override');
+const method = require ('method-override');
 const app = express();
 
 app.set ("port", process.env.PORT || 3001);
@@ -9,7 +9,7 @@ app.set ('views',path.resolve(__dirname,'views'));
 app.set ('view engine','ejs');
 app.use(express.static(path.resolve(__dirname,'../public')));
 app.use(express.urlencoded({extended: true}));
-//app.use(method('m'));
+app.use(method('m'));
 app.listen (app.get("port"), () => { console.log ("Servidor OK"); });
 
 app.use(require('./routes/routeMain'))

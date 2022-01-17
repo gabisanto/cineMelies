@@ -1,0 +1,46 @@
+[{
+    "id": 1,
+    "nombreCompleto": "Leora Nettles",
+    "Documento": "3440694615",
+    "fecha": "11/06/1933",
+    "email": "lnettles0@feedburner.com",
+    "clave": "aUUoCOMQJMv",
+    "image": "user_1.jpg",
+    "admin": true
+  }, {
+    "id": 2,
+    "nombreCompleto": "Sebastien Walworche",
+    "Documento": "8238872332",
+    "fecha": "13/01/1914",
+    "email": "swalworche1@studiopress.com",
+    "clave": "puotb7lwtkB",
+    "image": "user_2.jpg",
+    "admin": false
+  }, {
+    "id": 3,
+    "nombreCompleto": "Langston Treeby",
+    "Documento": "6764570736",
+    "fecha": "05/01/1965",
+    "email": "ltreeby2@meetup.com",
+    "clave": "z92odvJJd",
+    "image": "user_3.jpg",
+    "admin": false
+  }, {
+    "id": 4,
+    "nombreCompleto": "Remus Siret",
+    "Documento": "4037293528",
+    "fecha": "28/10/1957",
+    "email": "rsiret3@rediff.com",
+    "clave": "6N5LhU",
+    "image": "user_4.jpg",
+    "admin": false
+  }, {
+    "id": 5,
+    "nombreCompleto": "Dominique Tilbury",
+    "Documento": "9781393297",
+    "fecha": "17/09/1929",
+    "email": "dtilbury4@google.co.uk",
+    "clave": "jEGmVuX2U7",
+    "image": "user_5.jpg",
+    "admin": false
+  }]
