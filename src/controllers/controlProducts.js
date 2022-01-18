@@ -1,7 +1,9 @@
-module.exports = {
+const {all} = require('../models/product.js');
+const controller = {
     list: (req,res) => res.render('./products/list',{
         styles:['list'],
-        title: 'Listado items'
+        title: 'Listado items',
+        products: all()
     }),
 
     cart: (req,res) => res.render('./products/carrito',{
@@ -14,3 +16,5 @@ module.exports = {
         title: 'Detalle de película'
     })
 }
+
+module.exports = controller
