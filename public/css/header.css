@@ -24,6 +24,10 @@ body{
     width: 100%;
   }
 
+#banner{
+    z-index:1
+}
+
 .main_nav{
     background-color: #262626;
     font-family: 'Fira Sans', sans-serif;

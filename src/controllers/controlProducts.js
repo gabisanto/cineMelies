@@ -1,9 +1,10 @@
-const {all} = require('../models/product.js');
+const product = require('../models/product.js');
+
 const controller = {
     list: (req,res) => res.render('./products/list',{
         styles:['list'],
         title: 'Listado items',
-        products: all()
+        products: product.all()
     }),
 
     cart: (req,res) => res.render('./products/carrito',{
@@ -11,10 +12,21 @@ const controller = {
         title: 'Proceso de compra'
     }),
 
-    detail: (req,res) => res.render('./products/productDetail',{
-        styles: ['productDetail'],
-        title: 'Detalle de película'
-    })
+    show: (req,res) => {
+        let result = product.search('id',req.params.id)
+        return result ? res.render('./products/productDetail',{
+            styles:['productDetail','forms', 'create'],
+            title: result.productName,
+            product: result
+        }) : res.render('error',{
+            msg: 'Producto no encontrado'
+        })
+    }
+    
+        // res.render('./products/productDetail',{
+        // styles: ['productDetail'],
+        // title: 'Detalle de película'
+    
 }
 
 module.exports = controller

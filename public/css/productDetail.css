@@ -1,3 +1,13 @@
+/*Código Colores
+#0D1026 negro azulado
+#F2B035 naranja claro
+#F29E38 naranja oscuro
+#EDEEF2 gris
+#262626 casi negro
+
+font-family: 'Alegreya Sans', sans-serif; ----> textos
+font-family: 'Fira Sans', sans-serif; ----> botones, menú etc
+*/
 
 * {
     box-sizing: border-box;
@@ -21,17 +31,68 @@ main{
     width: 45%;
     
 }
- 
+
+.play { 
+    background: #F29E38;
+    border-radius: 50% / 10%;
+    color: #FFFFFF;
+    font-size: 2em; /* change this to change size */
+    height: 3em;
+    margin: 20px auto;
+    padding: 0;
+    position: relative;
+    text-align: center;
+    text-indent: 0.1em;
+    transition: all 150ms ease-out;
+    width: 4em;
+  }
+  
+  .play:hover {
+    background: #e6ba6a ;
+  }
+  
+  .play::before { 
+    background: inherit;
+    border-radius: 5% / 50%;
+    bottom: 9%;
+    content: "";
+    left: -5%;
+    position: absolute;
+    right: -5%;
+    top: 9%;
+  }
+  
+  .play::after {
+    border-style: solid;
+    border-width: 1em 0 1em 1.732em;
+    border-color: transparent transparent transparent rgba(255, 255, 255, 0.75);
+    content: ' ';
+    font-size: 0.75em;
+    height: 0;
+    margin: -1em 0 0 -0.75em;
+    top: 50%;
+    position: absolute;
+    width: 0;
+  }
+  
+
     
-#background-indemnity img{
+#background img{
 width: 100%;
+/* margin:-25%; */
+filter: brightness(50%);
+height:300%;
+margin-top:-40%
 
 }
 
-#background-indemnity {
+#background {
     margin: 0%;
     display: flex;
     position: absolute;
+    height: 50%;
+    overflow: hidden;
+    
 }
 
 .container-peli{
@@ -42,6 +103,7 @@ width: 100%;
     top: 126px;
     background: #EDEEF2;
     border: #F29E38 4px dashed;
+    padding:5%
 }
 
  h2{
@@ -199,6 +261,11 @@ article form input{
         
     }
 
+    #background img {
+        margin-top:-26%;
+        height:500%;
+    }
+
     iframe {
         width: 605px;
         height: 357px;
@@ -215,6 +282,22 @@ article form input{
        
         top: 269px;
         
+    }
+
+    #flexDescription{
+        display: flex;
+    }
+    
+   
+
+    .images img{
+        width:70%;
+        
+    }
+
+    .descripciones{
+        margin:auto;
+        position:unset
     }
 
 }
