@@ -62,39 +62,37 @@
                 <fieldset class="fieldCheckbox">
                     <legend>Formato</legend>
                     <label class="labelCheck" name="filmFormatUser"><input type="checkbox" name="filmFormatUser"  value="<% product.filmFormat %>"> <%= product.filmFormat %></label>
-                </section>
-                </fieldset>
-
-                <fieldset class="movie-info"> 
-                    <section class="movie-button">
-                    <button type="button"> Subtitulada </button>
-                    <button type="button"> Español </button>
                 
-                    </section>
                 </fieldset>
 
-                <fieldset class="movie-info movie-button">
-                        <button type="button"> Domingo </button>
+                <fieldset class="fieldCheckbox">
+                    <legend>Idioma</legend>
+                    <label class="labelCheck" name="filmAudioUser"><input type="checkbox" name="filmAudioUser"  value="<% product.filmAudio %>"> <%= product.filmAudio %></label>
+                
                 </fieldset>
 
-                <fieldset class="movie-info">
-                    <h4> CineMelies </h4>
-                    <section class="movie-button"> 
-                    <p> <small >  Classic • 2D • Español  </small> </p>
-                    <button type="button"> 14:00 </button>
-                    <p> <small>  Classic • 2D • Subtitulada  </small> </p>
-                    <button type="button"> 20:00 </button>
-                    </section>
+                <fieldset class="fieldCheckbox">
+                    <legend>Días en cartel</legend>
+                    <label class="labelCheck" name="diasCartelUser"><input type="checkbox" name="diasCartelUser"  value="<% product.diasCartel %>"> <%= product.diasCartel %></label>
+                
                 </fieldset>
 
-                <fieldset id="button-compra">
-                    <input type="submit" value="COMPRAR" />   
+                <fieldset class="fieldCheckbox">
+                    <legend>Horarios</legend>
+                    <label class="labelCheck" name="timeScheduledUser"><input type="checkbox" name="timeScheduledUser"  value="<% product.timeScheduled %>"> <%= product.timeScheduled %></label>
+                
+                </fieldset>
+
+                <fieldset class="botonNuevo">
+                    <button type="submit" class="enviar">comprar</button>
+                    <button type="reset" class="reset">cancelar</button> 
                 </fieldset>
             
 
         <% } else { %> 
             <fieldset class="botonNuevo">
-                <button type="submit" class="enviar">Agregar al carrito</button>
+                <button type="submit" class="enviar">comprar</button>
+                <button type="reset" class="reset">cancelar</button> 
             </fieldset>  
         <% } %> 
 

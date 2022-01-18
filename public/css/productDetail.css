@@ -25,7 +25,17 @@ main{
 
   }
 
+.fieldCheckbox legend {
+    margin:0 auto;
+}
 
+.fieldCheckbox {
+    margin-top: 5px;
+}
+
+/* .botonNuevo button{
+    width: 100% !important
+} */
 
 .images img{
     width: 45%;
@@ -36,7 +46,7 @@ main{
     background: #F29E38;
     border-radius: 50% / 10%;
     color: #FFFFFF;
-    font-size: 2em; /* change this to change size */
+    font-size: 1em; /* change this to change size */
     height: 3em;
     margin: 20px auto;
     padding: 0;
@@ -227,6 +237,10 @@ article form input{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+#form-movie form {
+    width:40%
 }
 
 #button-compra {

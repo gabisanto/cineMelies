@@ -15,7 +15,7 @@ const controller = {
     show: (req,res) => {
         let result = product.search('id',req.params.id)
         return result ? res.render('./products/productDetail',{
-            styles:['productDetail','forms', 'create'],
+            styles:['productDetail','forms','create'],
             title: result.productName,
             product: result
         }) : res.render('error',{
