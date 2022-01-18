@@ -14,7 +14,7 @@ app.listen (app.get("port"), () => { console.log ("Servidor OK"); });
 
 app.use(require('./routes/routeMain'))
 
-app.use(require('./routes/routeProducts'))
+app.use('/products',require('./routes/routeProducts'))
 
 app.use(require('./routes/routeUsers'))
 
