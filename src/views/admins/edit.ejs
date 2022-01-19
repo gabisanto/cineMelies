@@ -150,7 +150,7 @@
            <% if (products.productType != "Película") { %>
             <fieldset class="fieldNuevo">
                 <legend>Precio (sólo si no es película)</legend>
-                <label for="priceInput"><input type="number" name="priceInput" class="cajaNuevo" value="0" placeholder="Precio" >
+                <label for="priceInput"><input type="number" name="priceInput" class="cajaNuevo" value="<%=products.priceInput%>" placeholder="Precio" >
                 <span>Precio</span>
                 </label>
                 
