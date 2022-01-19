@@ -10,4 +10,6 @@ router.get('/:id',controlProducts.show)
 
 router.get('/update/:id',controlProducts.update)
 
+router.delete('/',controlProducts.delete)
+
 module.exports = router;

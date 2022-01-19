@@ -26,6 +26,11 @@ const controller = {
         products: product.all()
     }),
 
+    delete: (req,res) => {
+        product.delete(req.body.id)
+        return res.redirect("/products/list")
+    }
+
     
     }
     

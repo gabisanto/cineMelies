@@ -1,4 +1,5 @@
-[{
+[
+  {
     "id": 1,
     "productType": "Película",
     "productName": "The Big Heat",
@@ -13,7 +14,8 @@
     "filmAudio": "subtitulado",
     "priceInput": "movie",
     "createImage": "/img/the-big-heat.jpg"
-  }, {
+  },
+  {
     "id": 2,
     "productType": "Película",
     "productName": "Phantom Lady",
@@ -28,7 +30,8 @@
     "filmAudio": "subtitulado",
     "priceInput": "movie",
     "createImage": "/img/phantom-lady.jpg"
-  }, {
+  },
+  {
     "id": 3,
     "productType": "Película",
     "productName": "The Big Combo",
@@ -43,7 +46,8 @@
     "filmAudio": "subtitulado",
     "priceInput": "movie",
     "createImage": "/img/the-big-combo.jpg"
-  }, {
+  },
+  {
     "id": 4,
     "productType": "Película",
     "productName": "Double Indemnity",
@@ -58,7 +62,8 @@
     "filmAudio": "subtitulado",
     "priceInput": "movie",
     "createImage": "/img/double-indemnity.jpg"
-  }, {
+  },
+  {
     "id": 5,
     "productType": "Película",
     "productName": "Dune",
@@ -73,7 +78,8 @@
     "filmAudio": "subtitulado",
     "priceInput": "movie",
     "createImage": "/img/dune.jpg"
-  }, {
+  },
+  {
     "id": 6,
     "productType": "Película",
     "productName": "Maligno",
@@ -88,7 +94,8 @@
     "filmAudio": "subtitulado",
     "priceInput": "movie",
     "createImage": "/img/maligno.jpg"
-  }, {
+  },
+  {
     "id": 7,
     "productType": "Película",
     "productName": "Eternals",
@@ -103,7 +110,8 @@
     "filmAudio": "subtitulado",
     "priceInput": "movie",
     "createImage": "/img/Eternals.jpg"
-  }, {
+  },
+  {
     "id": 8,
     "productType": "Película",
     "productName": "Matrix",
@@ -118,7 +126,8 @@
     "filmAudio": "subtitulado",
     "priceInput": "movie",
     "createImage": "/img/matrix.jpg"
-  }, {
+  },
+  {
     "id": 9,
     "productType": "Bebida",
     "productName": "Coca Cola Chica",
@@ -133,7 +142,8 @@
     "filmAudio": null,
     "priceInput": "200",
     "createImage": "/img/cocacolachica.jpg"
-  }, {
+  },
+  {
     "id": 10,
     "productType": "Alimento",
     "productName": "Pochoclo mediano",
@@ -148,4 +158,4 @@
     "filmAudio": null,
     "priceInput": "800",
     "createImage": "/img/pochoclomediano.jpg"
-  }]
+}]
