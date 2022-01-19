@@ -7,6 +7,71 @@
 
 <!-- Sección Main -->
 <main>
+
+    <section id="register-form">
+        <h3> NUEVO CINÉFILO </h3> 
+       
+        <figure id="cine-foto">
+            <img src="/img/cinefilo.png">
+        </figure>
+       
+        <form action="/" id="register-form" method="post" >
+            <fieldset class="fieldNuevo">
+            <legend class="dn"> Nombre y Apellido </legend>
+            <label class="dn" for="nombreCompleto"> </label>
+            <input type="text" class="cajaNuevo" name="nombreCompleto" id="nombreCompleto" placeholder="Nombre y Apellido" required >
+            
+            </fieldset>
+        
+            <fieldset class="fieldNuevo">
+            <legend class="dn" > DNI </legend>
+            <label class="dn"  for="Documento">  </label>
+            <input type="number" class="cajaNuevo" name="Documento" id="Documento" placeholder="Documento"  required >
+         
+            </fieldset>
+        
+            <fieldset class="fieldNuevo" >
+            
+            <label for="fecha" class="dn"> </label>
+            <input type="date" class="cajaNuevo" class="t-input" name="fecha" id="fecha" placeholder="fecha"  required >
+            
+            </fieldset>
+        
+            <fieldset class="fieldNuevo">
+            <legend class="dn" > Email </legend>
+            <label  class="dn" for="email"> </label>
+            <input type="email"  class="cajaNuevo" name="email" id="email" placeholder="Email"  required >
+            
+            </fieldset>
+        
+            <fieldset class="fieldNuevo">
+            <legend class="dn" > Contraseña </legend>
+             <label for="clave" >  </label> 
+            <input type="password" class="cajaNuevo" name="clave" id="confirm" placeholder="Escribí tu contraseña" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+            title="Debe contener 8 o más caracteres de al menos un número y una letra mayúscula y minúscula" required >
+            
+            </fieldset>
+        
+            <fieldset class="fieldNuevo">
+            <legend class="dn" > Confirmar Contraseña </legend>
+            <label for="confirm" id="confirmar"> </label> 
+            <input type="password" class="cajaNuevo" name="confirm" id="confirm" class="clave" placeholder="Confirmar Contraseña" required >
+           
+            </fieldset>
+        
+            <fieldset class="botonNuevo">
+            <legend class="dn"> Botones del Formulario </legend>
+            <button type="submit" class="enviar"> Registrarse </button>
+            </fieldset>
+            
+            <fieldset class="">
+                <article > <a href="/login" id="login"> Ingresar </a>  </article>
+            </fieldset>
+            </form>
+            
+    </section>
+
+<!-- 
 <section> 
     <article> <h3> NUEVO CINÉFILO </h3> </article>
     <section  class="main-form" >
@@ -59,6 +124,8 @@
     </section>
     <article > <a href="/login" id="login"> Ingresar </a>  </article>
 </section>
+
+-->
 </main>
 
 <%- include ('../modules/footer') %>

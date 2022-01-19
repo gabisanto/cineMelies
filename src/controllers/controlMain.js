@@ -1,7 +1,9 @@
+
 module.exports = {
     home: (req,res) => res.render('./main/home',{
         styles: ['home'],
-        title: 'Cine Melies'
+        title: 'Cine Melies',
+        peliculas: productosPeliculas
     }),
     about: (req,res) => res.render('./main/nosotros',{
         styles:['nosotros'],

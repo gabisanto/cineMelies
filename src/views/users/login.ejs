@@ -5,33 +5,32 @@
 <%- include ('../modules/header') %> 
 
 <main>
-<section > 
+<section id="login-form"> 
     <h3> INGRESÁ TU CUENTA  </h3>  
-<section class="main-form"> 
     <figure id="cine-foto">
         <img src="/img/cinefilo.png" alt="">
     </figure>
 <form action="/"  method="post" class="fr">
-    <fieldset >
-        <legend > Usuario </legend>
+    <fieldset class="fieldNuevo">
+        
         <label for="Usuario" class="dn"> Usuario</label>
-        <input type="text" name="Usuario" id="Usuario" placeholder=" Usuario"  required >
+        <input type="text" class="cajaNuevo" name="Usuario" id="Usuario" placeholder=" Usuario"  required >
     </fieldset>
 
-    <fieldset>
-        <legend > Contraseña </legend>
+    <fieldset class="fieldNuevo">
+        
         <label for="clave" class="dn"> Contraseña  </label>
-        <input type="password" name="confirm" id="confirm" placeholder="Escribí tu contraseña" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+        <input type="password" class="cajaNuevo" name="confirm" id="confirm" placeholder="Escribí tu contraseña" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
         title="Debe contener 8 o más caracteres de al menos un número y una letra mayúscula y minúscula" required >
     </fieldset>
     </fieldset>
 
-    <fieldset class="usuario" >
+    <fieldset class="usuario fieldNuevo"" >
         <input type="checkbox" id="vehicle1" name="vehicle1"  value="Bike">
         <label for="vehicle1"> Recordar </label> 
     </fieldset>
 
-    <fieldset class="botones">
+    <fieldset class="botonNuevo">
         <legend class="dn"> Botones del Formulario </legend>
         <button type="submit"> Ingresar </button>   
     </fieldset>
@@ -39,12 +38,15 @@
     <fieldset >
     <a href="">  <article class="txt-register"> <h3> ¿ Olvidaste tu contraseña ?  </h3>  </article></a>  
     </fieldset>
-
-     
+  
 </form>
+
+        <article class="txt-register"> <h3> ¿ No ténes Usuario ? <a href="/register" id="register"> ¡Registrate! Acá </h3> </a>     
+        </article> 
+    
+
 </section>
-<article class="txt-register"> <h3> ¿ No ténes Usuario ? <a href="/register" id="register"> ¡Registrate! Acá </h3> </a>     
-</article>
+
 </section>
 </main>
 

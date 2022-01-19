@@ -1,4 +1,5 @@
-[{
+[
+  {
     "id": 1,
     "productType": "Película",
     "productName": "The Big Heat",
@@ -12,8 +13,9 @@
     "filmFormat": "dosDe",
     "filmAudio": "subtitulado",
     "priceInput": "movie",
-    "createImage": "http://dummyimage.com/909x1706.png/ff4444/ffffff"
-  }, {
+    "createImage": "/img/the-big-heat.jpg"
+  },
+  {
     "id": 2,
     "productType": "Película",
     "productName": "Phantom Lady",
@@ -27,8 +29,9 @@
     "filmFormat": "dosDe",
     "filmAudio": "subtitulado",
     "priceInput": "movie",
-    "createImage": "http://dummyimage.com/788x1987.png/5fa2dd/ffffff"
-  }, {
+    "createImage": "/img/phantom-lady.jpg"
+  },
+  {
     "id": 3,
     "productType": "Película",
     "productName": "The Big Combo",
@@ -42,8 +45,9 @@
     "filmFormat": "dosDe",
     "filmAudio": "subtitulado",
     "priceInput": "movie",
-    "createImage": "http://dummyimage.com/1565x142.png/ff4444/ffffff"
-  }, {
+    "createImage": "/img/the-big-combo.jpg"
+  },
+  {
     "id": 4,
     "productType": "Película",
     "productName": "Double Indemnity",
@@ -57,8 +61,9 @@
     "filmFormat": "dosDe",
     "filmAudio": "subtitulado",
     "priceInput": "movie",
-    "createImage": "http://dummyimage.com/274x1257.png/cc0000/ffffff"
-  }, {
+    "createImage": "/img/double-indemnity.jpg"
+  },
+  {
     "id": 5,
     "productType": "Película",
     "productName": "Dune",
@@ -72,8 +77,9 @@
     "filmFormat": "dosDe",
     "filmAudio": "subtitulado",
     "priceInput": "movie",
-    "createImage": "http://dummyimage.com/1775x1241.png/5fa2dd/ffffff"
-  }, {
+    "createImage": "/img/dune.jpg"
+  },
+  {
     "id": 6,
     "productType": "Película",
     "productName": "Maligno",
@@ -87,8 +93,9 @@
     "filmFormat": "dosDe",
     "filmAudio": "subtitulado",
     "priceInput": "movie",
-    "createImage": "http://dummyimage.com/688x103.png/5fa2dd/ffffff"
-  }, {
+    "createImage": "/img/maligno.jpg"
+  },
+  {
     "id": 7,
     "productType": "Película",
     "productName": "Eternals",
@@ -102,8 +109,9 @@
     "filmFormat": "dosDe",
     "filmAudio": "subtitulado",
     "priceInput": "movie",
-    "createImage": "http://dummyimage.com/1487x1779.png/ff4444/ffffff"
-  }, {
+    "createImage": "/img/Eternals.jpg"
+  },
+  {
     "id": 8,
     "productType": "Película",
     "productName": "Matrix",
@@ -117,11 +125,12 @@
     "filmFormat": "dosDe",
     "filmAudio": "subtitulado",
     "priceInput": "movie",
-    "createImage": "http://dummyimage.com/1698x772.png/cc0000/ffffff"
-  }, {
+    "createImage": "/img/matrix.jpg"
+  },
+  {
     "id": 9,
     "productType": "Bebida",
-    "productName": "Coca Cola",
+    "productName": "Coca Cola Chica",
     "productLink": "notMovie",
     "productDescription": "desc9",
     "filmCategory": "typeNoAplica",
@@ -132,11 +141,12 @@
     "filmFormat": "notMovie",
     "filmAudio": "notMovie",
     "priceInput": "movie",
-    "createImage": "http://dummyimage.com/1434x1593.png/ff4444/ffffff"
-  }, {
+    "createImage": "/img/cocacolachica.jpg"
+  },
+  {
     "id": 10,
     "productType": "Alimento",
-    "productName": "Pochoclo chico",
+    "productName": "Pochoclo mediano",
     "productLink": "notMovie",
     "productDescription": "desc10",
     "filmCategory": "typeNoAplica",
@@ -147,5 +157,21 @@
     "filmFormat": "notMovie",
     "filmAudio": "notMovie",
     "priceInput": "800",
-    "createImage": "http://dummyimage.com/467x1717.png/cc0000/ffffff"
-  }]
+    "createImage": "/img/pochoclomediano.jpg"
+  },
+  {
+    "id": 11,
+    "productType": "1",
+    "productName": "SPIDER-MAN: SIN CAMINO A CASA ",
+    "productLink": "https://www.youtube.com/watch?v=r6t0czGbuGI",
+    "productDescription": "Tras descubrirse la identidad secreta de Peter Parker como Spider-Man, la vida del joven se vuelve una locura. Peter decide pedirle ayuda al Doctor Extraño para recuperar su vida. Pero algo sale mal y provoca una fractura en el multiverso.",
+    "filmCategory": "typeModerna",
+    "filmGenre": "superscifi",
+    "salasCine": "salaSpielberg",
+    "diasCartel": "viernesCartel",
+    "timeScheduled": "16:00",
+    "filmFormat": "tresDe",
+    "filmAudio": "subtitulado",
+    "createImage": "3142881.jpg"
+  }
+]

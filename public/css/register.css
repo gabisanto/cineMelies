@@ -8,7 +8,7 @@
 
  /*seccion main*/
 
- main{
+ body {
   background-color: rgb(242, 158, 56);
   text-align: center;
   font-family: 'Alegreya Sans', sans-serif; 
@@ -18,26 +18,195 @@
 #cine-foto img{
 width: 40%;
 padding-top: .50em;
+text-align: center;
 }
 
 .dn{
 display: none;
+
+}
+
+#register-form{
+  padding:  0.50em 0;
+  background-color: #EDEEF2;
+  margin: 2em;
+  font-family: 'Alegreya Sans', sans-serif;
+  text-align: center;
+  
+}
+
+.titulos{
+    font-family: 'Alegreya Sans', sans-serif;
+    outline: none;
+    border: none;
+    margin-bottom: 2em;
+    font-weight: bold;
+    font-size: 18px;
 }
 
 
-.main-form{
+#data-form{
+  max-width: 100%;
+  padding-bottom: 2em;
 
-    background-color: rgba(235, 235, 235, 100%);
-    box-shadow: 0 0.0625rem 0.125rem 0 rgb(0 0 0 / 15%);
-    margin: 1.125rem ;
-    padding: 2rem 4rem;
-    display: flex;  
-    flex-direction: column;
-    align-items: center;
-    border-radius: 3px;
+}
+
+#data-form fieldset{
+  margin-left: 0.5%;
+    margin-bottom: 1em;
+}
+
+form fieldset {
+  outline:none;
+  border:none;
 }
 
 
+
+.fieldNuevo{
+  border:none;
+  display:block;
+ 
+  width:100%;
+  position:relative;
+  margin-bottom:0.5em;
+}
+
+.cajaNuevo{
+  border-radius:5px;
+  width:100%;
+  height:45px;
+  padding:1em;
+  display:block;
+  /* margin: 0 auto; */
+  border:none;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+  background-color: white;
+  /* font-weight: bold; */
+  color: #747373;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2), inset 0 -3px 0 rgba(0,0,0,0.22);
+}
+
+.fieldNuevo label input::-moz-placeholder {
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  color: #444444;
+  /* font-weight: bold; */
+}
+.fieldNuevo label input:-ms-input-placeholder {
+  -ms-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  color: #444444;
+  /* font-weight: bold; */
+}
+.fieldNuevo label input::placeholder {
+  transition: all 0.2s ease-in-out;
+  color: #444444;
+  /* font-weight: bold; */
+}
+
+.fieldNuevo label input:focus, .fieldNuevo label input.populated {
+  padding-top: 28px;
+  padding-bottom: 12px;
+}
+.fieldNuevo label input:focus::-moz-placeholder, .fieldNuevo label input.populated::-moz-placeholder {
+      color: transparent;
+  }
+.fieldNuevo label input:focus:-ms-input-placeholder, .fieldNuevo label input.populated:-ms-input-placeholder {
+      color: transparent;
+  }
+.fieldNuevo label input:focus::placeholder, .fieldNuevo label input.populated::placeholder {
+      color: transparent;
+  }
+
+
+.cajaNuevo:active {
+  transform: translateY(2px);
+}
+
+/*FIN ESTILOS INPUT*/
+
+/* ESTILOS DE BOTONES */
+
+
+.botonNuevo {
+  display: flex;
+  
+  box-shadow: var(--shadow) 4px 4px;
+  --border-size: 0.125rem;
+  --duration: 250ms;
+  --ease: cubic-bezier(0.215, 0.61, 0.355, 1);
+  --font-family: 'Fira Sans', sans-serif;
+  --color-primary: #EDEEF2;
+  --color-secondary: #F2B035;
+  /* --color-tertiary: dodgerblue; */
+  --shadow: rgba(0, 0, 0, 0.1);
+  --space: 1rem;
+  margin:2em;
+  
+  
+}
+
+.botonNuevo button {
+  flex-grow: 1;
+  cursor: pointer;
+  position: relative;
+  /* padding:
+    calc(var(--space) / 1.125)
+    var(--space)
+    var(--space); */
+    
+  height:45px;
+  border: var(--border-size) solid rgb(135, 134, 134);;
+  color: var(black);
+  background-color: var(--color-primary);
+  font-size: 0.75rem;
+  font-family: var(--font-family);
+  text-transform: lowercase;
+  text-shadow: var(--shadow) 2px 2px;
+  transition: flex-grow var(--duration) var(--ease);
+  
+}
+
+.botonNuevo button + button {
+  border-left: var(--border-size) solid rgb(135, 134, 134);
+  margin-left: calc(var(--border-size) * -1);
+}
+
+.botonNuevo button:hover,
+.botonNuevo button:focus {
+  flex-grow: 2;
+  color: white;
+  outline: none;
+  text-shadow: none;
+  background-color: var(--color-secondary);
+}
+
+.botonNuevo button:focus {
+  outline: var(--border-size) dashed var(--color-primary);
+  outline-offset: calc(var(--border-size) * -3);
+}
+
+.botonNuevo:hover button:focus:not(:hover) {
+  flex-grow: 1;
+  color: var(--color-secondary);
+  background-color: var(--color-primary);
+  outline-color: var(--color-tertiary);
+}
+
+.botonNuevo button:active {
+  transform: translateY(var(--border-size));
+}
+
+
+/* FIN ESTILO BOTONES */
+
+
+
+
+
+/*
 .fr{
 padding: 1em;
 display: flex;
@@ -46,6 +215,7 @@ align-items: center;
 
 
 }
+
 
 .fr fieldset{
 display: flex;
@@ -125,17 +295,15 @@ span{
 
 @media(min-width: 769px){
 
-  /*main*/
+  #cine-foto img{
+    width: 20%;
+    padding-top: .50em;
+    
+    }
 
-  .fr{
-    padding: 1em;
-    width: 100%;
-  
-  }
-  .main-form{
-  
-    margin: 1rem 9rem ;
-  }
+    .botonNuevo button {
+      font-size: 1rem;
+    }
   
 }
   
