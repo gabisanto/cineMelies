@@ -27,8 +27,8 @@ const controller = {
         products: product.search("id", req.params.id)
     }),
     modify: (req,res) => {
-        let updated = controller.update(req.params.id, req.body)
-        return res.redirect("./products/list")
+        let updated = product.update(req.params.id, req.body)
+        return res.redirect("./list")
     },
 
     delete: (req,res) => {

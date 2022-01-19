@@ -19,7 +19,6 @@ const model = {
         let updated = all.map(e => {
             if(e.id == id) {
                 
-                e.productType = data.productType
                 e.productName = data.productName
                 e.producLink = data.producLink
                 e.productDescription = data.productDescription

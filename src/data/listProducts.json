@@ -5,16 +5,12 @@
     "productName": "The Big Heat",
     "productLink": "https://www.youtube.com/watch?v=dLLAspkOv3w",
     "productDescription": "Tras suicidarse, el policía Tom Duncan deja una carta en la que confiesa haberse dejado sobornar por una banda de gángsters, pero también denuncia la corrupción de altos funcionarios. Cuando el sargento Dave Bannion trata de esclarecer su muerte, empieza a tropezar con toda clase de obstáculos.",
-    "filmCategory": "Clásica",
+    "filmCategory": "Estreno",
     "filmGenre": "drama",
     "salasCine": "salaMelies",
-    "diasCartel": "Lunes",
     "timeScheduled": "14",
-    "filmFormat": "2D",
     "filmAudio": "subtitulado",
-    "priceInput": "movie",
-    "createImage": "/img/the-big-heat.jpg",
-    "ageRestriction": "+18"
+    "createImage": "/img/the-big-heat.jpg"
   },
   {
     "id": 2,
