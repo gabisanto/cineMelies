@@ -21,10 +21,15 @@ const controller = {
         }) : null},
 
     update: (req,res) => res.render('./admins/edit',{
-        styles:['edit','forms'],
+        //list: controller.list(),
+        styles:['forms','edit'],
         title: 'Actualizar Item',
-        products: product.all()
+        products: product.search("id", req.params.id)
     }),
+    modify: (req,res) => {
+        let updated = controller.update(req.params.id, req.body)
+        return res.redirect("./products/list")
+    }
 
     delete: (req,res) => {
         product.delete(req.body.id)
