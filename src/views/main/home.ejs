@@ -35,113 +35,60 @@
             </select>
     </section>
 
-    <section id="container-clasica"> 
-            <!-- contenedor   Película clasica 1 -->
-        <section >
-                <figure  class="images">
-                     <img src="img/the-big-heat.jpg"> 
-                </figure>
-        <article >
-                    <p  class="title-peli"> THE BIG HEAT  </p>
-                    <p> (1953) </p>
-                    <p> <i class="fas fa-star"></i> 7.9 <span> / 10 </span> </p>
-                    <p> MAR y JUE 14HS</p>
-        </article>
-        </section>
+    <!-- contenedor   Películas clásicas -->
+    
+        <section id="container-clasica"> 
+            
         
-            <!-- contenedor  clasica 2 -->
-        <section >
-            <figure  class="images ">
-                 <img src="img/phantom-lady.jpg"> 
-            </figure>
-        <article  >
-                <p  class="title-peli"> PHANTOM LADY  </p>
-                <p> (1944) </p>
-                <p> <i class="fas fa-star"></i> 7.2 <span> / 10 </span> </p>
-                <p> LU y MIER 20HS</p>
-        </article>
-        </section>
-            <!-- contenedor  clasica 3 -->
-        <section >
-                <figure  class="images ">
-                     <img src="img/the-big-combo.jpg"> 
-                </figure> 
-        <article >
-                    <p  class="title-peli"> THE BIG COMBO  </p>
-                    <p> (1955) </p>
-                    <p> <i class="fas fa-star"></i> 7.4 <span> / 10 </span> </p>
-                    <p> LU  y MIER 11HS</p>
-        </article>
-        </section>
-            <!-- contenedor  clasica 4  -->
-        <section>
-            <figure  class="images ">
-                <a href="/productDetail"> <img src="img/double-indemnity.jpg"> </a>
-            </figure> 
-        <article >
-                <p  class="title-peli">  DOUBLE INDEMNITY  </p>
-                <p> (1944) </p>
-                <p> <i class="fas fa-star"></i> 8.3 <span> / 10 </span> </p>
-                <p> DOM 14 y 20HS</p>
-        </article>
-        </section> 
+            
+            
+                <% if (locals.productsClasica) { %> 
+                    <% if (productsClasica.length > 0) { %>
+                    <% productsClasica.forEach(element => { %>
+                        <section >
+                            <figure  class="images">
+                                <a href="/products/<%= element.id %>" title="<%= element.productName %>"><img src= <%= element.createImage %> ></a> 
+                            </figure>
+                            <article >
+                                <p  class="title-peli"> <%= element.productName %>  </p>
+                                <p> <a href="element.productLink"> Ver Trailer </a></p>
+                                <!-- <p> <i class="fas fa-star"></i> 7.9 <span> / 10 </span> </p> -->
+                                <p> <%= element.diasCartel %></p>
+                                <p> <%= element.timeScheduled %> hs.</p>
+                            </article>
+                        </section>
+                    <% }) %>
+                <% } %> 
+                <% } %> 
+        
+         
     </section> 
     
     
      <!-- contenedor Películas modernas -->
     
     <section id="container-moderna"> 
-        <!-- contenedor  Película 1 dune -->
-    <section >
-        <figure class="images">
-       <img src="img/dune.jpg"> 
-        </figure>
-    <article >
-            <p class="title-peli"> DUNE </p>
-            <p> (2021) </p>
-            <p>  <i class="fas fa-star"></i> 8.2 <span> / 10 </span> </p>
-            <p> LU y MIER 14HS</p>
-    </article>
-    </section> 
-         <!-- contenedor  Película 2 -->
-    <section >
-        <figure  class="images"> 
-            <img src="img/maligno.jpg"> 
-        </figure>
-    <article >
-            <p class="title-peli"> MALIGNO </p>
-            <p> (2021) </p>
-            <p> <i class="fas fa-star"></i>  6.3 <span> / 10 </span> </p>
-            <p> MAR y JUE 20HS</p>
-    </article>
-    </section>
-         <!-- contenedor  Película 3 -->
-    <section >
-        <figure  class="images">
-             <img src="img/Eternals.jpg">
-        </figure>
-    <article  >
-            <p class="title-peli"> ETERNALS  </p>
-            <p> (2021) </p>
-            <p> <i class="fas fa-star"></i> 6.8 <span> / 10 </span> </p>
-            <p> SAB 14HS y 20HS </p>
-    </article>
-    </section>
-        <!-- contenedor  Película 4 -->
-    <section >
-        <figure class="images">
-           <img src="img/matrix.jpg"> 
-        </figure> 
-    <article  >
-            <p class="title-peli"> MATRIX  </p>
-            <p> (2021) </p>
-            <p> <i class="fas fa-star"></i> 8.7 <span> / 10 </span> </p>
-            <p> VIE 20HS</p>
-    </article>
-    </section>  
-</section>
+        <% if (locals.productsModerna) { %> 
+            <% if (productsModerna.length > 0) { %>
+            <% productsModerna.forEach(element => { %>
+                <section >
+                    <figure  class="images">
+                        <a href="/products/<%= element.id %>" title="<%= element.productName %>"><img src= <%= element.createImage %> ></a> 
+                    </figure>
+                    <article >
+                        <p  class="title-peli"> <%= element.productName %>  </p>
+                        <p> <a href="element.productLink"> Ver Trailer </a></p>
+                        <!-- <p> <i class="fas fa-star"></i> 7.9 <span> / 10 </span> </p> -->
+                        <p> <%= element.diasCartel %></p>
+                        <p> <%= element.timeScheduled %> hs.</p>
+                    </article>
+                </section>
+            <% }) %>
+        <% } %> 
+        <% } %>
     
-</section> 
+</section>
+
 <!-- Proximos estrenos -->
 <section id="container-estrenos"> 
     <!-- 1 -->

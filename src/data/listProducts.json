@@ -15,7 +15,8 @@
     "priceInput": "movie",
     "createImage": "/img/the-big-heat.jpg",
     "ageRestriction": "+18"
-  }, {
+  },
+  {
     "id": 2,
     "productType": "Película",
     "productName": "Phantom Lady",
@@ -31,7 +32,8 @@
     "priceInput": "movie",
     "createImage": "/img/phantom-lady.jpg",
     "ageRestriction": "+18"
-  }, {
+  },
+  {
     "id": 3,
     "productType": "Película",
     "productName": "The Big Combo",
@@ -47,7 +49,8 @@
     "priceInput": "movie",
     "createImage": "/img/the-big-combo.jpg",
     "ageRestriction": "+16"
-  }, {
+  },
+  {
     "id": 4,
     "productType": "Película",
     "productName": "Double Indemnity",
@@ -63,7 +66,8 @@
     "priceInput": "movie",
     "createImage": "/img/double-indemnity.jpg",
     "ageRestriction": "+18"
-  }, {
+  },
+  {
     "id": 5,
     "productType": "Película",
     "productName": "Dune",
@@ -79,7 +83,8 @@
     "priceInput": "movie",
     "createImage": "/img/dune.jpg",
     "ageRestriction": "+13"
-  }, {
+  },
+  {
     "id": 6,
     "productType": "Película",
     "productName": "Maligno",
@@ -95,7 +100,8 @@
     "priceInput": "movie",
     "createImage": "/img/maligno.jpg",
     "ageRestriction": "+18"
-  }, {
+  },
+  {
     "id": 7,
     "productType": "Película",
     "productName": "Eternals",
@@ -111,7 +117,8 @@
     "priceInput": "movie",
     "createImage": "/img/Eternals.jpg",
     "ageRestriction": "ATP"
-  }, {
+  },
+  {
     "id": 8,
     "productType": "Película",
     "productName": "Matrix",
@@ -127,7 +134,8 @@
     "priceInput": "movie",
     "createImage": "/img/matrix.jpg",
     "ageRestriction": "+16"
-  }, {
+  },
+  {
     "id": 9,
     "productType": "Bebida",
     "productName": "Coca Cola Chica",
@@ -143,7 +151,8 @@
     "priceInput": "200",
     "createImage": "/img/cocacolachica.jpg",
     "ageRestriction": null
-  }, {
+  },
+  {
     "id": 10,
     "productType": "Alimento",
     "productName": "Pochoclo mediano",
@@ -159,4 +168,5 @@
     "priceInput": "800",
     "createImage": "/img/pochoclomediano.jpg",
     "ageRestriction": null
-  }]
+  }
+]
