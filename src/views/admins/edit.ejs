@@ -128,13 +128,13 @@
 
             <fieldset id="ageRestrictions">
                 <legend>Restricciones de edad</legend>
-                <input class="hidden radio-label" id="ageATP" type="radio" name="ageRestriction" value="todoPublico" <%=products.ageRestriction %> >
+                <input class="hidden radio-label" id="ageATP" type="radio" name="ageRestriction" value="todoPublico" <%=products.ageRestriction == "ATP" ? "checked":null %> >
                 <label class="button-label" for="ageATP">ATP</label>
-                <input class="hidden radio-label" id="ageThirteen" type="radio" name="ageRestriction" value="overThirteen">
+                <input class="hidden radio-label" id="ageThirteen" type="radio" name="ageRestriction" value="overThirteen" <%=products.ageRestriction == "+13" ? "checked":null %>>
                 <label class="button-label" for="ageThirteen">+13</label>
-                <input class="hidden radio-label" id="ageSixteen" type="radio" name="ageRestriction" value="overSixteen">
+                <input class="hidden radio-label" id="ageSixteen" type="radio" name="ageRestriction" value="overSixteen" <%=products.ageRestriction == "+16" ? "checked":null %>>
                 <label class="button-label" for="ageSixteen">+16</label>
-                <input class="hidden radio-label" id="ageEighteen" type="radio" name="ageRestriction" value="overEighteen">
+                <input class="hidden radio-label" id="ageEighteen" type="radio" name="ageRestriction" value="overEighteen" <%=products.ageRestriction == "+18" ? "checked":null %>>
                 <label class="button-label" for="ageEighteen">+18</label> 
             </fieldset>
             <% } %>
@@ -161,8 +161,9 @@
           
 
                         <fieldset class="botonNuevo">
-                            <button type="submit" class="enviar">Guardar</button>
+                            
                             <button type="reset" class="reset">Cancelar</button> 
+                            <button type="submit" class="enviar">Guardar</button>
                         </fieldset>
 
         </form>
