@@ -3,7 +3,8 @@ const controlAdmin = require ('../controllers/controlAdmin');
 const router = express.Router();
 
 router.get('/create',controlAdmin.create)
-// router.get('/edit',controlAdmin.edit)
+// la ruta edit interfiere con el metodo
+//router.get('/modify',controlAdmin.edit)
 
 
 
