@@ -1,5 +1,6 @@
 const path = require('path');
 const fs = require('fs');
+const { create } = require('domain');
 const model = {
     file: path.resolve(__dirname,'../data','listProducts.json'),
     read: () => fs.readFileSync(model.file),

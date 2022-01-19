@@ -4,14 +4,16 @@ const router = express.Router();
 
 router.get('/carrito',controlProducts.cart)
 
-router.get('/productDetail',controlProducts.detail)
-
-router.get('/create',controlProducts.create)
-
 router.get('/list',controlProducts.list)
 
+router.get('/:id',controlProducts.show)
 
-router.post('/',controlProducts.save);
+router.get('/:id/edit',controlProducts.update)
+
+router.delete('/',controlProducts.delete)
+router.put("/:id", controlProducts.modify)
+
+module.exports = router;
 
 
 

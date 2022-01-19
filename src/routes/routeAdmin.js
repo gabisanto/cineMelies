@@ -3,8 +3,6 @@ const controlAdmin = require ('../controllers/controlAdmin');
 const router = express.Router();
 
 
-router.get('/edit',controlAdmin.edit)
-
-
+router.get('/create',controlAdmin.create)
 
 module.exports = router;

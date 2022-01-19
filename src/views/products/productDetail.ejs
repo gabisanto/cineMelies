@@ -7,86 +7,109 @@
 <!--Sección MAIN-->
 <main>
 <section>
-    <article id=background-indemnity>
+    <article id=background>
         <picture >
-            <img src="img/background-indemnity.jpg">
+            <% if (product.productType !== "Película") { %>
+            <img src="/img/pop-corn.jpg">
+            <% } else { %>
+            <img src=<%= product.createImage %>>
+            <% } %> 
         </picture>
     </article>
 
 
     
-        <!-- detalle Película double-indemnity-->
+        <!-- detalle producto-->
 <section class="container-peli">
-    <article> <h2> DOUBLE INDEMNITY </h2> 
-    <p id="stars"> 
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star star-color"></i>
-    </p></article>
-    <article>
-        <iframe  src="https://www.youtube.com/embed/yKrrAa2o9Eg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <article> <h2> <%= product.productName %>  </h2> 
     </article>
-    <article>
-        <figure  class="images">
-            <img src="img/double-indemnity.jpg">
-        </figure>
-    </article>
+    <section id="flexDescription">
+        <article>
+            <figure  class="images">
+                <img src=<%= product.createImage %>>
+            </figure>
+        </article>
 
-<section class="descripciones" >
-<article id="sinopsis"> 
-    <h3> SINOPSIS </h3>
-    <p> Un vendedor de seguros de Los Ángeles 
-        se deja seducir por un ama de casa 
-        para participar en un plan de fraude 
-        y asesinato que despierta las sospechas 
-        de su colega, un investigador. </p>
-</article>
-</section>
-<section >
-<article id="comment-movie">
-<p>"¡La tremenda historia de Paramount sobre un amor impío y un crimen casi perfecto!"</p>
-</article>
-</section>
+       
+
+        <section class="descripciones" >
+            <article id="sinopsis"> 
+                <h3> SINOPSIS </h3>
+                <p> <%= product.productDescription %>  </p>
+            </article>
+
+            <figure>
+                <% if (product.productType == "Película") { %>
+                    <a href="<%= product.productLink %> " target="_blank"><div class="play"></div></a>
+                <% } else { %>
+                    <article id="sinopsis"> 
+                        <h3> PRECIO </h3>
+                        <p> $<%= product.priceInput %> por unidad </p>
+                    </article>
+
+                <% } %> 
+
+            </figure>
+
+        </section>
+
+        
 
 
-<section id="form-movie">
-    <article> <h4> ELEGIR PELÍCULA POR: </h4></article>
-<form action="/"  method="post">
-<fieldset class="movie-info"> 
-    <section class="movie-button">
-    <button type="button"> CLASIC </button>
-    <button type="button"> 2D </button>
-    <button type="button"> 3D </button>
     </section>
-</fieldset>
-
-<fieldset class="movie-info"> 
-    <section class="movie-button">
-    <button type="button"> Subtitulada </button>
-    <button type="button"> Español </button>
-    
-    </section>
-</fieldset>
-
-<fieldset class="movie-info movie-button">
-        <button type="button"> Domingo </button>
-</fieldset>
-<fieldset class="movie-info">
-    <h4> CineMelies </h4>
-    <section class="movie-button"> 
-    <p> <small >  Classic • 2D • Español  </small> </p>
-    <button type="button"> 14:00 </button>
-    <p> <small>  Classic • 2D • Subtitulada  </small> </p>
-    <button type="button"> 20:00 </button>
-    </section>
+<<<<<<< HEAD
     
 </fieldset>
 <fieldset id="button-compra">
         <input type="submit" value="COMPRAR" />   
 </fieldset>
 </form>
+=======
+
+    <% if (product.productType == "Película") { %>
+
+    <section id="form-movie">
+        <article> <h4> ELEGIR PELÍCULA POR: </h4></article>
+            <form action="/"  method="post">
+                <fieldset class="fieldCheckbox">
+                    <legend>Formato</legend>
+                    <label class="labelCheck" name="filmFormatUser"><input type="checkbox" name="filmFormatUser"  value="<% product.filmFormat %>"> <%= product.filmFormat %></label>
+                
+                </fieldset>
+
+                <fieldset class="fieldCheckbox">
+                    <legend>Idioma</legend>
+                    <label class="labelCheck" name="filmAudioUser"><input type="checkbox" name="filmAudioUser"  value="<% product.filmAudio %>"> <%= product.filmAudio %></label>
+                
+                </fieldset>
+
+                <fieldset class="fieldCheckbox">
+                    <legend>Días en cartel</legend>
+                    <label class="labelCheck" name="diasCartelUser"><input type="checkbox" name="diasCartelUser"  value="<% product.diasCartel %>"> <%= product.diasCartel %></label>
+                
+                </fieldset>
+
+                <fieldset class="fieldCheckbox">
+                    <legend>Horarios</legend>
+                    <label class="labelCheck" name="timeScheduledUser"><input type="checkbox" name="timeScheduledUser"  value="<% product.timeScheduled %>"> <%= product.timeScheduled %></label>
+                
+                </fieldset>
+
+                <fieldset class="botonNuevo">
+                    <button type="submit" class="enviar">comprar</button>
+                    <button type="reset" class="reset">cancelar</button> 
+                </fieldset>
+            
+
+        <% } else { %> 
+            <fieldset class="botonNuevo">
+                <button type="submit" class="enviar">comprar</button>
+                <button type="reset" class="reset">cancelar</button> 
+            </fieldset>  
+        <% } %> 
+
+    </form>
+>>>>>>> edb33fe073f7380637e1916d3086b3f38adda381
 </section>
 </section>
 </section> 

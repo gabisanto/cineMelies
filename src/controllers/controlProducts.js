@@ -1,9 +1,10 @@
+const product = require('../models/product.js');
 
 const controller = {
     list: (req,res) => res.render('./products/list',{
         styles:['list'],
         title: 'Listado items',
-        products: all()
+        products: product.all()
     }),
 
     cart: (req,res) => res.render('./products/carrito',{
@@ -11,26 +12,38 @@ const controller = {
         title: 'Proceso de compra'
     }),
 
-    detail: (req,res) => res.render('./products/productDetail',{
-        styles: ['productDetail'],
-        title: 'Detalle de película'
+    show: (req,res) => {
+        let result = product.search('id',req.params.id)
+        return result ? res.render('./products/productDetail',{
+            styles:['productDetail','forms','create'],
+            title: result.productName,
+            product: result
+        }) : null},
+
+    update: (req,res) => res.render('./admins/edit',{
+        //list: controller.list(),
+        styles:['forms','edit'],
+        title: 'Actualizar Item',
+        products: product.search("id", req.params.id)
     }),
-   
-    create: (req,res) => res.render('./products/create',{
-        styles: ['create','forms'],
-        title: 'Crear producto',
-    }),
-     
-    save: (req,res) => {
-        //return res.send(req.body);
-        let created = product.create(req.body);
-        return res.send(created)
-     
-      //res.send(req.body)
+    modify: (req,res) => {
+        let updated = product.update(req.params.id, req.body)
+        return res.redirect("./list")
     },
+
+    delete: (req,res) => {
+        product.delete(req.body.id)
+        return res.redirect("/products/list")
+    }
+
+    
+    }
+    
+
     
     
-}
+        // res.render('./products/productDetail',{
+        // styles: ['productDetail'],
+        // title: 'Detalle de película'
 
 module.exports = controller
-
