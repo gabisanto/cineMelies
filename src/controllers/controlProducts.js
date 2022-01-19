@@ -29,7 +29,7 @@ const controller = {
     modify: (req,res) => {
         let updated = controller.update(req.params.id, req.body)
         return res.redirect("./products/list")
-    }
+    },
 
     delete: (req,res) => {
         product.delete(req.body.id)
