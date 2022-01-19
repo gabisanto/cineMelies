@@ -24,6 +24,7 @@ const model = {
                 e.filmFormat = data.filmFormat
                 e.filmAudio = data.filmAudio
                 e.priceInput = data.priceInput
+                e.ageRestriction = data.ageRestriction
                 
                 return e
             }
@@ -31,8 +32,8 @@ const model = {
 
         })
         model.write(updated) 
-        let product = model.search("id", id)
-        return product
+        let producto = model.search("id", id)
+        return producto
 
     }
 }
