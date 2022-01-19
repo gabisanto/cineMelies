@@ -10,7 +10,8 @@
     "salasCine": "salaMelies",
     "timeScheduled": "14",
     "filmAudio": "subtitulado",
-    "createImage": "/img/the-big-heat.jpg"
+    "createImage": "/img/the-big-heat.jpg",
+    "ageRestriction": "todoPublico"
   },
   {
     "id": 2,

@@ -8,7 +8,7 @@ router.get('/list',controlProducts.list)
 
 router.get('/:id',controlProducts.show)
 
-router.get('/update/:id',controlProducts.update)
+router.get('/:id/edit',controlProducts.update)
 
 router.delete('/',controlProducts.delete)
 router.put("/:id", controlProducts.modify)
