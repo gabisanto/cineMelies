@@ -12,14 +12,9 @@
     "timeScheduled": "14",
     "filmFormat": "2D",
     "filmAudio": "subtitulado",
-<<<<<<< HEAD
-    "createImage": "/img/the-big-heat.jpg",
-    "ageRestriction": "todoPublico"
-=======
     "priceInput": "movie",
     "createImage": "/img/the-big-heat.jpg",
     "ageRestriction": "+13"
->>>>>>> 451c3b806befa9997e5e0dd96a10f8fa5f919ee6
   },
   {
     "id": 2,
