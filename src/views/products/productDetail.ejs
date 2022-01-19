@@ -9,7 +9,11 @@
 <section>
     <article id=background>
         <picture >
+            <% if (product.productType !== "Película") { %>
+            <img src="/img/pop-corn.jpg">
+            <% } else { %>
             <img src=<%= product.createImage %>>
+            <% } %> 
         </picture>
     </article>
 

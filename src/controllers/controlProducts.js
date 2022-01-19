@@ -18,10 +18,11 @@ const controller = {
             styles:['productDetail','forms','create'],
             title: result.productName,
             product: result
-        }) : res.render('error',{
-            msg: 'Producto no encontrado'
-        })
-    }
+        }) : null
+        }
+    ,
+
+    
     
         // res.render('./products/productDetail',{
         // styles: ['productDetail'],
