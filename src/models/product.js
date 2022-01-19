@@ -6,12 +6,13 @@ const model = {
     read: () => fs.readFileSync(model.file),
     all: () => JSON.parse(model.read()),
     search: (field,value) => model.all().find(element => element[field] == value),
-    write: (data) => fs.writeFileSync(model.file, JSON.stringify(data, null , 2)),
+    write: (data) => fs.writeFileSync(model.file, JSON.stringify(data,null,2)),
 
     update: (id,data) => {
         let all = model.all();
         let updated = all.map(e => {
             if(e.id == id) {
+                
                 e.productType = data.productType
                 e.productName = data.productName
                 e.producLink = data.producLink
