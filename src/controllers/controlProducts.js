@@ -18,16 +18,22 @@ const controller = {
             styles:['productDetail','forms','create'],
             title: result.productName,
             product: result
-        }) : null
-        }
-    ,
+        }) : null},
+
+    update: (req,res) => res.render('./admins/edit',{
+        styles:['edit','forms'],
+        title: 'Actualizar Item',
+        products: product.all()
+    }),
+
+    
+    }
+    
 
     
     
         // res.render('./products/productDetail',{
         // styles: ['productDetail'],
         // title: 'Detalle de película'
-    
-}
 
 module.exports = controller

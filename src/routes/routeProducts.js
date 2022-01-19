@@ -8,4 +8,6 @@ router.get('/list',controlProducts.list)
 
 router.get('/:id',controlProducts.show)
 
+router.get('/update/:id',controlProducts.update)
+
 module.exports = router;
