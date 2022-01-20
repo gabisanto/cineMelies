@@ -1,6 +1,19 @@
 const product = require('../models/product.js');
 
 const controller = {
+    create: (req,res) => res.render('./products/create',{
+        styles: ['create','forms'],
+        title: 'Crear producto',
+    }),
+     
+    save: (req,res) => {
+        //return res.send(req.body);
+        let created = product.create(req.body);
+        return res.send(created)
+     
+      //res.send(req.body)
+    },
+    
     list: (req,res) => res.render('./products/list',{
         styles:['list'],
         title: 'Listado items',
