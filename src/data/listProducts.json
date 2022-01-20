@@ -32,7 +32,6 @@
     "priceInput": "movie",
     "createImage": "/img/phantom-lady.jpg",
     "ageRestriction": "+18"
-
   },
   {
     "id": 3,
@@ -40,8 +39,6 @@
     "productName": "The Big Combo",
     "productLink": "https://www.youtube.com/watch?v=iIkCXF9Y4ow",
     "productDescription": "Un teniente de la policía que es presionado por una pandilla dirigida por un gánster vicioso. Él es ayudado por la esposa del criminal, celosa del romance de su marido con otra mujer, quien le proporciona información para ayudarlo a cerrarle la red a su enemigo.",
-
-
     "filmCategory": "Clásica",
     "filmGenre": "drama",
     "salasCine": "salaMelies",
@@ -69,7 +66,7 @@
     "priceInput": "movie",
     "createImage": "/img/double-indemnity.jpg",
     "ageRestriction": "+18"
-    },
+  },
   {
     "id": 5,
     "productType": "Película",
@@ -103,7 +100,6 @@
     "priceInput": "movie",
     "createImage": "/img/maligno.jpg",
     "ageRestriction": "+18"
-
   },
   {
     "id": 7,
@@ -121,7 +117,6 @@
     "priceInput": "movie",
     "createImage": "/img/Eternals.jpg",
     "ageRestriction": "ATP"
-
   },
   {
     "id": 8,
@@ -152,38 +147,23 @@
     "timeScheduled": "notMovie",
     "filmFormat": "notMovie",
     "filmAudio": "notMovie",
-    "priceInput": "movie",
+    "priceInput": "200",
     "createImage": "/img/cocacolachica.jpg"
   },
   {
     "id": 10,
     "productType": "Alimento",
     "productName": "Pochoclo mediano",
-    "productLink": null,
+    "productLink": "notMovie",
     "productDescription": "Pochoclo mediano",
-    "filmCategory": "No Aplica",
-    "filmGenre": null,
-    "salasCine": null,
-    "diasCartel": null,
-    "timeScheduled": null,
-    "filmFormat": null,
-    "filmAudio": null,
+    "filmCategory": "typeNoAplica",
+    "filmGenre": "notMovie",
+    "salasCine": "notMovie",
+    "diasCartel": "notMovie",
+    "timeScheduled": "notMovie",
+    "filmFormat": "notMovie",
+    "filmAudio": "notMovie",
     "priceInput": "800",
     "createImage": "/img/pochoclomediano.jpg"
-  },
-  {
-    "id": 11,
-    "productType": "1",
-    "productName": "SPIDER-MAN: SIN CAMINO A CASA ",
-    "productLink": "https://www.youtube.com/watch?v=r6t0czGbuGI",
-    "productDescription": "Tras descubrirse la identidad secreta de Peter Parker como Spider-Man, la vida del joven se vuelve una locura. Peter decide pedirle ayuda al Doctor Extraño para recuperar su vida. Pero algo sale mal y provoca una fractura en el multiverso.",
-    "filmCategory": "typeModerna",
-    "filmGenre": "superscifi",
-    "salasCine": "salaSpielberg",
-    "diasCartel": "viernesCartel",
-    "timeScheduled": "16:00",
-    "filmFormat": "tresDe",
-    "filmAudio": "subtitulado",
-    "createImage": "3142881.jpg"
   }
 ]

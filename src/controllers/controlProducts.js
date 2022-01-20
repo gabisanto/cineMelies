@@ -18,7 +18,7 @@ const controller = {
             styles:['productDetail','forms','create'],
             title: result.productName,
             product: result
-        }) : null},
+        }) : res.redirect("/products/")},
 
     update: (req,res) => res.render('./admins/edit',{
         //list: controller.list(),
@@ -28,12 +28,12 @@ const controller = {
     }),
     modify: (req,res) => {
         let updated = product.update(req.params.id, req.body)
-        return res.redirect("./list")
+        return res.redirect("/products/")
     },
 
     delete: (req,res) => {
         product.delete(req.body.id)
-        return res.redirect("/products/list")
+        return res.redirect("/products/")
     }
 
     

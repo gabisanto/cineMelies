@@ -4,7 +4,7 @@ const router = express.Router();
 
 router.get('/carrito',controlProducts.cart)
 
-router.get('/list',controlProducts.list)
+router.get('/',controlProducts.list)
 
 router.get('/:id',controlProducts.show)
 
