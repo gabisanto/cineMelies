@@ -165,5 +165,65 @@
     "filmAudio": "notMovie",
     "priceInput": "800",
     "createImage": "/img/pochoclomediano.jpg"
+  },
+  {
+    "id": 11,
+    "productType": "Película",
+    "productName": "SPIDER-MAN: SIN CAMINO A CASA ",
+    "productLink": "https://www.youtube.com/watch?v=r6t0czGbuGI",
+    "productDescription": "Tras descubrirse la identidad secreta de Peter Parker como Spider-Man, la vida del joven se vuelve una locura. Peter decide pedirle ayuda al Doctor Extraño para recuperar su vida. Pero algo sale mal y provoca una fractura en el multiverso.",
+    "filmCategory": "Moderna",
+    "filmGenre": [
+      "fantasia",
+      "superscifi"
+    ],
+    "salasCine": "salaSpielberg",
+    "diasCartel": "Jueves",
+    "timeScheduled": "16:00",
+    "filmFormat": "2D",
+    "filmAudio": "subtitulado",
+    "priceInput": "0",
+    "ageRestriction": "todoPublico",
+    "createImage": "3142881.jpg"
+  },
+  {
+    "id": 12,
+    "productType": "Película",
+    "productName": "SPIDER-MAN: SIN CAMINO A CASA ",
+    "productLink": "https://www.youtube.com/watch?v=r6t0czGbuGI",
+    "productDescription": "Tras descubrirse la identidad secreta de Peter Parker como Spider-Man, la vida del joven se vuelve una locura. Peter decide pedirle ayuda al Doctor Extraño para recuperar su vida. Pero algo sale mal y provoca una fractura en el multiverso.",
+    "filmCategory": "Moderna",
+    "filmGenre": [
+      "fantasia",
+      "superscifi"
+    ],
+    "salasCine": "salaSpielberg",
+    "diasCartel": "Jueves",
+    "timeScheduled": "16:00",
+    "filmFormat": "2D",
+    "filmAudio": "subtitulado",
+    "priceInput": "0",
+    "ageRestriction": "todoPublico",
+    "createImage": "3142881.jpg"
+  },
+  {
+    "id": 13,
+    "productType": "Película",
+    "productName": "SPIDER-MAN: SIN CAMINO A CASA ",
+    "productLink": "https://www.youtube.com/watch?v=r6t0czGbuGI",
+    "productDescription": "Tras descubrirse la identidad secreta de Peter Parker como Spider-Man, la vida del joven se vuelve una locura. Peter decide pedirle ayuda al Doctor Extraño para recuperar su vida. Pero algo sale mal y provoca una fractura en el multiverso.",
+    "filmCategory": "Moderna",
+    "filmGenre": [
+      "fantasia",
+      "superscifi"
+    ],
+    "salasCine": "salaSpielberg",
+    "diasCartel": "Jueves",
+    "timeScheduled": "16:00",
+    "filmFormat": "2D",
+    "filmAudio": "subtitulado",
+    "priceInput": "0",
+    "ageRestriction": "todoPublico",
+    "createImage": "3142881.jpg"
   }
 ]

@@ -5,11 +5,12 @@ const controller = {
         styles: ['create','forms'],
         title: 'Crear producto',
     }),
-     
     save: (req,res) => {
         //return res.send(req.body);
+        //return res.send(req.body);
+        req.body.product= req.product;
         let created = product.create(req.body);
-        return res.send(created)
+        return res.redirect('./' + created.id)
      
       //res.send(req.body)
     },

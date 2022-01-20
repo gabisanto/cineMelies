@@ -32,6 +32,7 @@ const model = {
         model.write(all)
         return newProduct
     },
+    
 
     delete: id =>{
         let deleted = model.all().filter(e => e.id != id)
