@@ -12,7 +12,9 @@
     "timeScheduled": "14",
     "filmFormat": "dosDe",
     "filmAudio": "subtitulado",
-    "createImage": "/img/the-big-heat.jpg"
+    "createImage": [
+      1
+    ]
   },
   {
     "id": 2,
@@ -28,8 +30,29 @@
     "filmFormat": "2D",
     "filmAudio": "subtitulado",
     "priceInput": "movie",
-    "createImage": "/img/phantom-lady.jpg",
+    "createImage": [
+      2
+    ],
     "ageRestriction": "+18"
+  },
+  {
+    "id": 3,
+    "productType": "Película",
+    "productName": "The Big Combo",
+    "productLink": "https://www.youtube.com/watch?v=iIkCXF9Y4ow",
+    "productDescription": "Un teniente de la policía que es presionado por una pandilla dirigida por un gánster vicioso. Él es ayudado por la esposa del criminal, celosa del romance de su marido con otra mujer, quien le proporciona información para ayudarlo a cerrarle la red a su enemigo.",
+    "filmCategory": "Clásica",
+    "filmGenre": "drama",
+    "salasCine": "salaMelies",
+    "diasCartel": "Sábado",
+    "timeScheduled": "10",
+    "filmFormat": "2D",
+    "filmAudio": "subtitulado",
+    "priceInput": "movie",
+    "createImage": [
+      3
+    ],
+    "ageRestriction": "+16"
   },
   {
     "id": 4,
@@ -45,7 +68,9 @@
     "filmFormat": "2D",
     "filmAudio": "subtitulado",
     "priceInput": "movie",
-    "createImage": "/img/double-indemnity.jpg",
+    "createImage": [
+      4
+    ],
     "ageRestriction": "+18"
   },
   {
@@ -62,7 +87,9 @@
     "filmFormat": "2D",
     "filmAudio": "subtitulado",
     "priceInput": "movie",
-    "createImage": "/img/dune.jpg",
+    "createImage": [
+      5
+    ],
     "ageRestriction": "+13"
   },
   {
@@ -79,7 +106,9 @@
     "filmFormat": "2D",
     "filmAudio": "subtitulado",
     "priceInput": "movie",
-    "createImage": "/img/maligno.jpg",
+    "createImage": [
+      6
+    ],
     "ageRestriction": "+18"
   },
   {
@@ -96,7 +125,9 @@
     "filmFormat": "2D",
     "filmAudio": "subtitulado",
     "priceInput": "movie",
-    "createImage": "/img/Eternals.jpg",
+    "createImage": [
+      7
+    ],
     "ageRestriction": "ATP"
   },
   {
@@ -113,7 +144,9 @@
     "filmFormat": "2D",
     "filmAudio": "subtitulado",
     "priceInput": "movie",
-    "createImage": "/img/matrix.jpg"
+    "createImage": [
+      8
+    ]
   },
   {
     "id": 9,
@@ -129,7 +162,9 @@
     "filmFormat": "notMovie",
     "filmAudio": "notMovie",
     "priceInput": "200",
-    "createImage": "/img/cocacolachica.jpg"
+    "createImage": [
+      9
+    ]
   },
   {
     "id": 10,
@@ -145,7 +180,9 @@
     "filmFormat": "notMovie",
     "filmAudio": "notMovie",
     "priceInput": "800",
-    "createImage": "/img/pochoclomediano.jpg"
+    "createImage": [
+      10
+    ]
   },
   {
     "id": 11,
@@ -163,7 +200,7 @@
     "priceInput": "0",
     "ageRestriction": "todoPublico",
     "createImage": [
-      1
+      11
     ]
   },
   {
@@ -176,7 +213,7 @@
     "timeScheduled": "",
     "priceInput": "130",
     "createImage": [
-      2
+      12
     ]
   }
 ]
