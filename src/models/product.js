@@ -1,6 +1,7 @@
 const path = require('path');
 const fs = require('fs');
 const { create } = require('domain');
+const file = require('./file');
 const model = {
     file: path.resolve(__dirname,'../data','listProducts.json'),
     read: () => fs.readFileSync(model.file),
@@ -21,7 +22,9 @@ const model = {
         filmAudio: data.filmAudio,
         priceInput: data.priceInput, 
         ageRestriction:data.ageRestriction,
-        createImage:data.createImage,
+        //createImage:data.createImage,
+        createImage: data.files.map(f => file.create(f).id),
+
     }),
 
    
@@ -33,7 +36,7 @@ const model = {
         return newProduct
     },
     
-
+  
     delete: id =>{
         let deleted = model.all().filter(e => e.id != id)
         model.write(deleted)

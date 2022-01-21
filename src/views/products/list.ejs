@@ -13,11 +13,10 @@
     <section id="list-movie">
     <article >
         <% products.forEach(product => { %>
-         
-        
             <h2> Item número <%= product.id %>: <%= product.productName %>  </h2>
             <figure  class="images-list">
-                <a href="/products/<%= product.id %>" title="<%= product.productName %>"><img src= <%= product.createImage %> ></a>
+                <a href="/products/<%= product.id %>" title="<%= product.productName %>"><img src="/uploads/<%= product.createImage %>"></a>
+                   
             </figure>
             <section id="iconitos">
                 <form action="/products/?m=DELETE" method="post">

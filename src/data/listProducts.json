@@ -8,13 +8,11 @@
     "filmCategory": "Clásica",
     "filmGenre": "drama",
     "salasCine": "salaMelies",
-    "diasCartel": "Martes",
+    "diasCartel": "martesCartel",
     "timeScheduled": "14",
-    "filmFormat": "2D",
+    "filmFormat": "dosDe",
     "filmAudio": "subtitulado",
-    "priceInput": "movie",
-    "createImage": "/img/the-big-heat.jpg",
-    "ageRestriction": "+13"
+    "createImage": "/img/the-big-heat.jpg"
   },
   {
     "id": 2,
@@ -32,23 +30,6 @@
     "priceInput": "movie",
     "createImage": "/img/phantom-lady.jpg",
     "ageRestriction": "+18"
-  },
-  {
-    "id": 3,
-    "productType": "Película",
-    "productName": "The Big Combo",
-    "productLink": "https://www.youtube.com/watch?v=iIkCXF9Y4ow",
-    "productDescription": "Un teniente de la policía que es presionado por una pandilla dirigida por un gánster vicioso. Él es ayudado por la esposa del criminal, celosa del romance de su marido con otra mujer, quien le proporciona información para ayudarlo a cerrarle la red a su enemigo.",
-    "filmCategory": "Clásica",
-    "filmGenre": "drama",
-    "salasCine": "salaMelies",
-    "diasCartel": "Sábado",
-    "timeScheduled": "10",
-    "filmFormat": "2D",
-    "filmAudio": "subtitulado",
-    "priceInput": "movie",
-    "createImage": "/img/the-big-combo.jpg",
-    "ageRestriction": "+16"
   },
   {
     "id": 4,
@@ -169,61 +150,33 @@
   {
     "id": 11,
     "productType": "Película",
-    "productName": "SPIDER-MAN: SIN CAMINO A CASA ",
+    "productName": "Cruela",
     "productLink": "https://www.youtube.com/watch?v=r6t0czGbuGI",
-    "productDescription": "Tras descubrirse la identidad secreta de Peter Parker como Spider-Man, la vida del joven se vuelve una locura. Peter decide pedirle ayuda al Doctor Extraño para recuperar su vida. Pero algo sale mal y provoca una fractura en el multiverso.",
+    "productDescription": "cruella cruella",
     "filmCategory": "Moderna",
-    "filmGenre": [
-      "fantasia",
-      "superscifi"
-    ],
+    "filmGenre": "superscifi",
     "salasCine": "salaSpielberg",
-    "diasCartel": "Jueves",
+    "diasCartel": "Miércoles",
     "timeScheduled": "16:00",
-    "filmFormat": "2D",
+    "filmFormat": "3D",
     "filmAudio": "subtitulado",
     "priceInput": "0",
     "ageRestriction": "todoPublico",
-    "createImage": "3142881.jpg"
+    "createImage": [
+      1
+    ]
   },
   {
     "id": 12,
-    "productType": "Película",
-    "productName": "SPIDER-MAN: SIN CAMINO A CASA ",
-    "productLink": "https://www.youtube.com/watch?v=r6t0czGbuGI",
-    "productDescription": "Tras descubrirse la identidad secreta de Peter Parker como Spider-Man, la vida del joven se vuelve una locura. Peter decide pedirle ayuda al Doctor Extraño para recuperar su vida. Pero algo sale mal y provoca una fractura en el multiverso.",
-    "filmCategory": "Moderna",
-    "filmGenre": [
-      "fantasia",
-      "superscifi"
-    ],
-    "salasCine": "salaSpielberg",
-    "diasCartel": "Jueves",
-    "timeScheduled": "16:00",
-    "filmFormat": "2D",
-    "filmAudio": "subtitulado",
-    "priceInput": "0",
-    "ageRestriction": "todoPublico",
-    "createImage": "3142881.jpg"
-  },
-  {
-    "id": 13,
-    "productType": "Película",
-    "productName": "SPIDER-MAN: SIN CAMINO A CASA ",
-    "productLink": "https://www.youtube.com/watch?v=r6t0czGbuGI",
-    "productDescription": "Tras descubrirse la identidad secreta de Peter Parker como Spider-Man, la vida del joven se vuelve una locura. Peter decide pedirle ayuda al Doctor Extraño para recuperar su vida. Pero algo sale mal y provoca una fractura en el multiverso.",
-    "filmCategory": "Moderna",
-    "filmGenre": [
-      "fantasia",
-      "superscifi"
-    ],
-    "salasCine": "salaSpielberg",
-    "diasCartel": "Jueves",
-    "timeScheduled": "16:00",
-    "filmFormat": "2D",
-    "filmAudio": "subtitulado",
-    "priceInput": "0",
-    "ageRestriction": "todoPublico",
-    "createImage": "3142881.jpg"
+    "productType": "Bebida",
+    "productName": "coca",
+    "productLink": "",
+    "productDescription": "coca grande",
+    "filmCategory": "No Aplica",
+    "timeScheduled": "",
+    "priceInput": "130",
+    "createImage": [
+      2
+    ]
   }
 ]

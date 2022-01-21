@@ -1,0 +1,53 @@
+<%- include ('../modules/head') %> 
+
+<body>
+
+<%- include ('../modules/header') %> 
+
+    <main>
+         <section >  <!--id="createProduct",h2 class="titulos", action="/files/"  id="creationForm"-->
+
+        <h2 >Nuevo producto</h2>
+        <form action="/files/" enctype="multipart/form-data" id="creationForm"method="post">
+            <fieldset class="fieldNuevo">
+                <label for="createImage"> 
+                   <input type="file" name="createImage" > 
+                </label>
+            </fieldset>
+           <fieldset class="botonNuevo">
+                <button type="submit" class="enviar">Subir</button>
+                <button type="reset" class="reset">Cancelar</button> 
+            </fieldset>
+
+        </form>
+            <!-- </form> -->
+       
+    <% if (locals.products) { %>
+        <% if (products.length > 0) { %>
+         
+        <section id="list-movie">
+        <article >
+            <% products.forEach(product => { %>
+             
+            
+                <h2> Item número <%= product.id %>: <%= product.productName %>  </h2>
+                <figure  class="images-list">
+                    <a href="/<%= product.id %>" title="<%= product.productName %>"><img src="/uploads/<%= product.createImage %>" ></a>
+                </figure>
+              
+    
+            <% }) %>
+        </article>
+           
+            <% } %> 
+       
+        <% } %> 
+    </section>
+</main>
+
+    <%- include ('../modules/footer') %>
+    
+    </body>
+    </html>
+
+    

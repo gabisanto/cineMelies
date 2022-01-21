@@ -8,6 +8,7 @@ app.set ("port", process.env.PORT || 3001);
 app.set ('views',path.resolve(__dirname,'views'));
 app.set ('view engine','ejs');
 app.use(express.static(path.resolve(__dirname,'../public')));
+app.use('/uploads',express.static(path.resolve(__dirname,'../uploads')));
 app.use(express.urlencoded({extended: true}));
 app.use(method('m'));
 app.listen (app.get("port"), () => { console.log ("Servidor OK"); });
@@ -19,6 +20,8 @@ app.use('/products',require('./routes/routeProducts'))
 app.use(require('./routes/routeUsers'))
 
 app.use(require('./routes/routeAdmin'))
+
+app.use('/files',require('./routes/routeFile'))
 
 // app.get('/register',(req,res) => res.sendFile(path.resolve(__dirname,'./views/users/register.html')))
 

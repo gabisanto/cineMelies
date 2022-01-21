@@ -1,6 +1,16 @@
 const express = require ('express');
 const controlProducts = require ('../controllers/controlProducts');
 const router = express.Router();
+const path = require('path');
+const multer = require('multer');
+const upload = multer({storage: multer.diskStorage({
+    destination: (req,file,cb) => cb(null, path.resolve(__dirname,'../../uploads')),
+    filename: (req,file,cb) => cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname))
+    //filename: function (req, file, cb) {
+        //cb(null, 'upload_at_' + Date.now() + path.extname(file.originalname))
+      //}
+})})
+
 
 router.get('/carrito',controlProducts.cart)
 
@@ -15,11 +25,8 @@ router.get('/:id/edit',controlProducts.update)
 router.delete('/',controlProducts.delete)
 router.put("/:id", controlProducts.modify)
 
-router.post('/',controlProducts.save)
+router.post('/',[upload.any()],controlProducts.save)
 
 module.exports = router;
 
 
-
-
-module.exports = router;

@@ -8,7 +8,7 @@
         <section id="createProduct">
 
         <h2 class="titulos">Nuevo producto</h2>
-        <form action="/" id="creationForm" method="post">
+        <form action="/products/" id="creationForm" enctype="multipart/form-data" method="post">
             <fieldset class="fieldNuevo">
                 <select name="productType" id="productType" class="selectOption">
                     <option selected value="0"> Elija un artículo </option>
@@ -117,7 +117,9 @@
 
             <fieldset id="imageInput">
                 <legend>Escoja una imagen</legend>
-                <label for="createImage"><input type="file" name="createImage" accept=".jpg, .png" required ></label>
+                <label for="createImage"><input type="file" name="createImage" accept=".jpg, .png" required >
+                    <!-- accept=".jpg, .png" required -->
+                </label>
             </fieldset>
 
             <fieldset class="fieldNuevo">

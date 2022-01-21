@@ -1,25 +1,26 @@
 const product = require('../models/product.js');
+const file = require('../models/file.js');
 
 const controller = {
+
+
+    list: (req,res) => res.render('./products/list',{
+        styles:['list'],
+        title: 'Listado items',
+        products: product.all().map(p => Object({...p, createImage: file.search('id',p.createImage)}))
+    }),
+
     create: (req,res) => res.render('./products/create',{
         styles: ['create','forms'],
         title: 'Crear producto',
     }),
     save: (req,res) => {
-        //return res.send(req.body);
-        //return res.send(req.body);
-        req.body.product= req.product;
+        //res.send(req.body)
+        req.body.files = req.files;
+        //req.body.product= req.product;
         let created = product.create(req.body);
         return res.redirect('./' + created.id)
-     
-      //res.send(req.body)
     },
-    
-    list: (req,res) => res.render('./products/list',{
-        styles:['list'],
-        title: 'Listado items',
-        products: product.all()
-    }),
 
     cart: (req,res) => res.render('./products/carrito',{
         styles: ['carrito'],
@@ -28,12 +29,14 @@ const controller = {
 
     show: (req,res) => {
         let result = product.search('id',req.params.id)
+        
         return result ? res.render('./products/productDetail',{
             styles:['productDetail','forms','create'],
             title: result.productName,
             product: result
-        }) : res.redirect("/products/")},
-
+        }) : res.redirect("/products/")
+    },
+         
     update: (req,res) => res.render('./admins/edit',{
         //list: controller.list(),
         styles:['forms','edit'],
@@ -42,7 +45,7 @@ const controller = {
     }),
     modify: (req,res) => {
         let updated = product.update(req.params.id, req.body)
-        return res.redirect("/products/")
+        return res.redirect("/products/" + updated.id)
     },
 
     delete: (req,res) => {
@@ -50,12 +53,9 @@ const controller = {
         return res.redirect("/products/")
     }
 
-    
-    }
-    
 
-    
-    
+    }
+       
         // res.render('./products/productDetail',{
         // styles: ['productDetail'],
         // title: 'Detalle de película'
