@@ -47,7 +47,7 @@
                     <% productsClasica.forEach(element => { %>
                         <section >
                             <figure  class="images">
-                                <a href="/products/<%= element.id %>" title="<%= element.productName %>"><img src= <%= element.createImage %> ></a> 
+                                <a href="/products/<%= element.id %>" title="<%= element.productName %>"><img src="/uploads/<%= element.createImage %>" ></a> 
                             </figure>
                             <article >
                                 <p  class="title-peli"> <%= element.productName %>  </p>
@@ -73,7 +73,7 @@
             <% productsModerna.forEach(element => { %>
                 <section >
                     <figure  class="images">
-                        <a href="/products/<%= element.id %>" title="<%= element.productName %>"><img src= <%= element.createImage %> ></a> 
+                        <a href="/products/<%= element.id %>" title="<%= element.productName %>"><img src="/uploads/<%= element.createImage %>" ></a> 
                     </figure>
                     <article >
                         <p  class="title-peli"> <%= element.productName %>  </p>

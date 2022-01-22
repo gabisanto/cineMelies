@@ -28,8 +28,8 @@ const controller = {
     }),
 
     show: (req,res) => {
-        let result = product.search('id',req.params.id)
-                
+        let result = product.search('id',req.params.id) 
+        /*let productDetalil = product.all().map(product => Object ({...product,createImage : file.search('id',product.createImage[0]).url})) */      
         return result ? res.render('./products/productDetail',{
             styles:['productDetail','forms','create'],
             title: result.productName,

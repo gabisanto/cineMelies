@@ -1,16 +1,21 @@
 const product = require('../models/product.js');
+const file = require('../models/file.js');
 
 module.exports = {
-    home: (req,res) => res.render('./main/home',{
-        styles: ['home'],
-        title: 'Cine Melies',
-        productsClasica: product.all().filter(
-            element => element.filmCategory == "Clásica"
-        ),
-        productsModerna: product.all().filter(
-            element => element.filmCategory == "Moderna"
-        )
-    }),
+    home: (req,res) => {
+        let list = product.all().map(product => Object ({...product,createImage : file.search('id',product.createImage[0]).url}))
+        res.render('main/home',{
+            styles: ['home'],
+            title: 'Cine Melies',
+            productsClasica: list.filter(
+                element => element.filmCategory == "Clásica"
+            ),
+            productsModerna: list.filter(
+                element => element.filmCategory == "Moderna"
+            )
+        })
+    },
+    
     about: (req,res) => res.render('./main/nosotros',{
         styles:['nosotros'],
         title: 'Sobre nosotros'
