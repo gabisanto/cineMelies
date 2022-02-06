@@ -3,6 +3,8 @@ const express = require ("express");
 const { urlencoded } = require("express");
 const method = require ('method-override');
 const app = express();
+const cookie = require('cookie-parser');
+const session = require('express-session');
 
 app.set ("port", process.env.PORT || 3001);
 app.set ('views',path.resolve(__dirname,'views'));
@@ -11,13 +13,21 @@ app.use(express.static(path.resolve(__dirname,'../public')));
 app.use('/uploads',express.static(path.resolve(__dirname,'../uploads')));
 app.use(express.urlencoded({extended: true}));
 app.use(method('m'));
+
 app.listen (app.get("port"), () => { console.log ("Servidor OK"); });
+
+app.use(cookie());
+app.use(session({
+    secret: 'meliesito',
+    saveUninitialized: true,
+    resave: false
+}))
 
 app.use(require('./routes/routeMain'))
 
 app.use('/products',require('./routes/routeProducts'))
 
-app.use(require('./routes/routeUsers'))
+app.use('/users',require('./routes/routeUsers'))
 
 app.use(require('./routes/routeAdmin'))
 

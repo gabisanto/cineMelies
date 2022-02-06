@@ -1,0 +1,55 @@
+/*Código Colores
+#0D1026 negro azulado
+#F2B035 naranja claro
+#F29E38 naranja oscuro
+#EDEEF2 gris
+#262626 casi negro
+
+font-family: 'Alegreya Sans', sans-serif; ----> textos
+font-family: 'Fira Sans', sans-serif; ----> botones, menú etc
+*/
+
+* {
+    box-sizing: border-box;
+    /* padding: 0;
+    margin: 0; */
+    
+  }
+
+  main,html{
+    background-color: rgb(242, 158, 56);
+    
+}
+
+html, body {
+    height: 100%;
+  }
+
+#profileMain{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: justify;
+    padding: 1.5em;
+    background-color: #EDEEF2 ;
+    margin: 2em; 
+    font-family: 'Alegreya Sans', sans-serif; 
+}
+
+.titulos{
+    font-family: 'Alegreya Sans', sans-serif; 
+    outline:none;
+    border:none;
+    margin-bottom: 2em;
+    font-weight: bold;
+    font-size:18px;
+}
+
+
+@media(min-width:769px){
+
+
+    .titulos{
+        font-size: 24px;
+    }
+}
