@@ -15,7 +15,7 @@
             <img src="/img/cinefilo.png">
         </figure>
        
-        <form action="/" id="register-form" method="post" >
+        <form action="/users/" id="register-form" method="post" >
             <fieldset class="fieldNuevo">
             <legend class="dn"> Nombre y Apellido </legend>
             <label class="dn" for="nombreCompleto"> </label>
@@ -37,18 +37,24 @@
             
             </fieldset>
         
+
+            <% if (locals.errors && errors.email) { %>
+                <p class="errores"><%= errors.email.msg %> </p>
+            <% } %>
             <fieldset class="fieldNuevo">
             <legend class="dn" > Email </legend>
             <label  class="dn" for="email"> </label>
-            <input type="email"  class="cajaNuevo" name="email" id="email" placeholder="Email"  required >
+            <input type="text"  class="cajaNuevo" name="email" id="email" placeholder="Email"  required >
             
             </fieldset>
-        
+            <% if (locals.errors && errors.clave) { %>
+                <p class="errores"><%= errors.clave.msg %> </p>
+            <% } %>
             <fieldset class="fieldNuevo">
             <legend class="dn" > Contraseña </legend>
-             <label for="clave" >  </label> 
-            <input type="password" class="cajaNuevo" name="clave" id="confirm" placeholder="Escribí tu contraseña" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-            title="Debe contener 8 o más caracteres de al menos un número y una letra mayúscula y minúscula" required >
+            <label for="clave" >  </label> 
+            <input type="password" class="cajaNuevo" name="clave" id="confirm" placeholder="Escribí tu contraseña"
+            title="Debe contener 8 o más caracteres, al menos un número, una letra mayúscula, una minúscula, y un carácter especial" required >
             
             </fieldset>
         

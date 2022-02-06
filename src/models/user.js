@@ -4,7 +4,7 @@ const bcrypt = require('bcrypt');
 const validator = require('express-validator');
 
 const model = {
-    file: path.resolve(__dirname,'../data','users.json'),
+    file: path.resolve(__dirname,'../data','listUsers.json'),
     read: () => fs.readFileSync(model.file,'utf8'),
     write: data => fs.writeFileSync(model.file,JSON.stringify(data,null,2)),
     all: () => JSON.parse(model.read()),
@@ -15,8 +15,8 @@ const model = {
         Documento: data.Documento,
         fecha: data.fecha,
         email:String(data.email),
-        password: bcrypt.hashSync(data.password,10),
-        isAdmin: String(data.email).includes('@cinemelies.com.ar'),
+        clave: bcrypt.hashSync(data.clave,10),
+        admin: String(data.email).includes('@cinemelies.com.ar'),
         isActive: true
     }),
     create: data => {
@@ -27,8 +27,8 @@ const model = {
         return user
     },
     validate: [
-        validator.body('email').isEmail(),
-        validator.password('password').isLength({ min: 8})
+        validator.body('email').isEmail().withMessage('Ingrese un email válido'),
+        validator.body('clave').matches(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9]).{8,}$/, "i").withMessage('La contraseña debe contener mínimo 8 caracteres, y al menos una mayúscula, una minúscula, un número y un carácter especial')
     ]
 
 }

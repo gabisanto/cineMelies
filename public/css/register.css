@@ -44,6 +44,10 @@ display: none;
     font-size: 18px;
 }
 
+.errores{
+  text-align: justify;
+  color: red;
+}
 
 #data-form{
   max-width: 100%;
