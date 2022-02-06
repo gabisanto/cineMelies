@@ -34,7 +34,7 @@ const controller = {
         //let productDetail = product.all().map(product => Object ({...product,createImage : file.search('id',product.createImage[0]).url})) */      
         return result ? res.render('./products/productDetail',{
             styles:['productDetail','forms','create'],
-            title: result.productName,
+            title: result[req.params.id-1].productName,
             product: result,
             id:req.params.id
         }) : res.redirect("/products/")
