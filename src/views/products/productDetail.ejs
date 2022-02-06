@@ -6,13 +6,19 @@
 
 <!--Sección MAIN-->
 <main>
+<% product.forEach(element => { %>
+ 
+
+<% if (id == element.id) { %>
+ 
+
 <section>
     <article id=background>
         <picture >
-            <% if (product.productType !== "Película") { %>
+            <% if (element.productType !== "Película") { %>
             <img src="/img/pop-corn.jpg">
             <% } else { %>
-            <img src=<%= product.createImage %>>
+            <img src="/uploads/<%= element.createImage.url %>">
             <% } %> 
         </picture>
     </article>
@@ -21,12 +27,12 @@
     
         <!-- detalle producto-->
 <section class="container-peli">
-    <article> <h2> <%= product.productName %>  </h2> 
+    <article> <h2> <%= element.productName %>  </h2> 
     </article>
     <section id="flexDescription">
         <article>
             <figure  class="images">
-                <img src="/uploads/<%= product.createImage.url %>">
+                <img src="/uploads/<%= element.createImage.url %>">
             </figure>
         </article>
 
@@ -35,16 +41,16 @@
         <section class="descripciones" >
             <article id="sinopsis"> 
                 <h3> SINOPSIS </h3>
-                <p> <%= product.productDescription %>  </p>
+                <p> <%= element.productDescription %>  </p>
             </article>
 
             <figure>
-                <% if (product.productType == "Película") { %>
-                    <a href="<%= product.productLink %> " target="_blank"><div class="play"></div></a>
+                <% if (element.productType == "Película") { %>
+                    <a href="<%= element.productLink %> " target="_blank"><div class="play"></div></a>
                 <% } else { %>
                     <article id="sinopsis"> 
                         <h3> PRECIO </h3>
-                        <p> $<%= product.priceInput %> por unidad </p>
+                        <p> $<%= element.priceInput %> por unidad </p>
                     </article>
 
                 <% } %> 
@@ -58,32 +64,36 @@
 
     </section>
 
-    <% if (product.productType == "Película") { %>
+    <% if (user) { %>
+     
+    
+
+    <% if (element.productType == "Película") { %>
 
     <section id="form-movie">
         <article> <h4> ELEGIR PELÍCULA POR: </h4></article>
             <form action="/"  method="post">
                 <fieldset class="fieldCheckbox">
                     <legend>Formato</legend>
-                    <label class="labelCheck" name="filmFormatUser"><input type="checkbox" name="filmFormatUser"  value="<% product.filmFormat %>"> <%= product.filmFormat %></label>
+                    <label class="labelCheck" name="filmFormatUser"><input type="checkbox" name="filmFormatUser"  value="<% element.filmFormat %>"> <%= element.filmFormat %></label>
                 
                 </fieldset>
 
                 <fieldset class="fieldCheckbox">
                     <legend>Idioma</legend>
-                    <label class="labelCheck" name="filmAudioUser"><input type="checkbox" name="filmAudioUser"  value="<% product.filmAudio %>"> <%= product.filmAudio %></label>
+                    <label class="labelCheck" name="filmAudioUser"><input type="checkbox" name="filmAudioUser"  value="<% element.filmAudio %>"> <%= element.filmAudio %></label>
                 
                 </fieldset>
 
                 <fieldset class="fieldCheckbox">
                     <legend>Días en cartel</legend>
-                    <label class="labelCheck" name="diasCartelUser"><input type="checkbox" name="diasCartelUser"  value="<% product.diasCartel %>"> <%= product.diasCartel %></label>
+                    <label class="labelCheck" name="diasCartelUser"><input type="checkbox" name="diasCartelUser"  value="<% element.diasCartel %>"> <%= element.diasCartel %></label>
                 
                 </fieldset>
 
                 <fieldset class="fieldCheckbox">
                     <legend>Horarios</legend>
-                    <label class="labelCheck" name="timeScheduledUser"><input type="checkbox" name="timeScheduledUser"  value="<% product.timeScheduled %>"> <%= product.timeScheduled %></label>
+                    <label class="labelCheck" name="timeScheduledUser"><input type="checkbox" name="timeScheduledUser"  value="<% element.timeScheduled %>"> <%= element.timeScheduled %></label>
                 
                 </fieldset>
 
@@ -102,9 +112,11 @@
 
     </form>
 </section>
+<% } %>
 </section>
-</section> 
-
+</section>
+<% } %> 
+<% }) %>
 </main>
 
 <%- include ('../modules/footer') %>

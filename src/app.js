@@ -23,6 +23,8 @@ app.use(session({
     resave: false
 }))
 
+app.use(require('./middlewares/user'))
+
 app.use(require('./routes/routeMain'))
 
 app.use('/products',require('./routes/routeProducts'))

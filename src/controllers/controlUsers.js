@@ -19,12 +19,12 @@ module.exports = {
         msg: 'PLACEHOLDER'
     }),
     save: (req,res) => {
-        let errors = validator.validationResult(req).mapped()
-        if (errors.length > 0) {
+        let errors = validator.validationResult(req)
+        if (!errors.isEmpty()) {
             return res.render ('users/register',{
                 styles: ['register'],
                 title: 'Registrarse',
-                errors,
+                errors: errors.mapped(),
             })
         }
         let exist = user.search('email',req.body.email)
@@ -40,12 +40,7 @@ module.exports = {
             })
         }
         let newUser = user.create(req.body)
-        res.send({
-            error: errors,
-            data:req.body,
-            user: newUser,
-            msg: 'llego del register'
-        })
+        res.redirect('/users/login')
     },
     logout: (req,res) => res.send({
         data: req.session,
