@@ -62,7 +62,7 @@ module.exports = {
         }
         req.session.user = exist
 
-        return res.redirect("/")
+        return res.redirect("/users/profile")
     },
     save: (req,res) => {
         let errors = validator.validationResult(req)

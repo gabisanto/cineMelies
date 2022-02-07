@@ -11,9 +11,10 @@ const upload = multer({storage: multer.diskStorage({
       //}
 })})
 const auth = require('../middlewares/auth')
+const access = require('../middlewares/access');
 
 
-router.get('/carrito',controlProducts.cart)
+router.get('/carrito',[access],controlProducts.cart)
 
 router.get('/',controlProducts.list)
 

@@ -18,27 +18,33 @@
 
             <article class="usuario">
                 <p class="datos">
-                    Nombre:
+                    Nombre: <%= user.nombreCompleto %> 
                     <br>
-                    Fecha de nacimiento:
+                    Fecha de nacimiento: <%= user.fecha %> 
                     <br>
-                    DNI:
+                    DNI: <%= user.Documento %> 
+                    <br>
+                    E-mail: <%= user.email %> 
                     <br>
                 </p>
             </article>
 
         </section>
 
-        <% if (user && user.isAdmin) { %>
+        <% if (user && user.admin) { %>
+            
          
             <section class="tarjetaPerfil">
 
-                <figure>
-                    <img src="/img/working.jpg" alt="" class="avatar">
+                <figure id="panelFigure">
+                    <img src="/img/work-from-home-3.png" alt="" class="panelAvatar">
                 </figure>
     
-                <article class="usuario">
+                <article class="panelOpciones">
                     <p class="datos">
+                        <p>Panel de control</p>
+                        <br>
+                        
                         <a href="/users/">Lista de usuarios</a>
                         <br>
                         <br>
@@ -53,7 +59,7 @@
     
             </section>
 
-        <% } %>
+            <% } %>
 
         <form action="/users/logout" method="post">
             <fieldset class="botonNuevo">

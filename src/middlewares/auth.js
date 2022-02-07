@@ -1,1 +1,1 @@
-module.exports = (req,res,next) => req.user && req.session.user ? req.session.user.admin ? next() : res.redirect('/') : res.redirect('/users/login')
+module.exports = (req,res,next) => (req.session && req.session.user) ? req.session.user.admin ? next() : res.redirect('/') : res.redirect('/users/login')
