@@ -18,6 +18,9 @@
                 <a href="/products/<%= product.id %>" title="<%= product.productName %>"><img src="/uploads/<%= product.createImage.url %>"></a>
                    
             </figure>
+            <% if (user && user.isAdmin) { %>
+             
+            
             <section id="iconitos">
                 <form action="/products/?m=DELETE" method="post">
                     <input type="hidden" name="id" value=<%= product.id %>>
@@ -27,7 +30,7 @@
                 </form>
                 <a href="/products/<%= product.id %>/edit" title="Editar elemento"> <i class="fas fa-pencil-alt"> </i> </a>
             </section>
-
+            <% } %>
         <% }) %>
     </article>
         <% } else { %>
