@@ -78,5 +78,15 @@
     "clave": "$2b$10$YZR7GhyLHe5CbnGSq2JTLO5Mcr4GZRbtb7v6p0aklVwn72o.dX.Vi",
     "admin": false,
     "isActive": true
+  },
+  {
+    "id": 9,
+    "nombreCompleto": "gabi santo",
+    "Documento": "12121212",
+    "fecha": "1999-09-19",
+    "email": "gabi@cinemelies.com.ar",
+    "clave": "$2b$10$CZpE.rxlxaADNq8qOVWKTe4yO9TV3r7hiGqYfSBOCB.9s27TRxOK.",
+    "admin": true,
+    "isActive": true
   }
 ]

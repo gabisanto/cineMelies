@@ -15,21 +15,21 @@
     <% if (locals.errors) { %>
         <% if (errors.email) { %>
             <p><%= errors.email.msg %></p>
-        <% } %>
+        <% }} %>
     
     <fieldset class="fieldNuevo">
         <label for="Usuario" class="dn"> E-mail</label>
         <input type="email" class="cajaNuevo" name="email"  id="Usuario" placeholder="Email">
         </fieldset>
 
-        <% if (errors.password) { %>
+        <% if (locals.errors && errors.clave) { %>
             <p><%= errors.clave.msg %></p>
         <% } %>
-        <% } %>
+        
 
     <fieldset class="fieldNuevo">
         <label for="clave" class="dn"> Contraseña  </label>
-        <input type="password" class="cajaNuevo" name="confirm" id="confirm" placeholder="Escribí tu contraseña">
+        <input type="password" class="cajaNuevo" name="clave" id="confirm" placeholder="Escribí tu contraseña">
         <!--pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
         title="Debe contener 8 o más caracteres de al menos un número y una letra mayúscula y minúscula" required-->
     </fieldset>

@@ -1,5 +1,5 @@
 const validator = require('express-validator');
-const user = require('../models/user');
+const userModel = require('../models/user');
 const bcrypt = require('bcrypt')
 
 module.exports = {
@@ -18,12 +18,9 @@ module.exports = {
     list: (req,res) => res.render('users/list',{
         styles:['list'],
         title: 'Listado de usuarios',
-        users: user.all()
+        users: userModel.all()
     }),
-    /*access: (req,res) => res.send({
-        data: req.body,
-        msg: 'PLACEHOLDER'
-    }),*/
+
     access: (req,res) => {
         let errors = validator.validationResult(req)
         if (!errors.isEmpty()) {
@@ -33,12 +30,14 @@ module.exports = {
                 errors: errors.mapped(),
             })
         }
-
-        let exist = user.search('email',req.body.email)
+        
+        let exist = userModel.search('email',req.body.email)
 
         if(!exist) {
            return res.render('users/login',{
-               errors:{
+                styles: ['login'],
+                title: 'Usuario',
+                errors:{
                    email:{
                        msg: 'Email no registrado'
                    }
@@ -46,10 +45,12 @@ module.exports = {
            })
         }
 
-        if(!bcrypt.compareSync(req.body.password,exist.password)) {
+        if(!bcrypt.compareSync(req.body.clave,exist.clave)) {
             return res.render('users/login',{
+                styles: ['login'],
+                title: 'Usuario',
                 errors:{
-                    password:{
+                    clave:{
                         msg: 'Contraseña invalida'
                     }
                 }
@@ -59,7 +60,6 @@ module.exports = {
         if(req.body.remember){
             res.cookie('email',req.body.email,{maxAge:1000*60*60*24*30})
         }
-
         req.session.user = exist
 
         return res.redirect("/")
@@ -73,7 +73,7 @@ module.exports = {
                 errors: errors.mapped(),
             })
         }
-        let exist = user.search('email',req.body.email)
+        let exist = userModel.search('email',req.body.email)
         if(exist) {
             return res.render ('users/register',{
                 styles: ['register'],
@@ -85,7 +85,7 @@ module.exports = {
                 },
             })
         }
-        let newUser = user.create(req.body)
+        let newUser = userModel.create(req.body)
         res.redirect('/users/login')
     },
      logout: (req,res) => {
