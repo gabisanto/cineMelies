@@ -14,6 +14,11 @@ module.exports = {
         styles: ['profile','forms'],
         title: 'Mi perfil'
     }),
+    list: (req,res) => res.render('users/list',{
+        styles:['list'],
+        title: 'Listado de usuarios',
+        users: user.all()
+    }),
     access: (req,res) => res.send({
         data: req.body,
         msg: 'PLACEHOLDER'
@@ -42,8 +47,9 @@ module.exports = {
         let newUser = user.create(req.body)
         res.redirect('/users/login')
     },
-    logout: (req,res) => res.send({
-        data: req.session,
-        msg: 'PLACEHOLDER'
-    }),
+    logout: (req,res) => {
+        delete req.session.user
+        res.cookie('email',null,{maxAge:-1})
+        return res.redirect('/')
+    },
 }

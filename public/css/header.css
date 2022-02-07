@@ -59,6 +59,10 @@ body{
     display: none;
   }
 
+/* .fa-user,.fa-address-card,.fa-shopping-cart,.fa-sign-out-alt,.fa-user{
+    display:none !important
+} */
+
 .item{
     color:#F29E38
 }
@@ -128,6 +132,17 @@ form .search {
     justify-content: space-evenly;
     align-items: center;
     flex-grow:2;
+    }
+
+    #nav02{
+        display: flex;
+        flex-direction: row;
+        width: 10%;
+        justify-content: center;
+    }
+
+    #nav02 a i{
+        margin-right:1em
     }
 
     .search {       

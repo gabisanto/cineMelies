@@ -1,0 +1,45 @@
+<%- include ('../modules/head') %> 
+
+<body>
+
+<%- include ('../modules/header') %> 
+
+<!--Sección MAIN-->
+<main>
+
+<% if (locals.users) { %>
+    <% if (users.length > 0) { %>
+     
+    <section id="list-movie">
+    
+        <% users.forEach(users => { %>
+            <article id="cajitaUser">
+            <h2 class="tituloLista"> Usuario número <%= users.id %>: <%= users.nombreCompleto %>  </h2>
+            <p class="datosLista">DNI: <%= users.Documento %></p>
+            <br>
+
+            <p class="datosLista">Nacimiento: <%= users.fecha %> </p>
+            <br>
+
+            <p class="datosLista">E-mail: <%= users.email %> </p>
+            <br>
+
+            </article>
+        <% }) %>
+    
+        <% } else { %>
+            <h2>No hay usuarios</h2>
+        <% } %> 
+    <% } else { %>
+        <h2>No hay usuarios</h2>
+    <% } %> 
+    
+
+</section>
+
+</main>
+
+<%- include ('../modules/footer') %>
+
+</body>
+</html>

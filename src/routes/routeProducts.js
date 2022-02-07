@@ -10,17 +10,18 @@ const upload = multer({storage: multer.diskStorage({
         //cb(null, 'upload_at_' + Date.now() + path.extname(file.originalname))
       //}
 })})
+const auth = require('../middlewares/auth')
 
 
 router.get('/carrito',controlProducts.cart)
 
 router.get('/',controlProducts.list)
 
-router.get('/create',controlProducts.create)
+router.get('/create',[auth],controlProducts.create)
 
 router.get('/:id',controlProducts.show)
 
-router.get('/:id/edit',controlProducts.update)
+router.get('/:id/edit',[auth],controlProducts.update)
 
 router.delete('/',controlProducts.delete)
 router.put("/:id", controlProducts.modify)

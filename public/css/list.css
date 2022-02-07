@@ -49,6 +49,25 @@ article h2{
     background-color: transparent
 }
 
+#cajitaUser{
+    width:90%;
+    margin: 0 auto;
+    border: medium solid #262626;
+    padding: 3%;
+    border-radius: 20px;
+    margin-bottom: 5%;
+    background-color: #EDEEF2;
+}
+
+.datosLista{
+    font-weight: bold;
+    font-size: medium;
+}
+
+.tituloLista{
+    font-size: large;
+}
+
 @media(min-width: 769px){
 
 #list-movie{
