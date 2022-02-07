@@ -10,6 +10,51 @@
 
         <h1 class="titulos">Mi perfil</h1>
 
+        <section class="tarjetaPerfil">
+
+            <figure>
+                <img src="/img/000000000000.jpg" alt="" class="avatar">
+            </figure>
+
+            <article class="usuario">
+                <p class="datos">
+                    Nombre:
+                    <br>
+                    Fecha de nacimiento:
+                    <br>
+                    DNI:
+                    <br>
+                </p>
+            </article>
+
+        </section>
+
+        <% if (user && user.isAdmin) { %>
+         
+            <section class="tarjetaPerfil">
+
+                <figure>
+                    <img src="/img/working.jpg" alt="" class="avatar">
+                </figure>
+    
+                <article class="usuario">
+                    <p class="datos">
+                        <a href="/users/">Lista de usuarios</a>
+                        <br>
+                        <br>
+                        <a href="/products/">Lista de productos</a>
+                        <br>
+                        <br>
+                        <a href="/products/create">Crear nuevo producto</a>
+                        <br>
+                        <br>
+                    </p>
+                </article>
+    
+            </section>
+
+        <% } %>
+
         <form action="/users/logout" method="post">
             <fieldset class="botonNuevo">
                 <button type="submit" class="enviar">logout</button> 
