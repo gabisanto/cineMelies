@@ -58,5 +58,25 @@
     "clave": "$2b$10$ywWleFmUcP7fZ7m.zJuNXeSc1J9JyxJdvHQo9nWQTiG1lg3Ws4Xwu",
     "admin": false,
     "isActive": true
+  },
+  {
+    "id": 7,
+    "nombreCompleto": "asda",
+    "Documento": "335546678",
+    "fecha": "1788-03-11",
+    "email": "mail@mail.com",
+    "clave": "$2b$10$iroNK3hNhlVt49YrtxaKAu2S4wpTeRB85s.BTF2b9DDsDX8a5PzFO",
+    "admin": false,
+    "isActive": true
+  },
+  {
+    "id": 8,
+    "nombreCompleto": "azul",
+    "Documento": "232930456",
+    "fecha": "1888-02-11",
+    "email": "azul@gmail.com",
+    "clave": "$2b$10$YZR7GhyLHe5CbnGSq2JTLO5Mcr4GZRbtb7v6p0aklVwn72o.dX.Vi",
+    "admin": false,
+    "isActive": true
   }
 ]

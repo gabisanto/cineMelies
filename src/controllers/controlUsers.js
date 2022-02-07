@@ -1,5 +1,6 @@
 const validator = require('express-validator');
 const user = require('../models/user');
+const bcrypt = require('bcrypt')
 
 module.exports = {
     login: (req,res) => res.render('users/login',{
@@ -19,10 +20,50 @@ module.exports = {
         title: 'Listado de usuarios',
         users: user.all()
     }),
-    access: (req,res) => res.send({
+    /*access: (req,res) => res.send({
         data: req.body,
         msg: 'PLACEHOLDER'
-    }),
+    }),*/
+    access: (req,res) => {
+        let errors = validator.validationResult(req)
+        if (!errors.isEmpty()) {
+            return res.render ('users/login',{
+                styles: ['login'],
+                title: 'Usuario',
+                errors: errors.mapped(),
+            })
+        }
+
+        let exist = user.search('email',req.body.email)
+
+        if(!exist) {
+           return res.render('users/login',{
+               errors:{
+                   email:{
+                       msg: 'Email no registrado'
+                   }
+               }
+           })
+        }
+
+        if(!bcrypt.compareSync(req.body.password,exist.password)) {
+            return res.render('users/login',{
+                errors:{
+                    password:{
+                        msg: 'Contraseña invalida'
+                    }
+                }
+            })
+         }
+
+        if(req.body.remember){
+            res.cookie('email',req.body.email,{maxAge:1000*60*60*24*30})
+        }
+
+        req.session.user = exist
+
+        return res.redirect("/")
+    },
     save: (req,res) => {
         let errors = validator.validationResult(req)
         if (!errors.isEmpty()) {
@@ -47,9 +88,15 @@ module.exports = {
         let newUser = user.create(req.body)
         res.redirect('/users/login')
     },
-    logout: (req,res) => {
+     logout: (req,res) => {
         delete req.session.user
         res.cookie('email',null,{maxAge:-1})
         return res.redirect('/')
     },
+  /* profile: (req, res) => res.render('users/profile'),
+    uploadAvatar: (req, res) => {
+        let update = user.update(req.session.user.id, {avatar: req.files ? req.files[0].filename : null});
+        req.session.user = update;
+        return res.redirect('users/profile');
+    }*/
 }

@@ -10,7 +10,8 @@ router.get('/register',controlUsers.register)
 router.get('/profile',[access],controlUsers.profile)
 
 router.post('/',[validate],controlUsers.save)
-router.post('/access',controlUsers.save)
+router.post('/access',[validate],controlUsers.access)
 router.post('/logout',controlUsers.logout)
+//router.post("/upload/avatar",[access,upload.any()],user.uploadAvatar);
 
 module.exports = router;
