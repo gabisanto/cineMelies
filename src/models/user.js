@@ -8,7 +8,7 @@ const model = {
     read: () => fs.readFileSync(model.file,'utf8'),
     write: data => fs.writeFileSync(model.file,JSON.stringify(data,null,2)),
     all: () => JSON.parse(model.read()),
-    save: data => model.write(JSON.stringify(data, null, 2)),
+    //save: data => model.write(JSON.stringify(data, null, 2)),
     search: (prop,value) => model.all().find(element => element[prop] == value),
     generated: data => Object({
         id: model.all().length == 0 ? 1 : model.all().pop().id + 1,
@@ -32,7 +32,7 @@ const model = {
     update: (id,data) => {
         const users = model.all();
         const updates = users.map(user => user.id === id ? {...user, ...data} : user);
-        model.save(updates);
+        model.write(updates);
         return updates.find(user => user.id === id);
     },
     validate: [
