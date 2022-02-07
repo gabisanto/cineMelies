@@ -93,10 +93,11 @@ module.exports = {
         res.cookie('email',null,{maxAge:-1})
         return res.redirect('/')
     },
-  /* profile: (req, res) => res.render('users/profile'),
-    uploadAvatar: (req, res) => {
-        let update = user.update(req.session.user.id, {avatar: req.files ? req.files[0].filename : null});
+    avatar: (req, res) => {
+        let update = userModel.update(req.session.user.id, {avatar: req.files ? req.files[0].filename : null});
         req.session.user = update;
-        return res.redirect('users/profile');
-    }*/
+        return res.redirect('/users/profile');
+    }
+
+    
 }

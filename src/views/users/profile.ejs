@@ -11,10 +11,16 @@
         <h1 class="titulos">Mi perfil</h1>
 
         <section class="tarjetaPerfil">
-
-            <figure>
-                <img src="/img/000000000000.jpg" alt="" class="avatar">
-            </figure>
+            <% if (user.avatar != null) { %>
+                <figure>
+                    <img src="/avatars/<%= user.avatar %>" alt="avatar <%= user.email %>">
+                </figure>
+            <% } else { %>
+                <figure>
+                    <img src="/img/000000000000.jpg" alt="avatar <%= user.email %>" class="avatar">
+                </figure>
+            <% } %>
+            
 
             <article class="usuario">
                 <p class="datos">
@@ -26,6 +32,10 @@
                     <br>
                     E-mail: <%= user.email %> 
                     <br>
+                    <form action="/users/upload/avatar" enctype="multipart/form-data" method="post">
+                        <input type="file" name="imagenUsuario" id="imagenUsuario">
+                        <button type="submit">Cambiar avatar</button>
+                    </form>
                 </p>
             </article>
 
