@@ -12,8 +12,8 @@
 
         <section class="tarjetaPerfil">
             <% if (user.avatar != null) { %>
-                <figure>
-                    <img src="../../../uploads/avatars/<%= user.avatar %>" alt="avatar <%= user.email %>" class="avatar">
+                <figure class="avatar">
+                    <img src="../../../uploads/avatars/<%= user.avatar %>" alt="avatar <%= user.email %>" >
                 </figure>
             <% } else { %>
                 <figure>

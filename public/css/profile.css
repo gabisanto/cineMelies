@@ -47,7 +47,12 @@ html, body {
 
 .avatar {
     border-radius: 50%;
-    width:100%
+    width:40%
+}
+
+.avatar img {
+    width:100%;
+    border-radius: 50%;
 }
 
 .panelAvatar {
