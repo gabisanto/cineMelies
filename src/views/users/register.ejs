@@ -10,70 +10,76 @@
 
     <section id="register-form">
         <h3> NUEVO CINÉFILO </h3> 
-       
-        <figure id="cine-foto">
-            <img src="/img/cinefilo.png">
-        </figure>
-       
-        <form action="/users/" id="register-form" method="post" >
-            <fieldset class="fieldNuevo">
-            <legend class="dn"> Nombre y Apellido </legend>
-            <label class="dn" for="nombreCompleto"> </label>
-            <input type="text" class="cajaNuevo" name="nombreCompleto" id="nombreCompleto" placeholder="Nombre y Apellido" required >
+       <section class="mainFlex">
+            <figure id="cine-foto">
+                <img src="/img/cinefilo.png">
+            </figure>
+            <section class="flexUser">
+            <form action="/users/" id="register-form" method="post" >
+                <fieldset class="fieldNuevo">
+                <legend class="dn"> Nombre y Apellido </legend>
+                <label class="dn" for="nombreCompleto"> </label>
+                <input type="text" class="cajaNuevo" name="nombreCompleto" id="nombreCompleto" placeholder="Nombre y Apellido" required >
+                
+                </fieldset>
             
-            </fieldset>
-        
-            <fieldset class="fieldNuevo">
-            <legend class="dn" > DNI </legend>
-            <label class="dn"  for="Documento">  </label>
-            <input type="number" class="cajaNuevo" name="Documento" id="Documento" placeholder="Documento"  required >
-         
-            </fieldset>
-        
-            <fieldset class="fieldNuevo" >
+                <fieldset class="fieldNuevo">
+                <legend class="dn" > DNI </legend>
+                <label class="dn"  for="Documento">  </label>
+                <input type="number" class="cajaNuevo" name="Documento" id="Documento" placeholder="Documento"  required >
             
-            <label for="fecha" class="dn"> </label>
-            <input type="date" class="cajaNuevo" class="t-input" name="fecha" id="fecha" placeholder="fecha"  required >
+                </fieldset>
             
-            </fieldset>
-        
+                <fieldset class="fieldNuevo" >
+                
+                <label for="fecha" class="dn"> </label>
+                <input type="date" class="cajaNuevo" class="t-input" name="fecha" id="fecha" placeholder="fecha"  required >
+                
+                </fieldset>
+            
 
-            <% if (locals.errors && errors.email) { %>
-                <p class="errores"><%= errors.email.msg %> </p>
-            <% } %>
-            <fieldset class="fieldNuevo">
-            <legend class="dn" > Email </legend>
-            <label  class="dn" for="email"> </label>
-            <input type="text"  class="cajaNuevo" name="email" id="email" placeholder="Email"  required >
+                <% if (locals.errors && errors.email) { %>
+                    <p class="errores"><%= errors.email.msg %> </p>
+                <% } %>
+                <fieldset class="fieldNuevo">
+                <legend class="dn" > Email </legend>
+                <label  class="dn" for="email"> </label>
+                <input type="text"  class="cajaNuevo" name="email" id="email" placeholder="Email"  required >
+                
+                </fieldset>
+                <% if (locals.errors && errors.clave) { %>
+                    <p class="errores"><%= errors.clave.msg %> </p>
+                <% } %>
+                <fieldset class="fieldNuevo">
+                <legend class="dn" > Contraseña </legend>
+                <label for="clave" >  </label> 
+                <input type="password" class="cajaNuevo" name="clave" id="confirm" placeholder="Escribí tu contraseña"
+                title="Debe contener 8 o más caracteres, al menos un número, una letra mayúscula, una minúscula, y un carácter especial" required >
+                
+                </fieldset>
             
-            </fieldset>
-            <% if (locals.errors && errors.clave) { %>
-                <p class="errores"><%= errors.clave.msg %> </p>
-            <% } %>
-            <fieldset class="fieldNuevo">
-            <legend class="dn" > Contraseña </legend>
-            <label for="clave" >  </label> 
-            <input type="password" class="cajaNuevo" name="clave" id="confirm" placeholder="Escribí tu contraseña"
-            title="Debe contener 8 o más caracteres, al menos un número, una letra mayúscula, una minúscula, y un carácter especial" required >
+                <fieldset class="fieldNuevo">
+                <legend class="dn" > Confirmar Contraseña </legend>
+                <label for="confirm" id="confirmar"> </label> 
+                <input type="password" class="cajaNuevo" name="confirm" id="confirm" class="clave" placeholder="Confirmar Contraseña" required >
             
-            </fieldset>
-        
-            <fieldset class="fieldNuevo">
-            <legend class="dn" > Confirmar Contraseña </legend>
-            <label for="confirm" id="confirmar"> </label> 
-            <input type="password" class="cajaNuevo" name="confirm" id="confirm" class="clave" placeholder="Confirmar Contraseña" required >
-           
-            </fieldset>
-        
+                </fieldset>
+            </section>
+        </section>
+
             <fieldset class="botonNuevo">
             <legend class="dn"> Botones del Formulario </legend>
-            <button type="submit" class="enviar"> Registrarse </button>
+            
+            <button type="submit" class="enviar" title="Registrarme"> Registrarse </button>
+            <button type="button" class="reset" title="Borrar todo"> cancelar</button>
             </fieldset>
             
-            <fieldset class="">
-                <article > <a href="/users/login" id="login"> Ingresar </a>  </article>
-            </fieldset>
+
             </form>
+
+            <article id="userExists">
+                <a href="/users/login" id="login"> Ya tengo usuario </a>
+            </article>
             
     </section>
 

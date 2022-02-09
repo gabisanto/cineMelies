@@ -12,11 +12,11 @@
 
         <section class="tarjetaPerfil">
             <% if (user.avatar != null) { %>
-                <figure class="avatar">
-                    <img src="../../../uploads/avatars/<%= user.avatar %>" alt="avatar <%= user.email %>" >
+                <figure class="figureAvatar">
+                    <img src="../../../uploads/avatars/<%= user.avatar %>" alt="avatar <%= user.email %>" class="avatar">
                 </figure>
             <% } else { %>
-                <figure>
+                <figure class="figureAvatar">
                     <img src="/img/000000000000.jpg" alt="avatar <%= user.email %>" class="avatar">
                 </figure>
             <% } %>
@@ -32,9 +32,10 @@
                     <br>
                     E-mail: <%= user.email %> 
                     <br>
-                    <form action="/users/upload/avatar" enctype="multipart/form-data" method="post">
-                        <input type="file" name="imagenUsuario" id="imagenUsuario">
-                        <button type="submit">Cambiar avatar</button>
+                    <form action="/users/upload/avatar" enctype="multipart/form-data" method="post" class="formAvatar">
+                        <input type="file" name="imagenUsuario" id="imagenUsuario" hidden/>
+                        <label for="imagenUsuario" class="avatarLabel">Cambiar avatar</label>
+                        <button type="submit" id="uploadImage"><i class="fa-solid fa-arrow-up-from-bracket"></i></button>
                     </form>
                 </p>
             </article>

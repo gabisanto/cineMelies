@@ -5,57 +5,64 @@
 <%- include ('../modules/header') %> 
 
 <main>
+    
 <section id="login-form"> 
-    <h3> INGRESÁ TU CUENTA  </h3>  
-    <figure id="cine-foto">
-        <img src="/img/cinefilo.png" alt="">
-    </figure>
-<form action="/users/access"  method="post" class="fr">
+    <h3 class="titulos"> INGRESÁ A TU CUENTA  </h3> 
+    <section class="mainFlex">
+        <figure id="cine-foto">
+            <img src="/img/cinefilo.png" alt="">
+        </figure>
 
-    <% if (locals.errors) { %>
-        <% if (errors.email) { %>
-            <p><%= errors.email.msg %></p>
-        <% }} %>
-    
-    <fieldset class="fieldNuevo">
-        <label for="Usuario" class="dn"> E-mail</label>
-        <input type="email" class="cajaNuevo" name="email"  id="Usuario" placeholder="Email">
-        </fieldset>
+        <section class="flexUser">
+            <form action="/users/access"  method="post" class="fr">
 
-        <% if (locals.errors && errors.clave) { %>
-            <p><%= errors.clave.msg %></p>
-        <% } %>
+                <% if (locals.errors) { %>
+                    <% if (errors.email) { %>
+                        <p><%= errors.email.msg %></p>
+                    <% }} %>
+            
+                <fieldset class="fieldNuevo">
+                    <label for="Usuario" class="dn"> E-mail</label>
+                    <input type="email" class="cajaNuevo" name="email"  id="Usuario" placeholder="Email">
+                </fieldset>
+
+                <% if (locals.errors && errors.clave) { %>
+                    <p><%= errors.clave.msg %></p>
+                <% } %>
+                
+
+                <fieldset class="fieldNuevo">
+                    <label for="clave" class="dn"> Contraseña  </label>
+                    <input type="password" class="cajaNuevo" name="clave" id="confirm" placeholder="Escribí tu contraseña">
+                    <!--pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                    title="Debe contener 8 o más caracteres de al menos un número y una letra mayúscula y minúscula" required-->
+                </fieldset>
+                </fieldset>
+
+                <fieldset class="usuario fieldNuevo"" >
+                    <input type="checkbox" name="remember" id="remember">
+                    <label > Recordar </label> 
+                </fieldset>
+
+                <fieldset class="botonNuevo">
+                    <legend class="dn"> Botones del Formulario </legend>
+                    <button type="submit"> Ingresar </button>   
+                </fieldset>
         
+                
+        
+            </form>
+                
+                <article >
+                    <a href="">  <article class="txt-register"> <h3> ¿ Olvidaste tu contraseña ?  </h3>  </article></a>  
+                </article>
 
-    <fieldset class="fieldNuevo">
-        <label for="clave" class="dn"> Contraseña  </label>
-        <input type="password" class="cajaNuevo" name="clave" id="confirm" placeholder="Escribí tu contraseña">
-        <!--pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-        title="Debe contener 8 o más caracteres de al menos un número y una letra mayúscula y minúscula" required-->
-    </fieldset>
-    </fieldset>
+                <article class="txt-register"> 
+                    <h3> ¿ No ténes Usuario ? <a href="/users/register" id="register"> ¡Registrate! Acá </h3> </a>     
+                </article> 
+        </section>
 
-    <fieldset class="usuario fieldNuevo"" >
-        <input type="checkbox" name="remember" id="remember">
-        <label > Recordar </label> 
-    </fieldset>
-
-    <fieldset class="botonNuevo">
-        <legend class="dn"> Botones del Formulario </legend>
-        <button type="submit"> Ingresar </button>   
-    </fieldset>
-   
-    <fieldset >
-    <a href="">  <article class="txt-register"> <h3> ¿ Olvidaste tu contraseña ?  </h3>  </article></a>  
-    </fieldset>
-  
-</form>
-
-        <article class="txt-register"> <h3> ¿ No ténes Usuario ? <a href="/users/register" id="register"> ¡Registrate! Acá </h3> </a>     
-        </article> 
-    
-
-</section>
+    </section>
 
 </section>
 

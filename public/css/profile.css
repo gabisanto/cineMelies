@@ -36,6 +36,30 @@ html, body {
     font-family: 'Alegreya Sans', sans-serif; 
 }
 
+.avatarLabel{
+    background-color: #F29E38;
+  color: white;
+  padding: 0.5rem;
+  font-family: 'Fira Sans', sans-serif;
+  border-radius: 20px;
+  cursor: pointer;
+  
+
+}
+
+.formAvatar {
+    margin-top: 1rem;
+}
+
+.fa-arrow-up-from-bracket{
+    color: #262626
+}
+
+#uploadImage{
+    border: none;
+    background-color: transparent;
+}
+
 .titulos{
     font-family: 'Alegreya Sans', sans-serif; 
     outline:none;
@@ -45,24 +69,18 @@ html, body {
     font-size:18px;
 }
 
-.avatar {
+.avatar,.panelAvatar {
     border-radius: 50%;
-    width:40%
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    object-position: center;
+    
 }
 
-.avatar img {
-    width:100%;
-    border-radius: 50%;
-}
-
-.panelAvatar {
-    border-radius: 50%;
-    width:30vh;
-    vertical-align: middle;
-}
-
-#panelFigure{
-    justify-items: center;
+.figureAvatar,#panelFigure{
+    width:120px;
+    height:120px;
 }
 
 .panelOpciones{
@@ -73,11 +91,11 @@ html, body {
 
 .tarjetaPerfil{
     display: flex;
-    flex-direction: row;
-    width:90%;
+    flex-direction: column;
+    width:85%;
     margin: 0 auto;
     border: medium solid #262626;
-    padding: 3%;
+    padding: 15px;
     border-radius: 20px;
     margin-bottom: 5%;
 }
@@ -95,11 +113,49 @@ html, body {
     font-weight: bold;
 }
 
+.figureAvatar,.usuario,#panelFigure,.panelOpciones{
+    align-self:center
+}
+
+.usuario,.panelOpciones{
+    text-align: center;
+}
+
 
 @media(min-width:769px){
 
 
     .titulos{
         font-size: 24px;
+    }
+
+    .tarjetaPerfil{
+        flex-direction: row;
+        height:244px;
+        width:578px;
+
+    }
+
+    .avatar,.panelAvatar {
+        border-radius: 50%;
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        object-position: center;
+        
+    }
+
+    .figureAvatar,#panelFigure{
+        width:200px;
+        height:200px;
+    }
+
+    .botonNuevo{
+        width:578px !important;
+        margin:0 auto !important
+    }
+
+    .panelOpciones{
+        align-self: center;
     }
 }
