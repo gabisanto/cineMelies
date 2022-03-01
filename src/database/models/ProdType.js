@@ -1,5 +1,7 @@
 module.exports = (sequelize, dataTypes) => { 
-    let alias = 'User'; 
+
+    let alias = 'ProdType'; 
+    //----------------------------------------
     let cols = { 
         id: { 
             type: dataTypes.BIGINT(10).UNSIGNED, 
@@ -8,37 +10,26 @@ module.exports = (sequelize, dataTypes) => {
             autoIncrement: true
         }, 
         name: {
-            type: dataTypes.STRING(100),
-            allowNull: false
-        }, 
-        email: {
-            type: dataTypes.STRING(100), 
-            allowNull: false
-        }, 
-        password: {
-            type: dataTypes.STRING(100), 
-            allowNull: false
-        },
-        remember_token : { 
             type: dataTypes.STRING(100), 
             allowNull: false
         }
 
-
     }; 
+    //----------------------------------------
     let config = {
         timestamp: true, 
-        tableName: 'Users'
+        tableName: 'ProdTypes'
     };
+    //----------------------------------------
 
-    const User = sequelize.define(alias, cols, config); 
+    const ProdType = sequelize.define(alias, cols, config); 
 
     //Creacion de relaciones 
-
 
     
 
 
 
-}
 
+    return ProdType;
+}

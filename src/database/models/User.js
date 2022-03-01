@@ -52,8 +52,10 @@ module.exports = (sequelize, dataTypes) => {
     //Creacion de relaciones 
 
 
+
+
     
 
-
-
+    return User; 
+    
 }
