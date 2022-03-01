@@ -27,7 +27,7 @@ module.exports = (sequelize, dataTypes) => {
     //Creacion de relaciones 
 
     Poster.association = function(models) {
-        Poster.hasMany(Movie,{
+        Poster.hasMany(models.Movie,{
             as: "movie",
             foreignKey: "image_id"
         })

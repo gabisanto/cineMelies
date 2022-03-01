@@ -34,7 +34,9 @@ module.exports = (sequelize, dataTypes) => {
 
     //Creacion de relaciones 
 
-    
+    ScreenFormat.belongsTo(Screen, {foreignKey: "screen_id"})
+
+    ScreenFormat.belongsTo(Format, {foreignKey:"format_id"})
 
 
 

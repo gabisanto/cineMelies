@@ -49,6 +49,14 @@ module.exports = (sequelize, dataTypes) => {
             foreignKey: "screening_id",
             otherKey: "movie_id",
             timestamps: false
+        }),
+        Screening.belongsTo(models.Language,{
+            as: "language",
+            foreignKey: "language_id"
+        }),
+        Screening.belongsTo(models.Screen,{
+            as: "screen",
+            foreignKey: "screen_id"
         })
     }
 

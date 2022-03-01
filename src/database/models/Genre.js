@@ -18,7 +18,7 @@ module.exports = (sequelize, dataTypes) => {
     const Genre = sequelize.define(alias,cols,config)
 
     Genre.association = function(models) {
-        Genre.hasMany(Movie,{
+        Genre.hasMany(models.Movie,{
             as: "movie",
             foreignKey: "genre_id"
         })

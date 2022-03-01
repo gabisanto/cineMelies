@@ -34,7 +34,18 @@ module.exports = (sequelize, dataTypes) => {
 
     //Creacion de relaciones 
 
-    
+    Screen.associate = function (models) {
+        Screen.hasMany(models.Screening,{
+            as: "screening",
+            foreignKey: "screen_id"
+        }),
+        Screen.belongsToMany(models.Format,{
+            as: "format",
+            through: "ScreenFormat",
+            foreignKey: "screen_id",
+            otherKey: "format_id"
+        })
+    }
 
 
 

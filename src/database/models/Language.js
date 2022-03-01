@@ -17,5 +17,12 @@ module.exports = (sequelize, dataTypes) => {
     }
     const Language = sequelize.define(alias,cols,config)
 
+    Language.associate = function (models) {
+        Language.hasMany(models.Screening,{
+            as: "screening",
+            foreignKey: "language_id"
+        })
+    }
+
     return Language
 };

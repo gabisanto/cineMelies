@@ -18,7 +18,7 @@ module.exports = (sequelize, dataTypes) => {
     const Category = sequelize.define(alias,cols,config)
 
     Category.association = function(models) {
-        Category.hasMany(Movie,{
+        Category.hasMany(models.Movie,{
             as: "movie",
             foreignKey: "category_id"
         })

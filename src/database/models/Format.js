@@ -17,5 +17,14 @@ module.exports = (sequelize, dataTypes) => {
     }
     const Format = sequelize.define(alias,cols,config)
 
+    Format.associate = function (models) {
+        Format.belongsToMany(models.Screen,{
+            as: "screen",
+            through: "ScreenFormat",
+            foreignKey: "formar_id",
+            otherKey: "screen_id"
+        })
+    }
+
     return Format
 };
