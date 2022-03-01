@@ -110,12 +110,36 @@ margin: 1em 0;
   #ageEighteen:checked + .button-label {
     background: #F2B035;
 }
+
+#conditioned:checked + .button-label {
+  background: #F2B035;
+}
   
   .hidden {
     display: none;
   }
 
 /*RADIO AGE*/
+
+#beverage:checked + .button-label {
+  background: #F2B035;
+}
+
+#food:checked + .button-label {
+    background: #F2B035;
+  }
+
+#combo:checked + .button-label {
+    background: #F2B035;
+}
+
+#yearPass:checked + .button-label {
+  background: #F2B035;
+}
+
+#monthPass:checked + .button-label {
+  background: #F2B035;
+}
 
 form fieldset legend{
     font-weight: bold;
@@ -137,6 +161,12 @@ form fieldset legend{
         align-self:center;
         width:70%
         }
+    
+      .selectOption{
+        margin:0 auto;
+        width:70% !important
+      
+      }
 
 
 }

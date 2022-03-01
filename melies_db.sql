@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 28-02-2022 a las 19:09:41
+-- Tiempo de generación: 01-03-2022 a las 02:24:41
 -- Versión del servidor: 10.4.22-MariaDB
 -- Versión de PHP: 8.1.2
 
@@ -294,8 +294,8 @@ INSERT INTO `restrictions` (`id`, `name`) VALUES
 
 CREATE TABLE `screenings` (
   `id` int(11) NOT NULL,
-  `day` varchar(255) NOT NULL,
   `hour` int(11) NOT NULL,
+  `day` varchar(255) NOT NULL,
   `screen_id` int(11) NOT NULL,
   `discount` tinyint(1) NOT NULL,
   `language_id` int(255) NOT NULL
@@ -305,15 +305,15 @@ CREATE TABLE `screenings` (
 -- Volcado de datos para la tabla `screenings`
 --
 
-INSERT INTO `screenings` (`id`, `day`, `hour`, `screen_id`, `discount`, `language_id`) VALUES
-(1, 'Lunes', 1400, 1, 0, 1),
-(2, 'Martes', 1800, 2, 0, 1),
-(3, 'Miércoles', 1400, 4, 1, 1),
-(4, 'Jueves', 2000, 3, 0, 1),
-(5, 'Viernes', 1200, 4, 1, 1),
-(6, 'Sábado', 1200, 2, 1, 1),
-(7, 'Sábado', 2100, 1, 0, 1),
-(8, 'Domingo', 1300, 3, 0, 1);
+INSERT INTO `screenings` (`id`, `hour`, `day`, `screen_id`, `discount`, `language_id`) VALUES
+(1, 1400, 'Lunes', 1, 0, 1),
+(2, 1800, 'Jueves', 2, 0, 1),
+(3, 1400, 'Miércoles', 4, 1, 1),
+(4, 2000, 'Martes', 3, 0, 1),
+(5, 1200, 'Viernes', 4, 1, 1),
+(6, 1200, 'Sábado', 2, 1, 1),
+(7, 2100, 'Domingo', 1, 0, 1),
+(8, 1300, 'Domingo', 3, 0, 1);
 
 -- --------------------------------------------------------
 
@@ -469,8 +469,7 @@ ALTER TABLE `restrictions`
 ALTER TABLE `screenings`
   ADD PRIMARY KEY (`id`),
   ADD KEY `screen` (`screen_id`),
-  ADD KEY `language` (`language_id`),
-  ADD KEY `language_id` (`language_id`);
+  ADD KEY `language` (`language_id`);
 
 --
 -- Indices de la tabla `screens`

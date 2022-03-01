@@ -8,140 +8,152 @@
         <section id="createProduct">
 
         <h2 class="titulos">Nuevo producto</h2>
-        <form action="/products/" id="creationForm" enctype="multipart/form-data" method="post">
-            <fieldset class="fieldNuevo">
-                <select name="productType" id="productType" class="selectOption">
-                    <option selected value="0"> Elija un artículo </option>
-                        <option value="Película">Película</option> 
-                        <option value="Combo">Combo</option> 
-                        <option value="Bebida">Bebida</option> 
-                        <option value="Alimento">Alimento</option>
-                        <option value="Pase">Pase</option>
-                </select>
-            </fieldset>
-            
-            <fieldset class="fieldNuevo">
-                <label for="productName"><input type="text" name="productName" class="cajaNuevo" placeholder="Nombre" required  >
-                <span>Nombre</span>
-                </label>
-                
-            </fieldset>
-            
-            <fieldset class="fieldNuevo">
-                <label for="productLink"><input type="text" name="productLink" class="cajaNuevo" placeholder="Link a trailer" >
-                <span>Link del trailer</span>
-                </label>
-                
-            </fieldset>
+        <select name="type_id" id="type_id" class="selectOption" onchange="changeOptions(this)">
+            <option selected value="0"> Elija un artículo </option>
+                <option value="Película">Película</option> 
+                <option value="Otros">Otros</option> 
+        </select>
+
+        <script>
+            function changeOptions(selectEl) {
+                let selectedValue = selectEl.options[selectEl.selectedIndex].value;
+                let subForms = document.getElementsByClassName('formTest')
+                for (let i = 0; i < subForms.length; i += 1) {
+                    if (selectedValue === subForms[i].name) {
+                    subForms[i].setAttribute('style', 'display:block')
+                    } else {
+                    subForms[i].setAttribute('style', 'display:none') 
+                    }
+                }
+            }
+        </script>
+    
+    
+    <form action="/" id="creationForm" method="post" style="display:none" class="formTest" name="Película">
+
+    <fieldset class="fieldNuevo">
+        <label for="name"><input type="text" name="name" class="cajaNuevo" placeholder="Nombre" required  >
+        <span>Nombre</span>
+        </label>
+        
+    </fieldset>
+    
+    <fieldset class="fieldNuevo">
+        <label for="productLink"><input type="text" name="productLink" class="cajaNuevo" placeholder="Link a trailer" required  >
+        <span>Link del trailer</span>
+        </label>
+        
+    </fieldset>
 
 
-            <fieldset class="fieldNuevo">
-                <label for="productDescription"><input type="text" name="productDescription" class="cajaNuevo" placeholder="Descripción" required  >
-                <span>Breve descripción</span>
-                </label>
-                
-            </fieldset>
+    <fieldset class="fieldNuevo">
+        <label for="description"><input type="text" name="description" class="cajaNuevo" placeholder="Descripción" required  >
+        <span>Breve descripción</span>
+        </label>
+        
+    </fieldset>
 
-            <fieldset id="filmCategory">
-                <legend>Categoría</legend>
-                <input class="hidden radio-label" id="radioUno" type="radio" name="filmCategory" value="Clásica">
-                <label class="button-label" for="radioUno">Clásica</label>
-                <input class="hidden radio-label" id="radioDos" type="radio" name="filmCategory" value="Moderna">
-                <label class="button-label" for="radioDos">Moderna</label>
-                <input class="hidden radio-label" id="radioTres" type="radio" name="filmCategory" value="Estreno">
-                <label class="button-label" for="radioTres">Estreno</label>
-                <input class="hidden radio-label" id="radioCuatro" type="radio" name="filmCategory" value="No Aplica">
-                <label class="button-label" for="radioCuatro">No aplica</label> 
-            </fieldset>
+    <fieldset id="category_id">
+        <legend>Categoría</legend>
+        <input class="hidden radio-label" id="radioUno" type="radio" name="category_id" value="1">
+        <label class="button-label" for="radioUno">Clásica</label>
+        <input class="hidden radio-label" id="radioDos" type="radio" name="category_id" value="2">
+        <label class="button-label" for="radioDos">Moderna</label>
+        <input class="hidden radio-label" id="radioTres" type="radio" name="category_id" value="3">
+        <label class="button-label" for="radioTres">Estreno</label>
+    </fieldset>
 
-            <fieldset class="fieldCheckbox">
-                <legend>Género</legend>
-                    <label class="labelCheck" for="comedia" name="filmGenre"><input type="checkbox"  id="comedia" name="filmGenre"  value="comedia"> Comedia</label>  
-                    <label class="labelCheck" for="drama" name="filmGenre"><input type="checkbox"  id="drama" name="filmGenre"  value="drama"> Drama</label>
-                    <label class="labelCheck" for="fantasia" name="filmGenre"><input type="checkbox"  id="fantasia" name="filmGenre"  value="fantasia"> Fantasía</label>
-                    <label class="labelCheck" for="superscifi" name="filmGenre"><input type="checkbox"  id="superscifi" name="filmGenre"  value="superscifi"> Ciencia ficción y superhéroes</label>
-                    <label class="labelCheck" for="infantil" name="filmGenre"><input type="checkbox"  id="infantil" name="filmGenre"  value="infantil"> Infantil</label>
-                    <label class="labelCheck" for="historia" name="filmGenre"><input type="checkbox"  id="historia" name="filmGenre"  value="historia"> Historia</label>    
-            </fieldset>
+    <fieldset id="restriction_id">
+        <legend>Restricciones de edad</legend>
+        <input class="hidden radio-label" id="ageATP" type="radio" name="restriction_id" value="1">
+        <label class="button-label" for="ageATP">ATP</label>
+        <input class="hidden radio-label" id="ageThirteen" type="radio" name="restriction_id" value="2">
+        <label class="button-label" for="ageThirteen">+13</label>
+        <input class="hidden radio-label" id="ageSixteen" type="radio" name="restriction_id" value="3">
+        <label class="button-label" for="ageSixteen">+16</label>
+        <input class="hidden radio-label" id="ageEighteen" type="radio" name="restriction_id" value="4">
+        <label class="button-label" for="ageEighteen">+18</label> 
+        <input class="hidden radio-label" id="conditioned" type="radio" name="restriction_id" value="5">
+        <label class="button-label" for="conditioned">Condicionada</label> 
+    </fieldset>
 
-            <fieldset class="fieldCheckbox">
-                <legend>Salas</legend>
-                    <label class="labelCheck" for="salaMelies" name="salasCine"><input type="checkbox"  id="salaMelies" name="salasCine"  value="salaMelies"> Sala Melies</label>  
-                    <label class="labelCheck" for="salaKurosawa" name="salasCine"><input type="checkbox"  id="salaKurosawa" name="salasCine"  value="salaKurosawa"> Sala Kurosawa</label> 
-                    <label class="labelCheck" for="salaGodard" name="salasCine"><input type="checkbox"  id="salaGodard" name="salasCine"  value="salaGodard"> Sala Godard</label> 
-                    <label class="labelCheck" for="salaSpielberg" name="salasCine"><input type="checkbox"  id="salaSpielberg" name="salasCine"  value="salaSpielberg"> Sala Spielberg</label>    
-            </fieldset>
+    <fieldset id="imageInput">
+        <legend>Escoja una imagen</legend>
+        <label for="createImage"><input type="file" name="createImage" accept=".jpg, .png" required ></label>
+    </fieldset>
 
-            <fieldset class="fieldCheckbox">
-                <legend>Días en cartel</legend>
-                    <label class="labelCheck" for="Lunes" name="diasCartel"><input type="checkbox"  id="Lunes" name="diasCartel"  value="Lunes"> Lunes</label>  
-                    <label class="labelCheck" for="Martes" name="diasCartel"><input type="checkbox"  id="Martes" name="diasCartel"  value="Martes"> Martes</label> 
-                    <label class="labelCheck" for="Miércoles" name="diasCartel"><input type="checkbox"  id="Miércoles" name="diasCartel"  value="Miércoles"> Miércoles</label> 
-                    <label class="labelCheck" for="Jueves" name="diasCartel"><input type="checkbox"  id="Jueves" name="diasCartel"  value="Jueves"> Jueves</label> 
-                    <label class="labelCheck" for="Viernes" name="diasCartel"><input type="checkbox"  id="Viernes" name="diasCartel"  value="Viernes"> Viernes</label> 
-                    <label class="labelCheck" for="Sábado" name="diasCartel"><input type="checkbox"  id="Sábado" name="diasCartel"  value="Sábado"> Sábado</label> 
-                    <label class="labelCheck" for="Domingo" name="diasCartel"><input type="checkbox"  id="Domingo" name="diasCartel"  value="Domingo"> Domingo</label> 
-            </fieldset>
+    <fieldset class="fieldCheckbox">
+        <legend>Género</legend>
+            <label class="labelCheck" for="comedia" name="genre_id"><input type="checkbox"  id="comedia" name="genre_id"  value="1"> Drama</label>  
+            <label class="labelCheck" for="drama" name="genre_id"><input type="checkbox"  id="drama" name="genre_id"  value="2"> Comedia</label>
+            <label class="labelCheck" for="fantasia" name="genre_id"><input type="checkbox"  id="fantasia" name="genre_id"  value="3"> Fantasía</label>
+            <label class="labelCheck" for="superscifi" name="genre_id"><input type="checkbox"  id="superscifi" name="genre_id"  value="4"> Animación</label>
+            <label class="labelCheck" for="infantil" name="genre_id"><input type="checkbox"  id="infantil" name="genre_id"  value="5"> Histórica</label>
+            <label class="labelCheck" for="historia" name="genre_id"><input type="checkbox"  id="historia" name="genre_id"  value="6"> Superhéroes</label> 
+            <label class="labelCheck" for="historia" name="genre_id"><input type="checkbox"  id="historia" name="genre_id"  value="7"> Ciencia ficción</label>
+            <label class="labelCheck" for="historia" name="genre_id"><input type="checkbox"  id="historia" name="genre_id"  value="8"> No ficción</label>
+            <label class="labelCheck" for="historia" name="genre_id"><input type="checkbox"  id="historia" name="genre_id"  value="9"> Musical</label>
+            <label class="labelCheck" for="historia" name="genre_id"><input type="checkbox"  id="historia" name="genre_id"  value="10"> Aventuras</label>   
+    </fieldset>
 
-            <fieldset class="fieldNuevo">
-                <legend>Horarios disponibles</legend>
-                <label for="timeScheduled"><input type="text" name="timeScheduled" class="cajaNuevo" placeholder="Horarios separados por comas" >
-                <span>Horarios (en formato 24 horas / separe por comas)</span>
-                </label>
-                
-            </fieldset>
+                <fieldset class="botonNuevo">
+                    <button type="submit" class="enviar">Aceptar</button>
+                    <button type="reset" class="reset">Cancelar</button> 
+                </fieldset>
 
-            <fieldset class="fieldCheckbox">
-                <legend>Formato</legend>
-                    <label class="labelCheck" for="dosDe" name="filmFormat"><input type="checkbox"  id="dosDe" name="filmFormat"  value="2D"> 2D</label>  
-                    <label class="labelCheck" for="tresDe" name="filmFormat"><input type="checkbox"  id="tresDe" name="filmFormat"  value="3D"> 3D</label> 
-            </fieldset>
-
-            <fieldset class="fieldCheckbox">
-                <legend>Audio</legend>
-                    <label class="labelCheck" for="subtitulado" name="filmAudio"><input type="checkbox"  id="subtitulado" name="filmAudio"  value="subtitulado"> VOSE</label>  
-                    <label class="labelCheck" for="doblado" name="filmAudio"><input type="checkbox"  id="doblado" name="filmAudio"  value="subtitulado"> Doblado al español</label> 
-            </fieldset>
-
-            <fieldset id="ageRestrictions">
-                <legend>Restricciones de edad</legend>
-                <input class="hidden radio-label" id="ageATP" type="radio" name="ageRestriction" value="todoPublico">
-                <label class="button-label" for="ageATP">ATP</label>
-                <input class="hidden radio-label" id="ageThirteen" type="radio" name="ageRestriction" value="overThirteen">
-                <label class="button-label" for="ageThirteen">+13</label>
-                <input class="hidden radio-label" id="ageSixteen" type="radio" name="ageRestriction" value="overSixteen">
-                <label class="button-label" for="ageSixteen">+16</label>
-                <input class="hidden radio-label" id="ageEighteen" type="radio" name="ageRestriction" value="overEighteen">
-                <label class="button-label" for="ageEighteen">+18</label> 
-            </fieldset>
-
-            <fieldset id="imageInput">
-                <legend>Escoja una imagen</legend>
-                <label for="createImage"><input type="file" name="createImage" accept=".jpg, .png" required >
-                    <!-- accept=".jpg, .png" required -->
-                </label>
-            </fieldset>
-
-            <fieldset class="fieldNuevo">
-                <legend>Precio (sólo si no es película)</legend>
-                <label for="priceInput"><input type="number" name="priceInput" class="cajaNuevo" value="0" placeholder="Precio" >
-                <span>Precio</span>
-                </label>
-                
-            </fieldset>
-
-                        <fieldset class="botonNuevo">
-                            <button type="submit" class="enviar">Aceptar</button>
-                            <button type="reset" class="reset">Cancelar</button> 
-                        </fieldset>
-
-        </form>
+</form>
 
 
+<form action="/" id="creationForm" method="post" style="display:none" class="formTest" name="Otros">
+
+    <fieldset id="type_id">
+        <legend>Tipo de producto</legend>
+        <input class="hidden radio-label" id="beverage" type="radio" name="type_id" value="1">
+        <label class="button-label" for="beverage">Bebidas</label>
+        <input class="hidden radio-label" id="food" type="radio" name="type_id" value="2">
+        <label class="button-label" for="food">Alimento</label>
+        <input class="hidden radio-label" id="combo" type="radio" name="type_id" value="3">
+        <label class="button-label" for="combo">Combo</label>
+        <input class="hidden radio-label" id="yearPass" type="radio" name="type_id" value="4">
+        <label class="button-label" for="yearPass">Abono mensual</label> 
+        <input class="hidden radio-label" id="monthPass" type="radio" name="type_id" value="5">
+        <label class="button-label" for="monthPass">Abono anual</label> 
+    </fieldset>
 
 
-                
+    <fieldset class="fieldNuevo">
+        <label for="name"><input type="text" name="name" class="cajaNuevo" placeholder="Nombre" required  >
+        <span>Nombre</span>
+        </label>
+        
+    </fieldset>
 
+    <fieldset class="fieldNuevo">
+        <label for="description"><input type="text" name="description" class="cajaNuevo" placeholder="Descripción" required  >
+        <span>Breve descripción</span>
+        </label>
+        
+    </fieldset>
+
+    <fieldset id="imageInput">
+        <legend>Escoja una imagen</legend>
+        <label for="createImage"><input type="file" name="createImage" accept=".jpg, .png" required ></label>
+    </fieldset>
+
+    <fieldset class="fieldNuevo">
+        <legend>Precio</legend>
+        <label for="price"><input type="number" name="price" class="cajaNuevo" placeholder="Precio" >
+        <span>Precio</span>
+        </label>
+        
+    </fieldset>
+
+                <fieldset class="botonNuevo">
+                    <button type="submit" class="enviar">Aceptar</button>
+                    <button type="reset" class="reset">Cancelar</button> 
+                </fieldset>
+
+</form>
 
             <!-- </form> -->
         </section>

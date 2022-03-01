@@ -1,0 +1,55 @@
+#melies:checked + .button-label {
+    background: #F2B035;
+  }
+
+  #godard:checked + .button-label {
+    background: #F2B035;
+  }
+
+  #kurosawa:checked + .button-label {
+    background: #F2B035;
+  }
+
+  #spielberg:checked + .button-label {
+    background: #F2B035;
+  }
+
+  #monday:checked + .button-label {
+    background: #F2B035;
+  }
+
+  #tuesday:checked + .button-label {
+    background: #F2B035;
+  }
+
+  #wednesday:checked + .button-label {
+    background: #F2B035;
+  }
+
+  #thursday:checked + .button-label {
+    background: #F2B035;
+  }
+
+  #friday:checked + .button-label {
+    background: #F2B035;
+  }
+
+  #saturday:checked + .button-label {
+    background: #F2B035;
+  }
+
+  #sunday:checked + .button-label {
+    background: #F2B035;
+  }
+
+  #subbed:checked + .button-label {
+    background: #F2B035;
+  }
+
+  #dubbed:checked + .button-label {
+    background: #F2B035;
+  }
+
+  #spanish:checked + .button-label {
+    background: #F2B035;
+  }

@@ -20,6 +20,12 @@ router.get('/',controlProducts.list)
 
 router.get('/create',[auth],controlProducts.create)
 
+router.get('/:id/newScreening',controlProducts.createScreening)
+
+//router.get('/:id/newScreening',[auth],controlProducts.createScreening)
+
+//hacer el POST de new screening
+
 router.get('/:id',controlProducts.show)
 
 router.get('/:id/edit',[auth],controlProducts.update)

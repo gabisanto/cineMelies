@@ -1,0 +1,82 @@
+<%- include ('../modules/head') %> 
+
+<body>
+
+<%- include ('../modules/header') %> 
+
+    <main>
+        <section id="createProduct">
+
+            
+        <h2 class="titulos">Nueva función de <%= product.productName %> </h2>
+      
+            
+    <form action="/" id="creationForm" method="post" name="screening">
+    
+        <fieldset id="screen">
+            <legend>Sala</legend>
+            <input class="hidden radio-label" id="melies" type="radio" name="day" value="1">
+            <label class="button-label" for="melies">Sala Melies</label>
+            <input class="hidden radio-label" id="godard" type="radio" name="day" value="2">
+            <label class="button-label" for="godard">Sala Godard</label>
+            <input class="hidden radio-label" id="godard" type="radio" name="day" value="3">
+            <label class="button-label" for="godard">Sala mier</label>
+            <input class="hidden radio-label" id="spielberg" type="radio" name="day" value="4">
+            <label class="button-label" for="spielberg">Sala Spielberg</label> 
+        </fieldset>
+
+        <fieldset id="day">
+            <legend>Día</legend>
+            <input class="hidden radio-label" id="monday" type="radio" name="day" value="Lunes">
+            <label class="button-label" for="monday">Lunes</label>
+            <input class="hidden radio-label" id="tuesday" type="radio" name="day" value="Martes">
+            <label class="button-label" for="tuesday">Martes</label>
+            <input class="hidden radio-label" id="wednesday" type="radio" name="day" value="Miércoles">
+            <label class="button-label" for="wednesday">Miércoles</label>
+            <input class="hidden radio-label" id="thursday" type="radio" name="day" value="Jueves">
+            <label class="button-label" for="thursday">Jueves</label> 
+            <input class="hidden radio-label" id="friday" type="radio" name="day" value="Viernes">
+            <label class="button-label" for="friday">Viernes</label> 
+            <input class="hidden radio-label" id="saturday" type="radio" name="day" value="Sábado">
+            <label class="button-label" for="saturday">Sábado</label> 
+            <input class="hidden radio-label" id="sunday" type="radio" name="day" value="Domingo">
+            <label class="button-label" for="sunday">Domingo</label> 
+        </fieldset>
+
+    <fieldset class="fieldNuevo">
+        <legend>Horarios para esta función</legend>
+        <label for="hour"><input type="text" name="hour" class="cajaNuevo" placeholder="Horarios de la función" >
+        <span>Horario (en formato 24 horas / cuatro dígitos)</span>
+        </label>
+        
+    </fieldset>
+
+    <fieldset id="language_id">
+        <legend>Audio</legend>
+        <input class="hidden radio-label" id="subbed" type="radio" name="language_id" value="1">
+        <label class="button-label" for="subbed">VOSE</label>
+        <input class="hidden radio-label" id="dubbed" type="radio" name="language_id" value="2">
+        <label class="button-label" for="dubbed">Doblado al español</label>
+        <input class="hidden radio-label" id="spanish" type="radio" name="language_id" value="3">
+        <label class="button-label" for="spanish">Original en español</label>
+    </fieldset>
+
+    
+
+                <fieldset class="botonNuevo">
+                    <button type="submit" class="enviar">Aceptar</button>
+                    <button type="reset" class="reset">Cancelar</button> 
+                </fieldset>
+
+</form>
+
+
+            <!-- </form> -->
+        </section>
+    </main>
+
+
+    <%- include ('../modules/footer') %>
+    
+    </body>
+    </html>

@@ -14,6 +14,20 @@ const controller = {
         styles: ['create','forms'],
         title: 'Crear producto',
     }),
+
+    createScreening: (req,res) => {
+        //let all = product.all().map(p => Object({...p, createImage: file.search('id',p.createImage)}))
+        let resultExists = product.search('id',req.params.id)
+        let result = product.all().map(p => Object({...p, createImage: file.search('id',p.createImage)}))
+        //let productDetail = product.all().map(product => Object ({...product,createImage : file.search('id',product.createImage[0]).url})) */      
+        return resultExists ? res.render('./products/screening',{
+            styles:['screening','forms','create'],
+            title: 'Nueva función de ' + result[req.params.id-1].productName,
+            product: resultExists,
+            id:req.params.id            
+        }) : res.redirect("/products/")
+    },
+
     save: (req,res) => {
         //res.send(req.body)
         req.body.files = req.files;

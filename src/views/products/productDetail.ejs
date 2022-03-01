@@ -64,7 +64,15 @@
 
     </section>
 
-    <% if (user) { %>
+    <% if (user && user.admin) { %>
+
+        Funciones disponibles
+
+        <a href="/products/<%= element.id %>/newScreening">Agregar nueva función</a>
+        
+    <% } %> 
+
+    <% if (user && !user.admin) { %>
      
     
 
@@ -116,7 +124,10 @@
 </section>
 </section>
 <% } %> 
+
 <% }) %>
+
+
 </main>
 
 <%- include ('../modules/footer') %>
