@@ -18,22 +18,22 @@
             <form action="/users/" id="register-form" method="post" >
                 <fieldset class="fieldNuevo">
                 <legend class="dn"> Nombre y Apellido </legend>
-                <label class="dn" for="nombreCompleto"> </label>
-                <input type="text" class="cajaNuevo" name="nombreCompleto" id="nombreCompleto" placeholder="Nombre y Apellido" required >
+                <label class="dn" for="name"> </label>
+                <input type="text" class="cajaNuevo" name="name" id="nombreCompleto" placeholder="Nombre y Apellido" required >
                 
                 </fieldset>
             
                 <fieldset class="fieldNuevo">
                 <legend class="dn" > DNI </legend>
-                <label class="dn"  for="Documento">  </label>
-                <input type="number" class="cajaNuevo" name="Documento" id="Documento" placeholder="Documento"  required >
+                <label class="dn"  for="document">  </label>
+                <input type="number" class="cajaNuevo" name="document" id="document" placeholder="Documento"  required >
             
                 </fieldset>
             
                 <fieldset class="fieldNuevo" >
                 
-                <label for="fecha" class="dn"> </label>
-                <input type="date" class="cajaNuevo" class="t-input" name="fecha" id="fecha" placeholder="fecha"  required >
+                <label for="birthDate" class="dn"> </label>
+                <input type="date" class="cajaNuevo" class="t-input" name="birthDate" id="birthDate" placeholder="birthDate"  required >
                 
                 </fieldset>
             
@@ -47,23 +47,17 @@
                 <input type="text"  class="cajaNuevo" name="email" id="email" placeholder="Email"  required >
                 
                 </fieldset>
-                <% if (locals.errors && errors.clave) { %>
-                    <p class="errores"><%= errors.clave.msg %> </p>
+                <% if (locals.errors && errors.password) { %>
+                    <p class="errores"><%= errors.password.msg %> </p>
                 <% } %>
                 <fieldset class="fieldNuevo">
                 <legend class="dn" > Contraseña </legend>
-                <label for="clave" >  </label> 
-                <input type="password" class="cajaNuevo" name="clave" id="confirm" placeholder="Escribí tu contraseña"
+                <label for="password" >  </label> 
+                <input type="password" class="cajaNuevo" name="password" id="confirm" placeholder="Escribí tu contraseña"
                 title="Debe contener 8 o más caracteres, al menos un número, una letra mayúscula, una minúscula, y un carácter especial" required >
                 
                 </fieldset>
             
-                <fieldset class="fieldNuevo">
-                <legend class="dn" > Confirmar Contraseña </legend>
-                <label for="confirm" id="confirmar"> </label> 
-                <input type="password" class="cajaNuevo" name="confirm" id="confirm" class="clave" placeholder="Confirmar Contraseña" required >
-            
-                </fieldset>
             </section>
         </section>
 
@@ -104,9 +98,9 @@
     </fieldset>
 
     <fieldset >
-    <legend  > Fecha de Nacimiento </legend>
-    <label for="fecha" class="dn"> Fecha de Nacimiento </label>
-    <input type="date" class="t-input" name="fecha" id="fecha" placeholder="fecha"  required >
+    <legend  > birthDate de Nacimiento </legend>
+    <label for="birthDate" class="dn"> birthDate de Nacimiento </label>
+    <input type="date" class="t-input" name="birthDate" id="birthDate" placeholder="birthDate"  required >
     </fieldset>
 
     <fieldset>
@@ -117,15 +111,15 @@
 
     <fieldset>
     <legend class="dn" > Contraseña </legend>
-    <span> <label for="clave"  > Contraseña  </label> </span>
-    <input type="password" class="t-input" name="clave" id="confirm" placeholder="Escribí tu contraseña" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+    <span> <label for="password"  > Contraseña  </label> </span>
+    <input type="password" class="t-input" name="password" id="confirm" placeholder="Escribí tu contraseña" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
     title="Debe contener 8 o más caracteres de al menos un número y una letra mayúscula y minúscula" required >
     </fieldset>
 
     <fieldset>
     <legend class="dn" > Confirmar Contraseña </legend>
     <span id="confirmar"><label for="confirm"> Confirmar Contraseña </label> </span>
-    <input type="password" name="confirm" id="confirm" class="clave" required >
+    <input type="password" name="confirm" id="confirm" class="password" required >
     </fieldset>
 
     <fieldset class="botones">

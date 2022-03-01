@@ -16,7 +16,7 @@ const model = {
         Documento: data.Documento,
         fecha: data.fecha,
         email:String(data.email),
-        clave: bcrypt.hashSync(data.clave,10),
+        password: bcrypt.hashSync(data.password,10),
         admin: String(data.email).includes('@cinemelies.com.ar'),
         isActive: true,
         avatar: data.avatar ? data.avatar : null,
@@ -37,7 +37,7 @@ const model = {
     },
     validate: [
         body('email').isEmail().withMessage('Ingrese un email válido'),
-        body('clave').matches(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9]).{8,}$/, "i").withMessage('La contraseña debe contener mínimo 8 caracteres, y al menos una mayúscula, una minúscula, un número y un carácter especial')
+        body('password').matches(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9]).{8,}$/, "i").withMessage('La contraseña debe contener mínimo 8 caracteres, y al menos una mayúscula, una minúscula, un número y un carácter especial')
     ]
 
 }

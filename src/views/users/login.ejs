@@ -26,14 +26,14 @@
                     <input type="email" class="cajaNuevo" name="email"  id="Usuario" placeholder="Email">
                 </fieldset>
 
-                <% if (locals.errors && errors.clave) { %>
-                    <p><%= errors.clave.msg %></p>
+                <% if (locals.errors && errors.password) { %>
+                    <p><%= errors.password.msg %></p>
                 <% } %>
                 
 
                 <fieldset class="fieldNuevo">
-                    <label for="clave" class="dn"> Contraseña  </label>
-                    <input type="password" class="cajaNuevo" name="clave" id="confirm" placeholder="Escribí tu contraseña">
+                    <label for="password" class="dn"> Contraseña  </label>
+                    <input type="password" class="cajaNuevo" name="password" id="confirm" placeholder="Escribí tu contraseña">
                     <!--pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                     title="Debe contener 8 o más caracteres de al menos un número y una letra mayúscula y minúscula" required-->
                 </fieldset>

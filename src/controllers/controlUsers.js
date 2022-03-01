@@ -45,12 +45,12 @@ module.exports = {
            })
         }
 
-        if(!bcrypt.compareSync(req.body.clave,exist.clave)) {
+        if(!bcrypt.compareSync(req.body.password,exist.password)) {
             return res.render('users/login',{
                 styles: ['login'],
                 title: 'Usuario',
                 errors:{
-                    clave:{
+                    password:{
                         msg: 'Contraseña invalida'
                     }
                 }

@@ -5,7 +5,7 @@
     "Documento": "3440694615",
     "fecha": "11/06/1933",
     "email": "lnettles0@feedburner.com",
-    "clave": "aUUoCOMQJMv",
+    "password": "aUUoCOMQJMv",
     "image": "user_1.jpg",
     "admin": true,
     "avatar": null
@@ -16,7 +16,7 @@
     "Documento": "8238872332",
     "fecha": "13/01/1914",
     "email": "swalworche1@studiopress.com",
-    "clave": "puotb7lwtkB",
+    "password": "puotb7lwtkB",
     "image": "user_2.jpg",
     "admin": false,
     "avatar": null
@@ -27,7 +27,7 @@
     "Documento": "6764570736",
     "fecha": "05/01/1965",
     "email": "ltreeby2@meetup.com",
-    "clave": "z92odvJJd",
+    "password": "z92odvJJd",
     "image": "user_3.jpg",
     "admin": false,
     "avatar": null
@@ -38,7 +38,7 @@
     "Documento": "4037293528",
     "fecha": "28/10/1957",
     "email": "rsiret3@rediff.com",
-    "clave": "6N5LhU",
+    "password": "6N5LhU",
     "image": "user_4.jpg",
     "admin": false,
     "avatar": null
@@ -49,7 +49,7 @@
     "Documento": "9781393297",
     "fecha": "17/09/1929",
     "email": "dtilbury4@google.co.uk",
-    "clave": "jEGmVuX2U7",
+    "password": "jEGmVuX2U7",
     "image": "user_5.jpg",
     "admin": false,
     "avatar": null
@@ -60,7 +60,7 @@
     "Documento": "51564151",
     "fecha": "1212-12-12",
     "email": "gabi@gmail.com",
-    "clave": "$2b$10$ywWleFmUcP7fZ7m.zJuNXeSc1J9JyxJdvHQo9nWQTiG1lg3Ws4Xwu",
+    "password": "$2b$10$ywWleFmUcP7fZ7m.zJuNXeSc1J9JyxJdvHQo9nWQTiG1lg3Ws4Xwu",
     "admin": false,
     "isActive": true,
     "avatar": null
@@ -71,7 +71,7 @@
     "Documento": "335546678",
     "fecha": "1788-03-11",
     "email": "mail@mail.com",
-    "clave": "$2b$10$iroNK3hNhlVt49YrtxaKAu2S4wpTeRB85s.BTF2b9DDsDX8a5PzFO",
+    "password": "$2b$10$iroNK3hNhlVt49YrtxaKAu2S4wpTeRB85s.BTF2b9DDsDX8a5PzFO",
     "admin": false,
     "isActive": true,
     "avatar": null
@@ -82,7 +82,7 @@
     "Documento": "232930456",
     "fecha": "1888-02-11",
     "email": "azul@gmail.com",
-    "clave": "$2b$10$YZR7GhyLHe5CbnGSq2JTLO5Mcr4GZRbtb7v6p0aklVwn72o.dX.Vi",
+    "password": "$2b$10$YZR7GhyLHe5CbnGSq2JTLO5Mcr4GZRbtb7v6p0aklVwn72o.dX.Vi",
     "admin": false,
     "isActive": true,
     "avatar": null
@@ -93,7 +93,7 @@
     "Documento": "12121212",
     "fecha": "1999-09-19",
     "email": "gabi@cinemelies.com.ar",
-    "clave": "$2b$10$CZpE.rxlxaADNq8qOVWKTe4yO9TV3r7hiGqYfSBOCB.9s27TRxOK.",
+    "password": "$2b$10$CZpE.rxlxaADNq8qOVWKTe4yO9TV3r7hiGqYfSBOCB.9s27TRxOK.",
     "admin": true,
     "isActive": true,
     "avatar": "imagenUsuario-1644373185982.jpg"
