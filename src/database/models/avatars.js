@@ -17,5 +17,5 @@ module.exports = (sequelize, dataTypes) => {
     }
     const Avatar = sequelize.define(alias,cols,config)
 
-    return Avatar
+    return Avatar;
 };
