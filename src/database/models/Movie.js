@@ -2,25 +2,25 @@ module.exports = (sequelize, dataTypes) => {
     let alias = 'Movie';
     let cols = {
         id: {
-            type: dataTypes.INT(11),
+            type: dataTypes.BIGINT(11),
             primaryKey: true,
             allowNull: false,
             autoIncrement: true
         },
         productName: {
-            type: dataTypes.VARCHAR(255),
+            type: dataTypes.STRING,
             allowNull: false
         },
         genre_id: {
-            type: dataTypes.INT(11),
+            type: dataTypes.BIGINT(11),
             allowNull: false,
         },
         category_id: {
-            type: dataTypes.INT(11),
+            type: dataTypes.BIGINT(11),
             allowNull: false
         },
         productLink: {
-            type: dataTypes.VARCHAR(255),
+            type: dataTypes.STRING,
             allowNull: false
         },
         productDescription: {
@@ -28,11 +28,11 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false
         },
         image_id: {
-            type: dataTypes.INT(11),
+            type: dataTypes.BIGINT(11),
             allowNull: false
         },
         restriction_id: {
-            type: dataTypes.INT(11),
+            type: dataTypes.BIGINT(11),
             allowNull: false
         },
     };
@@ -42,5 +42,30 @@ module.exports = (sequelize, dataTypes) => {
     }
     const Movie = sequelize.define(alias,cols,config)
 
-    return Movie
-};
+    Movie.associate = function (models) {
+        Movie.belongsTo(models.Genre,{
+            as: "genre",
+            foreignKey: "genre_id"
+        }),
+        Movie.belongsTo(models.Category,{
+            as: "category",
+            foreignKey: "category_id"
+        }),
+        Movie.belongsTo(models.Poster,{
+            as: "poster",
+            foreignKey: "image_id"
+        }),
+        Movie.belongsTo(models.Restriction,{
+            as: "restriction",
+            foreignKey: "restriction_id"
+        }),
+        Movie.belongsToMany(models.Screening,{
+            as: "screenings",
+            through: "Moviescreening",
+            foreignKey: "movie_id",
+            otherKey: "screening_id",
+            timestamps: false
+        })
+    }
+    return Movie;
+}

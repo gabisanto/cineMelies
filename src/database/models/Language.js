@@ -2,13 +2,13 @@ module.exports = (sequelize, dataTypes) => {
     let alias = 'Language';
     let cols = {
         id: {
-            type: dataTypes.INT(11),
+            type: dataTypes.BIGINT(11),
             primaryKey: true,
             allowNull: false,
             autoIncrement: true
         },
         name: {
-            type: dataTypes.VARCHAR(255),
+            type: dataTypes.STRING,
             allowNull: false
         }};
     let config = {

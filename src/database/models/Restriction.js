@@ -26,7 +26,12 @@ module.exports = (sequelize, dataTypes) => {
 
     //Creacion de relaciones 
 
-    
+    Restriction.association = function(models) {
+        Restriction.hasMany(Movie,{
+            as: "movie",
+            foreignKey: "restriction_id"
+        })
+    }
 
 
 

@@ -2,13 +2,13 @@ module.exports = (sequelize, dataTypes) => {
     let alias = 'MovieScreening';
     let cols = {
         id: {
-            type: dataTypes.INT(11),
+            type: dataTypes.BIGINT(11),
             primaryKey: true,
             allowNull: false,
             autoIncrement: true
         },
         movie_id: {
-            type: dataTypes.VARCHAR(255),
+            type: dataTypes.BIGINT(11),
             allowNull: false,
             references: {
                 model: 'Movie',
@@ -16,7 +16,7 @@ module.exports = (sequelize, dataTypes) => {
             }
         },
         screening_id: {
-            type: dataTypes.VARCHAR(255),
+            type: dataTypes.BIGINT(11),
             allowNull: false,
             references: {
                 model: 'Screening',

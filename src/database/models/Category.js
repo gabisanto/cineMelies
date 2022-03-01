@@ -2,13 +2,13 @@ module.exports = (sequelize, dataTypes) => {
     let alias = 'Category';
     let cols = {
         id: {
-            type: dataTypes.INT(11),
+            type: dataTypes.BIGINT(11),
             primaryKey: true,
             allowNull: false,
             autoIncrement: true
         },
         name: {
-            type: dataTypes.VARCHAR(255),
+            type: dataTypes.STRING,
             allowNull: false
         }};
     let config = {
@@ -16,6 +16,13 @@ module.exports = (sequelize, dataTypes) => {
         tableName: 'categories'
     }
     const Category = sequelize.define(alias,cols,config)
+
+    Category.association = function(models) {
+        Category.hasMany(Movie,{
+            as: "movie",
+            foreignKey: "category_id"
+        })
+    }
 
     return Category
 };

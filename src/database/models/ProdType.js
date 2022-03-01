@@ -26,7 +26,12 @@ module.exports = (sequelize, dataTypes) => {
 
     //Creacion de relaciones 
 
-    
+    ProdType.association = function(models) {
+        ProdType.hasMany(Product,{
+            as: "product",
+            foreignKey: "type_id"
+        })
+    }
 
 
 

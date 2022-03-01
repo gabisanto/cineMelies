@@ -42,7 +42,15 @@ module.exports = (sequelize, dataTypes) => {
 
     //Creacion de relaciones 
 
-    
+    Screening.associate = function (models) {
+        Screening.belongsToMany(models.Movie,{
+            as: "movie",
+            through: "Moviescreening",
+            foreignKey: "screening_id",
+            otherKey: "movie_id",
+            timestamps: false
+        })
+    }
 
 
 

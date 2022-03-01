@@ -42,7 +42,16 @@ module.exports = (sequelize, dataTypes) => {
 
     //Creacion de relaciones 
 
-    
+    Product.associate = function (models) {
+        Product.belongsTo(models.ProdType,{
+            as: "type",
+            foreignKey: "type_id"
+        });
+        Product.belongsTo(models.Image,{
+            as: "image",
+            foreignKey: "image_id"
+        });
+    }
 
 
 

@@ -2,13 +2,13 @@ module.exports = (sequelize, dataTypes) => {
     let alias = 'Image';
     let cols = {
         id: {
-            type: dataTypes.INT(11),
+            type: dataTypes.BIGINT(11),
             primaryKey: true,
             allowNull: false,
             autoIncrement: true
         },
         url: {
-            type: dataTypes.VARCHAR(255),
+            type: dataTypes.STRING,
             allowNull: false
         }};
     let config = {
@@ -16,6 +16,13 @@ module.exports = (sequelize, dataTypes) => {
         tableName: 'images'
     }
     const Image = sequelize.define(alias,cols,config)
+
+    Image.association = function(models) {
+        Image.hasMany(Product,{
+            as: "product",
+            foreignKey: "image_id"
+        })
+    }
 
     return Image
 };
