@@ -8,14 +8,23 @@ module.exports = (sequelize, dataTypes) => {
             autoIncrement: true
         },
         url: {
-            type: dataTypes.STRING,
+            type: dataTypes.STRING(100),
             allowNull: false
         }};
     let config = {
         timestamps: false,
         tableName: 'avatars'
-    }
-    const Avatar = sequelize.define(alias,cols,config)
+    };
 
+    
+    const Avatar = sequelize.define(alias,cols,config);
+
+   
+        Avatar.associate = function(models) {
+            //relacion Avatar (uno) con User (a muchos)
+            
+
+
+        }
     return Avatar;
 };

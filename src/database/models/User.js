@@ -50,8 +50,16 @@ module.exports = (sequelize, dataTypes) => {
     const User = sequelize.define(alias, cols, config); 
 
     //Creacion de relaciones 
+    User.associate = function(models) {
+        //relacion Avatar (uno) con User (a muchos)
+        User.belongsTo((models.Avatar), {
+            as: "avatar", 
+            foreignKey: "avatar_id"
+        })
 
 
+    }
+    
 
 
 
