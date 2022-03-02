@@ -6,12 +6,6 @@ const Op = db.Sequelize.Op
 const controller = {
 
 
-    list: (req,res) => res.render('./products/list',{
-        styles:['list'],
-        title: 'Listado items',
-        products: product.all().map(p => Object({...p, createImage: file.search('id',p.createImage)}))
-    }),
-
     create: (req,res) => res.render('./products/create',{
         styles: ['create','forms'],
         title: 'Crear producto',
@@ -69,14 +63,14 @@ const controller = {
         // }) : res.redirect("/products/")
     },
 
-    showProduct: (req,res) => {
+    showOther: (req,res) => {
         db.Product.findByPk(req.params.id,{
             include: ["type","image"]
         })
         .then (function (producto) 
             {return res.render('./products/productDetail',{
                 styles:['productDetail','forms','create'],
-                title: producto.productName,
+                title: producto.name,
                 product: producto,
                 id:req.params.id
         })})
@@ -84,7 +78,40 @@ const controller = {
             res.redirect("/")
         })
     },
-         
+
+    listMovie: (req,res) => {
+        db.Movie.findAll({
+            include: ["genre","category","poster","restriction"]
+        })
+        .then(function(pelicula) {return res.render('./products/listMovie',{
+            styles: ['list'],
+            title: 'Listado de películas',
+            pelicula: pelicula
+        })})
+        .catch(err => {
+            res.send(err)
+        })
+    
+        // res.render('./products/list',{
+        // styles:['list'],
+        // title: 'Listado items',
+        // products: product.all().map(p => Object({...p, createImage: file.search('id',p.createImage)}))
+    },
+
+    listOther: (req,res) => {
+        db.Product.findAll({
+            include: ["image"]
+        })
+        .then(function(product) {return res.render('./products/listOther',{
+            styles: ['list'],
+            title: 'Listado de productos',
+            other: product
+        })})
+        .catch(err => {
+            res.send(err)
+        })
+    },
+
     update: (req,res) => res.render('./admins/edit',{
         //list: controller.list(),
         styles:['forms','edit'],

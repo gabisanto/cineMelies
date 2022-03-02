@@ -16,7 +16,9 @@ const access = require('../middlewares/access');
 
 router.get('/carrito',[access],controlProducts.cart)
 
-router.get('/',controlProducts.list)
+router.get('/',controlProducts.listMovie)
+
+router.get('/other',controlProducts.listOther)
 
 router.get('/create',[auth],controlProducts.create)
 
@@ -28,7 +30,7 @@ router.get('/:id/newScreening',controlProducts.createScreening)
 
 router.get('/:id',controlProducts.showMovie) // muestra vista de película
 
-router.get('/other/:id',controlProducts.showProduct) // muestra vista de otros productos (bebida, alimento, etc)
+router.get('/other/:id',controlProducts.showOther) // muestra vista de otros productos (bebida, alimento, etc)
 
 router.get('/:id/edit',[auth],controlProducts.update)
 
