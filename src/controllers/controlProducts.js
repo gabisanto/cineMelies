@@ -1,5 +1,6 @@
 const product = require('../models/product.js');
 const file = require('../models/file.js');
+const db = require('../database/models')
 
 const controller = {
 

@@ -10,7 +10,7 @@
 <!-- contenedor padre de las películas-->
 <section id="container-posters">
         <!-- Sección titulos -->
-        <section id="id-select-movie">
+        <!-- <section id="id-select-movie">
             <label> Cine Melies </label>
             <select name="Pelicula" >
                 <option selected value="0"> Selecciona una película </option>
@@ -33,7 +33,7 @@
                     <option value="12">El bebé de Rosemary</option> 
                 </optgroup> 
             </select>
-    </section>
+    </section> -->
 
     <!-- contenedor   Películas clásicas -->
     
@@ -42,24 +42,24 @@
         
             
             
-                <% if (locals.productsClasica) { %> 
-                    <% if (productsClasica.length > 0) { %>
-                    <% productsClasica.forEach(element => { %>
-                        <section >
-                            <figure  class="images">
-                                <a href="/products/<%= element.id %>" title="<%= element.productName %>"><img src="/uploads/<%= element.createImage %>" ></a> 
-                            </figure>
-                            <article >
-                                <p  class="title-peli"> <%= element.productName %>  </p>
-                                <p> <a href="<%= element.productLink %>" target='_blank'> Ver Trailer </a></p>
-                                <!-- <p> <i class="fas fa-star"></i> 7.9 <span> / 10 </span> </p> -->
-                                <p> <%= element.diasCartel %></p>
-                                <p> <%= element.timeScheduled %> hs.</p>
-                            </article>
-                        </section>
-                    <% }) %>
-                <% } %> 
-                <% } %> 
+            <% pelicula.forEach(element => { %>
+                <% if (element.category.name == "Clásica") { %>
+                 
+                
+                <section >
+                    <figure  class="images">
+                        <a href="/products/<%= element.id %>" title="<%= element.productName %>"><img src="/uploads/<%= element.poster.url %>" ></a> 
+                    </figure>
+                    <article >
+                        <p  class="title-peli"> <%= element.productName %>  </p>
+                        <p> <a href="<%= element.productLink %>" target='_blank'> Ver Trailer </a></p>
+                        <!-- <p> <i class="fas fa-star"></i> 7.9 <span> / 10 </span> </p> -->
+                        <!-- <p> %= element.diasCartel %></p>
+                        <p> %= element.timeScheduled %> hs.</p> -->
+                    </article>
+                </section>
+                <% } %>
+            <% }) %>
         
          
     </section> 
@@ -68,24 +68,24 @@
      <!-- contenedor Películas modernas -->
     
     <section id="container-moderna"> 
-        <% if (locals.productsModerna) { %> 
-            <% if (productsModerna.length > 0) { %>
-            <% productsModerna.forEach(element => { %>
-                <section >
-                    <figure  class="images">
-                        <a href="/products/<%= element.id %>" title="<%= element.productName %>"><img src="/uploads/<%= element.createImage %>" ></a> 
-                    </figure>
-                    <article >
-                        <p  class="title-peli"> <%= element.productName %>  </p>
-                        <p> <a href="<%= element.productLink %>"> Ver Trailer </a></p>
-                        <!-- <p> <i class="fas fa-star"></i> 7.9 <span> / 10 </span> </p> -->
-                        <p> <%= element.diasCartel %></p>
-                        <p> <%= element.timeScheduled %> hs.</p>
-                    </article>
-                </section>
-            <% }) %>
-        <% } %> 
-        <% } %>
+        <% pelicula.forEach(element => { %>
+            <% if (element.category.name == "Moderna") { %>
+             
+            
+            <section >
+                <figure  class="images">
+                    <a href="/products/<%= element.id %>" title="<%= element.productName %>"><img src="/uploads/<%= element.poster.url %>" ></a> 
+                </figure>
+                <article >
+                    <p  class="title-peli"> <%= element.productName %>  </p>
+                    <p> <a href="<%= element.productLink %>" target='_blank'> Ver Trailer </a></p>
+                    <!-- <p> <i class="fas fa-star"></i> 7.9 <span> / 10 </span> </p> -->
+                    <!-- <p> %= element.diasCartel %></p>
+                    <p> %= element.timeScheduled %> hs.</p> -->
+                </article>
+            </section>
+            <% } %>
+        <% }) %>
     
 </section>
 

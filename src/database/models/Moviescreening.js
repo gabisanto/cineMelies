@@ -30,9 +30,11 @@ module.exports = (sequelize, dataTypes) => {
     }
     const MovieScreening = sequelize.define(alias,cols,config)
 
-    MovieScreening.belongsTo(Movie, {foreignKey: "movie_id"})
+    MovieScreening.association = function (models)
+    
+    {MovieScreening.belongsTo(models.Movie, {foreignKey: "movie_id"})
 
-    MovieScreening.belongsTo(Screening, {foreignKey:"screening_id"})
+    MovieScreening.belongsTo(models.Screening, {foreignKey:"screening_id"})}
 
     return MovieScreening
 };

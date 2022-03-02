@@ -1,0 +1,75 @@
+<%- include ('../modules/head') %> 
+
+<body>
+
+<%- include ('../modules/header') %> 
+
+<!--Sección MAIN-->
+<main>
+
+<!-- contenedor padre de las películas-->
+<section id="container-posters">
+        <!-- Sección titulos -->
+
+    <!-- contenedor   Películas clásicas -->
+    
+        <section id="container-clasica"> 
+            
+        
+            
+            
+                
+                    <% pelicula.forEach(element => { %>
+                        <% if (element.category.name == "Clásica") { %>
+                         
+                        
+                        <section >
+                            <figure  class="images">
+                                <a href="/products/<%= element.id %>" title="<%= element.productName %>"><img src="/uploads/<%= element.poster.url %>" ></a> 
+                            </figure>
+                            <article >
+                                <p  class="title-peli"> <%= element.productName %>  </p>
+                                <p> <a href="<%= element.productLink %>" target='_blank'> Ver Trailer </a></p>
+                                <!-- <p> <i class="fas fa-star"></i> 7.9 <span> / 10 </span> </p> -->
+                                <!-- <p> %= element.diasCartel %></p>
+                                <p> %= element.timeScheduled %> hs.</p> -->
+                            </article>
+                        </section>
+                        <% } %>
+                    <% }) %>
+                
+                    <% pelicula.forEach(element => { %>
+                        <% if (element.category.name == "Moderna") { %>
+                         
+                        
+                        <section >
+                            <figure  class="images">
+                                <a href="/products/<%= element.id %>" title="<%= element.productName %>"><img src="/uploads/<%= element.poster.url %>" ></a> 
+                            </figure>
+                            <article >
+                                <p  class="title-peli"> <%= element.productName %>  </p>
+                                <p> <a href="<%= element.productLink %>" target='_blank'> Ver Trailer </a></p>
+                                <!-- <p> <i class="fas fa-star"></i> 7.9 <span> / 10 </span> </p> -->
+                                <!-- <p> %= element.diasCartel %></p>
+                                <p> %= element.timeScheduled %> hs.</p> -->
+                            </article>
+                        </section>
+                        <% } %>
+                    <% }) %>
+
+
+                
+        
+         
+    </section> 
+    
+    </section> 
+
+</section> 
+</main>
+
+<%- include ('../modules/footer') %>
+
+
+</body>
+</html>
