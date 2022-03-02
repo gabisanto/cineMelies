@@ -26,7 +26,9 @@ router.get('/:id/newScreening',controlProducts.createScreening)
 
 //hacer el POST de new screening
 
-router.get('/:id',controlProducts.show)
+router.get('/:id',controlProducts.showMovie) // muestra vista de película
+
+router.get('/other/:id',controlProducts.showProduct) // muestra vista de otros productos (bebida, alimento, etc)
 
 router.get('/:id/edit',[auth],controlProducts.update)
 

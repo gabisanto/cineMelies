@@ -1,6 +1,7 @@
 const product = require('../models/product.js');
 const file = require('../models/file.js');
-const db = require('../database/models')
+const db = require('../database/models');
+const Op = db.Sequelize.Op
 
 const controller = {
 
@@ -42,17 +43,46 @@ const controller = {
         title: 'Proceso de compra'
     }),
 
-    show: (req,res) => {
-        //let all = product.all().map(p => Object({...p, createImage: file.search('id',p.createImage)}))
-        let resultExists = product.search('id',req.params.id)
-        let result = product.all().map(p => Object({...p, createImage: file.search('id',p.createImage)}))
-        //let productDetail = product.all().map(product => Object ({...product,createImage : file.search('id',product.createImage[0]).url})) */      
-        return resultExists ? res.render('./products/productDetail',{
-            styles:['productDetail','forms','create'],
-            title: result[req.params.id-1].productName,
-            product: result,
-            id:req.params.id
-        }) : res.redirect("/products/")
+    showMovie: (req,res) => {
+        db.Movie.findByPk(req.params.id,{
+            include: ["genre","category","poster","restriction"]
+        })
+        .then (function (pelicula) 
+            {return res.render('./products/movieDetail',{
+                styles:['productDetail','forms','create'],
+                title: pelicula.productName,
+                product: pelicula,
+                id:req.params.id
+        })})
+        .catch(err => {
+            res.redirect("/")
+        })
+        // //let all = product.all().map(p => Object({...p, createImage: file.search('id',p.createImage)}))
+        // let resultExists = product.search('id',req.params.id)
+        // let result = product.all().map(p => Object({...p, createImage: file.search('id',p.createImage)}))
+        // //let productDetail = product.all().map(product => Object ({...product,createImage : file.search('id',product.createImage[0]).url})) */      
+        // return resultExists ? res.render('./products/productDetail',{
+        //     styles:['productDetail','forms','create'],
+        //     title: result[req.params.id-1].productName,
+        //     product: result,
+        //     id:req.params.id
+        // }) : res.redirect("/products/")
+    },
+
+    showProduct: (req,res) => {
+        db.Product.findByPk(req.params.id,{
+            include: ["type","image"]
+        })
+        .then (function (producto) 
+            {return res.render('./products/productDetail',{
+                styles:['productDetail','forms','create'],
+                title: producto.productName,
+                product: producto,
+                id:req.params.id
+        })})
+        .catch(err => {
+            res.redirect("/")
+        })
     },
          
     update: (req,res) => res.render('./admins/edit',{

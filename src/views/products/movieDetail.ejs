@@ -6,6 +6,7 @@
 
 <!--Sección MAIN-->
 <main>
+
  
 
 <% if (id == product.id) { %>
@@ -14,7 +15,7 @@
 <section>
     <article id=background>
         <picture >
-            <img src="/img/pop-corn.jpg">
+            <img src="/uploads/<%= product.poster.url %>">
         </picture>
     </article>
 
@@ -22,12 +23,12 @@
     
         <!-- detalle producto-->
 <section class="container-peli">
-    <article> <h2> <%= product.name %>  </h2> 
+    <article> <h2> <%= product.productName %>  </h2> 
     </article>
     <section id="flexDescription">
         <article>
             <figure  class="images">
-                <img src="/uploads/<%= product.image.url %>">
+                <img src="/uploads/<%= product.poster.url %>">
             </figure>
         </article>
 
@@ -36,16 +37,15 @@
         <section class="descripciones" >
             <article id="sinopsis"> 
                 <h3> SINOPSIS </h3>
-                <p> <%= product.description %>  </p>
+                <p> <%= product.productDescription %>  </p>
             </article>
 
             <figure>
-                    <article id="sinopsis"> 
-                        <h3> PRECIO </h3>
-                        <p> $<%= product.price %> por unidad </p>
-                    </article>
 
-                <% } %> 
+                    <a href="<%= product.productLink %> " target="_blank"><div class="play"></div></a>
+                    
+
+            
 
             </figure>
 
@@ -114,7 +114,8 @@
 </section>
 <% } %>
 </section>
-</section> 
+</section>
+<% } %> 
 
 
 
