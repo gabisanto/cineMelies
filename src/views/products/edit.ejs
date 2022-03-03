@@ -1,0 +1,98 @@
+<%- include ('../modules/head') %> 
+
+<body>
+
+<%- include ('../modules/header') %> 
+
+    <main>
+
+        <section id="editProduct">
+
+        <h2 class="titulos">Actualizar <%= products.productName %> </h2>
+        <form action="/products/<%=products.id%>?m=PUT" id="creationForm" method="POST">
+          
+
+            <fieldset class="fieldNuevo">
+                <label for="name"><input type="text" name="productName" class="cajaNuevo" placeholder="Nombre" required value="<%=products.productName%>">
+                <span>Nombre</span>
+                </label>
+                
+            </fieldset>
+
+            <fieldset class="fieldNuevo">
+                <label for="productLink"><input type="text" name="productLink" class="cajaNuevo" placeholder="Link a trailer"  value="<%=products.productLink%>" required >
+                <span>Link del trailer</span>
+                </label>
+                
+            </fieldset>
+
+            <fieldset class="fieldNuevo">
+                <label for="description"><input type="text" name="productDescription" class="cajaNuevo" placeholder="Descripción" required value="<%=products.productDescription%>" >
+                <span>Breve descripción</span>
+                </label>
+                
+            </fieldset>
+                             
+            <fieldset id="category_id">
+                <legend>Categoría</legend>
+                <input class="hidden radio-label" id="radioUno" type="radio" name="category_id" value="1" <%= products.category_id == "1"? "checked" : null %>>
+                <label class="button-label" for="radioUno">Clásica</label>
+                <input class="hidden radio-label" id="radioDos" type="radio" name="category_id" value="2" <%= products.category_id == "2"? "checked" : null %>>
+                <label class="button-label" for="radioDos">Moderna</label>
+                <input class="hidden radio-label" id="radioTres" type="radio" name="category_id" value="3" <%= products.category_id == "3"? "checked" : null %>>
+                <label class="button-label" for="radioTres">Estreno</label>
+            </fieldset>   
+            
+            <fieldset id="restriction_id">
+                <legend>Restricciones de edad</legend>
+                <input class="hidden radio-label" id="ageATP" type="radio" name="restriction_id" value="1" <%= products.restriction_id == "1"? "checked" : null %>>
+                <label class="button-label" for="ageATP">ATP</label>
+                <input class="hidden radio-label" id="ageThirteen" type="radio" name="restriction_id" value="2" <%= products.restriction_id == "2"? "checked" : null %>>
+                <label class="button-label" for="ageThirteen">+13</label>
+                <input class="hidden radio-label" id="ageSixteen" type="radio" name="restriction_id" value="3" <%= products.restriction_id == "3"? "checked" : null %>>
+                <label class="button-label" for="ageSixteen">+16</label>
+                <input class="hidden radio-label" id="ageEighteen" type="radio" name="restriction_id" value="4" <%= products.restriction_id == "4"? "checked" : null %>>
+                <label class="button-label" for="ageEighteen">+18</label> 
+                <input class="hidden radio-label" id="conditioned" type="radio" name="restriction_id" value="5" <%= products.restriction_id == "5"? "checked" : null %>>
+                <label class="button-label" for="conditioned">Condicionada</label> 
+            </fieldset>
+
+            <select name="genre_id" id="genre_id" class="selectGenre">
+                <option value="0"> Elija un género </option>
+                    <option value="1" <%= products.genre_id == "1"? "selected" : null %>>Drama</option> 
+                    <option value="2" <%= products.genre_id == "2"? "selected" : null %>>Comedia</option>
+                    <option value="3" <%= products.genre_id == "3"? "selected" : null %>>Fantasía</option>
+                    <option value="4" <%= products.genre_id == "4"? "selected" : null %>>Animación</option>
+                    <option value="5" <%= products.genre_id == "5"? "selected" : null %>>Histórica</option>
+                    <option value="6" <%= products.genre_id == "6"? "selected" : null %>>Superhéroes</option>
+                    <option value="7" <%= products.genre_id == "7"? "selected" : null %>>Ciencia ficción</option>
+                    <option value="8" <%= products.genre_id == "8"? "selected" : null %>>No ficción</option>
+                    <option value="9" <%= products.genre_id == "9"? "selected" : null %>>Musical</option>
+                    <option value="10" <%= products.genre_id == "10"? "selected" : null %>>Aventura</option> 
+            </select>
+             
+          
+
+                        <fieldset class="botonNuevo">
+                            
+                            <button type="reset" class="reset">Cancelar</button> 
+                            <button type="submit" class="enviar">Guardar</button>
+                        </fieldset>
+
+        </form>
+
+
+
+
+                
+
+
+            <!-- </form> -->
+        </section>
+    </main>
+
+
+    <%- include ('../modules/footer') %>
+    
+    </body>
+    </html>

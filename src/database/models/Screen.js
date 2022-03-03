@@ -17,7 +17,7 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.BIGINT(11), 
             allowNull: false
         },
-        columnns: {
+        columns: {
             type: dataTypes.BIGINT(11),
             allowNull: false
         }

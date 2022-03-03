@@ -44,7 +44,7 @@
             
             <% pelicula.forEach(element => { %>
                 <% if (element.category.name == "Clásica") { %>
-                 <% if (element.screenings) { %>
+                 <% if (element.screenings[0]) { %>
                   
                  
                     
@@ -77,6 +77,7 @@
     <section id="container-moderna"> 
         <% pelicula.forEach(element => { %>
             <% if (element.category.name == "Moderna") { %>
+                <% if (element.screenings[0]) { %>
              
             
             <section >
@@ -91,6 +92,7 @@
                     <p> %= element.timeScheduled %> hs.</p> -->
                 </article>
             </section>
+            <% } %>
             <% } %>
         <% }) %>
     

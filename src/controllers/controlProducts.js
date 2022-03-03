@@ -15,6 +15,11 @@ const controller = {
         title: 'Crear película',
     }),
 
+    createOther: (req,res) => res.render('./products/createOther',{
+        styles: ['create','forms'],
+        title: 'Crear producto',
+    }),
+
     createScreening: (req,res) => {
         //let all = product.all().map(p => Object({...p, createImage: file.search('id',p.createImage)}))
         let resultExists = product.search('id',req.params.id)
@@ -34,11 +39,11 @@ const controller = {
         })
         .then(function (newPoster) {
             db.Movie.create({
-                productName: req.body.name,
+                productName: req.body.productName,
                 genre_id: req.body.genre_id,
                 category_id: req.body.category_id,
                 productLink: req.body.productLink,
-                productDescription: req.body.description,
+                productDescription: req.body.productDescription,
                 image_id: newPoster.id,
                 restriction_id: req.body.restriction_id
             })
@@ -50,16 +55,21 @@ const controller = {
     },
 
     saveOther: (req,res) => {
+        db.Image.create({
+            url: req.file.filename
+        })
+        .then(function (newImage) {
         db.Product.create({
             name: req.body.name,
             type_id: req.body.type_id,
             description: req.body.description,
-            image_id: req.body.createImage.id,
+            image_id: newImage.id,
             price: req.body.price
         })
         .then(function (newProduct) {
-            return res.redirect('/other/' + newProduct.id)
+            return res.redirect('/products/other/' + newProduct.id)
         })
+    })
     },
 
     saveScreening: (req,res) => {
@@ -156,15 +166,97 @@ const controller = {
         })
     },
 
-    update: (req,res) => res.render('./admins/edit',{
-        //list: controller.list(),
-        styles:['forms','edit'],
-        title: 'Actualizar Item',
-        products: product.search("id", req.params.id)
-    }),
-    modify: (req,res) => {
-        let updated = product.update(req.params.id, req.body)
-        return res.redirect("/products/" + updated.id)
+    updateMovie: (req,res) => {
+        db.Movie.findByPk(req.params.id,{
+            include: ["genre","category","poster","restriction"]
+        })
+        .then (function (pelicula) 
+            {return res.render('./products/edit',{
+                styles:['forms','edit'],
+                title: "Actualizar " + pelicula.productName,
+                products: pelicula,
+                id:req.params.id
+        })})
+        .catch(err => {
+            res.redirect("/")
+        })
+    },
+
+    updateOther: (req,res) => {
+        db.Product.findByPk(req.params.id,{
+            include: ["type","image"]
+        })
+        .then (function (product) 
+            {return res.render('./products/editOther',{
+                styles:['forms','edit','create'],
+                title: "Actualizar " + product.name,
+                products: product,
+                id:req.params.id
+        })})
+        .catch(err => {
+            res.redirect("/")
+        })
+    },
+
+    updateScreening: (req,res) => {
+        db.Screening.findByPk(req.params.id,{
+            include: ["language","screen","movie"]
+        })
+        .then (function (screen) 
+            {return res.render('./products/editScreening',{
+                styles:['screening','forms','create'],
+                title: "Actualizar función",
+                screening: screen,
+                id:req.params.id
+        })})
+        .catch(err => {
+            res.redirect("/")
+        })
+    },
+
+    modifyMovie: (req,res) => {
+        db.Movie.update({
+            productName: req.body.productName,
+            genre_id: req.body.genre_id,
+            category_id: req.body.category_id,
+            productLink: req.body.productLink,
+            productDescription: req.body.productDescription,
+            restriction_id: req.body.restriction_id
+        }, {
+            where: {id: req.params.id}
+        })
+        .then(function () {
+            return res.redirect('/products/' + req.params.id)
+        })
+    },
+
+    modifyOther: (req,res) => {
+        db.Product.update({
+            name: req.body.name,
+            type_id: req.body.type_id,
+            description: req.body.description,
+            price: req.body.price
+        }, {
+            where: {id: req.params.id}
+        })
+        .then(function () {
+            return res.redirect('/products/other/' + req.params.id)
+        })
+    },
+
+    modifyScreening: (req,res) => {
+        db.Screening.update({
+            hour: req.body.hour,
+            day: req.body.day,
+            screen_id: req.body.screen_id,
+            discount: false,
+            language_id: req.body.language_id,
+        }, {
+            where: {id: req.params.id}
+        })
+        .then(function () {
+            return res.redirect('/')
+        })
     },
 
     delete: (req,res) => {

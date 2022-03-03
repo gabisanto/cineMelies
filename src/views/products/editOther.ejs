@@ -1,0 +1,77 @@
+<%- include ('../modules/head') %> 
+
+<body>
+
+<%- include ('../modules/header') %> 
+
+    <main>
+
+        <section id="editProduct">
+
+        <h2 class="titulos">Actualizar <%= products.name %> </h2>
+        <form action="/products/other/<%=products.id%>?m=PUT" id="creationForm" method="POST">
+          
+            <fieldset id="type_id">
+                <legend>Tipo de producto</legend>
+                <input class="hidden radio-label" id="beverage" type="radio" name="type_id" value="1" <%= products.type_id == "1"? "checked" : null %>>
+                <label class="button-label" for="beverage">Bebidas</label>
+                <input class="hidden radio-label" id="food" type="radio" name="type_id" value="2" <%= products.type_id == "2"? "checked" : null %>> 
+                <label class="button-label" for="food">Alimento</label>
+                <input class="hidden radio-label" id="combo" type="radio" name="type_id" value="3" <%= products.type_id == "3"? "checked" : null %>>
+                <label class="button-label" for="combo">Combo</label>
+                <input class="hidden radio-label" id="yearPass" type="radio" name="type_id" value="4" <%= products.type_id == "4"? "checked" : null %>>
+                <label class="button-label" for="yearPass">Abono mensual</label> 
+                <input class="hidden radio-label" id="monthPass" type="radio" name="type_id" value="5" <%= products.type_id == "5"? "checked" : null %>>
+                <label class="button-label" for="monthPass">Abono anual</label> 
+            </fieldset>
+        
+        
+            <fieldset class="fieldNuevo">
+                <label for="name"><input type="text" name="name" class="cajaNuevo" placeholder="Nombre" required value="<%= products.name %>" >
+                <span>Nombre</span>
+                </label>
+                
+            </fieldset>
+        
+            <fieldset class="fieldNuevo">
+                <label for="description"><input type="text" name="description" class="cajaNuevo" placeholder="Descripción" required  value="<%= products.description %>">
+                <span>Breve descripción</span>
+                </label>
+                
+            </fieldset>
+        
+            <fieldset class="fieldNuevo">
+                <legend>Precio</legend>
+                <label for="price"><input type="number" name="price" class="cajaNuevo" placeholder="Precio" value="<%= products.price %>" >
+                <span>Precio</span>
+                </label>
+                
+            </fieldset>
+        
+                       
+                
+          
+
+                        <fieldset class="botonNuevo">
+                            
+                            <button type="reset" class="reset">Cancelar</button> 
+                            <button type="submit" class="enviar">Guardar</button>
+                        </fieldset>
+
+        </form>
+
+
+
+
+                
+
+
+            <!-- </form> -->
+        </section>
+    </main>
+
+
+    <%- include ('../modules/footer') %>
+    
+    </body>
+    </html>

@@ -8,29 +8,9 @@
 
         <section id="createProduct">
 
-        <h2 class="titulos">Nuevo producto</h2>
+        <h2 class="titulos">Nueva película</h2>
         
-        <select name="type_product" id="type_product" class="selectOption" onchange="changeOptions(this)">
-            <!-- <option selected value="0"> Elija un artículo </option> -->
-                <option value="Movie">Película</option> 
-                <option value="Others">Otros</option> 
-        </select>
-
-        <script>
-            function changeOptions(selectEl) {
-                let selectedValue = selectEl.options[selectEl.selectedIndex].value;
-                let subForms = document.getElementsByClassName('formTest')
-                for (let i = 0; i < subForms.length; i += 1) {
-                    if (selectedValue === subForms[i].name) {
-                    subForms[i].setAttribute('style', 'display:block')
-                    } else {
-                    subForms[i].setAttribute('style', 'display:none') 
-                    }
-                }
-            }
-        </script>
-
-    
+        
     
     <form action="/products/create" id="creationForm" method="post" class="formTest" name="Movie" enctype="multipart/form-data">
 
@@ -106,57 +86,6 @@
 
 </form>
 
-
-<form action="/" id="creationForm" method="post" class="formTest" name="Others" enctype="multipart/form-data">
-
-    <fieldset id="type_id">
-        <legend>Tipo de producto</legend>
-        <input class="hidden radio-label" id="beverage" type="radio" name="type_id" value="1">
-        <label class="button-label" for="beverage">Bebidas</label>
-        <input class="hidden radio-label" id="food" type="radio" name="type_id" value="2">
-        <label class="button-label" for="food">Alimento</label>
-        <input class="hidden radio-label" id="combo" type="radio" name="type_id" value="3">
-        <label class="button-label" for="combo">Combo</label>
-        <input class="hidden radio-label" id="yearPass" type="radio" name="type_id" value="4">
-        <label class="button-label" for="yearPass">Abono mensual</label> 
-        <input class="hidden radio-label" id="monthPass" type="radio" name="type_id" value="5">
-        <label class="button-label" for="monthPass">Abono anual</label> 
-    </fieldset>
-
-
-    <fieldset class="fieldNuevo">
-        <label for="name"><input type="text" name="name" class="cajaNuevo" placeholder="Nombre" required  >
-        <span>Nombre</span>
-        </label>
-        
-    </fieldset>
-
-    <fieldset class="fieldNuevo">
-        <label for="description"><input type="text" name="description" class="cajaNuevo" placeholder="Descripción" required  >
-        <span>Breve descripción</span>
-        </label>
-        
-    </fieldset>
-
-    <fieldset id="imageInput">
-        <legend>Escoja una imagen</legend>
-        <label for="createImage"><input type="file" name="createImage" accept=".jpg, .png" required ></label>
-    </fieldset>
-
-    <fieldset class="fieldNuevo">
-        <legend>Precio</legend>
-        <label for="price"><input type="number" name="price" class="cajaNuevo" placeholder="Precio" >
-        <span>Precio</span>
-        </label>
-        
-    </fieldset>
-
-                <fieldset class="botonNuevo">
-                    <button type="submit" class="enviar">Aceptar</button>
-                    <button type="reset" class="reset">Cancelar</button> 
-                </fieldset>
-
-</form>
 
             <!-- </form> -->
         </section>
