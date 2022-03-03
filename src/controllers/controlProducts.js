@@ -259,9 +259,11 @@ const controller = {
         })
     },
 
-    delete: (req,res) => {
-        product.delete(req.body.id)
-        return res.redirect("/products/")
+    deleteOther: (req,res) => {
+        db.Product.destroy({
+            where: {id: req.body.id}
+        })
+        .then(function() {return res.redirect("/products/other")})
     }
 
 
