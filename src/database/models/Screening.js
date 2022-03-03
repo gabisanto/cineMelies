@@ -45,7 +45,7 @@ module.exports = (sequelize, dataTypes) => {
     Screening.associate = function (models) {
         Screening.belongsToMany(models.Movie,{
             as: "movie",
-            through: "Moviescreening",
+            through: "moviescreenings",
             foreignKey: "screening_id",
             otherKey: "movie_id",
             timestamps: false

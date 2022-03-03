@@ -5,37 +5,81 @@ const Op = db.Sequelize.Op
 
 const controller = {
 
+    cart: (req,res) => res.render('./products/carrito',{
+        styles: ['carrito'],
+        title: 'Proceso de compra'
+    }),
 
     create: (req,res) => res.render('./products/create',{
         styles: ['create','forms'],
-        title: 'Crear producto',
+        title: 'Crear película',
     }),
 
     createScreening: (req,res) => {
         //let all = product.all().map(p => Object({...p, createImage: file.search('id',p.createImage)}))
         let resultExists = product.search('id',req.params.id)
-        let result = product.all().map(p => Object({...p, createImage: file.search('id',p.createImage)}))
+        //let result = product.all().map(p => Object({...p, createImage: file.search('id',p.createImage)}))
         //let productDetail = product.all().map(product => Object ({...product,createImage : file.search('id',product.createImage[0]).url})) */      
         return resultExists ? res.render('./products/screening',{
             styles:['screening','forms','create'],
-            title: 'Nueva función de ' + result[req.params.id-1].productName,
+            title: 'Nueva función de ' + req.params.id.productName,
             product: resultExists,
             id:req.params.id            
         }) : res.redirect("/products/")
     },
 
-    save: (req,res) => {
-        //res.send(req.body)
-        req.body.files = req.files;
-        //req.body.product= req.product;
-        let created = product.create(req.body);
-        return res.redirect('./' + created.id)
+    saveMovie: (req,res) => {
+        db.Poster.create({
+            url: req.file.filename
+        })
+        .then(function (newPoster) {
+            db.Movie.create({
+                productName: req.body.name,
+                genre_id: req.body.genre_id,
+                category_id: req.body.category_id,
+                productLink: req.body.productLink,
+                productDescription: req.body.description,
+                image_id: newPoster.id,
+                restriction_id: req.body.restriction_id
+            })
+            .then(function (product) {
+                return res.redirect('/products/' + product.id)
+        })
+        
+        })
     },
 
-    cart: (req,res) => res.render('./products/carrito',{
-        styles: ['carrito'],
-        title: 'Proceso de compra'
-    }),
+    saveOther: (req,res) => {
+        db.Product.create({
+            name: req.body.name,
+            type_id: req.body.type_id,
+            description: req.body.description,
+            image_id: req.body.createImage.id,
+            price: req.body.price
+        })
+        .then(function (newProduct) {
+            return res.redirect('/other/' + newProduct.id)
+        })
+    },
+
+    saveScreening: (req,res) => {
+        db.Screening.create({
+            hour: req.body.hour,
+            day: req.body.day,
+            screen_id: req.body.screen_id,
+            discount: false,
+            language_id: req.body.language_id,
+        })
+        .then(function(newScreening) {
+            db.MovieScreening.create({
+                movie_id: req.params.id,
+                screening_id: newScreening.id
+            })
+        })
+        .then(function () {
+            return res.redirect('/products/' + req.params.id)
+        })
+    },
 
     showMovie: (req,res) => {
         db.Movie.findByPk(req.params.id,{

@@ -44,8 +44,10 @@
             
             <% pelicula.forEach(element => { %>
                 <% if (element.category.name == "Clásica") { %>
+                 <% if (element.screenings) { %>
+                  
                  
-                
+                    
                 <section >
                     <figure  class="images">
                         <a href="/products/<%= element.id %>" title="<%= element.productName %>"><img src="/uploads/<%= element.poster.url %>" ></a> 
@@ -54,11 +56,16 @@
                         <p  class="title-peli"> <%= element.productName %>  </p>
                         <p> <a href="<%= element.productLink %>" target='_blank'> Ver Trailer </a></p>
                         <!-- <p> <i class="fas fa-star"></i> 7.9 <span> / 10 </span> </p> -->
+                        <% element.screenings.forEach(scree => { %>
+                            <p> <%= scree.day %>: <%= scree.hour %> hs. </p>
+                        <% }) %> 
                         <!-- <p> %= element.diasCartel %></p>
                         <p> %= element.timeScheduled %> hs.</p> -->
                     </article>
                 </section>
                 <% } %>
+                <% } %>
+               
             <% }) %>
         
          

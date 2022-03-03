@@ -259,7 +259,7 @@
 
 /*ESTILOS SELECT*/
 
-.selectOption {
+.selectOption, .selectGenre {
     border:none;
     background-color: white;
     font-family: 'Fira Sans', sans-serif;

@@ -11,17 +11,17 @@
         <h2 class="titulos">Nueva función de <%= product.productName %> </h2>
       
             
-    <form action="/" id="creationForm" method="post" name="screening">
+    <form action="/products/<%= id %>/newScreening" id="creationForm" method="post" name="screening">
     
         <fieldset id="screen">
             <legend>Sala</legend>
-            <input class="hidden radio-label" id="melies" type="radio" name="day" value="1">
+            <input class="hidden radio-label" id="melies" type="radio" name="screen_id" value="1">
             <label class="button-label" for="melies">Sala Melies</label>
-            <input class="hidden radio-label" id="godard" type="radio" name="day" value="2">
+            <input class="hidden radio-label" id="godard" type="radio" name="screen_id" value="2">
             <label class="button-label" for="godard">Sala Godard</label>
-            <input class="hidden radio-label" id="godard" type="radio" name="day" value="3">
-            <label class="button-label" for="godard">Sala mier</label>
-            <input class="hidden radio-label" id="spielberg" type="radio" name="day" value="4">
+            <input class="hidden radio-label" id="kurosawa" type="radio" name="screen_id" value="3">
+            <label class="button-label" for="kurosawa">Sala Kurosawa</label>
+            <input class="hidden radio-label" id="spielberg" type="radio" name="screen_id" value="4">
             <label class="button-label" for="spielberg">Sala Spielberg</label> 
         </fieldset>
 

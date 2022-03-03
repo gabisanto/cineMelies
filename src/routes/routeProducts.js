@@ -20,7 +20,9 @@ router.get('/',controlProducts.listMovie)
 
 router.get('/other',controlProducts.listOther)
 
-router.get('/create',[auth],controlProducts.create)
+router.get('/create',controlProducts.create) //muestra formulario de creación de película y producto
+
+//router.get('/create',[auth],controlProducts.create)
 
 router.get('/:id/newScreening',controlProducts.createScreening)
 
@@ -37,7 +39,13 @@ router.get('/:id/edit',[auth],controlProducts.update)
 router.delete('/',controlProducts.delete)
 router.put("/:id", controlProducts.modify)
 
-router.post('/',[upload.any()],controlProducts.save)
+router.post('/create',[upload.single("createImage")],controlProducts.saveMovie) //guarda película
+
+router.post('/other/create',[upload.single("createImage")],controlProducts.saveOther) //guarda otros productos
+
+router.post('/:id/newScreening',controlProducts.saveScreening) //guarda funciones
+
+
 
 module.exports = router;
 

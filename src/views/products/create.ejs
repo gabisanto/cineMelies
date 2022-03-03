@@ -5,13 +5,15 @@
 <%- include ('../modules/header') %> 
 
     <main>
+
         <section id="createProduct">
 
         <h2 class="titulos">Nuevo producto</h2>
-        <select name="type_id" id="type_id" class="selectOption" onchange="changeOptions(this)">
-            <option selected value="0"> Elija un artículo </option>
-                <option value="Película">Película</option> 
-                <option value="Otros">Otros</option> 
+        
+        <select name="type_product" id="type_product" class="selectOption" onchange="changeOptions(this)">
+            <!-- <option selected value="0"> Elija un artículo </option> -->
+                <option value="Movie">Película</option> 
+                <option value="Others">Otros</option> 
         </select>
 
         <script>
@@ -27,9 +29,10 @@
                 }
             }
         </script>
+
     
     
-    <form action="/" id="creationForm" method="post" style="display:none" class="formTest" name="Película">
+    <form action="/products/create" id="creationForm" method="post" class="formTest" name="Movie" enctype="multipart/form-data">
 
     <fieldset class="fieldNuevo">
         <label for="name"><input type="text" name="name" class="cajaNuevo" placeholder="Nombre" required  >
@@ -82,21 +85,21 @@
         <label for="createImage"><input type="file" name="createImage" accept=".jpg, .png" required ></label>
     </fieldset>
 
-    <fieldset class="fieldCheckbox">
-        <legend>Género</legend>
-            <label class="labelCheck" for="comedia" name="genre_id"><input type="checkbox"  id="comedia" name="genre_id"  value="1"> Drama</label>  
-            <label class="labelCheck" for="drama" name="genre_id"><input type="checkbox"  id="drama" name="genre_id"  value="2"> Comedia</label>
-            <label class="labelCheck" for="fantasia" name="genre_id"><input type="checkbox"  id="fantasia" name="genre_id"  value="3"> Fantasía</label>
-            <label class="labelCheck" for="superscifi" name="genre_id"><input type="checkbox"  id="superscifi" name="genre_id"  value="4"> Animación</label>
-            <label class="labelCheck" for="infantil" name="genre_id"><input type="checkbox"  id="infantil" name="genre_id"  value="5"> Histórica</label>
-            <label class="labelCheck" for="historia" name="genre_id"><input type="checkbox"  id="historia" name="genre_id"  value="6"> Superhéroes</label> 
-            <label class="labelCheck" for="historia" name="genre_id"><input type="checkbox"  id="historia" name="genre_id"  value="7"> Ciencia ficción</label>
-            <label class="labelCheck" for="historia" name="genre_id"><input type="checkbox"  id="historia" name="genre_id"  value="8"> No ficción</label>
-            <label class="labelCheck" for="historia" name="genre_id"><input type="checkbox"  id="historia" name="genre_id"  value="9"> Musical</label>
-            <label class="labelCheck" for="historia" name="genre_id"><input type="checkbox"  id="historia" name="genre_id"  value="10"> Aventuras</label>   
-    </fieldset>
+    <select name="genre_id" id="genre_id" class="selectGenre">
+        <option selected value="0"> Elija un género </option>
+            <option value="1">Drama</option> 
+            <option value="2">Comedia</option>
+            <option value="3">Fantasía</option>
+            <option value="4">Animación</option>
+            <option value="5">Histórica</option>
+            <option value="6">Superhéroes</option>
+            <option value="7">Ciencia ficción</option>
+            <option value="8">No ficción</option>
+            <option value="9">Musical</option>
+            <option value="10">Aventura</option> 
+    </select>
 
-                <fieldset class="botonNuevo">
+               <fieldset class="botonNuevo">
                     <button type="submit" class="enviar">Aceptar</button>
                     <button type="reset" class="reset">Cancelar</button> 
                 </fieldset>
@@ -104,7 +107,7 @@
 </form>
 
 
-<form action="/" id="creationForm" method="post" style="display:none" class="formTest" name="Otros">
+<form action="/" id="creationForm" method="post" class="formTest" name="Others" enctype="multipart/form-data">
 
     <fieldset id="type_id">
         <legend>Tipo de producto</legend>
@@ -157,8 +160,11 @@
 
             <!-- </form> -->
         </section>
+
+
     </main>
 
+    
 
     <%- include ('../modules/footer') %>
     
