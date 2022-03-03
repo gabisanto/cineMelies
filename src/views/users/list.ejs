@@ -12,16 +12,16 @@
      
     <section id="list-movie">
     
-        <% users.forEach(users => { %>
+        <% users.forEach(user => { %>
             <article id="cajitaUser">
-            <h2 class="tituloLista"> Usuario número <%= users.id %>: <%= users.nombreCompleto %>  </h2>
-            <p class="datosLista">DNI: <%= users.Documento %></p>
+            <h2 class="tituloLista"> Usuario número <%= user.id %>: <%= user.name %>  </h2>
+            <p class="datosLista">DNI: <%= user.document %></p>
             <br>
 
-            <p class="datosLista">Nacimiento: <%= users.fecha %> </p>
+            <p class="datosLista">Nacimiento: <%= user.birthDate %> </p>
             <br>
 
-            <p class="datosLista">E-mail: <%= users.email %> </p>
+            <p class="datosLista">E-mail: <%= user.email %> </p>
             <br>
 
             </article>

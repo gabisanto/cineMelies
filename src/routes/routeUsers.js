@@ -12,14 +12,14 @@ const storage = multer.diskStorage({
 })
 const upload = multer({storage:storage})
 
-router.get('/',[auth],controlUsers.list)
-router.get('/login',controlUsers.login)
-router.get('/register',controlUsers.register)
-router.get('/profile',[access],controlUsers.profile)
+router.get('/',[auth],controlUsers.list) //ok
+router.get('/login',controlUsers.login) //ok
+router.get('/register',controlUsers.register) //ok
+router.get('/profile',[access],controlUsers.profile) //ok
 
-router.post('/',[validate],controlUsers.save)
-router.post('/access',controlUsers.access)
-router.post('/logout',controlUsers.logout)
+router.post('/',[validate],controlUsers.save) //ok
+router.post('/access',controlUsers.access) //ok
+router.post('/logout',controlUsers.logout) //ok
 router.post('/upload/avatar',[access,upload.any()],controlUsers.avatar);
 
 module.exports = router;

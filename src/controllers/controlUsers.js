@@ -1,6 +1,8 @@
 const validator = require('express-validator');
 const userModel = require('../models/user');
-const bcrypt = require('bcrypt')
+const bcrypt = require('bcrypt');
+const db = require('../database/models');
+const Op = db.Sequelize.Op
 
 module.exports = {
     login: (req,res) => res.render('users/login',{
@@ -15,11 +17,24 @@ module.exports = {
         styles: ['profile','forms'],
         title: 'Mi perfil'
     }),
-    list: (req,res) => res.render('users/list',{
-        styles:['list'],
-        title: 'Listado de usuarios',
-        users: userModel.all()
-    }),
+    list: (req,res) => {
+        db.User.findAll({
+            include: ["avatar"]
+        })
+        .then(function(users) {return res.render('users/list',{
+            styles: ['list'],
+            title: 'Listado de usuarios',
+            users: users
+        })})
+        
+    },
+       
+    
+        // res.render('users/list',{
+        // styles:['list'],
+        // title: 'Listado de usuarios',
+        // users: userModel.all()
+        // }),
 
     access: (req,res) => {
         let errors = validator.validationResult(req)
@@ -31,38 +46,40 @@ module.exports = {
             })
         }
         
-        let exist = userModel.search('email',req.body.email)
-
-        if(!exist) {
-           return res.render('users/login',{
-                styles: ['login'],
-                title: 'Usuario',
-                errors:{
-                   email:{
-                       msg: 'Email no registrado'
-                   }
-               }
-           })
-        }
-
-        if(!bcrypt.compareSync(req.body.password,exist.password)) {
-            return res.render('users/login',{
-                styles: ['login'],
-                title: 'Usuario',
-                errors:{
-                    password:{
-                        msg: 'Contraseña invalida'
+        db.User.findOne({where : {email: req.body.email}})
+        .then (userFound =>{
+            if(!userFound) {
+                return res.render('users/login',{
+                     styles: ['login'],
+                     title: 'Usuario',
+                     errors:{
+                        email:{
+                            msg: 'Email no registrado'
+                        }
                     }
-                }
-            })
-         }
+                })
+             }
+             else if
+                (!bcrypt.compareSync(req.body.password,userFound.password)) {
+                    return res.render('users/login',{
+                        styles: ['login'],
+                        title: 'Usuario',
+                        errors:{
+                            password:{
+                                msg: 'Contraseña invalida'
+                            }
+                        }
+                    })
+                 }
+            else {req.session.user = userFound}
+        })
+        .then(() => {
+            if(req.body.remember){
+                res.cookie('email',req.body.email,{maxAge:1000*60*60*24*30})
+            }
+        }).then(() => res.redirect("/users/profile"))
+        
 
-        if(req.body.remember){
-            res.cookie('email',req.body.email,{maxAge:1000*60*60*24*30})
-        }
-        req.session.user = exist
-
-        return res.redirect("/users/profile")
     },
     save: (req,res) => {
         let errors = validator.validationResult(req)
@@ -73,21 +90,49 @@ module.exports = {
                 errors: errors.mapped(),
             })
         }
-        let exist = userModel.search('email',req.body.email)
-        if(exist) {
-            return res.render ('users/register',{
-                styles: ['register'],
-                title: 'Registrarse',
-                errors: {
-                    email:{
-                        msg: 'Ese mail ya está en uso'
-                    }
-                },
-            })
-        }
-        let newUser = userModel.create(req.body)
-        res.redirect('/users/login')
+        db.User.findOne({where : {email : req.body.email}})
+        .then (userFound => {
+            if(userFound) {
+                return res.render ('users/register',{
+                    styles: ['register'],
+                    title: 'Registrarse',
+                    errors: {
+                        email:{
+                            msg: 'Ese mail ya está en uso'
+                        }
+                    }})
+            } else {
+                db.User.create({
+                    name: req.body.name,
+                    document: req.body.document,
+                    birthDate: req.body.birthDate,
+                    email: req.body.email,
+                    avatar_id: 1,
+                    password: bcrypt.hashSync(req.body.password,10),
+                    admin: String(req.body.email).includes('@cinemelies.com.ar'),
+                    isActive: true
+                })
+            }
+        }).then(() => res.redirect("/users/login"))
     },
+
+    
+
+    //     let exist = userModel.search('email',req.body.email)
+    //     if(exist) {
+    //         return res.render ('users/register',{
+    //             styles: ['register'],
+    //             title: 'Registrarse',
+    //             errors: {
+    //                 email:{
+    //                     msg: 'Ese mail ya está en uso'
+    //                 }
+    //             },
+    //         })
+    //     }
+    //     let newUser = userModel.create(req.body)
+    //     res.redirect('/users/login')
+    // },
      logout: (req,res) => {
         delete req.session.user
         res.cookie('email',null,{maxAge:-1})
