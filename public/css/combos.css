@@ -5,20 +5,26 @@
     
   }
 
+  html{
+    background-color: rgb(242, 158, 56);
+  }
   .main_box{
-    display:flex;
-    flex-direction: row;
-    background-color:#F29E38;
-    width:100%;
-    padding:3%;
-    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: justify;
+    /* padding: 1.5em; */
+    background-color: #EDEEF2 ;
+    margin: 2em; 
+    font-family: 'Alegreya Sans', sans-serif; 
 
   }
   .main_candy{
     display:flex;
     flex-direction:row;
     flex-wrap:wrap;
-    width:65%;
+    /* width:65%; */
+    margin:0 auto
 
     
   }
@@ -172,10 +178,11 @@
     text-align: center;
     padding-top: 3%;
   }
-  .img_article{
-    max-width:100%;
-    align-items: center;
-  }
+  .candy_box_left img {
+   
+    height: 100%;
+    overflow: hidden;
+}
   .img_descripcion{
     text-align: center;
     padding-top: 10%;
@@ -278,12 +285,17 @@ font-family: 'Alegreya Sans', sans-serif;
   transform: translateY(var(--border-size));
 }
 
-@media (max-width:681px){
+@media (min-width:769px){
 
   .main_box{
     display:flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     flex-wrap: wrap;
+  }
+
+  .left_candy_container{
+    width:50%;
+    margin:0 auto
   }
 .column_box {
   width:90%;
@@ -291,6 +303,9 @@ font-family: 'Alegreya Sans', sans-serif;
 }
 .main_candy{
   width:90%;
+  display: flex;
+  flex-direction: row;
 }
+
 
 }

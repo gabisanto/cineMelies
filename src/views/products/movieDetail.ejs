@@ -26,7 +26,7 @@
     <article> <h2> <%= product.productName %>  </h2> 
     </article>
     <section id="flexDescription">
-        <article>
+        <article id="imageContainer">
             <figure  class="images">
                 <img src="/uploads/<%= product.poster.url %>">
             </figure>
@@ -36,7 +36,7 @@
 
         <section class="descripciones" >
             <article id="sinopsis"> 
-                <h3> SINOPSIS </h3>
+                <h3 class="sectionTitle"> SINOPSIS </h3>
                 <p> <%= product.productDescription %>  </p>
             </article>
 
@@ -49,6 +49,8 @@
 
             </figure>
 
+            
+
         </section>
 
         
@@ -56,62 +58,68 @@
 
     </section>
 
-    <% if (user && user.admin) { %>
+    <!-- % if user && user.admin  %> -->
+        <section class="sreeningBox">
+            <h3> Funciones del mes </h3>
 
-        Funciones disponibles
+            <% if (product.screenings[0]) { %>
+                <article>
+                    
+            
+            
+                <% product.screenings.forEach(element => { %>
 
-        <a href="/products/<%= element.id %>/newScreening">Agregar nueva función</a>
-        
-    <% } %> 
+                    <%= element.day %>, <%= element.hour %>hs., <%= element.language.name %>,<%= element.screen.name %> 
+                    
+                    <section id="iconitos">
+                        <form action="/products/screening/?m=DELETE" method="post">
+                            <input type="hidden" name="id" value=<%= element.id %>>
+                            <button type="submit" title="Eliminar">
+                                <i class="fas fa-trash"> </i>
+                            </button>
+                        </form>
+                        <a href="/products/screening/<%= element.id %>/edit" title="Editar elemento"> <i class="fas fa-pencil-alt"> </i> </a>
+                    </section>
+                  
+                
+                <% }) %>
+            <% } else {%>
+                <h3>No hay funciones disponibles</h3>
+                <% } %> 
+            
+                
+            </article>
+            
+        </section>
+        <a href="/products/<%= product.id %>/newScreening" class="newScreening">Agregar nueva función</a>
+    <!-- %  %>  -->
 
     <% if (user && !user.admin) { %>
      
-    
-
-    <% if (element.productType == "Película") { %>
-
-    <section id="form-movie">
-        <article> <h4> ELEGIR PELÍCULA POR: </h4></article>
+        <% if (product.screenings[0]) { %>
+    <section id="container">
+        <article> <h4> ELEGIR FUNCIÓN: </h4></article>
             <form action="/"  method="post">
-                <fieldset class="fieldCheckbox">
-                    <legend>Formato</legend>
-                    <label class="labelCheck" name="filmFormatUser"><input type="checkbox" name="filmFormatUser"  value="<% element.filmFormat %>"> <%= element.filmFormat %></label>
                 
-                </fieldset>
-
-                <fieldset class="fieldCheckbox">
-                    <legend>Idioma</legend>
-                    <label class="labelCheck" name="filmAudioUser"><input type="checkbox" name="filmAudioUser"  value="<% element.filmAudio %>"> <%= element.filmAudio %></label>
-                
-                </fieldset>
-
-                <fieldset class="fieldCheckbox">
-                    <legend>Días en cartel</legend>
-                    <label class="labelCheck" name="diasCartelUser"><input type="checkbox" name="diasCartelUser"  value="<% element.diasCartel %>"> <%= element.diasCartel %></label>
-                
-                </fieldset>
-
-                <fieldset class="fieldCheckbox">
-                    <legend>Horarios</legend>
-                    <label class="labelCheck" name="timeScheduledUser"><input type="checkbox" name="timeScheduledUser"  value="<% element.timeScheduled %>"> <%= element.timeScheduled %></label>
-                
-                </fieldset>
+        
+                <% product.screenings.forEach(element => { %>
+                    <label>
+                        <input type="radio" name="chooseScreening"/>
+                        <span><%= element.day %>, <%= element.hour %>hs., <%= element.language.name %>,<%= element.screen.name %> </span>
+                    </label>
+                    
+                <br> 
+                <br>
+                <% }) %>
 
                 <fieldset class="botonNuevo">
                     <button type="submit" class="enviar">comprar</button>
                     <button type="reset" class="reset">cancelar</button> 
                 </fieldset>
-            
-
-        <% } else { %> 
-            <fieldset class="botonNuevo">
-                <button type="submit" class="enviar">comprar</button>
-                <button type="reset" class="reset">cancelar</button> 
-            </fieldset>  
-        <% } %> 
 
     </form>
 </section>
+<% } %>
 <% } %>
 </section>
 </section>

@@ -35,7 +35,7 @@
 
         <section class="descripciones" >
             <article id="sinopsis"> 
-                <h3> SINOPSIS </h3>
+                <h3> Descripción </h3>
                 <p> <%= product.description %>  </p>
             </article>
 
@@ -56,63 +56,20 @@
 
     </section>
 
-    <% if (user && user.admin) { %>
-
-        Funciones disponibles
-
-        <a href="/products/<%= element.id %>/newScreening">Agregar nueva función</a>
-        
-    <% } %> 
-
     <% if (user && !user.admin) { %>
-     
-    
 
-    <% if (element.productType == "Película") { %>
-
-    <section id="form-movie">
-        <article> <h4> ELEGIR PELÍCULA POR: </h4></article>
-            <form action="/"  method="post">
-                <fieldset class="fieldCheckbox">
-                    <legend>Formato</legend>
-                    <label class="labelCheck" name="filmFormatUser"><input type="checkbox" name="filmFormatUser"  value="<% element.filmFormat %>"> <%= element.filmFormat %></label>
-                
-                </fieldset>
-
-                <fieldset class="fieldCheckbox">
-                    <legend>Idioma</legend>
-                    <label class="labelCheck" name="filmAudioUser"><input type="checkbox" name="filmAudioUser"  value="<% element.filmAudio %>"> <%= element.filmAudio %></label>
-                
-                </fieldset>
-
-                <fieldset class="fieldCheckbox">
-                    <legend>Días en cartel</legend>
-                    <label class="labelCheck" name="diasCartelUser"><input type="checkbox" name="diasCartelUser"  value="<% element.diasCartel %>"> <%= element.diasCartel %></label>
-                
-                </fieldset>
-
-                <fieldset class="fieldCheckbox">
-                    <legend>Horarios</legend>
-                    <label class="labelCheck" name="timeScheduledUser"><input type="checkbox" name="timeScheduledUser"  value="<% element.timeScheduled %>"> <%= element.timeScheduled %></label>
-                
-                </fieldset>
-
-                <fieldset class="botonNuevo">
-                    <button type="submit" class="enviar">comprar</button>
-                    <button type="reset" class="reset">cancelar</button> 
-                </fieldset>
-            
-
-        <% } else { %> 
+     <form>    
             <fieldset class="botonNuevo">
                 <button type="submit" class="enviar">comprar</button>
                 <button type="reset" class="reset">cancelar</button> 
             </fieldset>  
-        <% } %> 
+       
 
     </form>
+
+    <% } %> 
 </section>
-<% } %>
+
 </section>
 </section> 
 

@@ -38,8 +38,16 @@ main{
 } */
 
 .images img{
-    width: 45%;
+    width: 100%;
     
+}
+
+.sectionTitle{
+    margin:0 auto;
+}
+
+.screeningBox article{
+    text-align: center;
 }
 
 .play { 
@@ -143,10 +151,11 @@ margin-top:-40%
 .images{
 
         border-radius: 5px;
-        margin: 20px;
+        margin: 0 auto;
         position: relative;
         text-align: center;
         top: -3px;
+        width:50%
         
 }
 
@@ -212,11 +221,13 @@ article form input{
 }
 
 .descripciones p{
-    text-align: start;
+    text-align: justify;
     font-family: 'Alegreya Sans', sans-serif; 
     font-size: 18px;
 
 }
+
+
 .movie-info{
     border: none;
     border-radius: 2px;
@@ -262,6 +273,112 @@ article form input{
     
 }
 
+/* radio selectores */
+
+*, *:after, *:before {
+    box-sizing: border-box;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+label {
+    display: flex;
+    cursor: pointer;
+    font-weight: 500;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 0.375em;
+    margin: 0 auto
+   /* Accessible outline */
+   /* Remove comment to use */
+   /* &:focus-within {
+        outline: .125em solid $primary-color;
+   }
+    */
+}
+label input {
+    position: absolute;
+    left: -9999px;
+}
+label input:checked + span {
+    background-color: #d6d6e5;
+}
+label input:checked + span:before {
+    box-shadow: inset 0 0 0 0.4375em #F29E38;
+}
+label span {
+    display: flex;
+    align-items: center;
+    padding: 0.375em 0.75em 0.375em 0.375em;
+    border-radius: 99em;
+    transition: 0.25s ease;
+}
+label span:hover {
+    background-color: #d6d6e5;
+}
+label span:before {
+    display: flex;
+    flex-shrink: 0;
+    content: "";
+    background-color: #fff;
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 50%;
+    margin-right: 0.375em;
+    transition: 0.25s ease;
+    box-shadow: inset 0 0 0 0.125em #F29E38;
+}
+.container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.fa-trash,.fa-pencil-alt{
+    font-size: 16px;
+    padding: 5px;   
+    color: #F29E38;
+}
+
+#iconitos form button {
+    border: none;
+    background-color: transparent
+}
+
+#iconitos {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto
+}
+
+.newScreening{
+    background-color: #F29E38;
+  color: white;
+  padding: 0.5rem;
+  font-family: 'Fira Sans', sans-serif;
+  border-radius: 20px;
+  cursor: pointer;
+  margin:0 auto;
+  margin-top:3%
+  
+
+}
+
+#flexDescription{
+    width: 80%;
+    margin: 0 auto
+}
+
 @media(min-width: 769px){
 
     h2 {
@@ -303,18 +420,29 @@ article form input{
 
     #flexDescription{
         display: flex;
+        width: auto
     }
     
    
 
     .images img{
-        width:70%;
+        width:100%;
         
+    }
+
+    .images{
+        width:100%;
+        padding-right: 3%
+    }
+
+    #imageContainer{
+        width:50%
     }
 
     .descripciones{
         margin:auto;
-        position:unset
+        position:unset;
+        width:50%
     }
 
 }

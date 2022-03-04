@@ -93,7 +93,8 @@ const controller = {
 
     showMovie: (req,res) => {
         db.Movie.findByPk(req.params.id,{
-            include: ["genre","category","poster","restriction"]
+            include: ["genre","category","poster","restriction",{model: db.Screening, as: "screenings",include:["language", "screen"]}]
+            
         })
         .then (function (pelicula) 
             {return res.render('./products/movieDetail',{
@@ -101,9 +102,12 @@ const controller = {
                 title: pelicula.productName,
                 product: pelicula,
                 id:req.params.id
-        })})
+                
+        })
+     }
+        )
         .catch(err => {
-            res.redirect("/")
+            res.send(err)
         })
         // //let all = product.all().map(p => Object({...p, createImage: file.search('id',p.createImage)}))
         // let resultExists = product.search('id',req.params.id)
@@ -264,10 +268,33 @@ const controller = {
             where: {id: req.body.id}
         })
         .then(function() {return res.redirect("/products/other")})
-    }
+    },
 
+    deleteScreening: (req,res) => {
+        db.Movie.findByPk(req.params.id,{
+            include: ["genre","category","poster","restriction",{model: db.Screening, as: "screenings",include:["language", "screen"]}]   
+        })
+        .then(function(movie) {
+            let funciones = movie.getScreenings()
+            movie.setScreenings(funciones.filter(funcion => {
+                funcion.id !== req.body.id
+            }))
+        })
+        .then(() => {
+            db.Screening.destroy({
+                where: {id: req.body.id}})
+            })
+        .then(function() {return res.redirect("/products/" + req.params.id)})
+        
 
-    }
+        // db.Screening.destroy({
+        //     where: {id: req.body.id}
+        // })
+        // .then(function() {return res.redirect("/products/other")})
+    },
+
+}
+    
        
         // res.render('./products/productDetail',{
         // styles: ['productDetail'],

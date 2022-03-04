@@ -3,72 +3,123 @@
 <body>
 
 <%- include ('../modules/header') %> 
-
-<!--Sección MAIN-->
 <main>
-
-<!-- contenedor padre de las películas-->
-<section id="container-posters">
-        <!-- Sección titulos -->
-
-    <!-- contenedor   Películas clásicas -->
-    
-        <section id="container-clasica"> 
-            
+    <section class="main_box">
         
-            
-            
-                
-                    <% pelicula.forEach(element => { %>
-                        <% if (element.category.name == "Clásica") { %>
-                         
-                        
-                        <section >
-                            <figure  class="images">
-                                <a href="/products/<%= element.id %>" title="<%= element.productName %>"><img src="/uploads/<%= element.poster.url %>" ></a> 
-                            </figure>
-                            <article >
-                                <p  class="title-peli"> <%= element.productName %>  </p>
-                                <p> <a href="<%= element.productLink %>" target='_blank'> Ver Trailer </a></p>
-                                <!-- <p> <i class="fas fa-star"></i> 7.9 <span> / 10 </span> </p> -->
-                                <!-- <p> %= element.diasCartel %></p>
-                                <p> %= element.timeScheduled %> hs.</p> -->
-                            </article>
-                        </section>
-                        <% } %>
-                    <% }) %>
-                
-                    <% pelicula.forEach(element => { %>
-                        <% if (element.category.name == "Moderna") { %>
-                         
-                        
-                        <section >
-                            <figure  class="images">
-                                <a href="/products/<%= element.id %>" title="<%= element.productName %>"><img src="/uploads/<%= element.poster.url %>" ></a> 
-                            </figure>
-                            <article >
-                                <p  class="title-peli"> <%= element.productName %>  </p>
-                                <p> <a href="<%= element.productLink %>" target='_blank'> Ver Trailer </a></p>
-                                <!-- <p> <i class="fas fa-star"></i> 7.9 <span> / 10 </span> </p> -->
-                                <!-- <p> %= element.diasCartel %></p>
-                                <p> %= element.timeScheduled %> hs.</p> -->
-                            </article>
-                        </section>
-                        <% } %>
-                    <% }) %>
+        <h2 class="combos">COMBOS</h2>
 
+        <div class="main_candy">
 
-                
         
-         
-    </section> 
-    
-    </section> 
+        <! aca van los candy -->
+        
+        <% products.forEach(element => { %>
+        <% if (element.type_id == "3") { %>
+        <section class="left_candy_container" >
+            
 
-</section> 
-</main>
+            <article class="candy_box">
 
-<%- include ('../modules/footer') %>
+               <span class="combo_titulo"><%= element.name %> </span>
+                <div class="candy_box_left"  style="cursor:pointer" >
+                    <img class= "img_article"src="/uploads/<%= element.image.url %> " alt="">
+                   
+                    <div class="img_descripcion">
+                        <span><%= element.description %> </span>
+                    </div>
+                </div>
+                <div class="candy_box_rigth" style="cursor:pointer" >
+                   
+                    <span class="precio_antes"><%= parseInt(parseInt(element.price)*1.1) %> </span>
+                    <span class="precio_ahora"><%= element.price %> </span>
+                    <span class="agregar_combo"><i class="fas fa-plus"></i></span>
+                </div>
+            </article>
+
+        </section>
+        <% } %>
+        <% }) %>
+
+        </div>
+
+        <h2 class="combos">Para comer</h2>
+        <div class="main_candy">
+        
+        <% products.forEach(element => { %>
+        <% if (element.type_id == "2") { %>
+        <section class="left_candy_container" >
+            
+
+            <article class="candy_box">
+
+               <span class="combo_titulo"><%= element.name %> </span>
+                <div class="candy_box_left"  style="cursor:pointer" >
+                    <img class= "img_article"src="/uploads/<%= element.image.url %> " alt="">
+                   
+                    <div class="img_descripcion">
+                        <span><%= element.description %> </span>
+                    </div>
+                </div>
+                <div class="candy_box_rigth" style="cursor:pointer" >
+                   
+                    <span class="precio_antes"><%= parseInt(parseInt(element.price)*1.1) %> </span>
+                    <span class="precio_ahora"><%= element.price %> </span>
+                    <span class="agregar_combo"><i class="fas fa-plus"></i></span>
+                </div>
+            </article>
+
+        </section>
+        <% } %>
+        <% }) %>
+        </div>
+        
+        <h2 class="combos">Para beber</h2>
+        
+        <div class="main_candy">
+
+        <% products.forEach(element => { %>
+        <% if (element.type_id == "1") { %>
+        <section class="left_candy_container" >
+            
+
+            <article class="candy_box">
+
+               <span class="combo_titulo"><%= element.name %> </span>
+                <div class="candy_box_left"  style="cursor:pointer" >
+                    <img class= "img_article"src="/uploads/<%= element.image.url %> " alt="">
+                   
+                    <div class="img_descripcion">
+                        <span><%= element.description %> </span>
+                    </div>
+                </div>
+                <div class="candy_box_rigth" style="cursor:pointer" >
+                   
+                    <span class="precio_antes"><%= parseInt(parseInt(element.price)*1.1) %> </span>
+                    <span class="precio_ahora"><%= element.price %> </span>
+                    <span class="agregar_combo"><i class="fas fa-plus"></i></span>
+                </div>
+            </article>
+
+        </section>
+        <% } %>
+        <% }) %>
+        </div>
+
+
+        
+
+        </div>
+    </section>
+    </main>
+        
+        
+
+
+
+
+
+
+    <%- include ('../modules/footer') %>
 
 
 </body>

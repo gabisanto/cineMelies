@@ -87,6 +87,9 @@
                 <article >
                     <p  class="title-peli"> <%= element.productName %>  </p>
                     <p> <a href="<%= element.productLink %>" target='_blank'> Ver Trailer </a></p>
+                    <% element.screenings.forEach(scree => { %>
+                        <p> <%= scree.day %>: <%= scree.hour %> hs. </p>
+                    <% }) %> 
                     <!-- <p> <i class="fas fa-star"></i> 7.9 <span> / 10 </span> </p> -->
                     <!-- <p> %= element.diasCartel %></p>
                     <p> %= element.timeScheduled %> hs.</p> -->

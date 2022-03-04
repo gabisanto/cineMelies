@@ -37,8 +37,15 @@ module.exports = {
         styles: ['precios'],
         title: 'Precios'
     }),
-    combos: (req,res) => res.render('./main/combos',{
-        styles:['combos'],
-        title: 'Combos'
-    }),
+    combos: (req,res) => {
+        db.Product.findAll({
+            include: ["image","type"]
+        }).then(products => {
+            res.render('./products/prueba',{
+                styles:['combos'],
+                title: 'Combos',
+                products: products
+            })
+        })
+    },
 }
