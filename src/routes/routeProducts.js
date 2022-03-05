@@ -48,7 +48,9 @@ router.put("/screening/:id", controlProducts.modifyScreening) // guarda cambios 
 
 router.delete('/other/',controlProducts.deleteOther) //borra productos
 
-router.delete('/screening/',controlProducts.deleteScreening) //borra screening
+router.delete('/:id/screening/',controlProducts.deleteScreening)//borra screening
+
+router.delete('/',controlProducts.deleteMovie)
 
 
 router.post('/create',[upload.single("createImage")],controlProducts.saveMovie) //guarda película

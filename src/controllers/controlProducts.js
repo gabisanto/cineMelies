@@ -271,26 +271,41 @@ const controller = {
     },
 
     deleteScreening: (req,res) => {
-        db.Movie.findByPk(req.params.id,{
-            include: ["genre","category","poster","restriction",{model: db.Screening, as: "screenings",include:["language", "screen"]}]   
-        })
-        .then(function(movie) {
-            let funciones = movie.getScreenings()
-            movie.setScreenings(funciones.filter(funcion => {
-                funcion.id !== req.body.id
-            }))
-        })
-        .then(() => {
-            db.Screening.destroy({
-                where: {id: req.body.id}})
+        db.MovieScreening.destroy({
+                where: {screening_id : req.body.idFunction}
             })
-        .then(function() {return res.redirect("/products/" + req.params.id)})
+        .then (() => (db.Screening.destroy({
+            where: {id : req.body.idFunction}
+        })))
+        .then (() => {return res.redirect("/products/" + req.params.id)})
+        // .then(function(movie) {
+        //     let funciones = movie.getScreenings()
+        //     let funcionesActivas = Object.values(funciones).filter(funcion => {
+        //         funcion.id !== req.body.idFunction})
+        //     movie.setScreenings(funcionesActivas)
+        // })
+        // .then(() => {
+        //     db.Screening.destroy({
+        //         where: {id: req.body.idFunction}})
+        //     })
+        // .then(function() {return res.redirect("/products/" + req.params.id)})
         
 
         // db.Screening.destroy({
         //     where: {id: req.body.id}
         // })
         // .then(function() {return res.redirect("/products/other")})
+    },
+
+    deleteMovie: (req,res) => {
+        db.MovieScreening.destroy({
+                    where: {movie_id: req.body.id}
+                })
+        .then (() => {db.Movie.destroy({
+            where: {id: req.body.id}
+            })
+        }) 
+        .then(function() {return res.redirect("/products/")})
     },
 
 }
