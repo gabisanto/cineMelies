@@ -121,17 +121,19 @@ margin-top:-40%
     text-align: center; 
     top: 126px;
     background: #EDEEF2;
-    border: #F29E38 4px dashed;
+    /* border: #F29E38 4px dashed; */
     padding:5%;
 
 }
 
  h2{
-    font-family:  'Alegreya Sans', sans-serif; 
-    font-size: 24px;
-    color: #F29E38;
-    font-weight: 900;
-    text-shadow: 3px 3px 3px black;
+    margin: 0 auto 15px;
+    max-width: 1000px;
+    font: 300 41.6666666667px 'Fira Sans', sans-serif;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    font-weight: bold;
+    color:#EDEEF2;
     top: -87px;
     position: relative;
 
