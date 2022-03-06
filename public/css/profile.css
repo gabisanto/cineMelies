@@ -25,6 +25,44 @@ html, body {
     height: 100%;
   }
 
+  
+#centeredTitle{
+  
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  
+  /* margin: 0 auto 15px;
+  max-width: 1000px; */
+  font: 300 41.6666666667px 'Fira Sans', sans-serif;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  font-weight: bold;
+  color:#EDEEF2;
+  /* top: -87px;
+  position: relative; */
+  
+  }
+  
+  #background{
+  height: 50vh;
+  width:100vw;
+  position: relative;
+  text-align: center;
+  
+  overflow: hidden
+  }
+  
+  
+  
+  #background img{
+  height:100vh;
+  filter: brightness(50%);
+  margin-top: -20%;
+  margin-left:-70%
+  }
+
 #profileMain{
     display: flex;
     flex-direction: column;
@@ -158,4 +196,14 @@ html, body {
     .panelOpciones{
         align-self: center;
     }
+
+    #background img{
+        /* width:100vw; */
+        /* height:100vh; */
+        width:100vw;
+        height:auto;
+        filter: brightness(50%);
+        margin-top: -15%;
+        margin-left:0%
+      }
 }

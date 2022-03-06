@@ -8,6 +8,50 @@
   html{
     background-color: rgb(242, 158, 56);
   }
+
+  main,html{
+    background-color: rgb(242, 158, 56);
+    
+}
+
+#centeredTitle{
+  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+/* margin: 0 auto 15px;
+max-width: 1000px; */
+font: 300 41.6666666667px 'Fira Sans', sans-serif;
+letter-spacing: 0.35em;
+text-transform: uppercase;
+font-weight: bold;
+color:#EDEEF2;
+/* top: -87px;
+position: relative; */
+
+}
+
+#background{
+height: 50vh;
+width:100vw;
+position: relative;
+text-align: center;
+
+overflow: hidden
+}
+
+
+
+#background img{
+height:100vh;
+filter: brightness(50%);
+margin-top: -10%;
+margin-left:-30%
+}
+
+  
   .main_box{
     display: flex;
     flex-direction: column;
@@ -24,21 +68,24 @@
     flex-direction:row;
     flex-wrap:wrap;
     /* width:65%; */
-    margin:0 auto
+    margin:0 auto;
+    justify-content: center;
+    align-content: center;
 
     
   }
 
   .left_candy_container{
-    width:100%;
-    height: 100%;
+    width:65vw;
+    /* height: 90%; */
     background-color:#ebebeb;
     display:flex;
     flex-direction: row;
     flex-wrap:wrap;
     justify-content:center;
-    padding-top: 4% ;
-    padding-bottom: 2%;
+    /* margin:0 auto */
+    
+    
     
   }
   
@@ -287,6 +334,8 @@ font-family: 'Alegreya Sans', sans-serif;
 
 @media (min-width:769px){
 
+  
+
   .main_box{
     display:flex;
     flex-direction: column;
@@ -307,5 +356,14 @@ font-family: 'Alegreya Sans', sans-serif;
   flex-direction: row;
 }
 
+#background img{
+  /* width:100vw; */
+  /* height:100vh; */
+  width:100vw;
+  height:auto;
+  filter: brightness(50%);
+  margin-top: -10%;
+  margin-left:0%
+}
 
 }

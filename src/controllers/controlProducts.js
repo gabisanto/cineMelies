@@ -22,15 +22,16 @@ const controller = {
 
     createScreening: (req,res) => {
         //let all = product.all().map(p => Object({...p, createImage: file.search('id',p.createImage)}))
-        let resultExists = product.search('id',req.params.id)
+        db.Movie.findByPk(req.params.id)
         //let result = product.all().map(p => Object({...p, createImage: file.search('id',p.createImage)}))
         //let productDetail = product.all().map(product => Object ({...product,createImage : file.search('id',product.createImage[0]).url})) */      
-        return resultExists ? res.render('./products/screening',{
+        .then( movie => {
+            return movie ? res.render('./products/screening',{
             styles:['screening','forms','create'],
-            title: 'Nueva función de ' + req.params.id.productName,
-            product: resultExists,
+            title: 'Nueva función de ' + movie.productName,
+            product: movie,
             id:req.params.id            
-        }) : res.redirect("/products/")
+        }) : res.redirect("/")})
     },
 
     saveMovie: (req,res) => {

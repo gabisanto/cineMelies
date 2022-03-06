@@ -50,7 +50,7 @@ router.delete('/other/',controlProducts.deleteOther) //borra productos
 
 router.delete('/:id/screening/',controlProducts.deleteScreening)//borra screening
 
-router.delete('/',controlProducts.deleteMovie)
+router.delete('/',controlProducts.deleteMovie) //borra película
 
 
 router.post('/create',[upload.single("createImage")],controlProducts.saveMovie) //guarda película

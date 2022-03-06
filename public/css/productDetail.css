@@ -11,18 +11,22 @@ font-family: 'Fira Sans', sans-serif; ----> botones, menú etc
 
 * {
     box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+    /* padding: 0;
+    margin: 0; */
     
 }
 
 
-main{
+main,html{
     font-family: 'Alegreya Sans', sans-serif;
     background-color: rgb(242, 158, 56);
     text-align: center;
     
 
+  }
+
+  html, body {
+    height: 100%;
   }
 
 .fieldCheckbox legend {
@@ -95,38 +99,57 @@ main{
   
 
     
-#background picture img{
-width: 125%;
-/* margin:-25%; */
-filter: brightness(50%);
-/* height:300%; */
-margin-top:-40%
+  #centeredTitle{
+  
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  
+  /* margin: 0 auto 15px;
+  max-width: 1000px; */
+  font: 300 30px 'Fira Sans', sans-serif;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  font-weight: bold;
+  color:#EDEEF2;
+  /* top: -87px;
+  position: relative; */
 
 }
 
-#background {
-    margin: 0%;
-    display: flex;
-    position: absolute;
-    height: 50%;
-    overflow: hidden;
-    width:100%
-    
+#background{
+  height: 50vh;
+  width:100vw;
+  position: relative;
+  text-align: center;
+  
+  overflow: hidden
+}
+
+
+
+#background img{
+  width:120vw;
+  filter: brightness(50%);
+  margin-top: -20%;
+  margin-left:0%
 }
 
 .container-peli{
     display: flex;
     flex-direction: column; 
-    position: relative; 
+    /* position: relative;  */
     text-align: center; 
-    top: 126px;
+    /* top: 126px; */
     background: #EDEEF2;
     /* border: #F29E38 4px dashed; */
-    padding:5%;
+    padding:1.5em;
+    margin:2em
 
 }
 
- h2{
+ /* h2{
     margin: 0 auto 15px;
     max-width: 1000px;
     font: 300 41.6666666667px 'Fira Sans', sans-serif;
@@ -137,18 +160,9 @@ margin-top:-40%
     top: -87px;
     position: relative;
 
-}
+} */
 
-#stars{
-    position: relative;
-    top: -132px;
-    color: #F29E38;
-    text-shadow: 1px 1px 1px black;
-    font-size: 12px;
-}
-.star-color{
-    color: #f29e3805;
-}
+
 
 .images{
 
@@ -269,11 +283,11 @@ article form input{
     font-family: 'Fira Sans', sans-serif; 
 }
 
-#footer{
+/* #footer{
     position: relative;
     top: 125px;
     
-}
+} */
 
 /* radio selectores */
 
@@ -392,15 +406,20 @@ label span:before {
         top:  -238px;
  
     }
-    .container-peli {
+    /* .container-peli {
         top: 272px;
         
-    }
+    } */
 
-    #background img {
-        margin-top:-26%;
-        height:500%;
-    }
+    #background img{
+        /* width:100vw; */
+        /* height:100vh; */
+        width:100vw;
+        height:auto;
+        filter: brightness(50%);
+        margin-top: -30%;
+        margin-left:0%
+      }
 
     iframe {
         width: 605px;

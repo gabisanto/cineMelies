@@ -13,21 +13,24 @@
 
 <% if (id == product.id) { %>
  
-
-<section>
     <article id="background">
-        <picture >
-            <img src="/uploads/<%= product.poster.url %>">
-        </picture>
-    </article>
-
-
+                                
+        <img src="/uploads/<%= product.poster.url %>">
+        
     
-        <!-- detalle producto-->
-<section class="container-peli">
-    <article> <h2> <%= product.productName.toUpperCase() %>  </h2> 
+    <article id="centeredTitle"> <%= product.productName.toUpperCase() %>
     </article>
-    <section id="flexDescription">
+    </article>
+
+
+   
+
+
+    <!-- <section> -->
+        <!-- detalle producto-->
+        <section class="container-peli">
+    
+     <section id="flexDescription">
         <article id="imageContainer">
             <figure  class="images">
                 <img src="/uploads/<%= product.poster.url %>">
@@ -58,43 +61,46 @@
         
 
 
-    </section>
+     </section>
 
-    <% if (user && user.admin) { %>
-        <section class="sreeningBox">
-            <h3> Funciones del mes </h3>
+    
+        
+            <% if (user && user.admin) { %>
+                <section class="sreeningBox">
+                    <h3> Funciones del mes </h3>
 
-            <% if (product.screenings[0]) { %>
-                <article>
+                    <% if (product.screenings[0]) { %>
+                        <article>
+                            
                     
-            
-            
-                <% product.screenings.forEach(element => { %>
-
-                    <%= element.day %>, <%= element.hour %>hs., <%= element.language.name %>,<%= element.screen.name %> 
                     
-                    <section id="iconitos">
-                        <form action="/products/<%= product.id %>/screening/?m=DELETE" method="post">
-                            <input type="hidden" name="idFunction" value=<%= element.id %>>
-                            <button type="submit" title="Eliminar">
-                                <i class="fas fa-trash"> </i>
-                            </button>
-                        </form>
-                        <a href="/products/screening/<%= element.id %>/edit" title="Editar elemento"> <i class="fas fa-pencil-alt"> </i> </a>
+                        <% product.screenings.forEach(element => { %>
+
+                            <%= element.day %>, <%= element.hour %>hs., <%= element.language.name %>,<%= element.screen.name %> 
+                            
+                            <section id="iconitos">
+                                <form action="/products/<%= product.id %>/screening/?m=DELETE" method="post">
+                                    <input type="hidden" name="idFunction" value=<%= element.id %>>
+                                    <button type="submit" title="Eliminar">
+                                        <i class="fas fa-trash"> </i>
+                                    </button>
+                                </form>
+                                <a href="/products/screening/<%= element.id %>/edit" title="Editar elemento"> <i class="fas fa-pencil-alt"> </i> </a>
+                            </section>
+                        
+                        
+                        <% }) %>
+                    <% } else {%>
+                        <h3>No hay funciones disponibles</h3>
+                        <% } %> 
+                        
+                
+                        </article>
+            
                     </section>
-                  
-                
-                <% }) %>
-            <% } else {%>
-                <h3>No hay funciones disponibles</h3>
-                <% } %> 
-            
-                
-            </article>
-            
-        </section>
-        <a href="/products/<%= product.id %>/newScreening" class="newScreening">Agregar nueva función</a>
-    <% } %>
+                    <a href="/products/<%= product.id %>/newScreening" class="newScreening">Agregar nueva función</a>
+                    
+                <% } %>
 
     <% if (user && !user.admin) { %>
      
@@ -123,8 +129,7 @@
 </section>
 <% } %>
 <% } %>
-</section>
-</section>
+
 <% } %> 
 
 

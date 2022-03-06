@@ -137,7 +137,7 @@
 .slideshow .slide .title {
     margin: 0 auto 15px;
     max-width: 1000px;
-    font: 300 41.6666666667px 'Fira Sans', sans-serif;
+    font: 300 35px 'Fira Sans', sans-serif;
     letter-spacing: 0.35em;
     text-transform: uppercase;
     font-weight: bold;
@@ -225,4 +225,10 @@
     height: 26px;
     fill: #fff;
     transition: left 0.2s ease;
+}
+
+@media(min-width:769px){
+    .slideshow .slide .title {
+font-size:41.6666666667px
+    }
 }
