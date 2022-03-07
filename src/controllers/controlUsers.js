@@ -2,6 +2,7 @@ const validator = require('express-validator');
 const userModel = require('../models/user');
 const bcrypt = require('bcrypt');
 const db = require('../database/models');
+const user = require('../middlewares/user');
 const Op = db.Sequelize.Op
 
 module.exports = {
@@ -13,10 +14,22 @@ module.exports = {
         styles: ['register'],
         title: 'Registrarse'
     }),
-    profile: (req,res) => res.render('users/profile',{
-        styles: ['profile','forms'],
-        title: 'Mi perfil'
-    }),
+    profile: (req,res) => {
+        db.User.findByPk(req.session.user.id,{
+            include: ["avatar"]
+        })
+
+        .then(usuario => {
+            res.render('users/profile',{
+                styles: ['profile','forms'],
+                title: 'Mi perfil',
+                user:usuario
+        })
+        })
+    
+        
+    },
+
     list: (req,res) => {
         db.User.findAll({
             include: ["avatar"]
@@ -139,9 +152,25 @@ module.exports = {
         return res.redirect('/')
     },
     avatar: (req, res) => {
-        let update = userModel.update(req.session.user.id, {avatar: req.files ? req.files[0].filename : null});
-        req.session.user = update;
-        return res.redirect('/users/profile');
+        db.Avatar.create({
+            url: req.file.filename
+        })
+        .then(avatar => {
+            db.User.update({
+                avatar_id : avatar.id
+            }, {
+                where : { id: req.session.user.id }
+            })
+        
+        })
+
+        .then(() => {
+            return res.redirect('/users/profile')
+        })
+
+        // let update = userModel.update(req.session.user.id, {avatar: req.files ? req.files[0].filename : null});
+        // req.session.user = update;
+        // return res.redirect('/users/profile');
     }
 
     

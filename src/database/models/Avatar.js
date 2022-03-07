@@ -21,7 +21,10 @@ module.exports = (sequelize, dataTypes) => {
 
    
         Avatar.associate = function(models) {
-            //relacion Avatar (uno) con User (a muchos)
+            Avatar.hasOne(models.User,{
+                as: "user",
+                foreignKey: "avatar_id"
+            })
             
 
 

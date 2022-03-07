@@ -20,9 +20,9 @@
         <h1 class="titulos">Mi perfil</h1>
 
         <section class="tarjetaPerfil">
-            <% if (user.avatar != null) { %>
+            <% if (user.avatar_id != "1") { %>
                 <figure class="figureAvatar">
-                    <img src="../../../uploads/avatars/<%= user.avatar %>" alt="avatar <%= user.email %>" class="avatar">
+                    <img src="../../../uploads/avatars/<%= user.avatar.url %>" alt="avatar <%= user.email %>" class="avatar">
                 </figure>
             <% } else { %>
                 <figure class="figureAvatar">
