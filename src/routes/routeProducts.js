@@ -20,11 +20,11 @@ router.get('/',controlProducts.listMovie)
 
 router.get('/other',controlProducts.listOther)
 
-router.get('/create',controlProducts.create) //muestra formulario de creación de película
+router.get('/create',[auth],controlProducts.create) //muestra formulario de creación de película
 
-router.get('/other/create',controlProducts.createOther) //muestra formulario de creación de producto
+router.get('/other/create',[auth],controlProducts.createOther) //muestra formulario de creación de producto
 
-router.get('/:id/newScreening',controlProducts.createScreening) //muestra formulario de creación de screening
+router.get('/:id/newScreening',[auth],controlProducts.createScreening) //muestra formulario de creación de screening
 
 //agregarle el [auth] a los create
 
@@ -32,11 +32,11 @@ router.get('/:id',controlProducts.showMovie) // muestra vista de película
 
 router.get('/other/:id',controlProducts.showOther) // muestra vista de otros productos (bebida, alimento, etc)
 
-router.get('/:id/edit',controlProducts.updateMovie) // muestra vista de edición de movie
+router.get('/:id/edit',[auth],controlProducts.updateMovie) // muestra vista de edición de movie
 
-router.get('/other/:id/edit',controlProducts.updateOther) // muestra vista de edición de producto
+router.get('/other/:id/edit',[auth],controlProducts.updateOther) // muestra vista de edición de producto
 
-router.get('/screening/:id/edit',controlProducts.updateScreening) // muestra vista de edición de screening
+router.get('/screening/:id/edit',[auth],controlProducts.updateScreening) // muestra vista de edición de screening
 
 //agregarle el [auth] a los edit
 
@@ -58,6 +58,10 @@ router.post('/create',[upload.single("createImage")],controlProducts.saveMovie) 
 router.post('/other/create',[upload.single("createImage")],controlProducts.saveOther) //guarda otros productos
 
 router.post('/:id/newScreening',controlProducts.saveScreening) //guarda funciones
+
+// router.get('/searchResult',controlProducts.searchResult)
+
+router.post('/search',controlProducts.search)
 
 
 

@@ -309,6 +309,26 @@ const controller = {
         .then(function() {return res.redirect("/products/")})
     },
 
+    search: (req,res) => {
+        db.Movie.findAll({
+            where: { productName: { 
+                [Op.like] : "%" + req.body.search + "%"
+            }},
+            include: ["poster"]
+        })
+        .then(results => {
+            return res.render ('./products/searchResult',{
+                results: results,
+                styles: ["search"],
+                title: 'Resultado de búsqueda'
+            })
+        })
+    },
+
+    // searchResult: (req,res) => res.render('./products/searchResult',{
+        
+    // }),
+
 }
     
        

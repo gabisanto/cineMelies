@@ -1,0 +1,135 @@
+/*Código Colores
+#0D1026 negro azulado
+#F2B035 naranja claro
+#F29E38 naranja oscuro
+#EDEEF2 gris
+#262626 casi negro
+
+font-family: 'Alegreya Sans', sans-serif; ----> textos
+font-family: 'Fira Sans', sans-serif; ----> botones, menú etc
+*/
+
+
+* {
+    box-sizing: border-box;
+    /* padding: 0;
+    margin: 0; */
+    
+  }
+
+  main,html{
+    background-color: rgb(242, 158, 56);
+    
+}
+
+html, body {
+    height: 100%;
+  }
+
+  #centeredTitle{
+  
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  
+  /* margin: 0 auto 15px;
+  max-width: 1000px; */
+  font: 300 35px 'Fira Sans', sans-serif;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  font-weight: bold;
+  color:#EDEEF2;
+  /* top: -87px;
+  position: relative; */
+
+}
+
+#background{
+  height: 50vh;
+  width:100vw;
+  position: relative;
+  text-align: center;
+  
+  overflow: hidden
+}
+
+
+
+#background img{
+  height:100vh;
+  filter: brightness(50%);
+  margin-top: -30%;
+  margin-left:-50%
+}
+
+
+#mainAbout{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: justify;
+    padding: 1.5em;
+    background-color: #EDEEF2 ;
+    margin: 2em; 
+    font-family: 'Alegreya Sans', sans-serif; 
+}
+
+#searchResults{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.searchPoster{
+    width: 60vw
+}
+
+.searchPoster img{
+    width:100%;
+    padding: 5%
+}
+
+#searchTitle{
+    font-weight: bold;
+}
+
+@media(min-width:769px){
+
+
+    #background img{
+        /* width:100vw; */
+        /* height:100vh; */
+        width:100vw;
+        height:auto;
+        filter: brightness(50%);
+        margin-top: -15%;
+        margin-left:0%
+      }
+
+      #centeredTitle{
+        font-size: 41.666666666px
+      }
+
+      #searchResults{
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: center;
+      }
+
+      .searchPoster{
+          width: auto
+      }
+
+      .searchPoster img{
+          width:40vh;
+          padding: 10%
+      }
+
+      #searchTitle{
+          font-weight: bold;
+      }
+}

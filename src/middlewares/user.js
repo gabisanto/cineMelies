@@ -1,9 +1,14 @@
 const userModel = require('../models/user');
+const db = require("../database/models")
 const user = (req,res,next) => {
     let user = null
     if(req.cookie && req.cookie.email){
-        user = userModel.search('email', req.cookie.email)
-        req.session.user = user
+        db.User.findOne({where : {email : req.cookie.email}})
+        .then((found) => {
+            req.session.user = found})
+        
+        //user = userModel.search('email', req.cookie.email)
+        
     }
     if(req.session && req.session.user){
         user = req.session.user

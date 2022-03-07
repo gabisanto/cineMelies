@@ -20,6 +20,6 @@ router.get('/profile',[access],controlUsers.profile) //ok
 router.post('/',[validate],controlUsers.save) //ok
 router.post('/access',controlUsers.access) //ok
 router.post('/logout',controlUsers.logout) //ok
-router.post('/upload/avatar',[access,upload.single("imagenUsuario")],controlUsers.avatar);
+router.post('/upload/avatar',[access,upload.single("imagenUsuario")],controlUsers.avatar); //ok
 
 module.exports = router;

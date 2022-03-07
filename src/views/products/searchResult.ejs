@@ -1,0 +1,44 @@
+<%- include ('../modules/head') %> 
+
+<body>
+
+<%- include ('../modules/header') %> 
+
+
+    <main>
+        <article id="background">
+                                
+            <img src="/img/inthemood.jpg">
+            
+        
+        <article id="centeredTitle"> Resultado de búsqueda
+        </article>
+        </article>
+
+        <section id="mainAbout">
+            
+            <% if (results[0]) { %>
+                <article id="searchTitle">Mostrando <%= results.length %> resultado/s</article>
+                <section id="searchResults">    
+                    <% results.forEach(element => { %>
+                        <picture class="searchPoster">
+                            <a href="/products/<%= element.id %>"><img src="/uploads/<%= element.poster.url %>" ></a>
+                        </picture>
+                        
+                        
+
+                    <% }) %>
+                </section>
+            <% } %>
+            
+            
+
+        </section>
+
+        
+
+    </main>
+
+    <%- include ('../modules/footer') %>
+    </body>
+</html>
