@@ -40,11 +40,11 @@ const controller = {
         })
         .then(function (newPoster) {
             db.Movie.create({
-                productName: req.body.productName,
+                productName: req.body.name,
                 genre_id: req.body.genre_id,
                 category_id: req.body.category_id,
                 productLink: req.body.productLink,
-                productDescription: req.body.productDescription,
+                productDescription: req.body.description,
                 image_id: newPoster.id,
                 restriction_id: req.body.restriction_id
             })
