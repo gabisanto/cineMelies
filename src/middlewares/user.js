@@ -3,7 +3,8 @@ const db = require("../database/models")
 const user = (req,res,next) => {
     let user = null
     if(req.cookie && req.cookie.email){
-        db.User.findOne({where : {email : req.cookie.email}})
+        db.User.findOne({where : {email : req.cookie.email}},
+            {include:["avatar"]})
         .then((found) => {
             req.session.user = found})
         

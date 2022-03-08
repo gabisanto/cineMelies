@@ -7,6 +7,15 @@
 <!--Sección MAIN-->
 <main>
 
+    <article id="background">
+                                
+        <img src="/img/about.jpg">
+        
+    
+    <article id="centeredTitle"> Usuarios
+    </article>
+    </article>
+
 <% if (locals.users) { %>
     <% if (users.length > 0) { %>
      
@@ -23,6 +32,15 @@
 
             <p class="datosLista">E-mail: <%= user.email %> </p>
             <br>
+
+            <section id="iconitos">
+                <form action="/users/?m=DELETE" method="post">
+                    <input type="hidden" name="id" value=<%= user.id %>>
+                    <button type="submit" title="Eliminar">
+                        <i class="fas fa-trash"> </i>
+                    </button>
+                </form>
+            </section>
 
             </article>
         <% }) %>

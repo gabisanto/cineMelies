@@ -7,13 +7,23 @@
 <!--Sección MAIN-->
 <main>
 
+    <article id="background">
+                                
+        <img src="/img/lotr.jpg">
+        
+    
+    <article id="centeredTitle"> Nuestras películas
+    </article>
+    </article>
+
 <% if (locals.pelicula) { %>
     <% if (pelicula.length > 0) { %>
      
     <section id="list-movie">
-    <article >
+    
         <% pelicula.forEach(product => { %>
-            <h2> Item número <%= product.id %>: <%= product.productName %>  </h2>
+            <article class="movieBox">
+            <h2> ID: <%= product.id %>: <%= product.productName %>  </h2>
             <figure  class="images-list">
                 <a href="/products/<%= product.id %>" title="<%= product.productName %>"><img src="/uploads/<%= product.poster.url %>"></a>
                    
@@ -31,8 +41,9 @@
                 <a href="/products/<%= product.id %>/edit" title="Editar elemento"> <i class="fas fa-pencil-alt"> </i> </a>
             </section>
             <% } %>
+        </article>
         <% }) %>
-    </article>
+    
         <% } else { %>
             <h2>No hay productos</h2>
         <% } %> 

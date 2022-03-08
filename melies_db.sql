@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 01-03-2022 a las 02:24:41
+-- Tiempo de generación: 08-03-2022 a las 22:16:11
 -- Versión del servidor: 10.4.22-MariaDB
 -- Versión de PHP: 8.1.2
 
@@ -31,6 +31,21 @@ CREATE TABLE `avatars` (
   `id` int(11) NOT NULL,
   `url` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `avatars`
+--
+
+INSERT INTO `avatars` (`id`, `url`) VALUES
+(1, '000000000000.jpg'),
+(2, 'imagenUsuario-1646604278177.jpg'),
+(3, 'imagenUsuario-1646611810848.jpg'),
+(4, 'imagenUsuario-1646612190399.jpg'),
+(5, 'imagenUsuario-1646614240726.jpg'),
+(6, 'imagenUsuario-1646614323681.jpg'),
+(7, 'imagenUsuario-1646614423720.jpg'),
+(8, 'imagenUsuario-1646614455507.jpg'),
+(9, 'imagenUsuario-1646749241891.jpg');
 
 -- --------------------------------------------------------
 
@@ -115,7 +130,13 @@ CREATE TABLE `images` (
 
 INSERT INTO `images` (`id`, `url`) VALUES
 (1, 'cocacolachica.jpg'),
-(2, 'pochoclomediano.jpg');
+(2, 'pochoclomediano.jpg'),
+(3, 'createImage-1646312561759.jpg'),
+(4, 'createImage-1646313041658.png'),
+(5, 'createImage-1646361182777.png'),
+(6, 'createImage-1646361244928.png'),
+(7, 'createImage-1646361289404.png'),
+(8, 'createImage-1646361340936.jpg');
 
 -- --------------------------------------------------------
 
@@ -161,12 +182,13 @@ CREATE TABLE `movies` (
 INSERT INTO `movies` (`id`, `productName`, `genre_id`, `category_id`, `productLink`, `productDescription`, `image_id`, `restriction_id`) VALUES
 (1, 'The Big Heat', 1, 1, 'https://www.youtube.com/watch?v=dLLAspkOv3w', 'Tras suicidarse, el policía Tom Duncan deja una carta en la que confiesa haberse dejado sobornar por una banda de gángsters, pero también denuncia la corrupción de altos funcionarios. Cuando el sargento Dave Bannion trata de esclarecer su muerte, empieza a tropezar con toda clase de obstáculos.', 1, 3),
 (2, 'Phantom Lady', 1, 1, 'https://www.youtube.com/watch?v=iH5ZPIsI6-M', 'Una secretaria busca sin cesar a la mujer misteriosa que puede probar que su jefe no es un asesino.', 2, 2),
-(3, 'The Big Combo', 1, 1, 'https://www.youtube.com/watch?v=iIkCXF9Y4ow', 'Un teniente de la policía que es presionado por una pandilla dirigida por un gánster vicioso. Él es ayudado por la esposa del criminal, celosa del romance de su marido con otra mujer, quien le proporciona información para ayudarlo a cerrarle la red a su enemigo.', 3, 2),
+(3, 'The Big Combo', 1, 1, 'https://www.youtube.com/watch?v=iIkCXF9Y4ow', 'Película del cine negro acerca de un teniente de la policía que es presionado por una pandilla dirigida por un gánster vicioso. Él es ayudado por la esposa del criminal, celosa del romance de su marido con otra mujer, quien le proporciona información para ayudarlo a cerrarle la red a su enemigo.', 3, 2),
 (4, 'Double Indemnity', 1, 1, 'https://www.youtube.com/watch?v=yKrrAa2o9Eg', 'Historia de la angustia de una mujer que convence a su amante para que asesine a su marido para cobrar el seguro, pero aún así las cosas no salen como estaban previstas.', 4, 2),
 (5, 'Dune', 7, 2, 'https://www.youtube.com/watch?v=vW-PHNZ-Xww', 'Arrakis, también denominado \'Dune\', se ha convertido en el planeta más importante del universo. A su alrededor comienza una gigantesca lucha por el poder que culmina en una guerra interestelar.', 5, 2),
 (6, 'Maligno', 1, 2, 'https://www.youtube.com/watch?v=I2j_S0Oln1U', 'Madison está paralizada por visiones de asesinatos espeluznantes, y su tormento empeora cuando descubre que estos sueños de vigilia son, de hecho, realidades aterradoras.', 6, 3),
 (7, 'Eternals', 3, 2, 'https://www.youtube.com/watch?v=MKWXuj3ZYf0', 'Los Eternos son una raza de seres inmortales con poderes sobrehumanos que han vivido en secreto en la Tierra durante miles de años. Aunque nunca han intervenido en el destino de la población, ahora una amenaza se cierne sobre la humanidad.', 7, 2),
-(8, 'Matrix', 7, 2, 'https://www.youtube.com/watch?v=kV6tJtU7znU', 'Thomas Anderson lleva una vida cómoda como una eminencia dentro del mundo de los videojuegos, pero tiene problemas para discernir entre lo que es realidad y lo que no lo es. Thomas deberá decidir si sigue al conejo blanco una vez más.', 8, 2);
+(8, 'Matrix', 7, 2, 'https://www.youtube.com/watch?v=kV6tJtU7znU', 'Thomas Anderson lleva una vida cómoda como una eminencia dentro del mundo de los videojuegos, pero tiene problemas para discernir entre lo que es realidad y lo que no lo es. Thomas deberá decidir si sigue al conejo blanco una vez más.', 8, 3),
+(14, 'In the mood for love', 1, 1, 'https://www.youtube.com/watch?v=dWVDZ98AFhI', 'Chow Mo-wan, editor casado y su bella vecina, periodista, viven un romance después de descubrir la infidelidad de sus compañeros.', 19, 2);
 
 -- --------------------------------------------------------
 
@@ -186,13 +208,14 @@ CREATE TABLE `moviescreenings` (
 
 INSERT INTO `moviescreenings` (`id`, `movie_id`, `screening_id`) VALUES
 (1, 1, 1),
-(2, 2, 6),
-(3, 3, 5),
 (4, 4, 2),
 (5, 5, 7),
 (6, 6, 8),
 (7, 7, 3),
-(8, 8, 4);
+(8, 8, 4),
+(9, 5, 15),
+(20, 2, 26),
+(24, 3, 30);
 
 -- --------------------------------------------------------
 
@@ -217,7 +240,16 @@ INSERT INTO `posters` (`id`, `url`) VALUES
 (5, 'dune.jpg'),
 (6, 'maligno.jpg'),
 (7, 'Eternals.jpg'),
-(8, 'matrix.jpg');
+(8, 'matrix.jpg'),
+(11, 'createImage-1646270422619.jpg'),
+(12, 'createImage-1646270503333.jpg'),
+(13, 'createImage-1646270776507.jpg'),
+(14, 'createImage-1646271018371.jpg'),
+(15, 'createImage-1646271109905.jpg'),
+(16, 'createImage-1646683246751.jpg'),
+(17, 'createImage-1646683333574.jpg'),
+(18, 'createImage-1646683427938.jpg'),
+(19, 'createImage-1646683521573.jpg');
 
 -- --------------------------------------------------------
 
@@ -261,8 +293,13 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `name`, `type_id`, `description`, `image_id`, `price`) VALUES
-(1, 'Coca cola chica', 1, 'Coca Cola 500ml', 1, 250),
-(2, 'Pochoclo mediano', 2, 'Balde de pochoclo mediano', 2, 350);
+(1, 'Coca cola chica', 1, 'Coca Cola 500ml', 1, 350),
+(2, 'Pochoclo mediano', 2, 'Balde de pochoclo mediano', 2, 350),
+(3, 'Coca Cola grande', 1, 'Coca Cola grande', 3, 450),
+(5, 'Combo peluche Minion', 3, '1 balde de pochoclos. 1 gaseosa grande. 1 peluche Minions 2. Modelo sujeto a disponibilidad', 5, 1650),
+(6, 'Combo Familia', 3, '2 bolsas de pochoclos medianas. 4 gaseosa medianas. 1 golosina sin elección. (sujeto a disponibilidad)', 6, 1180),
+(7, 'Combo Película', 3, '1 balde de pochoclos. 2 gaseosas grandes. 1 golosina sin elección. (sujeto a disponibilidad)', 7, 980),
+(8, 'Combo Individual', 3, '1 balde de pochoclos. 1 gaseosa grande. ', 8, 680);
 
 -- --------------------------------------------------------
 
@@ -306,14 +343,23 @@ CREATE TABLE `screenings` (
 --
 
 INSERT INTO `screenings` (`id`, `hour`, `day`, `screen_id`, `discount`, `language_id`) VALUES
-(1, 1400, 'Lunes', 1, 0, 1),
+(1, 1545, 'Lunes', 1, 0, 1),
 (2, 1800, 'Jueves', 2, 0, 1),
 (3, 1400, 'Miércoles', 4, 1, 1),
 (4, 2000, 'Martes', 3, 0, 1),
 (5, 1200, 'Viernes', 4, 1, 1),
 (6, 1200, 'Sábado', 2, 1, 1),
 (7, 2100, 'Domingo', 1, 0, 1),
-(8, 1300, 'Domingo', 3, 0, 1);
+(8, 1300, 'Domingo', 3, 0, 1),
+(15, 815, 'Martes', 3, 0, 2),
+(16, 1300, 'Sábado', 1, 0, 2),
+(17, 1700, 'Domingo', 2, 0, 2),
+(18, 1400, 'Miércoles', 4, 0, 2),
+(24, 1400, 'Martes', 2, 0, 1),
+(26, 1800, 'Miércoles', 3, 0, 1),
+(28, 1145, 'Martes', 2, 0, 3),
+(29, 710, 'Lunes', 1, 0, 1),
+(30, 1230, 'Lunes', 2, 0, 1);
 
 -- --------------------------------------------------------
 
@@ -378,6 +424,15 @@ CREATE TABLE `users` (
   `isActive` tinyint(1) NOT NULL,
   `avatar_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `users`
+--
+
+INSERT INTO `users` (`id`, `name`, `document`, `birthDate`, `email`, `password`, `admin`, `isActive`, `avatar_id`) VALUES
+(1, 'gabi', 32568974, '1999-11-11', 'gabi@cinemelies.com.ar', '$2b$10$en3vHJrBvNPb3wu50n/y1.CnX2UVe3pHYn.XJ4cre715r4IWjb6X2', 1, 1, 9),
+(2, 'gabi', 123456789, '1999-02-12', 'gabi@yahoo.com.ar', '$2b$10$BJJr8WUzhI0IKz0ZdOGRG.9gMAW9eL9oxdvmStfEeM.W0BeWzWZ8a', 0, 1, 1),
+(4, 'garabato', 123456789, '1789-05-12', 'garabato@yahoo.com', '$2b$10$20f.t4PKXyorsVElnGlkQebnpIDG5UE/MzbutSH9sERODYfVeTo8O', 0, 1, 8);
 
 --
 -- Índices para tablas volcadas
@@ -500,7 +555,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de la tabla `avatars`
 --
 ALTER TABLE `avatars`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT de la tabla `categories`
@@ -524,7 +579,7 @@ ALTER TABLE `genres`
 -- AUTO_INCREMENT de la tabla `images`
 --
 ALTER TABLE `images`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de la tabla `languages`
@@ -536,19 +591,19 @@ ALTER TABLE `languages`
 -- AUTO_INCREMENT de la tabla `movies`
 --
 ALTER TABLE `movies`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT de la tabla `moviescreenings`
 --
 ALTER TABLE `moviescreenings`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT de la tabla `posters`
 --
 ALTER TABLE `posters`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT de la tabla `prodtypes`
@@ -560,7 +615,7 @@ ALTER TABLE `prodtypes`
 -- AUTO_INCREMENT de la tabla `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de la tabla `restrictions`
@@ -572,7 +627,7 @@ ALTER TABLE `restrictions`
 -- AUTO_INCREMENT de la tabla `screenings`
 --
 ALTER TABLE `screenings`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT de la tabla `screens`
@@ -590,7 +645,7 @@ ALTER TABLE `screensformats`
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Restricciones para tablas volcadas

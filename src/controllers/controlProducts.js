@@ -108,7 +108,7 @@ const controller = {
      }
         )
         .catch(err => {
-            res.send(err)
+            res.redirect("/products/")
         })
         // //let all = product.all().map(p => Object({...p, createImage: file.search('id',p.createImage)}))
         // let resultExists = product.search('id',req.params.id)

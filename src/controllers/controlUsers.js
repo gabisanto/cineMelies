@@ -35,7 +35,7 @@ module.exports = {
             include: ["avatar"]
         })
         .then(function(users) {return res.render('users/list',{
-            styles: ['list'],
+            styles: ['listUser'],
             title: 'Listado de usuarios',
             users: users
         })})
@@ -171,7 +171,14 @@ module.exports = {
         // let update = userModel.update(req.session.user.id, {avatar: req.files ? req.files[0].filename : null});
         // req.session.user = update;
         // return res.redirect('/users/profile');
-    }
+    },
+
+    deleteUser: (req,res) => {
+        db.User.destroy({
+            where: {id: req.body.id}
+        })
+        .then(function() {return res.redirect("/users/")})
+    },
 
     
 }
