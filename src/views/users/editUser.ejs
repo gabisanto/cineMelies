@@ -1,0 +1,71 @@
+<%- include ('../modules/head') %> 
+
+<body> 
+   
+<%- include ('../modules/header') %> 
+
+<!-- Sección Main -->
+<main>
+
+    <section id="register-form">
+        
+       <section class="mainFlex">
+            <section class="flexUser">
+            <form action="/users/<%= user.id %>?m=PUT" id="register-form" method="post" >
+                <fieldset class="fieldNuevo">
+                <legend class="dn"> Nombre y Apellido </legend>
+                <label class="dn" for="name"> </label>
+                <input type="text" class="cajaNuevo" name="name" id="nombreCompleto" placeholder="Nombre y Apellido" value="<%= user.name %>" required >
+                
+                </fieldset>
+            
+                <fieldset class="fieldNuevo">
+                <legend class="dn" > DNI </legend>
+                <label class="dn"  for="document">  </label>
+                <input type="number" class="cajaNuevo" name="document" id="document" placeholder="Documento" value="<%= user.document %>" required >
+            
+                </fieldset>
+            
+                <fieldset class="fieldNuevo" >
+                
+                <label for="birthDate" class="dn"> </label>
+                <input type="date" class="cajaNuevo" class="t-input" name="birthDate" id="birthDate" placeholder="birthDate" value="<%= user.birthDate %>" required >
+                
+                </fieldset>
+            
+
+                <% if (locals.errors && errors.email) { %>
+                    <p class="errores"><%= errors.email.msg %> </p>
+                <% } %>
+                <fieldset class="fieldNuevo">
+                <legend class="dn" > Email </legend>
+                <label  class="dn" for="email"> </label>
+                <input type="text"  class="cajaNuevo" name="email" id="email" placeholder="Email" value="<%= user.email %>"  required >
+                
+                </fieldset>
+                
+            
+            </section>
+        </section>
+
+            <fieldset class="botonNuevo">
+            <legend class="dn"> Botones del Formulario </legend>
+            
+            <button type="submit" class="enviar" title="Registrarme"> actualizar </button>
+            <button type="button" class="reset" title="Borrar todo"> cancelar</button>
+            </fieldset>
+            
+
+            </form>
+
+            
+    </section>
+
+
+</main>
+
+<%- include ('../modules/footer') %>
+
+</body>
+
+</html>

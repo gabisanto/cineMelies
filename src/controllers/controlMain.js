@@ -33,9 +33,9 @@ module.exports = {
         styles: ['agenda'],
         title: 'Agenda'
     }),
-    precios: (req,res) => res.render('./main/precios',{
-        styles: ['precios'],
-        title: 'Precios'
+    salas: (req,res) => res.render('./main/salas',{
+        styles: ['salas'],
+        title: 'Salas'
     }),
     combos: (req,res) => {
         db.Product.findAll({

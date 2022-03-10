@@ -22,6 +22,9 @@ router.post('/access',controlUsers.access) //ok
 router.post('/logout',controlUsers.logout) //ok
 router.post('/upload/avatar',[access,upload.single("imagenUsuario")],controlUsers.avatar); //ok
 
+router.get('/:id/edit',[auth],controlUsers.updateUser)
+router.put("/:id", controlUsers.modifyUser)
+
 router.delete('/',controlUsers.deleteUser)
 
 module.exports = router;

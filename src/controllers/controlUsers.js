@@ -180,5 +180,58 @@ module.exports = {
         .then(function() {return res.redirect("/users/")})
     },
 
-    
+    updateUser: (req,res) => {
+        db.User.findByPk(req.params.id)
+        .then (function (user) 
+            {return res.render('./users/editUser',{
+                styles:["register"],
+                title: "Actualizar usuario",
+                user: user,
+                id:req.params.id
+        })})
+        .catch(err => {
+            res.redirect("/")
+        })
+    },
+
+    modifyUser: (req,res) => {
+        let errors = validator.body('email').isEmail().withMessage('Ingrese un email válido')
+        if (!errors.isEmpty()) {
+            db.User.findOne({where: {id:req.params.id}})
+            .then(user => {
+                return res.render ('users/editUser',{
+                    styles: ['register'],
+                    title: 'Actualizar usuario',
+                    user: user,
+                    errors: errors.mapped(),
+            })
+            
+            })
+        }
+        db.User.findOne({where : {email : req.body.email}})
+        .then (userFound => {
+            if(userFound) {
+                return res.render ('users/editUser',{
+                    styles: ['register'],
+                    title: 'Actualizar usuario',
+                    user: userFound,
+                    errors: {
+                        email:{
+                            msg: 'Ese mail ya está en uso'
+                        }
+                    }})
+            } else {
+        db.User.update({
+            name: req.body.name,
+            email: req.body.email,
+            birthDate: req.body.birthDate,
+            document: req.body.document
+        }, {
+            where: {id: req.params.id}
+        })
+        .then(function () {
+            return res.redirect('/users/')
+        })}
+    })},
+
 }
