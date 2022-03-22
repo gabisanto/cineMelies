@@ -5,6 +5,7 @@
    
 <%- include ('../modules/header') %> 
 
+
 <!-- Sección Main -->
 <main>
     <article id="background">
@@ -24,24 +25,25 @@
             <section class="flexUser">
             <form action="/users/" id="register-form" method="post" >
                 <fieldset class="fieldNuevo">
-                <legend class="dn"> Nombre y Apellido </legend>
-                <label class="dn" for="name"> </label>
-                <input type="text" class="cajaNuevo" name="name" id="nombreCompleto" placeholder="Nombre y Apellido" required >
-                
+                    <legend class="dn"> Nombre y Apellido </legend>
+                    <label class="dn" for="name"> </label>
+                    <input type="text" class="cajaNuevo" name="name" id="nombreCompleto" placeholder="Nombre y Apellido">
+                    <small></small>
+
                 </fieldset>
             
                 <fieldset class="fieldNuevo">
                 <legend class="dn" > DNI </legend>
                 <label class="dn"  for="document">  </label>
                 <input type="number" class="cajaNuevo" name="document" id="document" placeholder="Documento"  required >
-            
+                <small></small>
                 </fieldset>
             
                 <fieldset class="fieldNuevo" >
                 
                 <label for="birthDate" class="dn"> </label>
-                <input type="date" class="cajaNuevo" class="t-input" name="birthDate" id="birthDate" placeholder="birthDate"  required >
-                
+                <input type="date" class="cajaNuevo" class="t-input" name="birthDate" id="birthDate" placeholder="birthDate" min="01/01/1900"  required >
+                <small></small>
                 </fieldset>
             
 
@@ -52,6 +54,7 @@
                 <legend class="dn" > Email </legend>
                 <label  class="dn" for="email"> </label>
                 <input type="text"  class="cajaNuevo" name="email" id="email" placeholder="Email"  required >
+                <small></small>
                 
                 </fieldset>
                 <% if (locals.errors && errors.password) { %>
@@ -62,7 +65,7 @@
                 <label for="password" >  </label> 
                 <input type="password" class="cajaNuevo" name="password" id="confirm" placeholder="Escribí tu contraseña"
                 title="Debe contener 8 o más caracteres, al menos un número, una letra mayúscula, una minúscula, y un carácter especial" required >
-                
+                <small></small>
                 </fieldset>
             
             </section>
@@ -139,7 +142,11 @@
 </section>
 
 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.14.1/moment.min.js"></script>
+<script src="/js/validateRegister.js" type="text/javascript"></script>
 </main>
+
+
 
 <%- include ('../modules/footer') %>
 

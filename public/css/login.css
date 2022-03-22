@@ -249,128 +249,20 @@ color: black;
 
 /* FIN ESTILO BOTONES */
 
-/*
+/* VALIDACIONES */
 
-.main-form{
+.fieldNuevo.error input {
+  background-color: #f8d28c !important;
+}
 
-    background-color: rgba(235, 235, 235, 100%);
-    box-shadow: 0 0.0625rem 0.125rem 0 rgb(0 0 0 / 15%);
-    margin: 1.125rem ;
-    padding: 2rem 4rem;
-    display: flex;  
-    flex-direction: column;
-    align-items: center;
-    border-radius: 3px;
+.fieldNuevo.success input {
+  background-color: #a9e6b7 !important;
 }
 
 
-.fr{
-  padding: 1em;
-  width: 100%;
-
+.fieldNuevo small {
+  color: #dc3545;
 }
-
-.fr fieldset{
-  display: flex;
-  border: none;
-  margin-bottom: 2em  ;
-  align-items: center;
-}
-
-
-
-.fr fieldset legend{
-  text-align: left;
-  padding-bottom: .25em ;
-}
-
-.fr fieldset input {
-  flex: 1 0 auto;
-  border: none;
-  outline: none;
-  padding: 1em;
-  border-radius: 5px;
-  font-size: 12px;
-  border-radius: 0.25em;
-  box-shadow: 0 3px 10px rgb(0 0 0 / 20%), inset 0 -3px 0 rgb(0 0 0 / 22%);
-  border-radius: 5px;
-  
-}
-
-.fr fieldset input:focus {
-  box-shadow: 0px 0px 0px rgb(0 0 0 / 20%), inset 0 0px 0 1px rgba(242, 158, 56 );
-
-}
-
-.usuario{
-  align-items: flex-end;
-  
-}
-
- form .usuario input{
-   box-shadow: none;
-   border-radius: none;
-  margin-right: -246px;
- }
-
- .fr .usuario input:focus {
-  box-shadow: none;
-
-}
-
- form .usuario label{
-  width: 100%;
-  
- }
-
-
-.fr fieldset input:focus {
-  box-shadow: 0px 0px 0px rgb(0 0 0 / 20%), inset 0 0px 0 1px rgba(242, 158, 56 );
-
-}
-
-.fr fieldset button {
-  flex: 1 0 auto;
-  border: none;
-  padding: 1em;
-  border-radius: 5px;
-  background-color: #F29E38;
-  color: white;
-  font-size: 12px;
-
-}
-
-.fr fieldset button:hover{
-  background-color: #262626 ;
-
-}
-
-.botones{
-  border-radius: 0.25em;
-  box-shadow: 0 3px 10px rgb(0 0 0 / 20%), inset 0 -3px 0 rgb(0 0 0 / 22%);
-
-
-}
-
-h3{
-  font-size: 24px;
-  padding-top: 1em;
-  text-align-last: initial;
-}
-
-.txt-register h3{
-
-  font-size: 18px;
-}
-
-#register{
-color: black;
-}
-
-#register:hover {
-color: white;
-}
-
 
 /*media queries*/
 

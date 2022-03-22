@@ -22,7 +22,7 @@
         </figure>
 
         <section class="flexUser">
-            <form action="/users/access"  method="post" class="fr">
+            <form action="/users/access"  method="post" class="fr" id="loginForm">
 
                 <% if (locals.errors) { %>
                     <% if (errors.email) { %>
@@ -32,6 +32,7 @@
                 <fieldset class="fieldNuevo">
                     <label for="Usuario" class="dn"> E-mail</label>
                     <input type="email" class="cajaNuevo" name="email"  id="Usuario" placeholder="Email">
+                    <small></small>
                 </fieldset>
 
                 <% if (locals.errors && errors.password) { %>
@@ -42,10 +43,11 @@
                 <fieldset class="fieldNuevo">
                     <label for="password" class="dn"> Contraseña  </label>
                     <input type="password" class="cajaNuevo" name="password" id="confirm" placeholder="Escribí tu contraseña">
+                    <small></small>
                     <!--pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                     title="Debe contener 8 o más caracteres de al menos un número y una letra mayúscula y minúscula" required-->
                 </fieldset>
-                </fieldset>
+                <!-- </fieldset> -->
 
                 <fieldset class="usuario fieldNuevo"" >
                     <input type="checkbox" name="remember" id="remember">
@@ -73,7 +75,7 @@
     </section>
 
 </section>
-
+<script src="/js/validateLogin.js" type="text/javascript"></script>
 </main>
 
 <%- include ('../modules/footer') %>
