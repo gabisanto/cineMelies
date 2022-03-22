@@ -13,24 +13,24 @@
           
 
             <fieldset class="fieldNuevo">
-                <label for="name"><input type="text" name="productName" class="cajaNuevo" placeholder="Nombre" required value="<%=products.productName%>">
+                <label for="name"><input type="text" name="productName" id="movieName" class="cajaNuevo" placeholder="Nombre" required value="<%=products.productName%>">
                 <span>Nombre</span>
                 </label>
-                
+                <small></small>
             </fieldset>
 
             <fieldset class="fieldNuevo">
-                <label for="productLink"><input type="text" name="productLink" class="cajaNuevo" placeholder="Link a trailer"  value="<%=products.productLink%>" required >
+                <label for="productLink"><input type="text" name="productLink" class="cajaNuevo" id="ytLink" placeholder="Link a trailer"  value="<%=products.productLink%>" required >
                 <span>Link del trailer</span>
                 </label>
-                
+                <small></small>
             </fieldset>
 
             <fieldset class="fieldNuevo">
-                <label for="description"><input type="text" name="productDescription" class="cajaNuevo" placeholder="Descripción" required value="<%=products.productDescription%>" >
+                <label for="description"><input type="text" name="productDescription" id="movieDesc" class="cajaNuevo" placeholder="Descripción" required value="<%=products.productDescription%>" >
                 <span>Breve descripción</span>
                 </label>
-                
+                <small></small>
             </fieldset>
                              
             <fieldset id="category_id">
@@ -89,6 +89,7 @@
 
             <!-- </form> -->
         </section>
+        <script src="/js/validateEditMovie.js" type="text/javascript"></script>
     </main>
 
 

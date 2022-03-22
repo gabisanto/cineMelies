@@ -1,11 +1,18 @@
-function changeOptions(selectEl) {
-    let selectedValue = selectEl.options[selectEl.selectedIndex].value;
-    let subForms = document.getElementsByClassName('formTest')
-    for (let i = 0; i < subForms.length; i += 1) {
-        if (selectedValue === subForms[i].name) {
-        subForms[i].setAttribute('style', 'display:block')
-        } else {
-        subForms[i].setAttribute('style', 'display:none') 
-        }
-    }
-}
+const el = document.getElementById('selectMesAgenda');
+
+const box = document.getElementsByClassName('months');
+
+for (var i = 0, len = box.length; i < len; i++) {
+    box[i].style.display = 'none';
+      };
+
+el.addEventListener('change', function handleChange(event) {
+for (var i = 0, len = box.length; i < len; i++) {
+    if (event.target.value === box[i].id) {
+        box[i].style.display = 'block';
+      } else {
+        box[i].style.display = 'none';
+      }
+    };
+  
+});

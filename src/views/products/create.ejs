@@ -15,25 +15,25 @@
     <form action="/products/create" id="creationForm" method="post" class="formTest" name="Movie" enctype="multipart/form-data">
 
     <fieldset class="fieldNuevo">
-        <label for="name"><input type="text" name="name" class="cajaNuevo" placeholder="Nombre" required  >
+        <label for="name"><input type="text" name="name" id="movieName" class="cajaNuevo" placeholder="Nombre" required  >
         <span>Nombre</span>
         </label>
-        
+        <small></small>
     </fieldset>
     
     <fieldset class="fieldNuevo">
-        <label for="productLink"><input type="text" name="productLink" class="cajaNuevo" placeholder="Link a trailer" required  >
+        <label for="productLink"><input type="text" name="productLink" class="cajaNuevo" id="ytLink" placeholder="Link a trailer" required  >
         <span>Link del trailer</span>
         </label>
-        
+        <small></small>
     </fieldset>
 
 
     <fieldset class="fieldNuevo">
-        <label for="description"><input type="text" name="description" class="cajaNuevo" placeholder="Descripción" required  >
+        <label for="description"><input type="text" name="description" class="cajaNuevo" id="movieDesc" placeholder="Descripción" required  >
         <span>Breve descripción</span>
         </label>
-        
+        <small></small>
     </fieldset>
 
     <fieldset id="category_id">
@@ -44,6 +44,8 @@
         <label class="button-label" for="radioDos">Moderna</label>
         <input class="hidden radio-label" id="radioTres" type="radio" name="category_id" value="3">
         <label class="button-label" for="radioTres">Estreno</label>
+        <br>
+        <small id="smallCheck"></small>
     </fieldset>
 
     <fieldset id="restriction_id">
@@ -58,15 +60,22 @@
         <label class="button-label" for="ageEighteen">+18</label> 
         <input class="hidden radio-label" id="conditioned" type="radio" name="restriction_id" value="5">
         <label class="button-label" for="conditioned">Condicionada</label> 
+        <br>
+        <small id="smallCheck"></small>
     </fieldset>
 
     <fieldset id="imageInput">
         <legend>Escoja una imagen</legend>
-        <label for="createImage"><input type="file" name="createImage" accept=".jpg, .png" required ></label>
+        <label for="createImage"><input type="file" id="file" accept=".jpg, .png, .jpeg, .gif" name="createImage"  required ></label>
+        <br>
+        <small></small>
     </fieldset>
 
+    <div id="imagePreview"></div>
+
+    <fieldset>
     <select name="genre_id" id="genre_id" class="selectGenre">
-        <option selected value="0"> Elija un género </option>
+        <option value="" disabled="disabled"> Elija un género </option>
             <option value="1">Drama</option> 
             <option value="2">Comedia</option>
             <option value="3">Fantasía</option>
@@ -77,7 +86,10 @@
             <option value="8">No ficción</option>
             <option value="9">Musical</option>
             <option value="10">Aventura</option> 
+            
     </select>
+    <small></small>
+    </fieldset>
 
                <fieldset class="botonNuevo">
                     <button type="submit" class="enviar">Aceptar</button>
@@ -90,7 +102,7 @@
             <!-- </form> -->
         </section>
 
-
+        <script src="/js/validateCreateMovie.js" type="text/javascript"></script>
     </main>
 
     

@@ -135,17 +135,18 @@ form .search {
     font-size: 1.8rem;
     color: white;
     text-decoration: none;
+    
   }
   
   .menuItem:hover {
-    text-decoration: underline;
+    text-decoration: none;
   }
   
   .hamburger {
     position: fixed;
     z-index: 100;
-    top: 0.5rem;
-    right: 1rem;
+    top: 0.35rem;
+    /* right: 1rem; */
     padding: 4px;
     background: none;
     outline: none !important;
@@ -170,7 +171,7 @@ form .search {
     right: 0;
     bottom: 0;
     z-index: 99;
-    background: black;
+    background: #262626;
     color: white;
     list-style: none;
     padding-top: 4rem;

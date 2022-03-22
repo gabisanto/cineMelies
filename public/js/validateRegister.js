@@ -195,8 +195,6 @@ form.addEventListener('input', debounce(function (e) {
         case 'birthDate':
             checkBirth();
             break;  
-        // case 'confirm-password':
-        //     checkConfirmPassword();
-        //     break;
+
     }
 }));

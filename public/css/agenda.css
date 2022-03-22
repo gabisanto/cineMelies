@@ -29,6 +29,12 @@ html, body {
 #selectorAgenda{
     margin:0 auto;
     width:80%;
+    outline:none
+}
+
+#selectorAgenda:focus{
+  outline:none;
+  border:none
 }
 
 #centeredTitle{
@@ -89,6 +95,11 @@ html, body {
     width: 100%;
     box-shadow: 0 3px 10px rgba(0,0,0,0.2), inset 0 -3px 0 rgba(0,0,0,0.22);
     transition: 0.3s;
+}
+
+#selectMesAgenda:focus{
+  outline:none;
+  border:none;
 }
 
 .titulos{

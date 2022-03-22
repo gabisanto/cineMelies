@@ -23,6 +23,8 @@
             <label class="button-label" for="kurosawa">Sala Kurosawa</label>
             <input class="hidden radio-label" id="spielberg" type="radio" name="screen_id" value="4">
             <label class="button-label" for="spielberg">Sala Spielberg</label> 
+            <br>
+            <small></small>
         </fieldset>
 
         <fieldset id="day">
@@ -41,12 +43,15 @@
             <label class="button-label" for="saturday">Sábado</label> 
             <input class="hidden radio-label" id="sunday" type="radio" name="day" value="Domingo">
             <label class="button-label" for="sunday">Domingo</label> 
+            <br>
+            <small></small>
         </fieldset>
 
     <fieldset class="fieldNuevo">
         <legend>Horarios para esta función</legend>
-        <label for="hour"><input type="text" name="hour" class="cajaNuevo" placeholder="Horarios de la función" >
-        <span>Horario (en formato 24 horas / cuatro dígitos)</span>
+        <label for="hour"><input type="text" name="hour" class="cajaNuevo" id="scrHour" placeholder="Horarios de la función" >
+        <span>Horario en formato 24 horas HHMM</span>
+        <small></small>
         </label>
         
     </fieldset>
@@ -59,6 +64,8 @@
         <label class="button-label" for="dubbed">Doblado al español</label>
         <input class="hidden radio-label" id="spanish" type="radio" name="language_id" value="3">
         <label class="button-label" for="spanish">Original en español</label>
+        <br>
+        <small></small>
     </fieldset>
 
     
@@ -73,6 +80,8 @@
 
             <!-- </form> -->
         </section>
+        
+        <script src="/js/validateCreateScreening.js" type="text/javascript"></script>
     </main>
 
 

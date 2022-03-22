@@ -23,29 +23,31 @@
                 <label class="button-label" for="yearPass">Abono mensual</label> 
                 <input class="hidden radio-label" id="monthPass" type="radio" name="type_id" value="5" <%= products.type_id == "5"? "checked" : null %>>
                 <label class="button-label" for="monthPass">Abono anual</label> 
+                <small></small>
             </fieldset>
         
         
             <fieldset class="fieldNuevo">
-                <label for="name"><input type="text" name="name" class="cajaNuevo" placeholder="Nombre" required value="<%= products.name %>" >
+                <label for="name"><input type="text" name="name" class="cajaNuevo" placeholder="Nombre" id="productName" required value="<%= products.name %>" >
                 <span>Nombre</span>
                 </label>
-                
+                <small></small>
             </fieldset>
         
             <fieldset class="fieldNuevo">
-                <label for="description"><input type="text" name="description" class="cajaNuevo" placeholder="Descripción" required  value="<%= products.description %>">
+                <label for="description"><input type="text" name="description" class="cajaNuevo" id="productDesc" placeholder="Descripción" required  value="<%= products.description %>">
                 <span>Breve descripción</span>
+                <small></small>
                 </label>
                 
             </fieldset>
         
             <fieldset class="fieldNuevo">
                 <legend>Precio</legend>
-                <label for="price"><input type="number" name="price" class="cajaNuevo" placeholder="Precio" value="<%= products.price %>" >
+                <label for="price"><input type="text" name="price" class="cajaNuevo" id="productPrice" placeholder="Precio" value="<%= products.price %>" >
                 <span>Precio</span>
                 </label>
-                
+                <small></small>
             </fieldset>
         
                        
@@ -68,6 +70,7 @@
 
             <!-- </form> -->
         </section>
+        <script src="/js/validateEditOther.js" type="text/javascript"></script>
     </main>
 
 

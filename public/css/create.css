@@ -145,6 +145,25 @@ form fieldset legend{
     font-weight: bold;
 }
 
+/* VALIDACIONES */
+
+.fieldNuevo.error input {
+  background-color: #f8d28c !important;
+}
+
+.fieldNuevo.success input {
+  background-color: #a9e6b7 !important;
+}
+
+
+small {
+  color: #dc3545;
+}
+
+#imagePreview img{
+  width:25%
+}
+
 @media(min-width:769px){
 
     .botones{
@@ -171,6 +190,13 @@ form fieldset legend{
       .selectGenre{
         margin:0 auto;
         width:100% !important
+
+      
+      }
+
+      .selectGenre:focus{
+        border: none;
+        outline: none;
       
       }
 

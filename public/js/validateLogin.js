@@ -111,8 +111,6 @@ form.addEventListener('input', debounce(function (e) {
         case 'confirm':
             checkPassword();
             break;
-        // case 'confirm-password':
-        //     checkConfirmPassword();
-        //     break;
+
     }
 }));
