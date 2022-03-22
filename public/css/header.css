@@ -127,7 +127,58 @@ form .search {
     display:none !important
 }
 
+/* BURGER MENU */
 
+.menuItem {
+    display: block;
+    margin: 2rem 4rem;
+    font-size: 1.8rem;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .menuItem:hover {
+    text-decoration: underline;
+  }
+  
+  .hamburger {
+    position: fixed;
+    z-index: 100;
+    top: 0.5rem;
+    right: 1rem;
+    padding: 4px;
+    background: none;
+    outline: none !important;
+    border:none;
+    /* border: black solid 1px; */
+    /* background: white; */
+    cursor: pointer;
+    font-size:20px
+  }
+  
+  .fa-times {
+    display: none;
+    outline:none
+  }
+  
+  .menu {
+    position: fixed;
+    transform: translateY(-100%);
+    transition: transform 0.2s;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+    background: black;
+    color: white;
+    list-style: none;
+    padding-top: 4rem;
+  }
+  
+  .showMenu {
+    transform: translateY(0);
+  }
 
 /*media queries*/
 
@@ -165,6 +216,14 @@ form .search {
 
     .fa-bars{
         display:none !important;
+    }
+
+    #nav02 button{
+        display:none !important;
+    }
+
+    .menu{
+        display:none !important
     }
 
     #nav02 form{
