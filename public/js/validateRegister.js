@@ -146,20 +146,22 @@ const showSuccess = (input) => {
 
 form.addEventListener('submit', function (e) {
     // detiene la acción por defecto
-    e.preventDefault();
+    
 
     // validate fields
     let isUsernameValid = checkUsername(),
-        isEmailValid = checkEmail(),
+        isEmailOkay = checkEmail(),
         isPasswordValid = checkPassword(),
         isDocumentValid = checkDocument(),
         isBirthValid = checkBirth()
 
-    let isFormValid = isUsernameValid && isEmailValid && isPasswordValid && isDocumentValid && isBirthValid
+    let isFormValid = isUsernameValid && isEmailOkay && isPasswordValid && isDocumentValid && isBirthValid
 
     // si todo es válido se registra
     if (isFormValid) {
         form.submit()
+    } else {
+        e.preventDefault();
     }
 });
 

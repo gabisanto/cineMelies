@@ -10,9 +10,9 @@
 
  body {
   background-color: rgb(242, 158, 56);
-  text-align: center;
+  /* text-align: center; */
   font-family: 'Alegreya Sans', sans-serif; 
-  text-align: center;
+ 
 }
 
 #centeredTitle{

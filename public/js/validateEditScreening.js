@@ -111,8 +111,7 @@ const showSuccess = (input) => {
 }
 
 form.addEventListener('submit', function (e) {
-    // detiene la acción por defecto
-    e.preventDefault();
+    
 
     // validate fields
     let isScreenChecked = checkScreen(),
@@ -126,6 +125,9 @@ form.addEventListener('submit', function (e) {
     // si todo es válido se registra
     if (isFormValid) {
         form.submit()
+    } else {
+        // detiene la acción por defecto
+    e.preventDefault();
     }
 });
 

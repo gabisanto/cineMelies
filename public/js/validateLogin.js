@@ -77,10 +77,10 @@ form.addEventListener('submit', function (e) {
     e.preventDefault();
 
     // validate fields
-    let isEmailValid = checkEmail(),
+    let isEmailOk = checkEmail(),
         isPasswordValid = checkPassword()
         
-    let isFormValid = isUsernameValid && isPasswordValid
+    let isFormValid = isEmailOk && isPasswordValid
 
     // si todo es válido se registra
     if (isFormValid) {
