@@ -25,6 +25,9 @@
             <label class="button-label" for="spielberg">Sala Spielberg</label> 
             <br>
             <small></small>
+            <% if (locals.errors && errors.screen_id) { %>
+                <p class="errores"><%= errors.screen_id.msg %> </p>
+            <% } %>
         </fieldset>
 
         <fieldset id="day">
@@ -45,14 +48,20 @@
             <label class="button-label" for="sunday">Domingo</label> 
             <br>
             <small></small>
+            <% if (locals.errors && errors.day) { %>
+                <p class="errores"><%= errors.day.msg %> </p>
+            <% } %>
         </fieldset>
 
     <fieldset class="fieldNuevo">
         <legend>Horarios para esta función</legend>
-        <label for="hour"><input type="text" name="hour" class="cajaNuevo" placeholder="Horarios de la función" value="<%=screening.hour%>" >
+        <label for="hour"><input type="text" name="hour" class="cajaNuevo" placeholder="Horarios de la función" value="<%=locals.userInput? userInput.hour : screening.hour %>" >
         <span>Horario en formato 24 horas HHMM</span>
         </label>
         <small></small>
+        <% if (locals.errors && errors.hour) { %>
+            <p class="errores"><%= errors.hour.msg %> </p>
+        <% } %>
     </fieldset>
 
     <fieldset id="language_id">
@@ -65,6 +74,9 @@
         <label class="button-label" for="spanish">Original en español</label>
         <br>
         <small></small>
+        <% if (locals.errors && errors.language_id) { %>
+            <p class="errores"><%= errors.language_id.msg %> </p>
+        <% } %>
     </fieldset>
 
     

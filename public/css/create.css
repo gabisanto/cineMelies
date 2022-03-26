@@ -22,6 +22,10 @@ font-family: 'Fira Sans', sans-serif; ----> botones, menú etc
     
 }
 
+.errores{
+  color: red
+}
+
 #createProduct{
     display: flex;
     flex-direction: column;

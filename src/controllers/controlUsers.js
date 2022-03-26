@@ -101,6 +101,7 @@ module.exports = {
                 styles: ['register'],
                 title: 'Registrarse',
                 errors: errors.mapped(),
+                userInput:req.body
             })
         }
         db.User.findOne({where : {email : req.body.email}})
@@ -195,17 +196,13 @@ module.exports = {
     },
 
     modifyUser: (req,res) => {
-        let errors = validator.body('email').isEmail().withMessage('Ingrese un email válido')
+        let errors = validator.validationResult(req)
         if (!errors.isEmpty()) {
-            db.User.findOne({where: {id:req.params.id}})
-            .then(user => {
-                return res.render ('users/editUser',{
-                    styles: ['register'],
-                    title: 'Actualizar usuario',
-                    user: user,
-                    errors: errors.mapped(),
-            })
-            
+            return res.render ('users/editUser',{
+                styles: ['register'],
+                title: 'Actualizar usuario',
+                
+                errors: errors.mapped(),
             })
         }
         db.User.findOne({where : {email : req.body.email}})

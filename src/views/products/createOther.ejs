@@ -12,51 +12,62 @@
         
         
 <form action="/products/other/create" id="creationForm" method="post" class="formTest" name="Others" enctype="multipart/form-data">
-
+    
     <fieldset id="type_id">
         <legend>Tipo de producto</legend>
-        <input class="hidden radio-label" id="beverage" type="radio" name="type_id" value="1">
+        <input class="hidden radio-label" id="beverage" type="radio" name="type_id" value="1" <%=locals.userInput && (userInput.type_id == 1) ? 'checked' :  "" %>>
         <label class="button-label" for="beverage">Bebidas</label>
-        <input class="hidden radio-label" id="food" type="radio" name="type_id" value="2">
+        <input class="hidden radio-label" id="food" type="radio" name="type_id" value="2" <%=locals.userInput && (userInput.type_id == 2) ? 'checked' :  "" %>>
         <label class="button-label" for="food">Alimento</label>
-        <input class="hidden radio-label" id="combo" type="radio" name="type_id" value="3">
+        <input class="hidden radio-label" id="combo" type="radio" name="type_id" value="3" <%=locals.userInput && (userInput.type_id == 3) ? 'checked' :  "" %>>
         <label class="button-label" for="combo">Combo</label>
-        <input class="hidden radio-label" id="yearPass" type="radio" name="type_id" value="4">
-        <label class="button-label" for="yearPass">Abono mensual</label> 
-        <input class="hidden radio-label" id="monthPass" type="radio" name="type_id" value="5">
-        <label class="button-label" for="monthPass">Abono anual</label> 
         <small></small>
+        <% if (locals.errors && errors.type_id) { %>
+            <p class="errores"><%= errors.type_id.msg %> </p>
+        <% } %>
     </fieldset>
 
-
+    
     <fieldset class="fieldNuevo">
-        <label for="name"><input type="text" name="name" class="cajaNuevo" id="productName" placeholder="Nombre" >
+        <label for="name"><input type="text" name="name" class="cajaNuevo" id="productName" value="<%=locals.userInput? userInput.name :  "" %>" placeholder="Nombre" required >
         <span>Nombre</span>
         </label>
         <small></small>
+        <% if (locals.errors && errors.name) { %>
+            <p class="errores"><%= errors.name.msg %> </p>
+        <% } %>
     </fieldset>
-
+    
     <fieldset class="fieldNuevo">
-        <label for="description"><input type="text" name="description" class="cajaNuevo" id="productDesc" placeholder="Descripción" required  >
+        <label for="description"><input type="text" name="description" class="cajaNuevo" id="productDesc" value="<%=locals.userInput? userInput.description :  "" %>" placeholder="Descripción" required  >
         <span>Breve descripción</span>
         </label>
         <small></small>
+        <% if (locals.errors && errors.description) { %>
+            <p class="errores"><%= errors.description.msg %> </p>
+        <% } %>
     </fieldset>
 
     <fieldset id="imageInput">
         <legend>Escoja una imagen</legend>
-        <label for="createImage"><input type="file" name="createImage" id="file" accept=".jpg, .png, .jpeg, .gif" required ></label>
+        <label for="createImage"><input type="file" name="createImage" accept=".jpg, .png, .jpeg, .gif" id="file" required  ></label>
         <small></small>
+        <% if (locals.errors && errors.createImage) { %>
+            <p class="errores"><%= errors.createImage.msg %> </p>
+        <% } %>
     </fieldset>
 
     <div id="imagePreview"></div>
-
+    
     <fieldset class="fieldNuevo">
         <legend>Precio</legend>
-        <label for="price"><input type="text" name="price" id="productPrice" class="cajaNuevo" placeholder="Precio" >
+        <label for="price"><input type="text" name="price" id="productPrice" class="cajaNuevo" value="<%=locals.userInput? userInput.price :  "" %>" placeholder="Precio" required >
         <span>Precio</span>
         </label>
         <small></small>
+        <% if (locals.errors && errors.price) { %>
+            <p class="errores"><%= errors.price.msg %> </p>
+        <% } %>
     </fieldset>
 
                 <fieldset class="botonNuevo">

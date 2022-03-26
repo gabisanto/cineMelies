@@ -15,57 +15,69 @@
     
         <fieldset id="screen">
             <legend>Sala</legend>
-            <input class="hidden radio-label" id="melies" type="radio" name="screen_id" value="1">
+            <input class="hidden radio-label" id="melies" type="radio" name="screen_id" value="1" <%=locals.userInput && (userInput.screen_id == 1) ? 'checked' :  "" %>>
             <label class="button-label" for="melies">Sala Melies</label>
-            <input class="hidden radio-label" id="godard" type="radio" name="screen_id" value="2">
+            <input class="hidden radio-label" id="godard" type="radio" name="screen_id" value="2" <%=locals.userInput && (userInput.screen_id == 2) ? 'checked' :  "" %>>
             <label class="button-label" for="godard">Sala Godard</label>
-            <input class="hidden radio-label" id="kurosawa" type="radio" name="screen_id" value="3">
+            <input class="hidden radio-label" id="kurosawa" type="radio" name="screen_id" value="3" <%=locals.userInput && (userInput.screen_id == 3) ? 'checked' :  "" %>>
             <label class="button-label" for="kurosawa">Sala Kurosawa</label>
-            <input class="hidden radio-label" id="spielberg" type="radio" name="screen_id" value="4">
+            <input class="hidden radio-label" id="spielberg" type="radio" name="screen_id" value="4" <%=locals.userInput && (userInput.screen_id == 4) ? 'checked' :  "" %>>
             <label class="button-label" for="spielberg">Sala Spielberg</label> 
             <br>
             <small></small>
+            <% if (locals.errors && errors.screen_id) { %>
+                <p class="errores"><%= errors.screen_id.msg %> </p>
+            <% } %>
         </fieldset>
 
         <fieldset id="day">
             <legend>Día</legend>
-            <input class="hidden radio-label" id="monday" type="radio" name="day" value="Lunes">
+            <input class="hidden radio-label" id="monday" type="radio" name="day" value="Lunes" <%=locals.userInput && (userInput.day == "Lunes") ? 'checked' :  "" %>>
             <label class="button-label" for="monday">Lunes</label>
-            <input class="hidden radio-label" id="tuesday" type="radio" name="day" value="Martes">
+            <input class="hidden radio-label" id="tuesday" type="radio" name="day" value="Martes" <%=locals.userInput && (userInput.day == "Martes") ? 'checked' :  "" %>>
             <label class="button-label" for="tuesday">Martes</label>
-            <input class="hidden radio-label" id="wednesday" type="radio" name="day" value="Miércoles">
+            <input class="hidden radio-label" id="wednesday" type="radio" name="day" value="Miércoles" <%=locals.userInput && (userInput.day == "Miércoles") ? 'checked' :  "" %>>
             <label class="button-label" for="wednesday">Miércoles</label>
-            <input class="hidden radio-label" id="thursday" type="radio" name="day" value="Jueves">
+            <input class="hidden radio-label" id="thursday" type="radio" name="day" value="Jueves" <%=locals.userInput && (userInput.day == "Jueves") ? 'checked' :  "" %>>
             <label class="button-label" for="thursday">Jueves</label> 
-            <input class="hidden radio-label" id="friday" type="radio" name="day" value="Viernes">
+            <input class="hidden radio-label" id="friday" type="radio" name="day" value="Viernes" <%=locals.userInput && (userInput.day == "Viernes") ? 'checked' :  "" %>>
             <label class="button-label" for="friday">Viernes</label> 
-            <input class="hidden radio-label" id="saturday" type="radio" name="day" value="Sábado">
+            <input class="hidden radio-label" id="saturday" type="radio" name="day" value="Sábado" <%=locals.userInput && (userInput.day == "Sábado") ? 'checked' :  "" %>>
             <label class="button-label" for="saturday">Sábado</label> 
-            <input class="hidden radio-label" id="sunday" type="radio" name="day" value="Domingo">
+            <input class="hidden radio-label" id="sunday" type="radio" name="day" value="Domingo" <%=locals.userInput && (userInput.day == "Domingo") ? 'checked' :  "" %>>
             <label class="button-label" for="sunday">Domingo</label> 
             <br>
             <small></small>
+            <% if (locals.errors && errors.day) { %>
+                <p class="errores"><%= errors.day.msg %> </p>
+            <% } %>
         </fieldset>
 
     <fieldset class="fieldNuevo">
         <legend>Horarios para esta función</legend>
-        <label for="hour"><input type="text" name="hour" class="cajaNuevo" id="scrHour" placeholder="Horarios de la función" >
+        <label for="hour"><input type="text" name="hour" class="cajaNuevo" id="scrHour" value="<%=locals.userInput? userInput.hour :  "" %>" placeholder="Horarios de la función" >
         <span>Horario en formato 24 horas HHMM</span>
         <small></small>
+        <% if (locals.errors && errors.hour) { %>
+            <p class="errores"><%= errors.hour.msg %> </p>
+        <% } %>
         </label>
         
     </fieldset>
 
     <fieldset id="language_id">
         <legend>Audio</legend>
-        <input class="hidden radio-label" id="subbed" type="radio" name="language_id" value="1">
+        <input class="hidden radio-label" id="subbed" type="radio" name="language_id" value="1" <%=locals.userInput && (userInput.language_id == 1) ? 'checked' :  "" %>>
         <label class="button-label" for="subbed">VOSE</label>
-        <input class="hidden radio-label" id="dubbed" type="radio" name="language_id" value="2">
+        <input class="hidden radio-label" id="dubbed" type="radio" name="language_id" value="2" <%=locals.userInput && (userInput.language_id == 2) ? 'checked' :  "" %>>
         <label class="button-label" for="dubbed">Doblado al español</label>
-        <input class="hidden radio-label" id="spanish" type="radio" name="language_id" value="3">
+        <input class="hidden radio-label" id="spanish" type="radio" name="language_id" value="3" <%=locals.userInput && (userInput.language_id == 3) ? 'checked' :  "" %>>
         <label class="button-label" for="spanish">Original en español</label>
         <br>
         <small></small>
+        <% if (locals.errors && errors.language_id) { %>
+            <p class="errores"><%= errors.language_id.msg %> </p>
+        <% } %>
     </fieldset>
 
     
@@ -81,7 +93,7 @@
             <!-- </form> -->
         </section>
         
-        <script src="/js/validateCreateScreening.js" type="text/javascript"></script>
+        <script src="/js/validateCreateScreening.js" type="text/javascript"></script> -->
     </main>
 
 

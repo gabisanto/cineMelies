@@ -19,25 +19,30 @@
                 <label class="button-label" for="food">Alimento</label>
                 <input class="hidden radio-label" id="combo" type="radio" name="type_id" value="3" <%= products.type_id == "3"? "checked" : null %>>
                 <label class="button-label" for="combo">Combo</label>
-                <input class="hidden radio-label" id="yearPass" type="radio" name="type_id" value="4" <%= products.type_id == "4"? "checked" : null %>>
-                <label class="button-label" for="yearPass">Abono mensual</label> 
-                <input class="hidden radio-label" id="monthPass" type="radio" name="type_id" value="5" <%= products.type_id == "5"? "checked" : null %>>
-                <label class="button-label" for="monthPass">Abono anual</label> 
                 <small></small>
+                <% if (locals.errors && errors.type_id) { %>
+                    <p class="errores"><%= errors.type_id.msg %> </p>
+                <% } %>
             </fieldset>
         
         
             <fieldset class="fieldNuevo">
-                <label for="name"><input type="text" name="name" class="cajaNuevo" placeholder="Nombre" id="productName" required value="<%= products.name %>" >
+                <label for="name"><input type="text" name="name" class="cajaNuevo" placeholder="Nombre" id="productName" value="<%= products.name %>" >
                 <span>Nombre</span>
                 </label>
                 <small></small>
+                <% if (locals.errors && errors.name) { %>
+                    <p class="errores"><%= errors.name.msg %> </p>
+                <% } %>
             </fieldset>
         
             <fieldset class="fieldNuevo">
-                <label for="description"><input type="text" name="description" class="cajaNuevo" id="productDesc" placeholder="Descripción" required  value="<%= products.description %>">
+                <label for="description"><input type="text" name="description" class="cajaNuevo" id="productDesc" placeholder="Descripción"  value="<%= products.description %>">
                 <span>Breve descripción</span>
                 <small></small>
+                <% if (locals.errors && errors.description) { %>
+                    <p class="errores"><%= errors.description.msg %> </p>
+                <% } %>
                 </label>
                 
             </fieldset>
@@ -48,6 +53,9 @@
                 <span>Precio</span>
                 </label>
                 <small></small>
+                <% if (locals.errors && errors.price) { %>
+                    <p class="errores"><%= errors.price.msg %> </p>
+                <% } %>
             </fieldset>
         
                        
@@ -70,7 +78,7 @@
 
             <!-- </form> -->
         </section>
-        <script src="/js/validateEditOther.js" type="text/javascript"></script>
+        <script src="/js/validateEditOther.js" type="text/javascript"></script> 
     </main>
 
 

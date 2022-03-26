@@ -1,4 +1,5 @@
 const product = require('../models/product.js');
+const validator = require('express-validator');
 const file = require('../models/file.js');
 const db = require('../database/models');
 const Op = db.Sequelize.Op
@@ -56,6 +57,15 @@ const controller = {
     },
 
     saveOther: (req,res) => {
+        let errors = validator.validationResult(req)
+        if (!errors.isEmpty()) {
+            return res.render ('./products/createOther',{
+                styles: ['create','forms'],
+                title: 'Crear producto',
+                errors: errors.mapped(),
+                userInput: req.body
+            })
+        } else {
         db.Image.create({
             url: req.file.filename
         })
@@ -70,10 +80,23 @@ const controller = {
         .then(function (newProduct) {
             return res.redirect('/products/other/' + newProduct.id)
         })
-    })
+    })}
     },
 
     saveScreening: (req,res) => {
+        let errors = validator.validationResult(req)
+        if (!errors.isEmpty()) {
+            db.Movie.findByPk(req.params.id)      
+            .then( movie => {
+                return movie ? res.render('./products/screening',{
+                styles:['screening','forms','create'],
+                title: 'Nueva función de ' + movie.productName,
+                product: movie,
+                id:req.params.id,
+                errors:errors.mapped(),
+                userInput: req.body            
+            }) : res.redirect("/")})
+        } else {
         db.Screening.create({
             hour: req.body.hour,
             day: req.body.day,
@@ -89,7 +112,7 @@ const controller = {
         })
         .then(function () {
             return res.redirect('/products/' + req.params.id)
-        })
+        })}
     },
 
     showMovie: (req,res) => {
@@ -204,6 +227,7 @@ const controller = {
     },
 
     updateScreening: (req,res) => {
+        
         db.Screening.findByPk(req.params.id,{
             include: ["language","screen","movie"]
         })
@@ -236,6 +260,17 @@ const controller = {
     },
 
     modifyOther: (req,res) => {
+        let errors = validator.validationResult(req)
+        if (!errors.isEmpty()) {
+            db.Product.findByPk(req.params.id)
+            .then (function (product) 
+                {return res.render('./products/editOther',{
+                    styles:['forms','edit','create'],
+                    title: "Actualizar " + product.name,
+                    products: product,
+                    errors:errors.mapped(),
+            })})
+        } else {
         db.Product.update({
             name: req.body.name,
             type_id: req.body.type_id,
@@ -247,9 +282,27 @@ const controller = {
         .then(function () {
             return res.redirect('/products/other/' + req.params.id)
         })
+    }
     },
 
     modifyScreening: (req,res) => {
+        let errors = validator.validationResult(req)
+        if (!errors.isEmpty()) {
+            db.Screening.findByPk(req.params.id,{
+                include: ["language","screen","movie"]
+            })
+            .then (function (screen) 
+                {return res.render('./products/editScreening',{
+                    styles:['screening','forms','create'],
+                    title: "Actualizar función",
+                    screening: screen,
+                    id:req.params.id,
+                    errors:errors.mapped(),
+                    userInput: req.body
+            })})
+        } else {
+
+
         db.Screening.update({
             hour: req.body.hour,
             day: req.body.day,
@@ -261,7 +314,7 @@ const controller = {
         })
         .then(function () {
             return res.redirect('/')
-        })
+        })}
     },
 
     deleteOther: (req,res) => {
