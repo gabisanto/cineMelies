@@ -14,100 +14,126 @@
     
     <form action="/products/create" id="creationForm" method="post" class="formTest" name="Movie" enctype="multipart/form-data">
 
-    <fieldset class="fieldNuevo">
-        <label for="name"><input type="text" name="name" id="movieName" class="cajaNuevo" placeholder="Nombre" required  >
-        <span>Nombre</span>
-        </label>
-        <small></small>
-    </fieldset>
+        <fieldset class="fieldNuevo">
+            <label for="name"><input type="text" name="name" id="movieName" class="cajaNuevo" value="<%=locals.userInput? userInput.name :  "" %>" placeholder="Nombre"  >
+            <span>Nombre</span>
+            </label>
+            <small></small>
+            <% if (locals.errors && errors.name) { %>
+                <p class="errores"><%= errors.name.msg %> </p>
+            <% } %>
+        </fieldset>
     
-    <fieldset class="fieldNuevo">
-        <label for="productLink"><input type="text" name="productLink" class="cajaNuevo" id="ytLink" placeholder="Link a trailer" required  >
-        <span>Link del trailer</span>
-        </label>
-        <small></small>
-    </fieldset>
-
-
-    <fieldset class="fieldNuevo">
-        <label for="description"><input type="text" name="description" class="cajaNuevo" id="movieDesc" placeholder="Descripción" required  >
-        <span>Breve descripción</span>
-        </label>
-        <small></small>
-    </fieldset>
-
-    <fieldset id="category_id">
-        <legend>Categoría</legend>
-        <input class="hidden radio-label" id="radioUno" type="radio" name="category_id" value="1">
-        <label class="button-label" for="radioUno">Clásica</label>
-        <input class="hidden radio-label" id="radioDos" type="radio" name="category_id" value="2">
-        <label class="button-label" for="radioDos">Moderna</label>
-        <input class="hidden radio-label" id="radioTres" type="radio" name="category_id" value="3">
-        <label class="button-label" for="radioTres">Estreno</label>
-        <br>
-        <small id="smallCheck"></small>
-    </fieldset>
-
-    <fieldset id="restriction_id">
-        <legend>Restricciones de edad</legend>
-        <input class="hidden radio-label" id="ageATP" type="radio" name="restriction_id" value="1">
-        <label class="button-label" for="ageATP">ATP</label>
-        <input class="hidden radio-label" id="ageThirteen" type="radio" name="restriction_id" value="2">
-        <label class="button-label" for="ageThirteen">+13</label>
-        <input class="hidden radio-label" id="ageSixteen" type="radio" name="restriction_id" value="3">
-        <label class="button-label" for="ageSixteen">+16</label>
-        <input class="hidden radio-label" id="ageEighteen" type="radio" name="restriction_id" value="4">
-        <label class="button-label" for="ageEighteen">+18</label> 
-        <input class="hidden radio-label" id="conditioned" type="radio" name="restriction_id" value="5">
-        <label class="button-label" for="conditioned">Condicionada</label> 
-        <br>
-        <small id="smallCheck"></small>
-    </fieldset>
-
-    <fieldset id="imageInput">
-        <legend>Escoja una imagen</legend>
-        <label for="createImage"><input type="file" id="file" accept=".jpg, .png, .jpeg, .gif" name="createImage"  required ></label>
-        <br>
-        <small></small>
-    </fieldset>
-
-    <div id="imagePreview"></div>
-
-    <fieldset>
-    <select name="genre_id" id="genre_id" class="selectGenre">
-        <option value="" disabled="disabled"> Elija un género </option>
-            <option value="1">Drama</option> 
-            <option value="2">Comedia</option>
-            <option value="3">Fantasía</option>
-            <option value="4">Animación</option>
-            <option value="5">Histórica</option>
-            <option value="6">Superhéroes</option>
-            <option value="7">Ciencia ficción</option>
-            <option value="8">No ficción</option>
-            <option value="9">Musical</option>
-            <option value="10">Aventura</option> 
-            
-    </select>
-    <small></small>
-    </fieldset>
-
-               <fieldset class="botonNuevo">
-                    <button type="submit" class="enviar">Aceptar</button>
-                    <button type="reset" class="reset">Cancelar</button> 
-                </fieldset>
-
-</form>
-
-
-            <!-- </form> -->
-        </section>
-
-        <script src="/js/validateCreateMovie.js" type="text/javascript"></script>
-    </main>
-
+    
+        <fieldset class="fieldNuevo">
+            <label for="productLink"><input type="text" name="productLink" class="cajaNuevo" id="ytLink" placeholder="Link a trailer" value="<%=locals.userInput? userInput.productLink :  "" %>"  >
+            <span>Link del trailer</span>
+            </label>
+            <small></small>
+            <% if (locals.errors && errors.productLink) { %>
+                <p class="errores"><%= errors.productLink.msg %> </p>
+            <% } %>
+        </fieldset>
     
 
-    <%- include ('../modules/footer') %>
+
+        <fieldset class="fieldNuevo">
+            <label for="description"><input type="text" name="description" class="cajaNuevo" id="movieDesc" placeholder="Descripción" required value="<%=locals.userInput? userInput.description :  "" %>" >
+            <span>Breve descripción</span>
+            </label>
+            <small></small>
+            <% if (locals.errors && errors.description) { %>
+                <p class="errores"><%= errors.description.msg %> </p>
+            <% } %>
+        </fieldset>
     
-    </body>
-    </html>
+
+        <fieldset id="category_id">
+            <legend>Categoría</legend>
+            <input class="hidden radio-label" id="radioUno" type="radio" name="category_id" value="1" <%=locals.userInput && (userInput.category_id == 1) ? 'checked' :  "" %>>
+            <label class="button-label" for="radioUno">Clásica</label>
+            <input class="hidden radio-label" id="radioDos" type="radio" name="category_id" value="2" <%=locals.userInput && (userInput.category_id == 2) ? 'checked' :  "" %>>
+            <label class="button-label" for="radioDos">Moderna</label>
+            <input class="hidden radio-label" id="radioTres" type="radio" name="category_id" value="3" <%=locals.userInput && (userInput.category_id == 3) ? 'checked' :  "" %>>
+            <label class="button-label" for="radioTres">Estreno</label>
+            <br>
+            <small id="smallCheck"></small>
+            <% if (locals.errors && errors.category_id) { %>
+                <p class="errores"><%= errors.category_id.msg %> </p>
+            <% } %>
+        </fieldset>
+    
+
+        <fieldset id="restriction_id">
+            <legend>Restricciones de edad</legend>
+            <input class="hidden radio-label" id="ageATP" type="radio" name="restriction_id" value="1" <%=locals.userInput && (userInput.restriction_id == 1) ? 'checked' :  "" %>>
+            <label class="button-label" for="ageATP">ATP</label>
+            <input class="hidden radio-label" id="ageThirteen" type="radio" name="restriction_id" value="2" <%=locals.userInput && (userInput.restriction_id == 2) ? 'checked' :  "" %>>
+            <label class="button-label" for="ageThirteen">+13</label>
+            <input class="hidden radio-label" id="ageSixteen" type="radio" name="restriction_id" value="3" <%=locals.userInput && (userInput.restriction_id == 3) ? 'checked' :  "" %>>
+            <label class="button-label" for="ageSixteen">+16</label>
+            <input class="hidden radio-label" id="ageEighteen" type="radio" name="restriction_id" value="4" <%=locals.userInput && (userInput.restriction_id == 4) ? 'checked' :  "" %>>
+            <label class="button-label" for="ageEighteen">+18</label> 
+            <input class="hidden radio-label" id="conditioned" type="radio" name="restriction_id" value="5" <%=locals.userInput && (userInput.restriction_id == 5) ? 'checked' :  "" %>>
+            <label class="button-label" for="conditioned">Condicionada</label> 
+            <br>
+            <small id="smallCheck"></small>
+            <% if (locals.errors && errors.restriction_id) { %>
+                <p class="errores"><%= errors.restriction_id.msg %> </p>
+            <% } %>
+        </fieldset>
+    
+        <fieldset id="imageInput">
+            <legend>Escoja una imagen</legend>
+            <label for="createImage"><input type="file" id="file" name="createImage" ></label>
+            <br>
+            <small></small>
+            <% if (locals.errors && errors.createImage) { %>
+                <p class="errores"><%= errors.createImage.msg %> </p>
+            <% } %>
+        </fieldset>
+    
+        <div id="imagePreview"></div>
+    
+        <fieldset>
+        <select name="genre_id" id="genre_id" class="selectGenre">
+            <option value="" disabled="disabled"> Elija un género </option>
+                <option value="1" <%=locals.userInput && (userInput.genre_id == 1) ? 'selected' :  "" %>>Drama</option> 
+                <option value="2" <%=locals.userInput && (userInput.genre_id == 2) ? 'selected' :  "" %>>Comedia</option>
+                <option value="3" <%=locals.userInput && (userInput.genre_id == 3) ? 'selected' :  "" %>>Fantasía</option>
+                <option value="4" <%=locals.userInput && (userInput.genre_id == 4) ? 'selected' :  "" %>>Animación</option>
+                <option value="5" <%=locals.userInput && (userInput.genre_id == 5) ? 'selected' :  "" %>>Histórica</option>
+                <option value="6" <%=locals.userInput && (userInput.genre_id == 6) ? 'selected' :  "" %>>Superhéroes</option>
+                <option value="7" <%=locals.userInput && (userInput.genre_id == 7) ? 'selected' :  "" %>>Ciencia ficción</option>
+                <option value="8" <%=locals.userInput && (userInput.genre_id == 8) ? 'selected' :  "" %>>No ficción</option>
+                <option value="9" <%=locals.userInput && (userInput.genre_id == 9) ? 'selected' :  "" %>>Musical</option>
+                <option value="10" <%=locals.userInput && (userInput.genre_id == 10) ? 'selected' :  "" %>>Aventura</option> 
+                
+        </select>
+        <small></small>
+        <% if (locals.errors && errors.genre_id) { %>
+            <p class="errores"><%= errors.genre_id.msg %> </p>
+        <% } %>
+        </fieldset>
+    
+                   <fieldset class="botonNuevo">
+                        <button type="submit" class="enviar">Aceptar</button>
+                        <button type="reset" class="reset">Cancelar</button> 
+                    </fieldset>
+    
+    </form>
+    
+                <!-- </form> -->
+            </section>
+    
+            <script src="/js/validateCreateMovie.js" type="text/javascript"></script>
+        </main>
+    
+        
+    
+        <%- include ('../modules/footer') %>
+        
+        </body>
+        </html>
+    
+    

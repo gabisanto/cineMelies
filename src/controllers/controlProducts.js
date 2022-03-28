@@ -36,6 +36,15 @@ const controller = {
     },
 
     saveMovie: (req,res) => {
+        let errors = validator.validationResult(req)
+        if (!errors.isEmpty()) {
+            return res.render ('./products/create',{
+                styles: ['create','forms'],
+                title: 'Crear película',
+                errors: errors.mapped(),
+                userInput: req.body
+            })
+        } else {
         db.Poster.create({
             url: req.file.filename
         })
@@ -54,6 +63,7 @@ const controller = {
         })
         
         })
+    }
     },
 
     saveOther: (req,res) => {

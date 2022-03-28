@@ -3,6 +3,7 @@ const controlProducts = require ('../controllers/controlProducts');
 const other = require ('../middlewares/other')
 const otherEdit = require ('../middlewares/otherEdit')
 const screening = require ('../middlewares/screening')
+const movie = require ('../middlewares/movieCreate')
 const router = express.Router();
 const path = require('path');
 const multer = require('multer');
@@ -23,11 +24,11 @@ router.get('/',controlProducts.listMovie)
 
 router.get('/other',controlProducts.listOther)
 
-router.get('/create',[auth],controlProducts.create) //muestra formulario de creación de película
+router.get('/create',controlProducts.create) //muestra formulario de creación de película
 
 router.get('/other/create',[auth],controlProducts.createOther) //muestra formulario de creación de producto
 
-router.get('/:id/newScreening',controlProducts.createScreening) //muestra formulario de creación de screening
+router.get('/:id/newScreening',[auth],controlProducts.createScreening) //muestra formulario de creación de screening
 
 //agregarle el [auth] a los create
 
@@ -39,11 +40,11 @@ router.get('/:id/edit',[auth],controlProducts.updateMovie) // muestra vista de e
 
 router.get('/other/:id/edit',[auth],controlProducts.updateOther) // muestra vista de edición de producto
 
-router.get('/screening/:id/edit',controlProducts.updateScreening) // muestra vista de edición de screening
+router.get('/screening/:id/edit',[auth],controlProducts.updateScreening) // muestra vista de edición de screening
 
 //agregarle el [auth] a los edit
 
-router.put("/:id", controlProducts.modifyMovie) // guarda cambios de movie
+router.put("/:id",controlProducts.modifyMovie) // guarda cambios de movie
 
 router.put("/other/:id", [otherEdit], controlProducts.modifyOther) // guarda cambios de producto
 
@@ -56,7 +57,7 @@ router.delete('/:id/screening/',controlProducts.deleteScreening)//borra screenin
 router.delete('/',controlProducts.deleteMovie) //borra película
 
 
-router.post('/create',[upload.single("createImage")],controlProducts.saveMovie) //guarda película
+router.post('/create',[upload.single("createImage")],[movie],controlProducts.saveMovie) //guarda película
 
 router.post('/other/create',[upload.single("createImage")],[other],controlProducts.saveOther) //guarda otros productos
 
