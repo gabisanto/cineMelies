@@ -23,7 +23,7 @@
     
         <% pelicula.forEach(product => { %>
             <article class="movieBox">
-            <h2> ID: <%= product.id %>: <%= product.productName %>  </h2>
+            <h2> ID <%= product.id %>: <%= product.productName %>  </h2>
             <figure  class="images-list">
                 <a href="/products/<%= product.id %>" title="<%= product.productName %>"><img src="/uploads/<%= product.poster.url %>"></a>
                    

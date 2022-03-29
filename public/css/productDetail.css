@@ -118,7 +118,7 @@ main,html{
 
 }
 
-#background{
+#background, #backgroundOther{
   height: 50vh;
   width:100vw;
   position: relative;
@@ -135,6 +135,14 @@ main,html{
   margin-top: -20%;
   margin-left:0%
 }
+
+#backgroundOther img{
+    width:120vw;
+    filter: brightness(50%);
+
+  }
+
+
 
 .container-peli{
     display: flex;
@@ -419,6 +427,15 @@ label span:before {
         filter: brightness(50%);
         margin-top: -30%;
         margin-left:0%
+      }
+
+      #backgroundOther img{
+        /* width:100vw; */
+        /* height:100vh; */
+        width:100vw;
+        height:auto;
+        filter: brightness(50%);
+
       }
 
     iframe {

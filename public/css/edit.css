@@ -10,6 +10,26 @@
     
 }
 
+.errores{
+  color: red
+}
+
+/* VALIDACIONES */
+
+.fieldNuevo.error input {
+  background-color: #f8d28c !important;
+}
+
+.fieldNuevo.success input {
+  background-color: #a9e6b7 !important;
+}
+
+
+small {
+  color: #dc3545;
+}
+
+
 #editProduct{
     display: flex;
     flex-direction: column;

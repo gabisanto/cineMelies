@@ -7,41 +7,63 @@
 <!--Sección MAIN-->
 <main>
 
+    <article id="background">
+                                
+        <img src="/img/Casablanca.jpg">
+        
+    
+    <article id="centeredTitle"> Nuestros combos y extras
+    </article>
+    </article>
+
 <% if (locals.other) { %>
     <% if (other.length > 0) { %>
      
-    <section id="list-movie">
-    <article >
-        <% other.forEach(product => { %>
-            <h2> Item número <%= product.id %>: <%= product.name %>  </h2>
-            <figure  class="images-list">
-                <a href="/products/other/<%= product.id %>" title="<%= product.name %>"><img src="/uploads/<%= product.image.url %>"></a>
-                   
-            </figure>
-            <% if (user && user.admin) { %>
-             
-            
-            <section id="iconitos">
-                <form action="/products/other/?m=DELETE" method="post">
-                    <input type="hidden" name="id" value=<%= product.id %>>
-                    <button type="submit" title="Eliminar">
-                        <i class="fas fa-trash"> </i>
-                    </button>
-                </form>
-                <a href="/products/other/<%= product.id %>/edit" title="Editar elemento"> <i class="fas fa-pencil-alt"> </i> </a>
-            </section>
-            <% } %>
-        <% }) %>
-    </article>
+        <section id="list-movie">
+    
+            <% other.forEach(product => { %>
+                <article class="movieBox">
+                <h2> ID <%= product.id %>: <%= product.name %>  </h2>
+                <figure  class="images-list">
+                    <a href="/products/other/<%= product.id %>" title="<%= product.name %>">
+                        <% if (product.type_id == 3) { %>
+                            <img src="/img/combo0.png">
+                        <% } else if (product.type_id == 1) {%>
+                            <img src="/img/drinks0.jpg">
+                        <% } else if (product.type_id == 2) {%>
+                            <img src="/img/popcorn0.jpg">
+                            <% } %>
+                        </a>
+                        
+                       </a>
+                       
+                </figure>
+                <% if (user && user.admin) { %>
+                 
+                
+                <section id="iconitos">
+                    <form action="/products/other/?m=DELETE" method="post">
+                        <input type="hidden" name="id" value=<%= product.id %>>
+                        <button type="submit" title="Eliminar">
+                            <i class="fas fa-trash"> </i>
+                        </button>
+                    </form>
+                    <a href="/products/other/<%= product.id %>/edit" title="Editar elemento"> <i class="fas fa-pencil-alt"> </i> </a>
+                </section>
+                <% } %>
+            </article>
+            <% }) %>
+        
+            <% } else { %>
+                <h2>No hay productos</h2>
+            <% } %> 
         <% } else { %>
             <h2>No hay productos</h2>
         <% } %> 
-    <% } else { %>
-        <h2>No hay productos</h2>
-    <% } %> 
+        
     
-
-</section>
+    </section>
+    
 
 </main>
 

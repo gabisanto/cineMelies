@@ -228,13 +228,14 @@ margin-left:-30%
   .candy_box_left img {
    
     height: 100%;
-    overflow: hidden;
+    overflow: auto;
 }
   .img_descripcion{
     text-align: center;
     padding-top: 10%;
     padding-left: 2%;
     padding-right: 2%;
+    padding-bottom:10%;
     font-family: 'Alegreya Sans', sans-serif;
   }
 
@@ -365,5 +366,7 @@ font-family: 'Alegreya Sans', sans-serif;
   margin-top: -10%;
   margin-left:0%
 }
+
+
 
 }

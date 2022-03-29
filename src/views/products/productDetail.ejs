@@ -12,22 +12,29 @@
  
 
 <section>
-    <article id=background>
-        <picture >
-            <img src="/img/pop-corn.jpg">
-        </picture>
+    <article id="backgroundOther">
+                                
+        <img src="/img/pop-corn.jpg">
+        
+    
+    <article id="centeredTitle"> <%= product.name.toUpperCase() %>
     </article>
-
+    </article>
 
     
         <!-- detalle producto-->
 <section class="container-peli">
-    <article> <h2> <%= product.name %>  </h2> 
-    </article>
+    
     <section id="flexDescription">
         <article>
             <figure  class="images">
-                <img src="/uploads/<%= product.image.url %>">
+                <% if (product.type_id == 3) { %>
+                    <img src="/img/combo0.png">
+                <% } else if (product.type_id == 1) {%>
+                    <img src="/img/drinks0.jpg">
+                <% } else if (product.type_id == 2) {%>
+                    <img src="/img/popcorn0.jpg">
+                    <% } %>
             </figure>
         </article>
 

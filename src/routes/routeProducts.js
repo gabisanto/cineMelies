@@ -4,6 +4,7 @@ const other = require ('../middlewares/other')
 const otherEdit = require ('../middlewares/otherEdit')
 const screening = require ('../middlewares/screening')
 const movie = require ('../middlewares/movieCreate')
+const movieEdit = require ('../middlewares/movieEdit')
 const router = express.Router();
 const path = require('path');
 const multer = require('multer');
@@ -24,7 +25,7 @@ router.get('/',controlProducts.listMovie)
 
 router.get('/other',controlProducts.listOther)
 
-router.get('/create',controlProducts.create) //muestra formulario de creación de película
+router.get('/create',[auth],controlProducts.create) //muestra formulario de creación de película
 
 router.get('/other/create',[auth],controlProducts.createOther) //muestra formulario de creación de producto
 
@@ -36,7 +37,7 @@ router.get('/:id',controlProducts.showMovie) // muestra vista de película
 
 router.get('/other/:id',controlProducts.showOther) // muestra vista de otros productos (bebida, alimento, etc)
 
-router.get('/:id/edit',[auth],controlProducts.updateMovie) // muestra vista de edición de movie
+router.get('/:id/edit',controlProducts.updateMovie) // muestra vista de edición de movie
 
 router.get('/other/:id/edit',[auth],controlProducts.updateOther) // muestra vista de edición de producto
 
@@ -44,7 +45,7 @@ router.get('/screening/:id/edit',[auth],controlProducts.updateScreening) // mues
 
 //agregarle el [auth] a los edit
 
-router.put("/:id",controlProducts.modifyMovie) // guarda cambios de movie
+router.put("/:id",[movieEdit],controlProducts.modifyMovie) // guarda cambios de movie
 
 router.put("/other/:id", [otherEdit], controlProducts.modifyOther) // guarda cambios de producto
 

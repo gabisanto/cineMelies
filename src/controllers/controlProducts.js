@@ -254,6 +254,19 @@ const controller = {
     },
 
     modifyMovie: (req,res) => {
+        let errors = validator.validationResult(req)
+        if (!errors.isEmpty()) {
+            db.Product.findByPk(req.params.id)
+            .then (function (product) 
+            {return res.render('./products/edit',{
+                styles:['forms','edit'],
+                title: "Actualizar " + product.productName,
+                products: product,
+                id:req.params.id,
+                errors:errors.mapped(),
+                userInput: req.body
+            })})
+        } else {
         db.Movie.update({
             productName: req.body.productName,
             genre_id: req.body.genre_id,
@@ -266,7 +279,7 @@ const controller = {
         })
         .then(function () {
             return res.redirect('/products/' + req.params.id)
-        })
+        })}
     },
 
     modifyOther: (req,res) => {

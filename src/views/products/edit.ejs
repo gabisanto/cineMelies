@@ -13,24 +13,33 @@
           
 
             <fieldset class="fieldNuevo">
-                <label for="name"><input type="text" name="productName" id="movieName" class="cajaNuevo" placeholder="Nombre" required value="<%=products.productName%>">
+                <label for="name"><input type="text" name="productName" id="movieName" class="cajaNuevo" placeholder="Nombre" value="<%=locals.userInput? userInput.productName : products.productName %>">
                 <span>Nombre</span>
                 </label>
                 <small></small>
+                <% if (locals.errors && errors.productName) { %>
+                    <p class="errores"><%= errors.productName.msg %> </p>
+                <% } %>
             </fieldset>
 
             <fieldset class="fieldNuevo">
-                <label for="productLink"><input type="text" name="productLink" class="cajaNuevo" id="ytLink" placeholder="Link a trailer"  value="<%=products.productLink%>" required >
+                <label for="productLink"><input type="text" name="productLink" class="cajaNuevo" id="ytLink" placeholder="Link a trailer"  value="<%=locals.userInput? userInput.productLink : products.productLink %>" >
                 <span>Link del trailer</span>
                 </label>
                 <small></small>
+                <% if (locals.errors && errors.productLink) { %>
+                    <p class="errores"><%= errors.productLink.msg %> </p>
+                <% } %>
             </fieldset>
 
             <fieldset class="fieldNuevo">
-                <label for="description"><input type="text" name="productDescription" id="movieDesc" class="cajaNuevo" placeholder="Descripción" required value="<%=products.productDescription%>" >
+                <label for="description"><input type="text" name="productDescription" id="movieDesc" class="cajaNuevo" placeholder="Descripción" required value="<%=locals.userInput? userInput.productDescription : products.productDescription %>" >
                 <span>Breve descripción</span>
                 </label>
                 <small></small>
+                <% if (locals.errors && errors.productDescription) { %>
+                    <p class="errores"><%= errors.productDescription.msg %> </p>
+                <% } %>
             </fieldset>
                              
             <fieldset id="category_id">
@@ -41,6 +50,9 @@
                 <label class="button-label" for="radioDos">Moderna</label>
                 <input class="hidden radio-label" id="radioTres" type="radio" name="category_id" value="3" <%= products.category_id == "3"? "checked" : null %>>
                 <label class="button-label" for="radioTres">Estreno</label>
+                <% if (locals.errors && errors.category_id) { %>
+                    <p class="errores"><%= errors.category_id.msg %> </p>
+                <% } %>
             </fieldset>   
             
             <fieldset id="restriction_id">
@@ -54,11 +66,14 @@
                 <input class="hidden radio-label" id="ageEighteen" type="radio" name="restriction_id" value="4" <%= products.restriction_id == "4"? "checked" : null %>>
                 <label class="button-label" for="ageEighteen">+18</label> 
                 <input class="hidden radio-label" id="conditioned" type="radio" name="restriction_id" value="5" <%= products.restriction_id == "5"? "checked" : null %>>
-                <label class="button-label" for="conditioned">Condicionada</label> 
+                <label class="button-label" for="conditioned">Condicionada</label>
+                <% if (locals.errors && errors.restriction_id) { %>
+                    <p class="errores"><%= errors.restriction_id.msg %> </p>
+                <% } %> 
             </fieldset>
 
             <select name="genre_id" id="genre_id" class="selectGenre">
-                <option value="0"> Elija un género </option>
+                <option value="" disabled="disabled"> Elija un género </option>
                     <option value="1" <%= products.genre_id == "1"? "selected" : null %>>Drama</option> 
                     <option value="2" <%= products.genre_id == "2"? "selected" : null %>>Comedia</option>
                     <option value="3" <%= products.genre_id == "3"? "selected" : null %>>Fantasía</option>
