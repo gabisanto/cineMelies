@@ -35,6 +35,15 @@ app.use(require('./routes/routeAdmin'))
 
 app.use('/files',require('./routes/routeFile'))
 
+//rutas de APIs
+
+app.use('/api/users',require('./routes/api/apiRouteUsers'));
+
+
+
+
+
+
 // app.get('/register',(req,res) => res.sendFile(path.resolve(__dirname,'./views/users/register.html')))
 
 // app.get('/login',(req,res) => res.sendFile(path.resolve(__dirname,'./views/users/login.html')))
