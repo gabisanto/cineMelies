@@ -46,12 +46,12 @@ module.exports = {
                         name: user.name,
                         email: user.email,
                         admin : user.admin,
-                        //avatarUrl: "http://localhost:3001/uploads/avatars/" + user.avatars.Url,
+                        //avatarUrl: "http://localhost:3001/uploads/avatars/" + user.avatars.Url, ("Falta Url imagen en detalle de Usuario")
                         detailUser: "http://localhost:3001/api/users" + `/api/users/${user.id}`,
                     },
                      status: 200,
             })   
-            })
+          })
          }
          
         
