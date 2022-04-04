@@ -39,6 +39,8 @@ app.use('/files',require('./routes/routeFile'))
 
 app.use('/api/users',require('./routes/api/apiRouteUsers'));
 
+app.use('/api/products',require('./routes/api/apiRouteProducts'));
+
 
 
 
