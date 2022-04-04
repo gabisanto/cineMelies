@@ -3,7 +3,9 @@ const Op = db.Sequelize.Op;
 
 module.exports = {
     list: (req,res) => {
-        db.User.findAll()
+        db.User.findAll({
+            include: ["avatar"]
+        })
         .then((users) => {
             if(users.length > 0) {
                 let result ={
@@ -19,8 +21,8 @@ module.exports = {
                     id: user.id,
                     name: user.name,
                     email: user.email,
-                   // detailAvatar:"http://localhost:3001/uploads/avatars/" + user.avatar_id.url
-                    detailUser: "http://localhost:3001/api/users" + `/api/users/${user.id}`,
+                    Avatar:"http://localhost:3001/uploads/avatars/" + user.avatar.url,
+                    detailUser: "http://localhost:3001" + `/api/users/${user.id}`,
                 })
             });
 
@@ -38,7 +40,9 @@ module.exports = {
     },
 
     userId:(req,res) =>{
-        db.User.findByPk(req.params.id)
+        db.User.findByPk(req.params.id,{
+            include: ["avatar"]
+        })
         .then((user) => {
             return res.status(200).json({
                 data: {
@@ -46,12 +50,16 @@ module.exports = {
                         name: user.name,
                         email: user.email,
                         admin : user.admin,
-                        //avatarUrl: "http://localhost:3001/uploads/avatars/" + user.avatars.Url,
-                        detailUser: "http://localhost:3001/api/users" + `/api/users/${user.id}`,
+                        avatar: "http://localhost:3001/uploads/avatars/" + user.avatar.url,
+                        detailUser: "http://localhost:3001/" + `/api/users/${user.id}`,
                     },
                      status: 200,
             })   
             })
+            .catch(err => {
+                return res.status(404).json( {
+                    error: 'User does not exist' } );;
+                     })  
          }
          
         
