@@ -390,7 +390,7 @@ const controller = {
             where: { productName: { 
                 [Op.like] : "%" + req.body.search + "%"
             }},
-            include: ["poster"]
+            include: ["poster","screenings"]
         })
         .then(results => {
             return res.render ('./products/searchResult',{
