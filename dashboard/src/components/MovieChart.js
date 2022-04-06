@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-// import MovieChartRow from './MovieChartRow';
+import MovieChartRow from './MovieChartRow';
 
 class MovieChart extends Component {
     constructor (props) {
@@ -12,12 +12,12 @@ class MovieChart extends Component {
     componentDidMount(){
         fetch(`http://localhost:3001/api/products/movies`)
         .then(res => res.json())
-        .then(data => {
-            this.setState({movies:data.results})
+        .then(results => {
+            this.setState({movies:results.data})
         })
         .catch(err => console.log(err))
     }
-
+    
     componentDidUpdate(){
         console.log('Actualizado')
     }
@@ -29,11 +29,12 @@ class MovieChart extends Component {
             /* <!-- DataTales Example --> */
             <div className="card shadow mb-4">
                 
-                {/* <div className="card-body">
+                <div className="card-body">
                     <div className="table-responsive">
                         <table className="table table-bordered" id="dataTable" width="100%" cellSpacing="0">
                             <thead>
                                 <tr>
+                                <th>ID</th>
                                     <th>Título</th>
                                     <th>Descripción</th>
                                     <th>Detalle</th>
@@ -45,14 +46,14 @@ class MovieChart extends Component {
                             <tbody>
                                 {
                                 this.state.movies && this.state.movies.map((movie) => {
-                                    return <MovieChartRow movie/>
+                                    return <MovieChartRow id={movie.id} name={movie.name} description={movie.description} detailmovie={movie.detailmovie}/>
                                 })
                                 }
     
                             </tbody>
                         </table>
                     </div>
-                </div> */}
+                </div>
             </div>
     
         )
