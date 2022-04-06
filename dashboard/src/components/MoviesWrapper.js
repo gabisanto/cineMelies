@@ -1,20 +1,27 @@
 import React from 'react';
+import MiddleMovieRow from './MiddleMovieRow';
+import TotalRows from './TotalRows';
+import MovieChart from './MovieChart';
 
-import MoviesContent from './MoviesContent';
-
-function ContentWrapper(){
-    return (
+function MoviesWrapper(){
+    return(
         <React.Fragment>
-            {/*<!-- Content Wrapper -->*/}
-            <div id="content-wrapper" className="d-flex flex-column">
-                {/*<!-- Main Content -->*/}
-                <div id="content">
-                   
-                    <MoviesContent />
-                   
-                </div>
-            </div>    
+				{/*<!-- Content Row Top -->*/}
+				<div className="container-fluid">
+					<div className="d-sm-flex aligns-items-center justify-content-between mb-4">
+						<h1 className="h3 mb-0 text-gray-800">Películas</h1>
+					</div>
+				
+					{/*<!-- Content Row Movies-->*/}
+					<TotalRows />
+					<MiddleMovieRow />
+					<MovieChart />
+	
+				</div>
+				{/*<!--End Content Row Top-->*/}
+
         </React.Fragment>
     )
+
 }
-export default ContentWrapper;
+export default MoviesWrapper;

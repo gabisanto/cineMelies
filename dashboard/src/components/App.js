@@ -1,20 +1,28 @@
 import React, {Component} from 'react';
-import SideBarComplete from './SideBarComplete';
-
+// import SideBarComplete from './SideBarComplete';
+import MoviesWrapper from './MoviesWrapper';
 
 class App extends Component{
   constructor (props) {
     super(props);
       this.state = {
-        movies: null
+        movies: null,
+        latestMovie:null,
+        users:null,
+        latestUser:null
+
     }
   }
 
   componentDidMount(){
-    fetch(`http://localhost:3001/api/products/movies`)
-    .then(res => res.json())
+    Promise.all([
+      fetch(`http://localhost:3001/api/products/movies`).then(result => result.json()),
+      fetch(`http://localhost:3001/api/products/movies/latest`).then(result => result.json()),
+      fetch(`http://localhost:3001/api/users`).then(result => result.json()),
+      fetch(`http://localhost:3001/api/users/latest`).then(result => result.json()),
+    ])
     .then(results => {
-        this.setState({movies:results.data})
+        this.setState({movies:results[0].data,latestMovie:results[1].data,users:results[2].data,latestUser:results[3].data})
     })
     .catch(err => console.log(err))
 }
@@ -29,7 +37,7 @@ render() {
   return (
     <React.Fragment>
       	<div id="wrapper">
-          <SideBarComplete />
+        <MoviesWrapper />
         </div>
     </React.Fragment>
   );
