@@ -145,8 +145,9 @@
 .slideshow .slide .text {
     margin: 0 auto;
     max-width: 1000px;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.4;
+    font-family: 'Fira Sans', sans-serif;
 }
 .slideshow .slide .btttn {
     margin: 15px 0 0;

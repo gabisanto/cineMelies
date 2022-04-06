@@ -23,6 +23,17 @@
                     <% results.forEach(element => { %>
                         <picture class="searchPoster">
                             <a href="/products/<%= element.id %>"><img src="/uploads/<%= element.poster.url %>" ></a>
+                            <div class="boxText">
+                                <div class="text">
+                                    <%= element.productName %> 
+                                    
+                                    <% if (element.screenings[0]) { %>
+                                        <br>
+                                    <br>
+                                        en cartelera
+                                    <% } %>  
+                                </div>
+                            </div>
                         </picture>
                         
                         

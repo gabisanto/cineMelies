@@ -84,16 +84,59 @@ html, body {
 }
 
 .searchPoster{
-    width: 60vw
-}
+    width: 60vw;
+    position:relative;
+    }
 
 .searchPoster img{
     width:100%;
-    padding: 5%
+    padding: 5%;
+    transition: all .3s ease-in-out;
+}
+
+
+
+.searchPoster:hover img{
+  transform: scale(1.2);
+}
+
+.boxText{
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+  background-color: #000000;
+  
+  padding:2%
+}
+
+.searchPoster:hover img {
+  filter: brightness(50%);
+}
+
+.searchPoster:hover .boxText {
+  opacity: 0.75;
+}
+
+.text {
+  
+  color: white;
+  font-size: 12px;
+  text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.15em;
+    font-weight: 500;
+    opacity: 1;
+  
 }
 
 #searchTitle{
     font-weight: bold;
+    padding-bottom: 10px
 }
 
 @media(min-width:769px){

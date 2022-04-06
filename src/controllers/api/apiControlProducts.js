@@ -123,5 +123,27 @@ module.exports = {
                          })   
              },
 
+        latestMovie: (req,res) => {
+            db.Movie.findOne({
+                order: [['id', 'DESC']],
+                include: ["genre","category","poster","restriction",{model: db.Screening, as: "screenings",include:["language", "screen"]}]
+            })
+            .then((movie) => {
+                return res.status(200).json({
+                    data: {
+                            id: movie.id,
+                            name: movie.productName,
+                            description: movie.productDescription,
+                            category: movie.category.name,
+                            genre: movie.genre.name,
+                            restriction: movie.restriction.name,
+                            trailer: movie.productLink,
+                            poster: "http://localhost:3001/uploads/" + movie.poster.url,
+                        },
+                         status: 200,
+                })   
+                })
+        }
+
     }
     
