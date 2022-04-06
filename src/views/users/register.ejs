@@ -37,7 +37,7 @@
                 <fieldset class="fieldNuevo">
                 <legend class="dn" > DNI </legend>
                 <label class="dn"  for="document">  </label>
-                <input type="number" class="cajaNuevo" name="document" id="document" placeholder="Documento" value="<%=locals.userInput? userInput.document :  "" %>" >
+                <input type="text" class="cajaNuevo" name="document" id="document" placeholder="Documento" value="<%=locals.userInput? userInput.document :  "" %>" >
                 <small></small>
                 <% if (locals.errors && errors.document) { %>
                     <p class="errores"><%= errors.document.msg %> </p>
