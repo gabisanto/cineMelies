@@ -1,17 +1,20 @@
-import React from 'react';
+import React, {Component} from 'react';
 import MovieLatest from './MovieLatest';
 import MoviesCategory from './MoviesCategory';
 
-function ContentRowCenter(){
-    return (
-        <div className="row">
-            
-            
-            <MovieLatest />
-            <MoviesCategory />
-
-        </div>
-    )
+class MiddleMovieRow extends Component{
+    render(){
+        return (
+            <div className="row">
+                
+                
+                <MovieLatest />
+                <MoviesCategory />
+    
+            </div>
+        )
+    }
+    
 }
 
-export default ContentRowCenter;
+export default MiddleMovieRow;

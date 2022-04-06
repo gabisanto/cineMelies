@@ -1,24 +1,47 @@
-import React from 'react';
+import React, {Component} from 'react';
 
-let moviesLatest = {
-    title: 'In the mood for love',
-    description: "Película asiática clásica",
-    trailer: 'www.youtube.com',
-    category: "Clásica",
-}
+class MovieLatest extends Component {
+    constructor (props) {
+        super(props)
+        this.state = {
+            latestMovie: null
+        }
+    }
 
-function MovieLatest () {
-    return (
-        <div>
-            <h2 className="title">Última película creada</h2>
+    componentDidMount(){
+        fetch(`http://localhost:3001/api/products/movies/latest`)
+        .then(res => res.json())
+        .then(results => {
+            this.setState({latestMovie:results.data})
+        })
+        .catch(err => console.log(err))
+    }
+    
+    componentDidUpdate(){
+        console.log('Actualizado')
+    }
+
+    render(){
+        console.log('latest',this.state.latestMovie)
+        return(
             <ul>
-                <li>{moviesLatest.title}</li>
-                <li>{moviesLatest.description}</li>
-                <li>{moviesLatest.trailer}</li>
-                <li>{moviesLatest.category}</li>
+                <li>Titulo</li>
+                <li>Categoría</li>
+                <li>Descripción</li>
             </ul>
-        </div>
-    );
+        )
+    }
+    // return (
+    //     <div>
+    //         <h2 className="title">Última película creada</h2>
+    //         <ul>
+    //             <li>{moviesLatest.title}</li>
+    //             <li>{moviesLatest.description}</li>
+    //             <li>{moviesLatest.trailer}</li>
+    //             <li>{moviesLatest.category}</li>
+    //         </ul>
+    //     </div>
+    // );
 }
 
 export default MovieLatest

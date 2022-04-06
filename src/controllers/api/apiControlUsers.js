@@ -50,14 +50,43 @@ module.exports = {
                         name: user.name,
                         email: user.email,
                         admin : user.admin,
-                        //avatarUrl: "http://localhost:3001/uploads/avatars/" + user.avatars.Url, ("Falta Url imagen en detalle de Usuario")
-                        detailUser: "http://localhost:3001/api/users" + `/api/users/${user.id}`,
+                        avatar: "http://localhost:3001/uploads/avatars/" + user.avatar.url,
+                        detailUser: "http://localhost:3001/" + `/api/users/${user.id}`,
                     },
                      status: 200,
             })   
-          })
-         }
+            })
+            .catch(err => {
+                return res.status(404).json( {
+                    error: 'User does not exist' } );;
+                     })  
+         },
+
+         userLatest:(req,res) =>{
+            db.User.findOne({
+                order: [['id', 'DESC']],
+                include: ["avatar"]
+            })
+            .then((user) => {
+                return res.status(200).json({
+                    data: {
+                            id: user.id,
+                            name: user.name,
+                            email: user.email,
+                            admin : user.admin,
+                            avatar: "http://localhost:3001/uploads/avatars/" + user.avatar.url,
+                            detailUser: "http://localhost:3001/" + `/api/users/${user.id}`,
+                        },
+                         status: 200,
+                })   
+                })
+                .catch(err => {
+                    return res.status(404).json( {
+                        error: 'User does not exist' } );;
+                         })  
+             }
          
         
     }
     
+

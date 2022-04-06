@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-// import SideBarComplete from './SideBarComplete';
 import MoviesWrapper from './MoviesWrapper';
 
 class App extends Component{
