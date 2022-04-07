@@ -73,7 +73,7 @@ export default function StickyHeadTable() {
     const rows = users.map(user => createData(user.id,user.name,user.email,user.detailUser))    
 
   const [page, setPage] = React.useState(0);
-  const [rowsPerPage, setRowsPerPage] = React.useState(10);
+  const [rowsPerPage, setRowsPerPage] = React.useState(5);
 
   const handleChangePage = (event, newPage) => {
     setPage(newPage);

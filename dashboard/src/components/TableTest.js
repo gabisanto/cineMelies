@@ -73,7 +73,7 @@ export default function StickyHeadTable() {
     const rows = movies.map(movie => createData(movie.id,movie.name,movie.description,movie.detailmovie))    
 
   const [page, setPage] = React.useState(0);
-  const [rowsPerPage, setRowsPerPage] = React.useState(10);
+  const [rowsPerPage, setRowsPerPage] = React.useState(5);
 
   const handleChangePage = (event, newPage) => {
     setPage(newPage);

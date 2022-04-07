@@ -92,7 +92,7 @@ body{
     display: none;
   }
 
-.fa-user,.fa-shopping-cart,.fa-right-from-bracket,.fa-user{
+.fa-user,.fa-shopping-cart,.fa-right-from-bracket,.fa-user, .fa-address-card{
     display:none !important
 }
 
@@ -151,9 +151,9 @@ form .search {
     border-radius: 5px;
 }
 
-#nav02 form{
+/* #nav02 form{
     display:none !important
-}
+} */
 
 /* BURGER MENU */
 
@@ -247,9 +247,9 @@ form .search {
         display:none !important;
     }
 
-    #nav02 button{
+    /* #nav02 button{
         display:none !important;
-    }
+    } */
 
     .menu{
         display:none !important
