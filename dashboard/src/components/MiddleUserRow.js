@@ -29,7 +29,7 @@ class MiddleUserRow extends Component {
     }
 
     render () {
-        return 
+        
     }
 }
 

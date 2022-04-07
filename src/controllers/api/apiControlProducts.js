@@ -20,6 +20,7 @@ module.exports = {
                 result.data.push({
                     id: movie.id,
                     name: movie.productName,
+                    category: movie.category.name,
                     description: movie.productDescription,
                     screenings: movie.screenings.map(function(scr) {
                         return {hour: scr.hour, day: scr.day,screen: scr.screen.name,language:scr.language.name}
