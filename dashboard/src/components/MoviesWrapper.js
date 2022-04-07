@@ -3,6 +3,7 @@ import MiddleMovieRow from './MiddleMovieRow';
 import TotalRows from './TotalRows';
 import MovieChart from './MovieChart';
 
+
 function MoviesWrapper(){
     return(
         <React.Fragment>
@@ -14,6 +15,7 @@ function MoviesWrapper(){
 				
 					{/*<!-- Content Row Movies-->*/}
 					<TotalRows />
+					
 					<MiddleMovieRow />
 					<MovieChart />
 	
