@@ -1,39 +1,34 @@
 import React from 'react';
-import TotalMovieCards from './TotalMovieCards';
-
-/*  Cada set de datos es un objeto literal */
-
-/* <!-- Movies in DB --> */
-
-let moviesTotal = {
-    title: 'Total de películas',
-     
-    cuantity: 21,
-    icon: 'fa-clipboard-list'
-}
-
-/* <!-- Total awards --> */
-
-let moviesScreening = {
-    title:'En cartelera', 
-     
-    cuantity: '8',
-    icon:'fa-award'
-}
-
-
-let cartProps = [moviesTotal, moviesScreening];
+import {useState,useEffect,Fragment} from 'react'
 
 function ContentRowMovies(){
+    const [movies,setMovies] = useState([]);
+   
+    useEffect(() => {
+        fetch('http://localhost:3001/api/products/movies/')
+        .then(res => res.json())
+        .then(results => setMovies(results.meta))        
+        console.log('Inicia')
+    },[])
+
+    useEffect(() => {
+        fetch('http://localhost:3001/api/products/movies/')
+        .then(res => res.json())
+        .then(results => setMovies(results.meta))        
+        console.log('Actualiza')
+    },[])
+
+    
+
     return (
     
         <div className="row">
             
-            {cartProps.map( (movie, i) => {
-
-                return <TotalMovieCards {...movie} key={i}/>
             
-            })}
+            <h2>Total de películas: {movies.count} </h2>
+            
+                
+        
 
         </div>
     )
