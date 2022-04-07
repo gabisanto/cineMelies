@@ -7,7 +7,7 @@ function MovieChartRow(props){
                     <td>{props.id}</td>
                     <td>{props.name}</td>
                     <td>{props.description}</td>
-                    <td>{props.detailmovie}</td>
+                    <td><a href={props.detailmovie}>{props.detailmovie}</a></td>
                     
                 </tr>
             )

@@ -144,7 +144,93 @@ module.exports = {
                          status: 200,
                 })   
                 })
-        }
+        },
 
+        listModerna: (req,res) => {
+            db.Movie.findAll({
+                where: {
+                    category_id:2
+                },
+                include: ["genre","category","poster","restriction",{model: db.Screening, as: "screenings",include:["language", "screen"]}]
+            })
+            .then((movies) => {
+                if(movies.length > 0) {
+                    let result ={
+                        meta: {
+                            status: 200,
+                            count:  movies.length,
+                            url: '/api/products/movies'
+                        },
+                        data: [],
+                }
+                movies.forEach(movie =>{
+                    result.data.push({
+                        id: movie.id,
+                        name: movie.productName,
+                        category: movie.category.name,
+                        description: movie.productDescription,
+                        screenings: movie.screenings.map(function(scr) {
+                            return {hour: scr.hour, day: scr.day,screen: scr.screen.name,language:scr.language.name}
+                        })
+                        ,
+                        detailmovie: "http://localhost:3001" + `/api/products/movies/${movie.id}`,
+                    })
+                });
+    
+               return res.json(result)
+                
+            } else{
+                return res.status(404).json( {
+                    error: 'No hay resultados'} );
+            }
+        })
+            .catch(err => {
+                return res.status(500).json( {
+                    error: 'Could not connect to database' } );;
+                     })   
+        },
+        listClasica: (req,res) => {
+            db.Movie.findAll({
+                where: {
+                    category_id:1
+                },
+                include: ["genre","category","poster","restriction",{model: db.Screening, as: "screenings",include:["language", "screen"]}]
+            })
+            .then((movies) => {
+                if(movies.length > 0) {
+                    let result ={
+                        meta: {
+                            status: 200,
+                            count:  movies.length,
+                            url: '/api/products/movies'
+                        },
+                        data: [],
+                }
+                movies.forEach(movie =>{
+                    result.data.push({
+                        id: movie.id,
+                        name: movie.productName,
+                        category: movie.category.name,
+                        description: movie.productDescription,
+                        screenings: movie.screenings.map(function(scr) {
+                            return {hour: scr.hour, day: scr.day,screen: scr.screen.name,language:scr.language.name}
+                        })
+                        ,
+                        detailmovie: "http://localhost:3001" + `/api/products/movies/${movie.id}`,
+                    })
+                });
+    
+               return res.json(result)
+                
+            } else{
+                return res.status(404).json( {
+                    error: 'No hay resultados'} );
+            }
+        })
+            .catch(err => {
+                return res.status(500).json( {
+                    error: 'Could not connect to database' } );;
+                     })   
+        },
     }
     

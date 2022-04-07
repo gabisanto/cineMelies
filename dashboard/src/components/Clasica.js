@@ -9,7 +9,7 @@ class Movies extends Component {
     }
     componentDidMount(){
         
-        fetch("http://localhost:3001/api/products/movies" )
+        fetch("http://localhost:3001/api/products/movies/clasica" )
                 .then(res => res.json())
                 .then(data => {
                         
@@ -30,15 +30,15 @@ class Movies extends Component {
 
             <>
                 <div className="col-md-4 mb-4">
-                    <div className="card border-left-success shadow h-100 py-2">
+                    <div className="card border-left-warning shadow h-100 py-2">
                         <div className="card-body">
                             <div className="row no-gutters align-items-center">
                                 <div className="col mr-2">
-                                    <div className="text-xs font-weight-bold text-success text-uppercase mb-1">Cantidad de películas</div>
+                                    <div className="text-xs font-weight-bold text-warning text-uppercase mb-1">Películas clásicas</div>
                                     <div className="h5 mb-0 font-weight-bold text-gray-800">{this.state.count}</div>
                                 </div>
                                 <div className="col-auto">
-                                    <i className="fas fa-film fa-2x text-gray-300"></i>
+                                    <i className="fas fa-user-secret fa-2x text-gray-300"></i>
                                 </div>
                             </div>
                         </div>

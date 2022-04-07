@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
-import MoviesWrapper from './MoviesWrapper';
-import UsersWrapper from './UsersWrapper';
 
+import Testy from './testy';
 
 class App extends Component{
   constructor (props) {
@@ -38,9 +37,10 @@ render() {
   return (
  
     <React.Fragment>
+        <Testy />
       	<div id="wrapper">
-        <MoviesWrapper />
-        <UsersWrapper />
+        
+       
         </div>
     </React.Fragment>
 

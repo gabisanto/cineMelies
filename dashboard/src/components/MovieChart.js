@@ -40,13 +40,14 @@ class MovieChart extends Component {
                                     <th>Detalle</th>
                                     
                                     
+                                    
                                 </tr>
                             </thead>
                             
                             <tbody>
                                 {
                                 this.state.movies && this.state.movies.map((movie) => {
-                                    return <MovieChartRow id={movie.id} name={movie.name} description={movie.description} detailmovie={movie.detailmovie}/>
+                                    return <MovieChartRow id={movie.id} name={movie.name} description={movie.description} detailmovie={movie.detailmovie} />
                                 })
                                 }
     

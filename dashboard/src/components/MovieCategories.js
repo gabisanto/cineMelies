@@ -21,7 +21,7 @@ function MovieCategories ({title}){
 
     let clasica = movies.filter(movie => movie.category === "Clásica").length
     let moderna = movies.filter(movie => movie.category === "Moderna").length
-    let estrenos = movies.filter(movie => movie.category === "Estreno").length
+    
 
     return (
        
@@ -31,7 +31,7 @@ function MovieCategories ({title}){
         <ul>
         <li>Clásica: {clasica}</li>
         <li>Moderna: {moderna}</li> 
-         <li>Estrenos: {estrenos}</li>    
+         
               
            
        </ul> 
