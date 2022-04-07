@@ -1,7 +1,7 @@
 import React from 'react';
-import UserLatest from './UserLatest';
+import UserCard from './UserCard';
 import TotalUserRows from './TotalUserRows';
-import UserChart from './UserChart';
+import TableTestUsers from './TableTestUsers';
 
 
 function UsersWrapper(){
@@ -11,11 +11,17 @@ function UsersWrapper(){
 				<div className="container-fluid">
 					
 				
-					
+					<div className="middleTotal">
 					<TotalUserRows />
+					</div>
 					
-					<UserLatest />
-					<UserChart />
+					<div className="middleCard">
+					<UserCard />
+					</div>
+					
+					<div className="middleCard">
+					<TableTestUsers />
+					</div>
 	
 				</div>
 			

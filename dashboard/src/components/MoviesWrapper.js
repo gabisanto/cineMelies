@@ -1,24 +1,32 @@
 import React from 'react';
-import MiddleMovieRow from './MiddleMovieRow';
 import TotalRows from './TotalRows';
-import MovieChart from './MovieChart';
+// import MovieChart from './MovieChart';
 import Moderna from './Moderna';
 import Clasica from './Clasica';
+import MovieCard from './MovieCard';
+import TableTest from './TableTest';
 
 function MoviesWrapper(){
     return(
         <React.Fragment>
-				{/*<!-- Content Row Top -->*/}
+				
 				<div className="container-fluid">
 					
 				
-					{/*<!-- Content Row Movies-->*/}
+					<div className="flex">
 					<TotalRows />
 					<Moderna />
 					<Clasica />
-					<MiddleMovieRow />
-					<MovieChart />
-	
+					</div>
+					
+					<div className="middleCard">
+					<MovieCard/>
+					</div>
+					
+					
+					<div className="middleCard">
+					<TableTest />
+					</div>
 				</div>
 				{/*<!--End Content Row Top-->*/}
 
