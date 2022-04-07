@@ -1,21 +1,21 @@
-import React, {Component } from 'react';
+import React from 'react';
 
-class Users extends Component {
-    constructor() {
-        super();
+class MiddleUserRow extends Component {
+    constructor(props) {
+        super(props);
         this.state = {
-            count: 0
+            users: [],
           };
     }
     componentDidMount(){
         
-        fetch("http://localhost:3001/api/users" )
+        fetch(`http://localhost:3001/api/users`)
                 .then(res => res.json())
                 .then(data => {
                         
                         this.setState(
                             {
-                                count: data.meta.count,
+                                users: data.meta.users,
                                                     
                             }
                         )})
@@ -24,29 +24,13 @@ class Users extends Component {
         
     }
 
-    
-    render () {
-        return (
+    componentDidUpdate(){
+        console.log('Actualizado')
+    }
 
-            <>
-                <div className="col-md-4 mb-4">
-                    <div className="card border-left-warning shadow h-100 py-2">
-                        <div className="card-body">
-                            <div className="row no-gutters align-items-center">
-                                <div className="col mr-2">
-                                    <div className="text-xs font-weight-bold text-warning text-uppercase mb-1">Cantidad de Usuarios en la Base de Datos</div>
-                                    <div className="h5 mb-0 font-weight-bold text-gray-800">{this.state.count}</div>
-                                </div>
-                                <div className="col-auto">
-                                    <i className="fas fa-users fa-2x text-gray-300"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </>
-        );
+    render () {
+        return 
     }
 }
 
-export default Users;
+export default MiddleUserRow;

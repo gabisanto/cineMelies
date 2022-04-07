@@ -37,8 +37,10 @@ render() {
     <React.Fragment>
       	<div id="wrapper">
         <MoviesWrapper />
+      
         </div>
     </React.Fragment>
+
   );
 }
 

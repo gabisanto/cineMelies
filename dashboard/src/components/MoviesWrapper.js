@@ -3,6 +3,8 @@ import MiddleMovieRow from './MiddleMovieRow';
 import TotalRows from './TotalRows';
 import MovieChart from './MovieChart';
 
+
+
 function MoviesWrapper(){
     return(
         <React.Fragment>

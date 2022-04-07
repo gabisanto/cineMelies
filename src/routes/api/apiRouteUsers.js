@@ -6,7 +6,7 @@ const apiUserController = require('../../controllers/api/apiControlUsers');
 //router.get("/", (req, res) =>{ res.redirect('/')}); 
 
 router.get('/', apiUserController.list);
-router.get('/latest', apiUserController.userLatest);
+//router.get('/latest', apiUserController.userLatest);
 router.get('/:id', apiUserController.userId);
 
 module.exports = router;  
