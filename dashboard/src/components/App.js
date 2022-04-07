@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import MoviesWrapper from './MoviesWrapper';
+import UsersWrapper from './UsersWrapper';
+
 
 class App extends Component{
   constructor (props) {
@@ -34,10 +36,11 @@ componentDidUpdate(){
 render() {
   
   return (
+ 
     <React.Fragment>
       	<div id="wrapper">
         <MoviesWrapper />
-      
+        <UsersWrapper />
         </div>
     </React.Fragment>
 
